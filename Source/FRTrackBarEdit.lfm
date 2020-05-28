@@ -1,0 +1,33 @@
+object RTrackBarEdit: TRTrackBarEdit
+  Left = 0
+  Height = 21
+  Top = 0
+  Width = 193
+  AutoSize = True
+  ClientHeight = 21
+  ClientWidth = 193
+  TabOrder = 0
+  object TrackBar: TTrackBar
+    Left = 0
+    Height = 20
+    Top = 0
+    Width = 150
+    Frequency = 32
+    Max = 255
+    OnChange = TrackBarChange
+    PageSize = 10
+    Position = 0
+    TickMarks = tmTopLeft
+    TabOrder = 0
+  end
+  object Edit: TEdit
+    Left = 152
+    Height = 21
+    Top = 0
+    Width = 41
+    OnChange = EditChange
+    OnExit = TrackBarChange
+    TabOrder = 1
+    Text = '0'
+  end
+end

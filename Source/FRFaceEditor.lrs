@@ -1,0 +1,22 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TRFaceEditor','FORMDATA',[
+  'TPF0'#12'TRFaceEditor'#11'RFaceEditor'#4'Left'#2#0#6'Height'#3#186#0#3'Top'#2
+  +#0#5'Width'#3'1'#1#8'AutoSize'#9#12'ClientHeight'#3#186#0#11'ClientWidth'#3
+  +'1'#1#8'TabOrder'#2#0#0#6'TLabel'#6'Label1'#4'Left'#2#0#6'Height'#2#16#3'Top'
+  +#2#6#5'Width'#2'2'#7'Caption'#6#9'Shininess'#11'ParentColor'#8#0#0#12'TPageC'
+  +'ontrol'#11'PageControl'#4'Left'#2#0#6'Height'#3#130#0#3'Top'#2'8'#5'Width'#3
+  +'1'#1#10'ActivePage'#7#9'TSAmbient'#6'Images'#7#9'ImageList'#8'TabIndex'#2#0
+  +#8'TabOrder'#2#0#0#9'TTabSheet'#9'TSAmbient'#7'Caption'#6#7'Ambient'#12'Clie'
+  +'ntHeight'#2'f'#11'ClientWidth'#3')'#1#0#244#13'TRColorEditor'#9'CEAmbiant'#0
+  +#0#0#9'TTabSheet'#9'TSDiffuse'#7'Caption'#6#7'Diffuse'#12'ClientHeight'#2'g'
+  +#11'ClientWidth'#3')'#1#10'ImageIndex'#2#1#0#244#13'TRColorEditor'#9'CEDiffu'
+  +'se'#0#0#0#9'TTabSheet'#10'TSEmission'#7'Caption'#6#8'Emission'#12'ClientHei'
+  +'ght'#2'g'#11'ClientWidth'#3')'#1#10'ImageIndex'#2#2#0#244#13'TRColorEditor'
+  +#10'CEEmission'#0#0#0#9'TTabSheet'#10'TSSpecular'#7'Caption'#6#8'Specular'#12
+  +'ClientHeight'#2'g'#11'ClientWidth'#3')'#1#10'ImageIndex'#2#3#0#244#13'TRCol'
+  +'orEditor'#10'CESpecular'#0#0#0#0#244#14'TRTrackBarEdit'#12'TBEShininess'#4
+  +'Left'#2'4'#6'Height'#2#23#12'ClientHeight'#2#23#8'TabOrder'#2#1#0#241#5'TEd'
+  +'it'#4'Edit'#6'Height'#2#23#0#0#0#10'TImageList'#9'ImageList'#4'left'#3#8#1#3
+  +'top'#2#8#0#0#0
+]);

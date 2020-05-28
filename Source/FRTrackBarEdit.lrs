@@ -1,0 +1,12 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TRTrackBarEdit','FORMDATA',[
+  'TPF0'#14'TRTrackBarEdit'#13'RTrackBarEdit'#4'Left'#2#0#6'Height'#2#21#3'Top'
+  +#2#0#5'Width'#3#193#0#8'AutoSize'#9#12'ClientHeight'#2#21#11'ClientWidth'#3
+  +#193#0#8'TabOrder'#2#0#0#9'TTrackBar'#8'TrackBar'#4'Left'#2#0#6'Height'#2#20
+  +#3'Top'#2#0#5'Width'#3#150#0#9'Frequency'#2' '#3'Max'#3#255#0#8'OnChange'#7
+  +#14'TrackBarChange'#8'PageSize'#2#10#8'Position'#2#0#9'TickMarks'#7#9'tmTopL'
+  +'eft'#8'TabOrder'#2#0#0#0#5'TEdit'#4'Edit'#4'Left'#3#152#0#6'Height'#2#21#3
+  +'Top'#2#0#5'Width'#2')'#8'OnChange'#7#10'EditChange'#6'OnExit'#7#14'TrackBar'
+  +'Change'#8'TabOrder'#2#1#4'Text'#6#1'0'#0#0#0
+]);

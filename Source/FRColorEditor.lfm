@@ -1,0 +1,182 @@
+object RColorEditor: TRColorEditor
+  Left = 0
+  Height = 95
+  Top = 0
+  Width = 289
+  AutoSize = True
+  ClientHeight = 95
+  ClientWidth = 289
+  OnResize = FrameResize
+  TabOrder = 0
+  object Label1: TLabel
+    Left = 0
+    Height = 20
+    Top = 2
+    Width = 32
+    Caption = 'Red'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clRed
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 0
+    Height = 20
+    Top = 26
+    Width = 47
+    Caption = 'Green'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 0
+    Height = 20
+    Top = 50
+    Width = 36
+    Caption = 'Blue'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 0
+    Height = 20
+    Top = 74
+    Width = 45
+    Caption = 'Alpha'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object ColorEditorPaintBox: TPaintBox
+    Left = 0
+    Height = 95
+    Top = 0
+    Width = 289
+    Align = alClient
+    OnMouseDown = ColorEditorPaintBoxMouseDown
+    OnMouseMove = ColorEditorPaintBoxMouseMove
+    OnMouseUp = ColorEditorPaintBoxMouseUp
+    OnPaint = ColorEditorPaintBoxPaint
+  end
+  object PAPreview: TPanel
+    Left = 220
+    Height = 73
+    Hint = 'Double-click to select with Windows color picker'
+    Top = 6
+    Width = 33
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    BorderWidth = 1
+    Color = clLime
+    ParentColor = False
+    TabOrder = 0
+    Visible = False
+    OnDblClick = PAPreviewDblClick
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 95
+    Top = 0
+    Width = 289
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    Caption = '                Color edit frame'
+    TabOrder = 1
+    Visible = False
+  end
+  object RedEdit: TEdit
+    Left = 176
+    Height = 22
+    Top = 4
+    Width = 33
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = RedEditChange
+    ParentFont = False
+    TabOrder = 2
+    Text = '0'
+  end
+  object GreenEdit: TEdit
+    Left = 176
+    Height = 22
+    Top = 26
+    Width = 33
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = GreenEditChange
+    ParentFont = False
+    TabOrder = 3
+    Text = '0'
+  end
+  object BlueEdit: TEdit
+    Left = 176
+    Height = 22
+    Top = 48
+    Width = 33
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = BlueEditChange
+    ParentFont = False
+    TabOrder = 4
+    Text = '0'
+  end
+  object AlphaEdit: TEdit
+    Left = 176
+    Height = 22
+    Top = 70
+    Width = 33
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnChange = AlphaEditChange
+    ParentFont = False
+    TabOrder = 5
+    Text = '0'
+  end
+  object ColorDialog: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 8
+    top = 8
+  end
+end
