@@ -1,0 +1,33 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TDataModule1','FORMDATA',[
+  'TPF0'#12'TDataModule1'#11'DataModule1'#8'OnCreate'#7#16'DataModuleCreate'#9
+  +'OnDestroy'#7#17'DataModuleDestroy'#14'OldCreateOrder'#8#6'Height'#3','#1#16
+  +'HorizontalOffset'#3')'#2#14'VerticalOffset'#3#243#0#5'Width'#3#144#1#0#8'TG'
+  +'LScene'#8'GLScene1'#4'left'#2#28#3'top'#2#13#0#14'TGLLightSource'#14'GLLigh'
+  +'tSource1'#8'TagFloat'#5#0#0#0#0#0#0#0#0#0#0#16'ConstAttenuation'#5#0#0#0#0#0
+  +#0#0#128#255'?'#17'LinearAttenuation'#5#0#0#0#0#0#0#0#0#0#0#20'QuadraticAtte'
+  +'nuation'#5#0#0#0#0#0#0#0#0#0#0#10'SpotCutOff'#5#0#0#0#0#0#0#0#180#6'@'#12'S'
+  +'potExponent'#5#0#0#0#0#0#0#0#0#0#0#0#0#9'TGLTeapot'#9'GLTeapot1'#8'TagFloat'
+  +#5#0#0#0#0#0#0#0#0#0#0#10'PitchAngle'#5#0#0#0#0#0#0#0#0#0#0#9'RollAngle'#5#0
+  +#0#0#0#0#0#0#0#0#0#9'TurnAngle'#5#0#0#0#0#0#0#0#0#0#0#0#0#12'TGLDummyCube'#11
+  +'DCBlueLight'#8'TagFloat'#5#0#0#0#0#0#0#0#0#0#0#10'PitchAngle'#5#0#0#0#0#0#0
+  +#0#0#0#0#9'RollAngle'#5#0#0#0#0#0#0#0#0#0#0#9'TurnAngle'#5#0#0#0#0#0#0#0#0#0
+  +#0#8'CubeSize'#5#0#0#0#0#0#0#0#128#255'?'#0#14'TGLLightSource'#14'GLLightSou'
+  +'rce2'#8'TagFloat'#5#0#0#0#0#0#0#0#0#0#0#16'ConstAttenuation'#5#0#0#0#0#0#0#0
+  +#128#255'?'#13'Diffuse.Color'#10#16#0#0#0#0#0#0#0#0#0#0#0#0#0#128'?'#0#0#128
+  +'?'#17'LinearAttenuation'#5#0#0#0#0#0#0#0#0#0#0#20'QuadraticAttenuation'#5#0
+  +#0#0#0#0#0#0#0#0#0#10'SpotCutOff'#5#0#0#0#0#0#0#0#180#6'@'#12'SpotExponent'#5
+  +#0#0#0#0#0#0#0#0#0#0#0#0#0#9'TGLCamera'#9'GLCamera1'#8'TagFloat'#5#0#0#0#0#0
+  +#0#0#0#0#0#11'DepthOfView'#5#0#0#0#0#0#0#0#200#5'@'#11'FocalLength'#5#0#0#0#0
+  +#0#0#0#200#4'@'#12'TargetObject'#7#9'GLTeapot1'#20'Position.Coordinates'#10
+  +#16#0#0#0#0#0'@@'#0#0#0'@'#0#0#0'@'#0#0#128'?'#0#0#0#19'TGLFullScreenViewer'
+  +#19'GLFullScreenViewer1'#6'Camera'#7#9'GLCamera1'#5'Width'#3' '#3#6'Height'#3
+  +'X'#2#10'PostRender'#7#29'GLFullScreenViewer1PostRender'#22'Buffer.Backgroun'
+  +'dColor'#7#7'clBlack'#9'StayOnTop'#9#11'RefreshRate'#2'd'#10'OnKeyPress'#7#27
+  +'GLFullScreenViewer1KeyPress'#4'left'#2'`'#3'top'#2#13#0#0#11'TGLCadencer'#11
+  +'GLCadencer1'#5'Scene'#7#8'GLScene1'#12'MaxDeltaTime'#5#0#0#0#0#0#0#0#0#0#0
+  +#12'MinDeltaTime'#5#0#0#0#0#0#0#0#0#0#0#14'FixedDeltaTime'#5#0#0#0#0#0#0#0#0
+  +#0#0#10'OnProgress'#7#19'GLCadencer1Progress'#4'left'#3#168#0#3'top'#2#13#0#0
+  +#0
+]);

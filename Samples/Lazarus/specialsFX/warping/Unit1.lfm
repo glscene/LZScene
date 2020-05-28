@@ -1,0 +1,174 @@
+object Form1: TForm1
+  Left = 204
+  Height = 338
+  Top = 99
+  Width = 433
+  Caption = 'Form1'
+  ClientHeight = 318
+  ClientWidth = 433
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object GLSceneViewer: TGLSceneViewer
+    Left = 0
+    Height = 318
+    Top = 0
+    Width = 433
+    Camera = GLCamera
+    FieldOfView = 179.6396484375
+    Align = alClient
+    OnMouseDown = GLSceneViewerMouseDown
+    OnMouseMove = GLSceneViewerMouseMove
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 8
+    top = 8
+    object MIFile: TMenuItem
+      Caption = 'File'
+      object MIOpenImageFile: TMenuItem
+        Caption = 'Open image file...'
+        ShortCut = 16463
+        OnClick = MIOpenImageFileClick
+      end
+      object MISaveCurrentImage: TMenuItem
+        Caption = 'Save current image...'
+        ShortCut = 16467
+        OnClick = MISaveCurrentImageClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object MIExit: TMenuItem
+        Caption = 'Exit'
+        ShortCut = 32883
+        OnClick = MIExitClick
+      end
+    end
+    object MIQuality: TMenuItem
+      Caption = 'Quality'
+      object N1toomuch1: TMenuItem
+        Tag = 2
+        Caption = '2 (too much)'
+        RadioItem = True
+        OnClick = MIQualityOptionClick
+      end
+      object N4highquality1: TMenuItem
+        Tag = 4
+        Caption = '4 (high quality)'
+        RadioItem = True
+        OnClick = MIQualityOptionClick
+      end
+      object N8mediumquality1: TMenuItem
+        Tag = 8
+        Caption = '8 (medium quality)'
+        RadioItem = True
+        OnClick = MIQualityOptionClick
+      end
+      object N16lowquality1: TMenuItem
+        Tag = 16
+        Caption = '16 (low quality)'
+        Checked = True
+        RadioItem = True
+        OnClick = MIQualityOptionClick
+      end
+      object MIQualityOption: TMenuItem
+        Tag = 32
+        Caption = '32 (super fast)'
+        RadioItem = True
+        OnClick = MIQualityOptionClick
+      end
+    end
+    object MIRadius: TMenuItem
+      Caption = 'Radius'
+      object N10small1: TMenuItem
+        Tag = 10
+        Caption = '10 (small)'
+        RadioItem = True
+        OnClick = MIRadiusSettingClick
+      end
+      object N20medium1: TMenuItem
+        Tag = 20
+        Caption = '20 (medium)'
+        Checked = True
+        RadioItem = True
+        OnClick = MIRadiusSettingClick
+      end
+      object MIRadiusSetting: TMenuItem
+        Tag = 40
+        Caption = '40 (large)'
+        RadioItem = True
+        OnClick = MIRadiusSettingClick
+      end
+      object N80extra1: TMenuItem
+        Tag = 80
+        Caption = '80 (extra)'
+        RadioItem = True
+        OnClick = MIRadiusSettingClick
+      end
+    end
+    object MIEffect: TMenuItem
+      Caption = 'Effect'
+      object MIZoomEffect: TMenuItem
+        Caption = 'Zoom'
+        Checked = True
+        RadioItem = True
+        OnClick = MIZoomEffectClick
+      end
+      object MISpin: TMenuItem
+        Tag = 1
+        Caption = 'Spin'
+        RadioItem = True
+        OnClick = MIZoomEffectClick
+      end
+    end
+  end
+  object OpenPictureDialog: TOpenPictureDialog
+    left = 64
+    top = 8
+  end
+  object GLScene: TGLScene
+    left = 8
+    top = 56
+    object HeightField: TGLHeightField
+      TagFloat = 0
+      Material.Texture.MinFilter = miLinear
+      Material.Texture.TextureMode = tmReplace
+      Material.Texture.Disabled = False
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      XSamplingScale.Min = 0
+      XSamplingScale.Max = 16
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 8
+      YSamplingScale.Min = 0
+      YSamplingScale.Max = 16
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 8
+      Options = [hfoTextureCoordinates, hfoTwoSided]
+      OnGetHeight = HeightFieldGetHeight
+    end
+    object GLCamera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 0.5
+      CameraStyle = csOrthogonal
+      Position.Coordinates = {
+        0000803F0000803F000020410000803F
+      }
+      left = 256
+      top = 152
+    end
+  end
+  object SaveDialog: TSaveDialog
+    DefaultExt = '.bmp'
+    Filter = 'Bitmaps (*.bmp)|*.bmp|All files (*.*)|*.*'
+    left = 104
+    top = 8
+  end
+end

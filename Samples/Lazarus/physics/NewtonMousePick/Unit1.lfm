@@ -1,0 +1,566 @@
+object Form1: TForm1
+  Left = 486
+  Height = 531
+  Top = 343
+  Width = 735
+  Caption = 'Form1'
+  ClientHeight = 531
+  ClientWidth = 735
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 531
+    Top = 0
+    Width = 735
+    Camera = GLCamera1
+    FieldOfView = 158.669509887695
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    OnMouseUp = GLSceneViewer1MouseUp
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 176
+    top = 16
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      Position.Coordinates = {
+        0000000000004040000020410000803F
+      }
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+    object Floor: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000080BF000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060C54474C4E47445374617469630200060A4E47442053
+        746174696302000201060D474C4E47444D616E61676572310800090500000000
+        000AD7A3F83F0600
+      }
+      CubeSize = {
+        000020410000803F00002041
+      }
+      object GLCube2: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000000000A0400000A0C00000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BehavioursData = {
+          0458434F4C02010201060C54474C4E47445374617469630200060A4E47442053
+          746174696302000201060D474C4E47444D616E61676572310800090500000000
+          000AD7A3F83F0600
+        }
+        CubeSize = {
+          00002041000020410000803F
+        }
+      end
+      object GLCube3: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000C0400000A040000080BF0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BehavioursData = {
+          0458434F4C02010201060C54474C4E47445374617469630200060A4E47442053
+          746174696302000201060D474C4E47444D616E61676572310800090500000000
+          000AD7A3F83F0600
+        }
+        CubeSize = {
+          0000803F0000204100002041
+        }
+      end
+      object GLCube4: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000C0C00000A040000080BF0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BehavioursData = {
+          0458434F4C02010201060C54474C4E47445374617469630200060A4E47442053
+          746174696302000201060D474C4E47444D616E61676572310800090500000000
+          000AD7A3F83F0600
+        }
+        CubeSize = {
+          0000803F0000204100002041
+        }
+      end
+    end
+    object GLCube1: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+    end
+    object GLSphere1: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000C000004040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 0.5
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+    end
+    object GLLines1: TGLLines
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Pickable = False
+      Nodes = <      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = -0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = 0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -0.625
+          Y = 0.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 2.375
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -1.375
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = 0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end      
+        item
+          X = -2.625
+          Y = 3.625
+          Z = -0.625
+          Color.Color = {
+            0000803F0000803F000000000000803F
+          }
+        end>
+      NodesAspect = lnaInvisible
+      SplineMode = lsmSegments
+      Options = [loUseNodeColorForLines]
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 120
+    top = 16
+  end
+  object GLNGDManager1: TGLNGDManager
+    VisibleAtRunTime = True
+    NewtonSurfaceItem = <>
+    NewtonSurfacePair = <>
+    DebugOption.NGDManagerDebugs = [mdShowAABB, mdShowJoint]
+    Line = GLLines1
+    NewtonJoint = <    
+      item
+        KinematicControllerOptions.PickModeLinear = True
+        KinematicControllerOptions.AngularFriction = 500
+        JointType = nj_KinematicController
+        CollisionState = True
+      end>
+    left = 216
+    top = 8
+  end
+end

@@ -1,0 +1,222 @@
+object Form1: TForm1
+  Left = 69
+  Height = 476
+  Top = 116
+  Width = 634
+  Caption = 'Form1'
+  ClientHeight = 476
+  ClientWidth = 634
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 423
+    Top = 24
+    Width = 626
+    Camera = GLCamera1
+    Buffer.AmbientColor.Color = {
+      CDCCCC3ECDCCCC3ECDCCCC3E0000803F
+    }
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow, roTwoSideLighting]
+    FieldOfView = 153.398193359375
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object CheckBox_ShowOctree: TCheckBox
+    Left = 0
+    Height = 19
+    Top = 0
+    Width = 82
+    Caption = 'Show Octree'
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        CDCC4C3ECDCC4C3ECDCC4C3E0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000048420000C842000048C20000803F
+      }
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLShadowVolume1: TGLShadowVolume
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Lights = <      
+        item
+          EffectiveRadius = 0
+          CastingMode = scmAlways
+          LightSource = GLLightSource1
+        end>
+      Occluders = <      
+        item
+          EffectiveRadius = 0
+          Caster = GLActor1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = Cape
+        end>
+      Options = [svoScissorClips]
+      object ActorDummy: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        object GLActor1: TGLActor
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            00000000000000000000803F00000000
+          }
+          Reference = aarSkeleton
+          CurrentFrameDelta = 0
+          AnimationMode = aamLoop
+          Interval = 75
+          MaterialLibrary = GLMaterialLibrary1
+        end
+      end
+      object Cape: TGLActor
+        TagFloat = 0
+        Material.BackProperties.Ambient.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.BackProperties.Diffuse.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.BackProperties.Shininess = 48
+        Material.BackProperties.Specular.Color = {
+          0000003F0000003F0000003F0000803F
+        }
+        Material.FrontProperties.Ambient.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.FrontProperties.Shininess = 48
+        Material.FrontProperties.Specular.Color = {
+          0000003F0000003F0000003F0000803F
+        }
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Material.FaceCulling = fcNoCull
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+      end
+      object GLPlane1: TGLPlane
+        TagFloat = 0
+        Material.FrontProperties.Ambient.Color = {
+          0000003F0000003F0000003F0000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        Height = 500
+        Width = 500
+        XOffset = 0
+        XTiles = 4
+        YOffset = 0
+        YTiles = 4
+      end
+    end
+    object OctreeRenderer: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      UseBuildList = False
+      OnRender = OctreeRendererRender
+      Blend = False
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000
+      FocalLength = 50
+      TargetObject = GLActor1
+      Position.Coordinates = {
+        00004842000048420000A0C20000803F
+      }
+      Direction.Coordinates = {
+        00000000000000800000803F00000000
+      }
+      object GLLightSource2: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        Diffuse.Color = {
+          9A99193F9A99193F9A99193F0000803F
+        }
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 40
+    top = 8
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 40
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 96
+    top = 56
+  end
+end

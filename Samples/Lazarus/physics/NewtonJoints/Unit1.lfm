@@ -1,0 +1,1065 @@
+object Form1: TForm1
+  Left = 418
+  Height = 556
+  Top = 216
+  Width = 767
+  Caption = 'Form1'
+  ClientHeight = 556
+  ClientWidth = 767
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.30'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 556
+    Top = 0
+    Width = 767
+    Camera = GLCamera1
+    FieldOfView = 159.608032226562
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseUp = GLSceneViewer1MouseUp
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 176
+    top = 16
+    object GLLines1: TGLLines
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Pickable = False
+      Nodes = <      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 6
+        end      
+        item
+          X = -4
+        end      
+        item
+          X = -4
+          Y = 3
+          Z = 1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 3
+          Z = -1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 4
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 2
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -3
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 6
+        end      
+        item
+          X = -2
+        end      
+        item
+          X = -2
+          Y = 3
+          Z = 1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 3
+          Z = -1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 4
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -2
+          Y = 2
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -1
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -3
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 6
+        end      
+        item
+        end      
+        item
+          Y = 3
+          Z = 1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Z = -1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 4
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 2
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 1
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -1
+          Y = 3
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 9
+        end      
+        item
+          X = 2
+          Y = 3
+        end      
+        item
+          X = 2
+          Y = 6
+          Z = 1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 6
+          Z = -1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 2
+          Y = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 3
+          Y = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 1
+          Y = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 6
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 9
+        end      
+        item
+          X = 6
+          Y = 3
+        end      
+        item
+          X = 6
+          Y = 6
+          Z = 1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 6
+          Z = -1
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 7
+          Y = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 1
+          Z = 7
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 1
+          Z = 7
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 1
+          Z = 7
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = -3
+          Y = 3
+          Z = 7
+        end      
+        item
+          X = -7
+          Y = -1
+          Z = 7
+        end      
+        item
+          X = -5
+          Y = -1
+          Z = 9
+        end      
+        item
+          X = -5
+          Y = 3
+          Z = 5
+        end      
+        item
+          X = -5
+          Y = 1
+          Z = 8
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 1
+          Z = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -5
+          Y = 2
+          Z = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -5
+          Z = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -4
+          Y = 1
+          Z = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -6
+          Y = 1
+          Z = 7
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 1
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Z = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 3
+          Z = 4
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 4
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = 2
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 1
+          Y = 3
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = -1
+          Y = 3
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          Y = -1
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 4
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 4
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 2
+          Z = 5
+          Color.Color = {
+            000000000000803F0000803F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 4
+          Z = 6
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 4
+          Z = 4
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 5
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 5
+          Y = 3
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 6
+          Y = 4
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end      
+        item
+          X = 4
+          Y = 4
+          Z = 5
+          Color.Color = {
+            EBE0E03EE4DB5B3F9A93133F0000803F
+          }
+        end>
+      NodesAspect = lnaInvisible
+      SplineMode = lsmSegments
+      Options = [loUseNodeColorForLines]
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Floor
+      Position.Coordinates = {
+        0000000000004040000070410000803F
+      }
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+    object Floor: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000080BF000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060C54474C4E47445374617469630200060A4E47442053
+        746174696302000201060D474C4E47444D616E61676572310800090500000000
+        000AD7A3F83F0600
+      }
+      CubeSize = {
+        0000A0410000803F0000A041
+      }
+    end
+    object Hinge: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000080C000004040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText1: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Hinge Joint'
+        Rotation = 0
+      end
+    end
+    object Slider: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000C000004040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText2: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Slider Joint'
+        Rotation = 0
+      end
+    end
+    object Corkscrew: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000004040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText3: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Corkscrew Joint'
+        Rotation = 0
+      end
+    end
+    object CustomHinge: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000400000C040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      CubeSize = {
+        000000400000004000000040
+      }
+      object GLAbsoluteHUDText4: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Custom Hinge with Limits'
+        Rotation = 0
+      end
+    end
+    object CustomSlider: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000C0400000C040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      CubeSize = {
+        000000400000004000000040
+      }
+      object GLAbsoluteHUDText5: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Custom Slider with Limits'
+        Rotation = 0
+      end
+    end
+    object Universal: TGLCone
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A0C00000803F0000E0400000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200092EBD3B32000080BE
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText6: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Universal Joint'
+        Rotation = 0
+      end
+    end
+    object CustomBall: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A040000000400000A0400000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 1
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText8: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Custom Ball with Limits'
+        Rotation = 0
+      end
+    end
+    object Ball: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000000000803F0000A0400000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 0.5
+      BehavioursData = {
+        0458434F4C02010201060D54474C4E474444796E616D69630200060B4E474420
+        44796E616D696302000201060D474C4E47444D616E6167657231080009050000
+        0000000AD7A3F83F0600020109050000000000CDCCCCFB3F0500000000000000
+        80FF3F0905000000000000000000000200080200080200090000000000000000
+        000000000000803F020008
+      }
+      object GLAbsoluteHUDText7: TGLAbsoluteHUDText
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        BitmapFont = GLWindowsBitmapFont1
+        Text = 'Ball and Socketl Joint'
+        Rotation = 0
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 136
+    top = 16
+  end
+  object GLNGDManager1: TGLNGDManager
+    VisibleAtRunTime = True
+    NewtonSurfaceItem = <>
+    NewtonSurfacePair = <>
+    DebugOption.NGDManagerDebugs = [mdShowJoint]
+    Line = GLLines1
+    NewtonJoint = <    
+      item
+        KinematicControllerOptions.LinearFriction = 75
+        JointType = nj_KinematicController
+        ParentObject = Floor
+        CollisionState = True
+      end    
+      item
+        HingeOptions.PivotPoint.Coordinates = {
+          000080C000004040000000000000803F
+        }
+        HingeOptions.PinDirection.Coordinates = {
+          00000000000040400000000000000000
+        }
+        JointType = nj_Hinge
+        ParentObject = Floor
+        ChildObject = Hinge
+        CollisionState = True
+      end    
+      item
+        SliderOptions.PivotPoint.Coordinates = {
+          000000C000004040000000000000803F
+        }
+        SliderOptions.PinDirection.Coordinates = {
+          00000000000040400000000000000000
+        }
+        JointType = nj_Slider
+        ParentObject = Floor
+        ChildObject = Slider
+        CollisionState = True
+      end    
+      item
+        CorkscrewOptions.PivotPoint.Coordinates = {
+          0000000000004040000000000000803F
+        }
+        CorkscrewOptions.PinDirection.Coordinates = {
+          00000000000040400000000000000000
+        }
+        JointType = nj_Corkscrew
+        ParentObject = Floor
+        ChildObject = Corkscrew
+        CollisionState = True
+      end    
+      item
+        CustomHingeOptions.PivotPoint.Coordinates = {
+          000000400000C040000000000000803F
+        }
+        CustomHingeOptions.PinDirection.Coordinates = {
+          00000000000040400000000000000000
+        }
+        CustomHingeOptions.MinAngle = -30
+        CustomHingeOptions.MaxAngle = 30
+        JointType = nj_CustomHinge
+        ParentObject = Floor
+        ChildObject = CustomHinge
+        CollisionState = True
+      end    
+      item
+        CustomSliderOptions.PivotPoint.Coordinates = {
+          0000C0400000C040000000000000803F
+        }
+        CustomSliderOptions.PinDirection.Coordinates = {
+          00000000000040400000000000000000
+        }
+        CustomSliderOptions.MinDistance = -3
+        JointType = nj_CustomSlider
+        ParentObject = Floor
+        ChildObject = CustomSlider
+        CollisionState = True
+      end    
+      item
+        UniversalOptions.PivotPoint.Coordinates = {
+          0000A0C00000803F0000E0400000803F
+        }
+        UniversalOptions.PinDirection.Coordinates = {
+          00000040000000400000000000000000
+        }
+        UniversalOptions.PinDirection2.Coordinates = {
+          00000000000000C00000004000000000
+        }
+        JointType = nj_Universal
+        ParentObject = Floor
+        ChildObject = Universal
+        CollisionState = True
+      end    
+      item
+        BallAndSocketOptions.PivotPoint.Coordinates = {
+          00000000000040400000A0400000803F
+        }
+        JointType = nj_BallAndSocket
+        ParentObject = Floor
+        ChildObject = Ball
+        CollisionState = True
+      end    
+      item
+        CustomBallAndSocketOptions.PivotPoint.Coordinates = {
+          0000A040000080400000A0400000803F
+        }
+        CustomBallAndSocketOptions.MinTwistAngle = -45
+        CustomBallAndSocketOptions.MaxTwistAngle = 45
+        JointType = nj_CustomBallAndSocket
+        ParentObject = Floor
+        ChildObject = CustomBall
+        CollisionState = True
+      end>
+    left = 256
+    top = 16
+  end
+  object GLWindowsBitmapFont1: TGLWindowsBitmapFont
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    left = 40
+    top = 312
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    FormCaption = 'Form1 - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    OnMouseMove = GLSimpleNavigation1MouseMove
+    left = 216
+    top = 16
+  end
+end

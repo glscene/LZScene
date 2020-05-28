@@ -1,0 +1,233 @@
+object MainForm: TMainForm
+  Left = 0
+  Height = 498
+  Top = 0
+  Width = 589
+  ActiveControl = edtPitch
+  Caption = 'Quaternion ArcBall'
+  ClientHeight = 498
+  ClientWidth = 589
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  Visible = False
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 378
+    Top = 120
+    Width = 589
+    Camera = GLCamera1
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 150.363708496094
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    OnMouseUp = GLSceneViewer1MouseUp
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 120
+    Top = 0
+    Width = 589
+    Align = alTop
+    ClientHeight = 120
+    ClientWidth = 589
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Left = 5
+      Height = 110
+      Top = 5
+      Width = 235
+      Align = alLeft
+      BorderSpacing.Around = 4
+      Caption = 'Euler Angles'
+      ClientHeight = 90
+      ClientWidth = 231
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 8
+        Height = 15
+        Top = 56
+        Width = 45
+        Caption = 'Pith (Z) :'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 15
+        Top = 32
+        Width = 45
+        Caption = 'Yaw (Y) :'
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 8
+        Height = 15
+        Top = 8
+        Width = 38
+        Caption = 'Roll (X)'
+        ParentColor = False
+      end
+      object edtPitch: TFloatSpinEdit
+        Left = 59
+        Height = 23
+        Top = 56
+        Width = 138
+        Increment = 1
+        MaxValue = 360
+        MinValue = 0
+        OnChange = edtPitchEditingDone
+        OnEditingDone = edtPitchEditingDone
+        TabOrder = 0
+        Value = 0
+      end
+      object edtYaw: TFloatSpinEdit
+        Left = 59
+        Height = 23
+        Top = 32
+        Width = 138
+        Increment = 1
+        MaxValue = 360
+        MinValue = 0
+        OnChange = edtYawEditingDone
+        OnEditingDone = edtYawEditingDone
+        TabOrder = 1
+        Value = 0
+      end
+      object edtRoll: TFloatSpinEdit
+        Left = 59
+        Height = 23
+        Top = 8
+        Width = 138
+        Increment = 1
+        MaxValue = 360
+        MinValue = 0
+        OnChange = edtRollEditingDone
+        OnEditingDone = edtRollEditingDone
+        TabOrder = 2
+        Value = 0
+      end
+    end
+  end
+  object GLSceneViewer2: TGLSceneViewer
+    Left = 397
+    Height = 100
+    Top = 295
+    Width = 100
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 0
+    TabOrder = 2
+  end
+  object GLScene1: TGLScene
+    left = 24
+    top = 152
+    object DCWorld: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLCube1: TGLCube
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        PitchAngle = 0
+        RollAngle = 0
+        ShowAxes = True
+        TurnAngle = 0
+      end
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 100
+        FocalLength = 50
+        TargetObject = GLCube1
+        Position.Coordinates = {
+          000000000000A040000020C10000803F
+        }
+        object GLLightSource1: TGLLightSource
+          TagFloat = 0
+          Ambient.Red = 0
+          Ambient.Green = 0
+          Ambient.Blue = 0
+          Ambient.Alpha = 1
+          ConstAttenuation = 1
+          Diffuse.Red = 1
+          Diffuse.Green = 1
+          Diffuse.Blue = 1
+          Diffuse.Alpha = 1
+          LinearAttenuation = 0
+          QuadraticAttenuation = 0
+          Position.Coordinates = {
+            000000C00000A0400000A0C00000803F
+          }
+          Specular.Red = 0
+          Specular.Green = 0
+          Specular.Blue = 0
+          Specular.Alpha = 1
+          SpotCutOff = 180
+          SpotExponent = 0
+        end
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 352
+    top = 128
+  end
+end

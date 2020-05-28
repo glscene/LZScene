@@ -1,0 +1,267 @@
+object Form1: TForm1
+  Left = 145
+  Height = 441
+  Top = 99
+  Width = 526
+  Caption = 'Form1'
+  ClientHeight = 441
+  ClientWidth = 526
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnMouseWheel = FormMouseWheel
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 380
+    Top = 38
+    Width = 526
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clSilver
+    FieldOfView = 50.8154373168945
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 418
+    Width = 526
+    Panels = <    
+      item
+        Width = 200
+      end>
+    SimplePanel = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 38
+    Top = 0
+    Width = 526
+    Align = alTop
+    BevelOuter = bvLowered
+    ClientHeight = 38
+    ClientWidth = 526
+    TabOrder = 2
+    object SBPlay: TSpeedButton
+      Left = 188
+      Height = 24
+      Hint = 'Play Actor'
+      Top = 8
+      Width = 23
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+        00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+        70E337F3333F333337F3E0F33303333370E337F3337FF33337F3E0F333003333
+        70E337F33377FF3337F3E0F33300033370E337F333777FF337F3E0F333000033
+        70E337F33377773337F3E0F33300033370E337F33377733337F3E0F333003333
+        70E337F33377333337F3E0F33303333370E337F33373333337F3E0F333333333
+        70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+        00E33777777777777733EEEEEEEEEEEEEEE33333333333333333
+      }
+      NumGlyphs = 2
+      OnClick = SBPlayClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SBStop: TSpeedButton
+      Left = 214
+      Height = 24
+      Hint = 'Stop Actor'
+      Top = 8
+      Width = 23
+      Enabled = False
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+        00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+        70E337F33333333337F3E0F33333333370E337F333FFFFF337F3E0F330000033
+        70E337F3377777F337F3E0F33000003370E337F3377777F337F3E0F330000033
+        70E337F3377777F337F3E0F33000003370E337F3377777F337F3E0F330000033
+        70E337F33777773337F3E0F33333333370E337F33333333337F3E0F333333333
+        70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+        00E33777777777777733EEEEEEEEEEEEEEE33333333333333333
+      }
+      NumGlyphs = 2
+      OnClick = SBStopClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object SBFrameToFrame: TSpeedButton
+      Left = 240
+      Height = 24
+      Hint = 'Play Frame to Frame'
+      Top = 8
+      Width = 23
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333333333333333EEEEEEEEEEEEEEE333FFFFFFFFFFFFF3E00000000000
+        00E337777777777777F3E0F77777777770E337F33333333337F3E0F333333333
+        70E337F33333333337F3E0F33333333370E337F333FF3F3337F3E0F330030333
+        70E337F3377F7FF337F3E0F33003003370E337F3377F77FF37F3E0F330030003
+        70E337F3377F777337F3E0F33003003370E337F3377F773337F3E0F330030333
+        70E337F33773733337F3E0F33333333370E337F33333333337F3E0F333333333
+        70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
+        00E33777777777777733EEEEEEEEEEEEEEE33333333333333333
+      }
+      NumGlyphs = 2
+      OnClick = SBFrameToFrameClick
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 13
+      Top = 14
+      Width = 52
+      Caption = 'Animation :'
+      ParentColor = False
+    end
+    object CBAnimations: TComboBox
+      Left = 64
+      Height = 23
+      Hint = 'Change State'
+      Top = 3
+      Width = 109
+      ItemHeight = 13
+      OnChange = CBAnimationsChange
+      ParentShowHint = False
+      ShowHint = True
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object BBLoadWeapon: TBitBtn
+      Left = 408
+      Height = 24
+      Top = 8
+      Width = 89
+      Caption = 'Load Weapon'
+      OnClick = BBLoadWeaponClick
+      TabOrder = 1
+    end
+    object CBSmooth: TCheckBox
+      Left = 280
+      Height = 19
+      Top = 12
+      Width = 56
+      Caption = 'Smooth'
+      Checked = True
+      OnClick = CBSmoothClick
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object GLScene1: TGLScene
+    left = 40
+    top = 48
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        Ambient.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Position.Coordinates = {
+          0000204100000000000020410000803F
+        }
+        LightStyle = lsOmni
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 1000
+        FocalLength = 400
+        TargetObject = DummyCube1
+        Position.Coordinates = {
+          00009041000080410000C0400000803F
+        }
+        Direction.Coordinates = {
+          2EF964BF2EF9E43E0000000000000000
+        }
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+      end
+      object Disk1: TGLDisk
+        TagFloat = 0
+        Material.Texture.MinFilter = miLinear
+        Material.Texture.Disabled = False
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000000080BF0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        InnerRadius = 0
+        Loops = 1
+        OuterRadius = 3
+        Slices = 8
+        StartAngle = 0
+        SweepAngle = 360
+      end
+    end
+    object Actor1: TGLActor
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      Material.Texture.MinFilter = miLinear
+      Material.Texture.TextureMode = tmModulate
+      Material.Texture.Disabled = False
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CurrentFrameDelta = 0
+      Interval = 100
+      OnFrameChanged = Actor1FrameChanged
+      object Actor2: TGLActor
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        Material.Texture.MinFilter = miLinear
+        Material.Texture.Disabled = False
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    SleepLength = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 48
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 8
+    top = 80
+  end
+end

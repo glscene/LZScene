@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 209
+  Height = 346
+  Top = 106
+  Width = 511
+  Caption = 'Form1'
+  ClientHeight = 346
+  ClientWidth = 511
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 346
+    Top = 0
+    Width = 511
+    Camera = Camera1
+    Buffer.BackgroundColor = clSilver
+    FieldOfView = 147.759567260742
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 464
+    top = 8
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object Cube1: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        0000803F00000000000000000000803F
+      }
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F00000000000000000000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        0000803F00000000000000000000803F
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        000040C000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        0000803F0000A0400000803F00000000
+      }
+      TurnAngle = 0
+    end
+    object Cube2: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Emission.Color = {
+        000000000000803F000000000000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        0000803F0000A0400000803F00000000
+      }
+      TurnAngle = 0
+    end
+    object Cube3: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Emission.Color = {
+        00000000000000000000803F0000803F
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000404000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        0000803F0000A0400000803F00000000
+      }
+      TurnAngle = 0
+    end
+    object Camera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000000
+      FocalLength = 50
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000000000000000000020410000803F
+      }
+      Direction.Coordinates = {
+        000080BF000000000000000000000000
+      }
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 464
+    top = 40
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    left = 464
+    top = 72
+  end
+  object GLTimeEventsMGR1: TGLTimeEventsMGR
+    Cadencer = GLCadencer1
+    FreeEventOnEnd = True
+    Events = <    
+      item
+        Name = 'Event0'
+        StartTime = 2
+        EndTime = 5
+        Period = 0
+        EventType = etContinuous
+        OnEvent = GLTimeEventsMGR1Events0Event
+      end    
+      item
+        Name = 'Event1'
+        StartTime = 5
+        EndTime = 10
+        Period = 0.01
+        EventType = etPeriodic
+        OnEvent = GLTimeEventsMGR1Events1Event
+      end    
+      item
+        Name = 'Event2'
+        StartTime = 10
+        EndTime = 0
+        Period = 0
+        OnEvent = GLTimeEventsMGR1Events2Event
+      end    
+      item
+        Name = 'Event3'
+        StartTime = 15
+        EndTime = -1
+        Period = 0.5
+        EventType = etPeriodic
+        OnEvent = GLTimeEventsMGR1Events3Event
+      end    
+      item
+        Name = 'Event4'
+        StartTime = 15
+        EndTime = -1
+        Period = 0.1
+        EventType = etPeriodic
+        OnEvent = GLTimeEventsMGR1Events4Event
+      end    
+      item
+        Name = 'Event5'
+        StartTime = 15
+        EndTime = -1
+        Period = 0.01
+        EventType = etPeriodic
+        OnEvent = GLTimeEventsMGR1Events5Event
+      end>
+    left = 464
+    top = 104
+  end
+end

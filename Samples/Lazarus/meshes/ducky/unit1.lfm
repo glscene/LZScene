@@ -1,0 +1,116 @@
+object Form1: TForm1
+  Left = 84
+  Height = 435
+  Top = 117
+  Width = 666
+  Caption = 'Form1'
+  ClientHeight = 435
+  ClientWidth = 666
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.29'
+  object Panel1: TPanel
+    Left = 0
+    Height = 435
+    Top = 0
+    Width = 161
+    Align = alLeft
+    ClientHeight = 435
+    ClientWidth = 161
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Height = 13
+      Top = 56
+      Width = 52
+      Caption = 'Resolution'
+      ParentColor = False
+    end
+    object TrackBar1: TTrackBar
+      Left = 16
+      Height = 38
+      Top = 80
+      Width = 129
+      Max = 50
+      Min = 1
+      OnChange = TrackBar1Change
+      Position = 20
+      TickStyle = tsManual
+      TabOrder = 0
+    end
+    object CheckBox1: TCheckBox
+      Left = 16
+      Height = 22
+      Top = 120
+      Width = 74
+      Caption = 'Wireframe'
+      OnClick = CheckBox1Click
+      TabOrder = 1
+    end
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 161
+    Height = 435
+    Top = 0
+    Width = 505
+    Camera = GLCamera1
+    FieldOfView = 154.106979370117
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 104
+    top = 16
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 100
+        FocalLength = 50
+        TargetObject = GLDummyCube1
+        Position.Coordinates = {
+          000040C000004040000040400000803F
+        }
+        Direction.Coordinates = {
+          00000000000080BF0000008000000000
+        }
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        object GLLightSource1: TGLLightSource
+          TagFloat = 0
+          ConstAttenuation = 1
+          LinearAttenuation = 0
+          QuadraticAttenuation = 0
+          Specular.Color = {
+            0000803F0000803F0000803F0000803F
+          }
+          SpotCutOff = 180
+          SpotExponent = 0
+        end
+      end
+    end
+    object GLActor1: TGLActor
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F0000803F000000000000803F
+      }
+      Material.FrontProperties.Shininess = 50
+      Material.FrontProperties.Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CurrentFrameDelta = 0
+      Interval = 100
+    end
+  end
+end

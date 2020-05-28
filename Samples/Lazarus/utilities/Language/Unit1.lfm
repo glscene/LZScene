@@ -1,0 +1,83 @@
+object Form1: TForm1
+  Left = 110
+  Height = 303
+  Top = 142
+  Width = 479
+  Caption = 'Language demo'
+  ClientHeight = 283
+  ClientWidth = 479
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '0.9.29'
+  object AboutScene: TMemo
+    Left = 296
+    Height = 274
+    Top = 4
+    Width = 179
+    Lines.Strings = (
+      'AboutGLScene'
+    )
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 274
+    Top = 4
+    Width = 296
+    Caption = 'GroupBox1'
+    ClientHeight = 256
+    ClientWidth = 292
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 102
+      Height = 16
+      Top = 100
+      Width = 35
+      Caption = 'Label1'
+      ParentColor = False
+    end
+    object Button: TButton
+      Left = 22
+      Height = 25
+      Top = 28
+      Width = 75
+      Caption = 'Button'
+      TabOrder = 0
+    end
+    object Panel1: TPanel
+      Left = 142
+      Height = 50
+      Top = 172
+      Width = 128
+      Caption = 'Panel1'
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 168
+    top = 80
+    object mOption: TMenuItem
+      Caption = 'Option'
+      object mLanguage: TMenuItem
+        Caption = 'Language'
+        object mEnglish: TMenuItem
+          Caption = 'English'
+          OnClick = mEnglishClick
+        end
+        object mRussian: TMenuItem
+          Caption = 'Russian'
+          OnClick = mRussianClick
+        end
+        object mDeutsch: TMenuItem
+          Caption = 'Deutsch'
+          OnClick = mDeutschClick
+        end
+      end
+    end
+  end
+  object GLSLanguage1: TGLSLanguage
+    ConvertEncodingList = celCP1251ToUTF8
+    left = 168
+    top = 32
+  end
+end

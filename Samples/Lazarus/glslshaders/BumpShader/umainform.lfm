@@ -1,0 +1,470 @@
+object GLSLTestForm: TGLSLTestForm
+  Left = 261
+  Height = 447
+  Top = 176
+  Width = 641
+  Caption = 'GLSL Bump Shader Demo'
+  ClientHeight = 447
+  ClientWidth = 641
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnMouseWheel = FormMouseWheel
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object Viewer: TGLSceneViewer
+    Left = 0
+    Height = 400
+    Top = 0
+    Width = 641
+    Camera = Camera
+    Buffer.BackgroundColor = clBlack
+    Buffer.AntiAliasing = aaNone
+    Buffer.DepthPrecision = dp24bits
+    Buffer.ColorDepth = cd24bits
+    FieldOfView = 143.991668701172
+    Align = alClient
+    OnMouseDown = ViewerMouseDown
+    OnMouseMove = ViewerMouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 47
+    Top = 400
+    Width = 641
+    Align = alBottom
+    ClientHeight = 47
+    ClientWidth = 641
+    TabOrder = 1
+    object LightMovingCheckBox: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 8
+      Width = 91
+      Caption = 'Light is Moving'
+      Checked = True
+      Color = clBtnFace
+      ParentColor = False
+      State = cbChecked
+      TabOrder = 0
+    end
+    object RollPitchTurnCheckBox: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 24
+      Width = 148
+      Caption = 'Roll / Pitch / Turn Enabled'
+      TabOrder = 1
+    end
+    object ShaderEnabledCheckBox: TCheckBox
+      Left = 176
+      Height = 19
+      Top = 8
+      Width = 96
+      Caption = 'Shader Enabled'
+      Checked = True
+      OnClick = ShaderEnabledCheckBoxClick
+      State = cbChecked
+      TabOrder = 2
+    end
+    object MultiLightShaderCheckBox: TCheckBox
+      Left = 176
+      Height = 19
+      Top = 24
+      Width = 102
+      Caption = 'MultiLight Shader'
+      OnClick = MultiLightShaderCheckBoxClick
+      TabOrder = 3
+    end
+    object UseSpecularTextureCheckBox: TCheckBox
+      Left = 320
+      Height = 19
+      Top = 8
+      Width = 123
+      Caption = 'Use Specular Texture'
+      Checked = True
+      OnClick = UseSpecularTextureCheckBoxClick
+      State = cbChecked
+      TabOrder = 4
+    end
+    object UseNormalTextureCheckBox: TCheckBox
+      Left = 320
+      Height = 19
+      Top = 24
+      Width = 114
+      Caption = 'Use Normal Texture'
+      Checked = True
+      OnClick = UseNormalTextureCheckBoxClick
+      State = cbChecked
+      TabOrder = 5
+    end
+    object ShowUnsupportedSceneObjectsCheckBox: TCheckBox
+      Left = 456
+      Height = 19
+      Top = 8
+      Width = 178
+      Caption = 'Show unsupported scene objects'
+      OnClick = ShowUnsupportedSceneObjectsCheckBoxClick
+      TabOrder = 6
+    end
+  end
+  object Scene: TGLScene
+    ObjectsSorting = osNone
+    left = 24
+    top = 16
+    object GUICube: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLArrowLine1: TGLArrowLine
+        TagFloat = 0
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000000000C8420000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0000A0410000A0410000A04100000000
+        }
+        TurnAngle = 0
+        BottomRadius = 0.100000001490116
+        Height = 1
+        TopRadius = 0.100000001490116
+        TopArrowHeadHeight = 0.5
+        TopArrowHeadRadius = 0.200000002980232
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.200000002980232
+      end
+      object GLXYZGrid1: TGLXYZGrid
+        TagFloat = 0
+        Direction.Coordinates = {
+          00000000000080BF0000000000000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000000000A0C10000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        XSamplingScale.Min = -200
+        XSamplingScale.Max = 200
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 20
+        YSamplingScale.Min = -200
+        YSamplingScale.Max = 200
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 20
+        ZSamplingScale.Min = -200
+        ZSamplingScale.Max = 200
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 20
+        Parts = [gpX, gpZ]
+      end
+    end
+    object LightCube: TGLDummyCube
+      TagFloat = 0
+      Direction.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        000096C3000096C3000096430000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      OnProgress = LightCubeProgress
+      CubeSize = 1
+      object Light: TGLLightSource
+        TagFloat = 0
+        Ambient.Color = {
+          9A99193E9A99193E9A99193E0000803F
+        }
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        LightStyle = lsOmni
+        Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          E6E5653F8180003DCDCC4C3F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F4F3733FEEED6D3F000000000000803F
+        }
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 10
+      end
+    end
+    object LightCube2: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000048430000C8C2000096430000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+      CubeSize = 1
+      object Light2: TGLLightSource
+        TagFloat = 0
+        Ambient.Color = {
+          CDCCCC3DCDCCCC3DCDCCCC3D0000803F
+        }
+        ConstAttenuation = 1
+        Diffuse.Color = {
+          DCD8583FC6BF3F3FDCD8583F0000803F
+        }
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Shining = False
+        Specular.Color = {
+          0000803F0000003F0000003F0000803F
+        }
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLSphere2: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Ambient.Color = {
+          F6F5753FCDCC4C3ECDCC4C3E0000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          EAE9693FCDCC4C3FCDCC4C3F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F0EF6F3F00000000000000000000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 10
+      end
+    end
+    object WorldCube: TGLDummyCube
+      TagFloat = 0
+      ObjectsSorting = osRenderBlendedLast
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Sphere_little: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000001643000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Sphere_big: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000016C3000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Teapot: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          000016C300000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Fighter: TGLActor
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000164300000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+        MaterialLibrary = TrinityMatlib
+      end
+      object GLCube: TGLCube
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        CubeSize = {
+          000096420000964200009642
+        }
+      end
+      object GLDodecahedron: TGLDodecahedron
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          00001643000016C3000000000000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0000C8420000C8420000C84200000000
+        }
+        TurnAngle = 0
+        Visible = False
+      end
+      object GLSphere: TGLSphere
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        Direction.Coordinates = {
+          00000000000080BF0000000000000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000016C300001643000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        Visible = False
+        Radius = 50
+      end
+    end
+    object Camera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 500
+      FocalLength = 65
+      TargetObject = GLXYZGrid1
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        0000000000004842000048430000803F
+      }
+      Direction.Coordinates = {
+        00000000000080BF0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object Cadencer: TGLCadencer
+    Scene = Scene
+    MaxDeltaTime = 0.02
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = CadencerProgress
+    left = 24
+    top = 56
+  end
+  object Timer1: TTimer
+    Interval = 650
+    OnTimer = Timer1Timer
+    left = 24
+    top = 136
+  end
+  object MaterialLibrary: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'Earth'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          E7E6E63EEBEAEA3EEBEAEA3E0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F1F0F03DF1F0F03DF1F0F03D0000803F
+        }
+        Material.FrontProperties.Specular.Color = {
+          8180003E8180003EE1E0E03D0000803F
+        }
+        Material.Texture.ImageAlpha = tiaOpaque
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmReplace
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+        Material.MaterialLibrary = MaterialLibrary
+      end    
+      item
+        Name = 'EarthNormals'
+        Tag = 0
+        Material.Texture.Disabled = False
+      end    
+      item
+        Name = 'EarthHeight'
+        Tag = 0
+      end    
+      item
+        Name = 'EarthGross'
+        Tag = 0
+        Material.Texture.Disabled = False
+      end>
+    left = 24
+    top = 88
+  end
+  object MyBumpShader: TGLSLBumpShader
+    NormalTextureName = 'EarthNormals'
+    SpecularTextureName = 'EarthGross'
+    MaterialLibrary = MaterialLibrary
+    BumpHeight = 0.5
+    BumpSmoothness = 300
+    SpecularPower = 6
+    SpecularSpread = 1.5
+    LightPower = 1
+    left = 56
+    top = 16
+  end
+  object TrinityMatlib: TGLMaterialLibrary
+    left = 56
+    top = 88
+  end
+end

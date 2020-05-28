@@ -1,0 +1,346 @@
+object Form1: TForm1
+  Left = 215
+  Height = 318
+  Top = 104
+  Width = 498
+  BorderWidth = 3
+  Caption = 'Form1'
+  ClientHeight = 318
+  ClientWidth = 498
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnResize = FormResize
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 3
+    Height = 312
+    Top = 3
+    Width = 387
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    FieldOfView = 144.45735168457
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 390
+    Height = 312
+    Top = 3
+    Width = 105
+    Align = alRight
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    BorderWidth = 1
+    ClientHeight = 312
+    ClientWidth = 105
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 24
+      Height = 25
+      Top = 8
+      Width = 60
+      Caption = 'Mirror'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -21
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object CBOpaque: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 56
+      Width = 64
+      Caption = 'Opaque'
+      OnClick = CBOpaqueClick
+      TabOrder = 0
+    end
+    object CBStencil: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 88
+      Width = 83
+      Caption = 'Use Stencil'
+      Checked = True
+      OnClick = CBStencilClick
+      State = cbChecked
+      TabOrder = 1
+    end
+    object CBClearZ: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 120
+      Width = 89
+      Caption = 'ClearZBuffer'
+      Checked = True
+      OnClick = CBClearZClick
+      State = cbChecked
+      TabOrder = 2
+    end
+    object CBPlaneClip: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 152
+      Width = 77
+      Caption = 'Plane Clip'
+      Checked = True
+      OnClick = CBPlaneClipClick
+      State = cbChecked
+      TabOrder = 3
+    end
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 8
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        0000003F0000003F0000003F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000C8420000B4420000A0420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DCNonReflectingStuff: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Cylinder: TGLTorus
+        TagFloat = 0
+        Material.FrontProperties.Ambient.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          000000008180003F000000000000803F
+        }
+        ObjectsSorting = osNone
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000080BF000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          E9DC72BF000000009BE8A13E00000000
+        }
+        Hint = '0'
+        MajorRadius = 4
+        MinorRadius = 0.5
+        Rings = 24
+        Sides = 12
+        object Cylinder2: TGLCylinder
+          TagFloat = 0
+          Material.FrontProperties.Ambient.Color = {
+            0000000000000000000000000000803F
+          }
+          Material.FrontProperties.Diffuse.Color = {
+            000000008180003F000000000000803F
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          BottomRadius = 0.20000000298023
+          Height = 7
+          Slices = 12
+          Stacks = 1
+          TopRadius = 0.20000000298023
+        end
+      end
+    end
+    object ReflectingObjects: TGLDummyCube
+      TagFloat = 0
+      ObjectsSorting = osNone
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object CylinderThroughMirror: TGLCylinder
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000000000C00000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          F404353FF204353F0000000000000000
+        }
+        BottomRadius = 0.20000000298023
+        Height = 3
+        Slices = 12
+        Stacks = 1
+        TopRadius = 0.20000000298023
+      end
+      object Sphere: TGLSphere
+        TagFloat = 0
+        ObjectsSorting = osNone
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000000000803F000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 0.5
+        Slices = 12
+        Stacks = 6
+        Top = 0
+        TopCap = ctCenter
+        object Cylinder1: TGLCylinder
+          TagFloat = 0
+          Direction.Coordinates = {
+            000000000000803F2EBD3BB300000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000CDCCCCBD6666663F0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            000000002EBD3BB3000080BF00000000
+          }
+          BottomRadius = 0.10000000149012
+          Height = 1
+          Slices = 8
+          Stacks = 1
+          TopRadius = 0.10000000149012
+        end
+        object Teapot1: TGLTeapot
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            0000803F0000803F000000000000803F
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            000000000000003F000000000000803F
+          }
+          RollAngle = 0
+          Scale.Coordinates = {
+            00000040000000400000004000000000
+          }
+          TurnAngle = 0
+        end
+      end
+    end
+    object GLMirror: TGLMirror
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        00000000000000000000803F0000803F
+      }
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F0000803F0000803F9A99993E
+      }
+      Material.BlendingMode = bmTransparency
+      ObjectsSorting = osNone
+      Direction.Coordinates = {
+        000000800000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      MirrorObject = ReflectingObjects
+      MirrorOptions = [moUseStencil, moMirrorPlaneClip, moClearZBuffer]
+      Height = 6
+      Width = 6
+      Radius = 1
+      object Cadre: TGLExtrusionSolid
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          00000000000000000000803F0000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Contours = <        
+          item
+            Nodes = <            
+              item
+                X = 3.09999990463257
+                Y = -3.09999990463257
+              end            
+              item
+                X = 3.09999990463257
+                Y = 3.09999990463257
+              end            
+              item
+                X = -3.09999990463257
+                Y = 3.09999990463257
+              end            
+              item
+                X = -3.09999990463257
+                Y = -3.09999990463257
+              end>
+          end        
+          item
+            Nodes = <            
+              item
+                X = 2.90000009536743
+                Y = 2.90000009536743
+              end            
+              item
+                X = -2.90000009536743
+                Y = 2.90000009536743
+              end            
+              item
+                X = -2.90000009536743
+                Y = -2.90000009536743
+              end            
+              item
+                X = 2.90000009536743
+                Y = -2.90000009536743
+              end>
+          end>
+        Parts = [espOutside, espStartPolygon, espStopPolygon]
+        Height = 0.10000000149012
+        MinSmoothAngle = 5
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = ReflectingObjects
+      Position.Coordinates = {
+        0000A0400000C040000010410000803F
+      }
+      left = 192
+      top = 128
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 40
+    top = 8
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0.05
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 40
+  end
+end

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="GLScene_RunTime"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="glslbumpshaderdemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GLSLBumpshaderDemo"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="12" Y="10"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <ComponentName Value="GLSLTestForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="142"/>
+        <CursorPos X="103" Y="147"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../../Source/Base/GLApplicationFileIO.pas"/>
+        <TopLine Value="187"/>
+        <CursorPos Y="206"/>
+        <UsageCount Value="10"/>
+        <Bookmarks Count="1">
+          <Item0 X="64" Y="233" ID="1"/>
+        </Bookmarks>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../../Source/FileFormats/GLFile3DS.pas"/>
+        <TopLine Value="2115"/>
+        <CursorPos Y="2154"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../Source/GLVectorFileObjects.pas"/>
+        <TopLine Value="5846"/>
+        <CursorPos Y="6160"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../Source/GLSLShaders/GLSLBumpShader.pas"/>
+        <TopLine Value="707"/>
+        <CursorPos Y="727"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../Source/GLMaterial.pas"/>
+        <TopLine Value="1372"/>
+        <CursorPos Y="1395"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../Source/GLTexture.pas"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../../../lcl/include/picture.inc"/>
+        <TopLine Value="706"/>
+        <CursorPos Y="730"/>
+        <SyntaxHighlighter Value="FreePascal"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../Source/FileFormats/DDSImage.pas"/>
+        <TopLine Value="106"/>
+        <CursorPos Y="133"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../Source/Base/OpenGL1x.pas"/>
+        <TopLine Value="6250"/>
+        <CursorPos Y="6271"/>
+        <SyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../../../../../../lazarus/lcl/lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <TopLine Value="5032"/>
+        <CursorPos X="14" Y="5041"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../Source/Experimental/GL3xMaterial.pas"/>
+        <TopLine Value="2059"/>
+        <CursorPos Y="2078"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../../../../Source/GLTexture.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1551"/>
+        <CursorPos X="71" Y="1564"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="149" TopLine="124"/>
+      </Position1>
+      <Position2>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="149" TopLine="124"/>
+      </Position2>
+      <Position3>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="149" TopLine="124"/>
+      </Position3>
+      <Position4>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="151" Column="49" TopLine="124"/>
+      </Position4>
+      <Position5>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="25" Column="9" TopLine="4"/>
+      </Position5>
+      <Position6>
+        <Filename Value="glslbumpshaderdemo.lpr"/>
+        <Caret Line="8" Column="19"/>
+      </Position6>
+      <Position7>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="104" Column="23" TopLine="90"/>
+      </Position7>
+      <Position8>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="106" TopLine="85"/>
+      </Position8>
+      <Position9>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="104" Column="14" TopLine="90"/>
+      </Position9>
+      <Position10>
+        <Filename Value="glslbumpshaderdemo.lpr"/>
+        <Caret Line="8" Column="19"/>
+      </Position10>
+      <Position11>
+        <Filename Value="glslbumpshaderdemo.lpr"/>
+        <Caret Line="10" Column="12"/>
+      </Position11>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

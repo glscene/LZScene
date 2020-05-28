@@ -1,0 +1,134 @@
+object Form1: TForm1
+  Left = 200
+  Height = 193
+  Top = 106
+  Width = 283
+  BorderStyle = bsDialog
+  Caption = 'Form1'
+  ClientHeight = 193
+  ClientWidth = 283
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.31'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 8
+    Height = 177
+    Top = 8
+    Width = 265
+    Camera = GLCamera1
+    FieldOfView = 121.069557189941
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 48
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000000000803F000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000048420000C842000048420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Sphere: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000040000080BE000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      OnProgress = SphereProgress
+      Radius = 1
+    end
+    object Cylinder: TGLCylinder
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000C0000080BE000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      OnProgress = SphereProgress
+      BottomRadius = 1
+      Height = 1.5
+      TopRadius = 1
+    end
+    object Torus: TGLTorus
+      TagFloat = 0
+      Direction.Coordinates = {
+        F604B5BEF304353F70C41C3F00000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000C0CDCC0C40000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        F604B53EF304353F70C41CBF00000000
+      }
+      OnProgress = SphereProgress
+      MajorRadius = 0.69999998807907
+      MinorRadius = 0.20000000298023
+      StartAngle = 0
+      StopAngle = 360
+      Parts = [toSides, toStartDisk, toStopDisk]
+    end
+    object Cone: TGLCone
+      TagFloat = 0
+      Direction.Coordinates = {
+        00000000F28384BEEA46773F00000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000004000002040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000EA46773FF283843E00000000
+      }
+      OnProgress = SphereProgress
+      BottomRadius = 1
+      Height = 1.5
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000000000008040000020410000803F
+      }
+    end
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    left = 16
+    top = 16
+  end
+  object TIPickTimer: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = TIPickTimerTimer
+    left = 128
+    top = 16
+  end
+end

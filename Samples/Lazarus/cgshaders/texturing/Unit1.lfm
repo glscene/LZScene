@@ -1,0 +1,803 @@
+object Form1: TForm1
+  Left = 205
+  Height = 439
+  Top = 112
+  Width = 662
+  Caption = 'Cg Shader Demo'
+  ClientHeight = 439
+  ClientWidth = 662
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnMouseWheel = FormMouseWheel
+  LCLVersion = '0.9.29'
+  object Splitter1: TSplitter
+    Left = 313
+    Height = 439
+    Top = 0
+    Width = 5
+    Color = clBtnShadow
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 439
+    Top = 0
+    Width = 313
+    Align = alLeft
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 439
+    ClientWidth = 313
+    TabOrder = 0
+    object PageControl1: TPageControl
+      Left = 2
+      Height = 435
+      Top = 2
+      Width = 309
+      ActivePage = TabSheet1
+      Align = alClient
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentFont = False
+      TabIndex = 0
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Vertex Program'
+        ClientHeight = 409
+        ClientWidth = 301
+        object Splitter3: TSplitter
+          Cursor = crVSplit
+          Left = 0
+          Height = 3
+          Top = 316
+          Width = 301
+          Align = alBottom
+          Color = clBtnShadow
+          ParentColor = False
+          ResizeAnchor = akBottom
+        end
+        object Panel2: TPanel
+          Left = 0
+          Height = 25
+          Top = 0
+          Width = 301
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 25
+          ClientWidth = 301
+          TabOrder = 0
+          object LabelVertProfile: TLabel
+            Left = 88
+            Height = 14
+            Top = 5
+            Width = 64
+            Caption = 'Using profile:'
+            ParentColor = False
+          end
+          object CBVertexProgram: TCheckBox
+            Left = 6
+            Height = 19
+            Top = 4
+            Width = 58
+            Caption = 'Enabled'
+            Checked = True
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            OnClick = CBVertexProgramClick
+            ParentFont = False
+            State = cbChecked
+            TabOrder = 0
+          end
+        end
+        object Panel11: TPanel
+          Left = 0
+          Height = 291
+          Top = 25
+          Width = 301
+          Align = alClient
+          Caption = 'Panel6'
+          ClientHeight = 291
+          ClientWidth = 301
+          TabOrder = 1
+          object Panel12: TPanel
+            Left = 1
+            Height = 16
+            Top = 1
+            Width = 299
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Shader Code'
+            Color = clBtnHighlight
+            ParentColor = False
+            TabOrder = 0
+          end
+          object MemoVertCode: TMemo
+            Left = 1
+            Height = 248
+            Top = 17
+            Width = 299
+            Align = alClient
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Lucida Console'
+            OnChange = MemoVertCodeChange
+            ParentFont = False
+            ScrollBars = ssBoth
+            TabOrder = 1
+            WordWrap = False
+          end
+          object Panel13: TPanel
+            Left = 1
+            Height = 25
+            Top = 265
+            Width = 299
+            Align = alBottom
+            BevelOuter = bvNone
+            ClientHeight = 25
+            ClientWidth = 299
+            TabOrder = 2
+            object ButtonApplyVP: TButton
+              Left = 224
+              Height = 20
+              Top = 2
+              Width = 67
+              Anchors = [akTop, akRight]
+              Caption = 'Apply'
+              Enabled = False
+              OnClick = ButtonApplyVPClick
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel5: TPanel
+          Left = 0
+          Height = 90
+          Top = 319
+          Width = 301
+          Align = alBottom
+          ClientHeight = 90
+          ClientWidth = 301
+          TabOrder = 2
+          object Label2: TLabel
+            Left = 227
+            Height = 14
+            Top = 5
+            Width = 31
+            Anchors = [akTop, akRight]
+            Caption = 'Show:'
+            ParentColor = False
+          end
+          object Memo1: TMemo
+            Left = 1
+            Height = 88
+            Top = 1
+            Width = 216
+            Align = alLeft
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            Color = clBtnFace
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -9
+            Font.Name = 'Lucida Console'
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssBoth
+            TabOrder = 0
+            WordWrap = False
+          end
+          object Button1: TButton
+            Left = 226
+            Height = 18
+            Top = 21
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Params'
+            OnClick = Button1Click
+            TabOrder = 1
+          end
+          object Button4: TButton
+            Left = 226
+            Height = 18
+            Top = 42
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Asm'
+            OnClick = Button4Click
+            TabOrder = 2
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Fragment Program'
+        ClientHeight = 0
+        ClientWidth = 0
+        ImageIndex = 1
+        object Splitter2: TSplitter
+          Cursor = crVSplit
+          Left = 0
+          Height = 3
+          Top = 287
+          Width = 301
+          Align = alBottom
+          Color = clBtnShadow
+          ParentColor = False
+          ResizeAnchor = akBottom
+        end
+        object Panel4: TPanel
+          Left = 0
+          Height = 25
+          Top = 0
+          Width = 301
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 25
+          ClientWidth = 301
+          TabOrder = 0
+          object LabelFragProfile: TLabel
+            Left = 88
+            Height = 13
+            Top = 5
+            Width = 63
+            Caption = 'Using profile:'
+            ParentColor = False
+          end
+          object CheckBox1: TCheckBox
+            Left = 6
+            Height = 17
+            Top = 4
+            Width = 67
+            Caption = 'Enabled'
+            Checked = True
+            OnClick = CBFragmentProgramClick
+            State = cbChecked
+            TabOrder = 0
+          end
+        end
+        object Panel6: TPanel
+          Left = 0
+          Height = 262
+          Top = 25
+          Width = 301
+          Align = alClient
+          Caption = 'Panel6'
+          ClientHeight = 262
+          ClientWidth = 301
+          TabOrder = 1
+          object Panel7: TPanel
+            Left = 1
+            Height = 16
+            Top = 1
+            Width = 299
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Shader Code'
+            Color = clBtnHighlight
+            ParentColor = False
+            TabOrder = 0
+          end
+          object MemoFragCode: TMemo
+            Left = 1
+            Height = 219
+            Top = 17
+            Width = 299
+            Align = alClient
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Lucida Console'
+            OnChange = MemoFragCodeChange
+            ParentFont = False
+            ScrollBars = ssBoth
+            TabOrder = 1
+            WordWrap = False
+          end
+          object Panel3: TPanel
+            Left = 1
+            Height = 25
+            Top = 236
+            Width = 299
+            Align = alBottom
+            BevelOuter = bvNone
+            ClientHeight = 25
+            ClientWidth = 299
+            TabOrder = 2
+            object ButtonApplyFP: TButton
+              Left = 224
+              Height = 20
+              Top = 2
+              Width = 67
+              Anchors = [akTop, akRight]
+              Caption = 'Apply'
+              Enabled = False
+              OnClick = ButtonApplyFPClick
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel8: TPanel
+          Left = 0
+          Height = 90
+          Top = 279
+          Width = 301
+          Align = alBottom
+          ClientHeight = 90
+          ClientWidth = 301
+          TabOrder = 2
+          object Label1: TLabel
+            Left = 228
+            Height = 13
+            Top = 5
+            Width = 30
+            Anchors = [akTop, akRight]
+            Caption = 'Show:'
+            ParentColor = False
+          end
+          object Memo3: TMemo
+            Left = 1
+            Height = 88
+            Top = 1
+            Width = 216
+            Align = alLeft
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            Color = clBtnFace
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Courier New'
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssBoth
+            TabOrder = 0
+            WordWrap = False
+          end
+          object Button2: TButton
+            Left = 226
+            Height = 18
+            Top = 21
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Params'
+            OnClick = Button2Click
+            TabOrder = 1
+          end
+          object Button3: TButton
+            Left = 226
+            Height = 18
+            Top = 42
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Asm'
+            OnClick = Button3Click
+            TabOrder = 2
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'Controls'
+        ClientHeight = 0
+        ClientWidth = 0
+        ImageIndex = 2
+        object Label16: TLabel
+          Left = 8
+          Height = 13
+          Top = 272
+          Width = 282
+          Caption = 'Note: NV2x class hardware may not honor negative values'
+          ParentColor = False
+        end
+        object GroupBox1: TGroupBox
+          Left = 8
+          Height = 105
+          Top = 40
+          Width = 281
+          Anchors = [akTop, akLeft, akRight]
+          Caption = ' TexCoord. Shifts '
+          ClientHeight = 87
+          ClientWidth = 277
+          TabOrder = 0
+          object Label18: TLabel
+            Left = 64
+            Height = 13
+            Top = 86
+            Width = 193
+            Alignment = taCenter
+            Anchors = [akTop, akLeft, akRight]
+            AutoSize = False
+            Caption = '0'
+            ParentColor = False
+          end
+          object Label3: TLabel
+            Left = 16
+            Height = 13
+            Top = 24
+            Width = 27
+            Caption = 'Tex 0'
+            ParentColor = False
+          end
+          object Label4: TLabel
+            Left = 16
+            Height = 13
+            Top = 40
+            Width = 27
+            Caption = 'Tex 1'
+            ParentColor = False
+          end
+          object Label5: TLabel
+            Left = 16
+            Height = 13
+            Top = 56
+            Width = 27
+            Caption = 'Tex 2'
+            ParentColor = False
+          end
+          object Label6: TLabel
+            Left = 16
+            Height = 13
+            Top = 72
+            Width = 27
+            Caption = 'Tex 3'
+            ParentColor = False
+          end
+          object Label11: TLabel
+            Left = 32
+            Height = 13
+            Top = 24
+            Width = 3
+            ParentColor = False
+          end
+          object Label12: TLabel
+            Left = 56
+            Height = 13
+            Top = 86
+            Width = 10
+            Caption = '-1'
+            ParentColor = False
+          end
+          object Label14: TLabel
+            Left = 252
+            Height = 13
+            Top = 86
+            Width = 6
+            Anchors = [akTop, akRight]
+            Caption = '1'
+            ParentColor = False
+          end
+          object TrackBar1: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 24
+            Width = 206
+            Max = 100
+            Position = 50
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 0
+          end
+          object TrackBar2: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 40
+            Width = 206
+            Max = 100
+            Position = 50
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 1
+          end
+          object TrackBar3: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 56
+            Width = 206
+            Max = 100
+            Position = 50
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 2
+          end
+          object TrackBar4: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 72
+            Width = 206
+            Max = 100
+            Position = 50
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 3
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 8
+          Height = 105
+          Top = 160
+          Width = 281
+          Anchors = [akTop, akLeft, akRight]
+          Caption = ' Blending Weights '
+          ClientHeight = 87
+          ClientWidth = 277
+          TabOrder = 1
+          object Label17: TLabel
+            Left = 64
+            Height = 13
+            Top = 86
+            Width = 193
+            Alignment = taCenter
+            Anchors = [akTop, akLeft, akRight]
+            AutoSize = False
+            Caption = '0'
+            ParentColor = False
+          end
+          object Label7: TLabel
+            Left = 16
+            Height = 13
+            Top = 24
+            Width = 27
+            Caption = 'Tex 0'
+            ParentColor = False
+          end
+          object Label8: TLabel
+            Left = 16
+            Height = 13
+            Top = 40
+            Width = 27
+            Caption = 'Tex 1'
+            ParentColor = False
+          end
+          object Label9: TLabel
+            Left = 16
+            Height = 13
+            Top = 56
+            Width = 27
+            Caption = 'Tex 2'
+            ParentColor = False
+          end
+          object Label10: TLabel
+            Left = 16
+            Height = 13
+            Top = 72
+            Width = 27
+            Caption = 'Tex 3'
+            ParentColor = False
+          end
+          object Label13: TLabel
+            Left = 252
+            Height = 13
+            Top = 86
+            Width = 6
+            Anchors = [akTop, akRight]
+            Caption = '1'
+            ParentColor = False
+          end
+          object Label15: TLabel
+            Left = 56
+            Height = 13
+            Top = 86
+            Width = 10
+            Caption = '-1'
+            ParentColor = False
+          end
+          object TrackBar5: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 24
+            Width = 206
+            Max = 100
+            Position = 75
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 0
+          end
+          object TrackBar6: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 40
+            Width = 206
+            Max = 100
+            Position = 75
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 1
+          end
+          object TrackBar7: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 56
+            Width = 206
+            Max = 100
+            Position = 75
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 2
+          end
+          object TrackBar8: TTrackBar
+            Left = 56
+            Height = 15
+            Top = 72
+            Width = 206
+            Max = 100
+            Position = 65
+            TickMarks = tmBoth
+            TickStyle = tsNone
+            Anchors = [akTop, akLeft, akRight]
+            TabOrder = 3
+          end
+        end
+        object CheckBox2: TCheckBox
+          Left = 14
+          Height = 17
+          Top = 12
+          Width = 131
+          Caption = 'CgShader Enabled'
+          Checked = True
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          OnClick = CheckBox2Click
+          ParentFont = False
+          State = cbChecked
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  object Panel9: TPanel
+    Left = 318
+    Height = 439
+    Top = 0
+    Width = 344
+    Align = alClient
+    ClientHeight = 439
+    ClientWidth = 344
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object Panel10: TPanel
+      Left = 1
+      Height = 48
+      Top = 1
+      Width = 342
+      Align = alTop
+      Caption = 'Cg Multi-Texturing'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -19
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object GLSceneViewer1: TGLSceneViewer
+      Left = 1
+      Height = 389
+      Top = 49
+      Width = 342
+      Camera = GLCamera1
+      Buffer.Lighting = False
+      Buffer.AntiAliasing = aa4xHQ
+      FieldOfView = 147.402404785156
+      Align = alClient
+      OnMouseDown = GLSceneViewer1MouseDown
+      OnMouseMove = GLSceneViewer1MouseMove
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 352
+    top = 56
+    object GLXYZGrid1: TGLXYZGrid
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000006F12033B000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      LineColor.Color = {
+        938C0C3E938E0E3F938C0C3E0000803F
+      }
+      XSamplingScale.Min = -2
+      XSamplingScale.Max = 2
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 0.10000000149012
+      YSamplingScale.Min = 0
+      YSamplingScale.Max = 0
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 0.10000000149012
+      ZSamplingScale.Min = -2
+      ZSamplingScale.Max = 2
+      ZSamplingScale.Origin = 0
+      ZSamplingScale.Step = 0.10000000149012
+      Parts = [gpX, gpZ]
+    end
+    object GLPlane1: TGLPlane
+      TagFloat = 0
+      Material.MaterialLibrary = GLMatLib
+      Material.LibMaterialName = 'LibMaterial'
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 90
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      Height = 1
+      Width = 1
+      XOffset = 0
+      YOffset = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLPlane1
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        000000000000C03F0000803F0000803F
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 352
+    top = 88
+  end
+  object CgShader1: TCgShader
+    VertexProgram.OnApply = CgShader1ApplyVP
+    FragmentProgram.OnApply = CgShader1ApplyFP
+    FragmentProgram.OnUnApply = CgShader1UnApplyFP
+    OnApplyVP = CgShader1ApplyVP
+    OnApplyFP = CgShader1ApplyFP
+    OnUnApplyFP = CgShader1UnApplyFP
+    OnInitialize = CgShader1Initialize
+    left = 320
+    top = 56
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 388
+    top = 56
+  end
+  object GLMatLib: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Material.Texture.Disabled = False
+        Tag = 0
+        Shader = CgShader1
+      end    
+      item
+        Name = 'LibMaterial1'
+        Material.Texture.Disabled = False
+        Tag = 0
+      end    
+      item
+        Name = 'LibMaterial2'
+        Tag = 0
+      end    
+      item
+        Name = 'LibMaterial3'
+        Tag = 0
+      end>
+    TexturePaths = '..\..\media\'
+    left = 321
+    top = 88
+  end
+end

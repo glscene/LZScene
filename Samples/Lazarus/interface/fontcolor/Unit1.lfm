@@ -1,0 +1,188 @@
+object Form1: TForm1
+  Left = 219
+  Height = 299
+  Top = 107
+  Width = 370
+  Caption = 'Bitmap Text with Color Properties'
+  ClientHeight = 299
+  ClientWidth = 370
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 299
+    Top = 0
+    Width = 370
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 143.015167236328
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 72
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000004000000040000000400000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Teapot1: TGLTeapot
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        9D9C1C3FB3B2323F0000803F0000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object HUDText1: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000034430000F042000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = BitmapFont
+      Text = 'FADING OUT'
+      Rotation = 0
+      Alignment = taCenter
+      ModulateColor.Color = {
+        0000803F0000803F0000803F3333333F
+      }
+    end
+    object HUDText2: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000034430000DC42000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = BitmapFont
+      Text = 'THE END'
+      Rotation = 0
+      Alignment = taCenter
+      ModulateColor.Color = {
+        0000803FF8FEFE3E000000003333333F
+      }
+    end
+    object HUDText3: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000034430000A041000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = BitmapFont
+      Text = 'RED RED'
+      Rotation = 0
+      Alignment = taCenter
+      ModulateColor.Color = {
+        0000803F00000000000000000000803F
+      }
+    end
+    object HUDText4: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000344300002043000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = BitmapFont
+      Text = 'TRANSPARENT'
+      Rotation = 0
+      Alignment = taCenter
+      ModulateColor.Color = {
+        9A99593F9A99593FCDCCCC3DCDCCCC3E
+      }
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Teapot1
+      Position.Coordinates = {
+        0000803F0000003F0000803F0000803F
+      }
+    end
+  end
+  object BitmapFont: TGLBitmapFont
+    GlyphsIntervalX = 7
+    GlyphsIntervalY = 0
+    Ranges = <    
+      item
+        StartASCII = 'A'
+        StopASCII = 'H'
+        StartGlyphIdx = 0
+      end    
+      item
+        StartASCII = 'I'
+        StopASCII = 'P'
+        StartGlyphIdx = 8
+      end    
+      item
+        StartASCII = 'Q'
+        StopASCII = 'X'
+        StartGlyphIdx = 16
+      end    
+      item
+        StartASCII = '!'
+        StopASCII = '!'
+        StartGlyphIdx = 27
+      end>
+    CharWidth = 27
+    CharHeight = 32
+    HSpace = 0
+    left = 8
+    top = 104
+  end
+  object GLTimeEventsMGR1: TGLTimeEventsMGR
+    Cadencer = GLCadencer1
+    Events = <    
+      item
+        Name = 'Event0'
+        StartTime = 1.5
+        EndTime = 3
+        Period = 0
+        EventType = etContinuous
+        OnEvent = GLTimeEventsMGR1Events0Event
+      end    
+      item
+        Name = 'Event1'
+        StartTime = 0
+        EndTime = 0
+        Period = 0
+        OnEvent = GLTimeEventsMGR1Events1Event
+      end    
+      item
+        Name = 'Event2'
+        StartTime = 2
+        EndTime = 10
+        Period = 0
+        EventType = etContinuous
+        OnEvent = GLTimeEventsMGR1Events2Event
+      end>
+    left = 8
+    top = 8
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    left = 8
+    top = 40
+  end
+end

@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 159
+  Height = 429
+  Top = 120
+  Width = 611
+  Caption = 'Form1'
+  ClientHeight = 429
+  ClientWidth = 611
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 429
+    Top = 0
+    Width = 611
+    Camera = GLCamera1
+    Buffer.FogEnvironment.FogColor.Color = {
+      0000803F0000803F0000803F0000803F
+    }
+    Buffer.FogEnvironment.FogStart = 400
+    Buffer.FogEnvironment.FogEnd = 1200
+    Buffer.FogEnvironment.FogDistance = fdEyeRadial
+    Buffer.BackgroundColor = clBlack
+    Buffer.FogEnable = True
+    Buffer.Lighting = False
+    FieldOfView = 153.757293701171
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 56
+    top = 56
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000041000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 1200
+        FocalLength = 50
+        TargetObject = DummyCube1
+        Position.Coordinates = {
+          0000A040000020410000C8410000803F
+        }
+        left = 264
+        top = 160
+      end
+    end
+    object TerrainRenderer1: TGLTerrainRenderer
+      TagFloat = 0
+      Material.FrontProperties.Emission.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        00008040000080400000003F00000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      HeightDataSource = GLCustomHDS
+      TileSize = 32
+      TilesPerTexture = 1
+      QualityDistance = 50
+      CLODPrecision = 20
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 56
+    top = 96
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 16
+    top = 16
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 16
+    top = 56
+  end
+  object GLCustomHDS: TGLCustomHDS
+    MaxPoolSize = 0
+    OnStartPreparingData = GLCustomHDSStartPreparingData
+    left = 56
+    top = 16
+  end
+end

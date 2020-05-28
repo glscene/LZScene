@@ -1,0 +1,367 @@
+object PostShaderDemoForm: TPostShaderDemoForm
+  Left = 261
+  Height = 445
+  Top = 176
+  Width = 623
+  Caption = 'Post Shader demo'
+  ClientHeight = 445
+  ClientWidth = 623
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  WindowState = wsMaximized
+  object Viewer: TGLSceneViewer
+    Left = 0
+    Height = 416
+    Top = 0
+    Width = 464
+    Camera = Camera
+    Buffer.BackgroundColor = clBackground
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    Buffer.AntiAliasing = aaNone
+    Buffer.DepthPrecision = dp24bits
+    Buffer.ColorDepth = cd24bits
+    FieldOfView = 145.291946411133
+    Align = alClient
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 29
+    Top = 416
+    Width = 623
+    Align = alBottom
+    ClientHeight = 29
+    ClientWidth = 623
+    TabOrder = 1
+    object LightMovingCheckBox: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 8
+      Width = 91
+      Caption = 'Light is Moving'
+      Checked = True
+      Color = clBtnFace
+      ParentColor = False
+      State = cbChecked
+      TabOrder = 0
+    end
+    object TurnPitchrollCheckBox: TCheckBox
+      Left = 112
+      Height = 19
+      Top = 8
+      Width = 132
+      Caption = 'Turn-Pitch-Roll Enabled'
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 464
+    Height = 416
+    Top = 0
+    Width = 159
+    Align = alRight
+    ClientHeight = 416
+    ClientWidth = 159
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 16
+      Height = 13
+      Top = 8
+      Width = 42
+      Caption = 'Shaders:'
+      ParentColor = False
+    end
+    object ShaderCheckListBox: TCheckListBox
+      Left = 8
+      Height = 145
+      Top = 24
+      Width = 145
+      ItemHeight = 0
+      OnClickCheck = ShaderCheckListBoxClick
+      TabOrder = 0
+    end
+    object BigBlurThicknessCheckbox: TCheckBox
+      Left = 6
+      Height = 19
+      Top = 376
+      Width = 107
+      Caption = 'Big blur Thickness'
+      Checked = True
+      OnClick = BigBlurThicknessCheckboxClick
+      State = cbChecked
+      TabOrder = 1
+    end
+  end
+  object Scene: TGLScene
+    ObjectsSorting = osNone
+    left = 24
+    top = 16
+    object GUICube: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLArrowLine1: TGLArrowLine
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000000000C8420000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0000A0410000A0410000A04100000000
+        }
+        TurnAngle = 0
+        BottomRadius = 0.100000001490116
+        Height = 1
+        TopRadius = 0.100000001490116
+        TopArrowHeadHeight = 0.5
+        TopArrowHeadRadius = 0.200000002980232
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.200000002980232
+      end
+      object GLXYZGrid1: TGLXYZGrid
+        TagFloat = 0
+        Direction.Coordinates = {
+          00000000000080BF0000000000000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000000000A0C10000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        XSamplingScale.Min = -200
+        XSamplingScale.Max = 200
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 20
+        YSamplingScale.Min = -200
+        YSamplingScale.Max = 200
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 20
+        ZSamplingScale.Min = -200
+        ZSamplingScale.Max = 200
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 20
+        Parts = [gpX, gpZ]
+      end
+    end
+    object LightCube: TGLDummyCube
+      TagFloat = 0
+      Direction.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        000096C300000000000096430000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      OnProgress = LightCubeProgress
+      CubeSize = 1
+      object Light: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        LightStyle = lsOmni
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          E6E5653F8180003DCDCC4C3F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F4F3733FEEED6D3F000000000000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 10
+      end
+    end
+    object WorldCube: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Fighter: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Fighter'
+        PitchAngle = 0
+        Position.Coordinates = {
+          00001643000000000000A0410000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000080BF0000008000000000
+        }
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Teapot: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Fighter'
+        PitchAngle = 0
+        Position.Coordinates = {
+          000016C300000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Sphere_big: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000016C3000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Sphere_little: TGLActor
+        TagFloat = 0
+        Material.MaterialLibrary = MaterialLibrary
+        Material.LibMaterialName = 'Earth'
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000001643000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        Interval = 100
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+    end
+    object PostShaderHolder: TGLPostShaderHolder
+      TagFloat = 0
+      TempTextureTarget = ttTextureRect
+      Shaders = <>
+    end
+    object Camera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 500
+      FocalLength = 65
+      TargetObject = GLXYZGrid1
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        000048C20000164300007A430000803F
+      }
+      Direction.Coordinates = {
+        00000000000080BF0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object Cadencer: TGLCadencer
+    Scene = Scene
+    MaxDeltaTime = 0.02
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = CadencerProgress
+    left = 24
+    top = 56
+  end
+  object MaterialLibrary: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'Noise'
+        Tag = 0
+        Material.Texture.Disabled = False
+      end    
+      item
+        Name = 'Fighter'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          BFBEBE3EBBBABA3EBBBABA3E0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          B1B0B03DB1B0B03DB1B0B03D0000803F
+        }
+        Material.FrontProperties.Specular.Color = {
+          8988083E8180003E8988083E0000803F
+        }
+        Material.BlendingMode = bmTransparency
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+      end    
+      item
+        Name = 'Earth'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          E7E6E63EEBEAEA3EEBEAEA3E0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F1F0F03DF1F0F03DF1F0F03D0000803F
+        }
+        Material.FrontProperties.Specular.Color = {
+          8180003E8180003EE1E0E03D0000803F
+        }
+        Material.BlendingMode = bmTransparency
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+      end    
+      item
+        Name = 'Snow'
+        Tag = 0
+        Material.Texture.Disabled = False
+      end    
+      item
+        Name = 'FireGrade'
+        Tag = 0
+        Material.Texture.Disabled = False
+      end>
+    left = 24
+    top = 88
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = Viewer
+    FormCaption = 'Post Shader Demo - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 24
+    top = 120
+  end
+end

@@ -1,0 +1,21 @@
+object Form2: TForm2
+  Left = 324
+  Height = 293
+  Top = 160
+  Width = 396
+  AutoSize = True
+  BorderStyle = bsSizeToolWin
+  Caption = 'Font Texture'
+  ClientHeight = 293
+  ClientWidth = 396
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object Image1: TImage
+    Left = 0
+    Height = 264
+    Top = 0
+    Width = 388
+    AutoSize = True
+  end
+end

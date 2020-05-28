@@ -1,0 +1,252 @@
+object Form1: TForm1
+  Left = 170
+  Height = 266
+  Top = 79
+  Width = 521
+  AutoSize = True
+  Caption = 'Form1'
+  ClientHeight = 266
+  ClientWidth = 521
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object Bevel2: TBevel
+    Left = 296
+    Height = 209
+    Top = 57
+    Width = 225
+    Align = alRight
+  end
+  object Bevel1: TBevel
+    Left = 0
+    Height = 209
+    Top = 57
+    Width = 225
+    Align = alLeft
+  end
+  object PaintBox1: TPaintBox
+    Left = 304
+    Height = 193
+    Top = 64
+    Width = 209
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 8
+    Height = 193
+    Top = 64
+    Width = 209
+    Camera = GLCamera1
+    FieldOfView = 125.219512939453
+    TabOrder = 0
+  end
+  object BUCast: TButton
+    Left = 232
+    Height = 25
+    Top = 232
+    Width = 57
+    Caption = 'Cast!'
+    OnClick = BUCastClick
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 57
+    Top = 0
+    Width = 521
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 57
+    ClientWidth = 521
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 0
+      Height = 22
+      Top = 0
+      Width = 521
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'RayCasting demo/testbed'
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 14
+      Top = 32
+      Width = 100
+      Caption = 'OpenGL scene view'
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 296
+      Height = 14
+      Top = 32
+      Width = 136
+      Caption = 'RayCasted/RayTraced view'
+      Font.Height = -11
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 64
+    object Sphere1: TGLSphere
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        8D8C0C3F8D8C0C3F0000803F0000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 0.200000002980232
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      Direction.Coordinates = {
+        00000000000080330000803F00000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        EE8384BEEA46773FEA4677B300000000
+      }
+      CubeSize = 1
+      object Torus1: TGLTorus
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F00000000000000000000803F
+        }
+        Direction.Coordinates = {
+          5D1C7C3F02004032CED0313E00000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000BF00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00C02FB20000803F0000403200000000
+        }
+        Visible = False
+        MajorRadius = 0.400000005960464
+        MinorRadius = 0.100000001490116
+        StartAngle = 0
+        StopAngle = 360
+        Parts = [toSides, toStartDisk, toStopDisk]
+      end
+      object Plane1: TGLPlane
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F000000000000803F
+        }
+        Material.FaceCulling = fcNoCull
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Height = 0.699999988079071
+        Width = 0.300000011920929
+        XOffset = 0
+        YOffset = 0
+      end
+      object Cylinder1: TGLCylinder
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F8180003F0000803F
+        }
+        Direction.Coordinates = {
+          00000000010000BFD6B35D3F00000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000003F00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000D6B35D3F0100003F00000000
+        }
+        BottomRadius = 0.100000001490116
+        Height = 0.600000023841858
+        TopRadius = 0.100000001490116
+        object GLAnnulus1: TGLAnnulus
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            00000000000000000000803F0000803F
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          BottomRadius = 0.230000004172325
+          Height = 0.200000002980232
+          BottomInnerRadius = 0.180000007152557
+          TopInnerRadius = 0.180000007152557
+          TopRadius = 0.230000004172325
+        end
+      end
+      object GLCube1: TGLCube
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F00000000000000000000803F
+        }
+        Direction.Coordinates = {
+          00000000B28F70BF431DAF3E00000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000BF00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000431DAF3EB28F703F00000000
+        }
+        CubeSize = {
+          CDCC4C3ECDCCCC3D9A99993E
+        }
+      end
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000204100001041000070410000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      Position.Coordinates = {
+        0000000000000000000040400000803F
+      }
+      left = 256
+      top = 160
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 56
+    top = 64
+  end
+end

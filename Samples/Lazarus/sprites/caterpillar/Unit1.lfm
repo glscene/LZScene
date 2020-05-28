@@ -1,0 +1,122 @@
+object Form1: TForm1
+  Left = 234
+  Height = 246
+  Top = 106
+  Width = 352
+  BorderWidth = 5
+  Caption = 'Form1'
+  ClientHeight = 246
+  ClientWidth = 352
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 5
+    Height = 236
+    Top = 5
+    Width = 342
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.DepthTest = False
+    FieldOfView = 134.072463989258
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osRenderFarthestFirst
+    left = 8
+    top = 24
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      ObjectsSorting = osNone
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Sprite2: TGLSprite
+        TagFloat = 0
+        Material.MaterialLibrary = GLMaterialLibrary1
+        Material.LibMaterialName = 'BlueBall'
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000A04000000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Width = 2
+        Height = 2
+        Rotation = 0
+      end
+    end
+    object Sprite1: TGLSprite
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        0000000000000000000000000000803F
+      }
+      Material.FrontProperties.Diffuse.Color = {
+        0000000000000000000000000000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        0000803F0000803F000000000000803F
+      }
+      Material.BlendingMode = bmAdditive
+      Material.Texture.MinFilter = miLinear
+      Material.Texture.TextureMode = tmModulate
+      Material.Texture.Disabled = False
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Width = 4
+      Height = 4
+      Rotation = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        000020410000A040000020410000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'BlueBall'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          0000000000000000000000000000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          F3F2F23EF3F2F23E0000803F0000803F
+        }
+        Material.BlendingMode = bmAdditive
+        Material.Texture.MinFilter = miLinear
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Disabled = False
+      end>
+    left = 8
+    top = 64
+  end
+  object Timer1: TTimer
+    Interval = 4000
+    OnTimer = Timer1Timer
+    left = 8
+    top = 104
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 48
+    top = 24
+  end
+end

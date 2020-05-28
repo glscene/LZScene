@@ -1,0 +1,72 @@
+object Form1: TForm1
+  Left = 159
+  Height = 161
+  Top = 183
+  Width = 289
+  Caption = 'Form1'
+  ClientHeight = 161
+  ClientWidth = 289
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 13
+    Top = 32
+    Width = 265
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Type key to map to this panel...'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 13
+    Top = 8
+    Width = 265
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Click a panel to choose the key'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object PAUp: TPanel
+    Left = 88
+    Height = 25
+    Top = 64
+    Width = 105
+    Caption = 'MBUTTON'
+    TabOrder = 0
+    OnClick = PAUpClick
+  end
+  object PALeft: TPanel
+    Left = 8
+    Height = 25
+    Top = 96
+    Width = 97
+    Caption = 'LBUTTON'
+    TabOrder = 1
+    OnClick = PAUpClick
+  end
+  object PARight: TPanel
+    Left = 176
+    Height = 25
+    Top = 96
+    Width = 97
+    Caption = 'RBUTTON'
+    TabOrder = 2
+    OnClick = PAUpClick
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    left = 8
+    top = 56
+  end
+end

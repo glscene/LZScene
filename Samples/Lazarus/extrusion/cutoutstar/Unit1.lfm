@@ -1,0 +1,80 @@
+object Form1: TForm1
+  Left = 187
+  Height = 358
+  Top = 153
+  Width = 469
+  ActiveControl = GLSceneViewer1
+  Caption = 'Form1'
+  ClientHeight = 358
+  ClientWidth = 469
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 358
+    Top = 0
+    Width = 469
+    Camera = GLCamera1
+    FieldOfView = 134.533172607421
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000484200002042000070420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object ExtrusionSolid: TGLExtrusionSolid
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Contours = <>
+      Parts = [espOutside, espStartPolygon, espStopPolygon]
+      Height = 1
+      MinSmoothAngle = 5
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 75
+      TargetObject = ExtrusionSolid
+      Position.Coordinates = {
+        0000C04000000041000020410000803F
+      }
+      Direction.Coordinates = {
+        2EF964BF2EF9E43E0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      left = 216
+      top = 152
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 48
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 8
+    top = 88
+  end
+end

@@ -1,0 +1,88 @@
+object Form1: TForm1
+  Left = 395
+  Height = 208
+  Top = 115
+  Width = 228
+  Caption = 'Form1'
+  ClientHeight = 208
+  ClientWidth = 228
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 208
+    Top = 0
+    Width = 228
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.DepthTest = False
+    FieldOfView = 152.966873168945
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLParticles1: TGLParticles
+      TagFloat = 0
+      ObjectsSorting = osNone
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      ParticlePoolSize = 10
+      OnActivateParticle = GLParticles1ActivateParticle
+      object DummyCube1: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        OnProgress = DummyCube1Progress
+        CubeSize = 1
+        object Sprite1: TGLSprite
+          TagFloat = 0
+          Material.FrontProperties.Ambient.Color = {
+            0000000000000000000000000000803F
+          }
+          Material.FrontProperties.Diffuse.Color = {
+            0000000000000000000000000000803F
+          }
+          Material.FrontProperties.Emission.Color = {
+            0000803F0000803F0000803F0000803F
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Width = 0.10000000149011
+          Height = 0.10000000149011
+          Rotation = 0
+        end
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 25
+      TargetObject = GLParticles1
+      Position.Coordinates = {
+        0000204100004040000000000000803F
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 40
+  end
+  object Timer1: TTimer
+    Interval = 10000
+    OnTimer = Timer1Timer
+    left = 40
+    top = 8
+  end
+end

@@ -1,0 +1,146 @@
+object Form1: TForm1
+  Left = 133
+  Height = 362
+  Top = 72
+  Width = 558
+  Caption = 'Form1'
+  ClientHeight = 362
+  ClientWidth = 558
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object GLSceneViewer: TGLSceneViewer
+    Left = 0
+    Height = 362
+    Top = 0
+    Width = 456
+    Camera = GLCamera1
+    FieldOfView = 149.115112304688
+    Align = alClient
+    OnMouseDown = GLSceneViewerMouseDown
+    OnMouseMove = GLSceneViewerMouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 456
+    Height = 362
+    Top = 0
+    Width = 102
+    Align = alRight
+    BevelOuter = bvLowered
+    ClientHeight = 362
+    ClientWidth = 102
+    Font.Height = -11
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 19
+      Top = 8
+      Width = 83
+      Caption = 'HeightField'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 19
+      Top = 32
+      Width = 52
+      Caption = 'picking'
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 145
+      Top = 168
+      Width = 89
+      AutoSize = False
+      Caption = 'This demo uses a crude method for heightfield picking based on the Z-Buffer. This method can be easily adapted for a variety of objects and 2.5D problems.'
+      ParentColor = False
+      WordWrap = True
+    end
+    object RBPaint: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 80
+      Width = 43
+      Caption = 'Paint'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioButton2: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 112
+      Width = 51
+      Caption = 'Rotate'
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 40
+    object HeightField: TGLHeightField
+      TagFloat = 0
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        9A99193F9A99193F0000003F00000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      XSamplingScale.Min = -5.5
+      XSamplingScale.max = 5.5
+      XSamplingScale.Origin = 0
+      XSamplingScale.step = 0.20000000298023
+      YSamplingScale.Min = -5.5
+      YSamplingScale.max = 5.5
+      YSamplingScale.Origin = 0
+      YSamplingScale.step = 0.20000000298023
+      ColorMode = hfcmAmbientAndDiffuse
+      OnGetHeight = HeightFieldGetHeight
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        9A99193E9A99193E9A99193E0000803F
+      }
+      ConstAttenuation = 1
+      Diffuse.Color = {
+        9A99593F9A99593F9A99593F0000803F
+      }
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000E040000070410000A0400000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = HeightField
+      Position.Coordinates = {
+        0000A04000008040000040400000803F
+      }
+    end
+  end
+end

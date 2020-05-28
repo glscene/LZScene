@@ -1,0 +1,538 @@
+object Form1: TForm1
+  Left = 202
+  Height = 484
+  Top = 112
+  Width = 759
+  Caption = 'Cg Shader Demo'
+  ClientHeight = 484
+  ClientWidth = 759
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnMouseWheel = FormMouseWheel
+  Position = poScreenCenter
+  LCLVersion = '0.9.29'
+  object Splitter1: TSplitter
+    Left = 369
+    Height = 484
+    Top = 0
+    Width = 5
+    Color = clBtnShadow
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 484
+    Top = 0
+    Width = 369
+    Align = alLeft
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 484
+    ClientWidth = 369
+    TabOrder = 0
+    object PageControl1: TPageControl
+      Left = 2
+      Height = 480
+      Top = 2
+      Width = 365
+      ActivePage = TabSheet1
+      Align = alClient
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentFont = False
+      TabIndex = 0
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Vertex Program'
+        ClientHeight = 454
+        ClientWidth = 357
+        object Splitter3: TSplitter
+          Cursor = crVSplit
+          Left = 0
+          Height = 3
+          Top = 347
+          Width = 357
+          Align = alBottom
+          Color = clBtnShadow
+          ParentColor = False
+          ResizeAnchor = akBottom
+        end
+        object Panel2: TPanel
+          Left = 0
+          Height = 25
+          Top = 0
+          Width = 357
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 25
+          ClientWidth = 357
+          TabOrder = 0
+          object LabelVertProfile: TLabel
+            Left = 88
+            Height = 14
+            Top = 5
+            Width = 64
+            Caption = 'Using profile:'
+            ParentColor = False
+          end
+          object CBVertexProgram: TCheckBox
+            Left = 6
+            Height = 19
+            Top = 4
+            Width = 58
+            Caption = 'Enabled'
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            OnClick = CBVertexProgramClick
+            ParentFont = False
+            TabOrder = 0
+          end
+        end
+        object Panel11: TPanel
+          Left = 0
+          Height = 322
+          Top = 25
+          Width = 357
+          Align = alClient
+          Caption = 'Panel6'
+          ClientHeight = 322
+          ClientWidth = 357
+          TabOrder = 1
+          object Panel12: TPanel
+            Left = 1
+            Height = 16
+            Top = 1
+            Width = 355
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Shader Code'
+            Color = clBtnHighlight
+            ParentColor = False
+            TabOrder = 0
+          end
+          object MemoVertCode: TMemo
+            Left = 1
+            Height = 279
+            Top = 17
+            Width = 355
+            Align = alClient
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Courier New'
+            OnChange = MemoVertCodeChange
+            ParentFont = False
+            ScrollBars = ssBoth
+            TabOrder = 1
+            WordWrap = False
+          end
+          object Panel13: TPanel
+            Left = 1
+            Height = 25
+            Top = 296
+            Width = 355
+            Align = alBottom
+            BevelOuter = bvNone
+            ClientHeight = 25
+            ClientWidth = 355
+            TabOrder = 2
+            object ButtonApplyVP: TButton
+              Left = 280
+              Height = 20
+              Top = 2
+              Width = 67
+              Anchors = [akTop, akRight]
+              Caption = 'Apply'
+              Enabled = False
+              OnClick = ButtonApplyVPClick
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel5: TPanel
+          Left = 0
+          Height = 104
+          Top = 350
+          Width = 357
+          Align = alBottom
+          ClientHeight = 104
+          ClientWidth = 357
+          TabOrder = 2
+          object Label2: TLabel
+            Left = 283
+            Height = 14
+            Top = 5
+            Width = 31
+            Anchors = [akTop, akRight]
+            Caption = 'Show:'
+            ParentColor = False
+          end
+          object Memo1: TMemo
+            Left = 1
+            Height = 102
+            Top = 1
+            Width = 272
+            Align = alLeft
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            Color = clBtnFace
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Courier New'
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssBoth
+            TabOrder = 0
+            WordWrap = False
+          end
+          object Button1: TButton
+            Left = 282
+            Height = 18
+            Top = 21
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Params'
+            OnClick = Button1Click
+            TabOrder = 1
+          end
+          object Button4: TButton
+            Left = 282
+            Height = 18
+            Top = 42
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Asm'
+            OnClick = Button4Click
+            TabOrder = 2
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Fragment Program'
+        ClientHeight = 0
+        ClientWidth = 0
+        ImageIndex = 1
+        object Splitter2: TSplitter
+          Cursor = crVSplit
+          Left = 0
+          Height = 3
+          Top = 318
+          Width = 357
+          Align = alBottom
+          Color = clBtnShadow
+          ParentColor = False
+          ResizeAnchor = akBottom
+        end
+        object Panel4: TPanel
+          Left = 0
+          Height = 25
+          Top = 0
+          Width = 357
+          Align = alTop
+          BevelOuter = bvNone
+          ClientHeight = 25
+          ClientWidth = 357
+          TabOrder = 0
+          object LabelFragProfile: TLabel
+            Left = 88
+            Height = 13
+            Top = 5
+            Width = 63
+            Caption = 'Using profile:'
+            ParentColor = False
+          end
+          object CheckBox1: TCheckBox
+            Left = 6
+            Height = 17
+            Top = 4
+            Width = 67
+            Caption = 'Enabled'
+            OnClick = CBFragmentProgramClick
+            TabOrder = 0
+          end
+        end
+        object Panel6: TPanel
+          Left = 0
+          Height = 293
+          Top = 25
+          Width = 357
+          Align = alClient
+          Caption = 'Panel6'
+          ClientHeight = 293
+          ClientWidth = 357
+          TabOrder = 1
+          object Panel7: TPanel
+            Left = 1
+            Height = 16
+            Top = 1
+            Width = 355
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'Shader Code'
+            Color = clBtnHighlight
+            ParentColor = False
+            TabOrder = 0
+          end
+          object MemoFragCode: TMemo
+            Left = 1
+            Height = 250
+            Top = 17
+            Width = 355
+            Align = alClient
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Courier New'
+            OnChange = MemoFragCodeChange
+            ParentFont = False
+            ScrollBars = ssBoth
+            TabOrder = 1
+            WordWrap = False
+          end
+          object Panel3: TPanel
+            Left = 1
+            Height = 25
+            Top = 267
+            Width = 355
+            Align = alBottom
+            BevelOuter = bvNone
+            ClientHeight = 25
+            ClientWidth = 355
+            TabOrder = 2
+            object ButtonApplyFP: TButton
+              Left = 280
+              Height = 20
+              Top = 2
+              Width = 67
+              Anchors = [akTop, akRight]
+              Caption = 'Apply'
+              Enabled = False
+              OnClick = ButtonApplyFPClick
+              TabOrder = 0
+            end
+          end
+        end
+        object Panel8: TPanel
+          Left = 0
+          Height = 104
+          Top = 321
+          Width = 357
+          Align = alBottom
+          ClientHeight = 104
+          ClientWidth = 357
+          TabOrder = 2
+          object Label1: TLabel
+            Left = 284
+            Height = 13
+            Top = 5
+            Width = 30
+            Anchors = [akTop, akRight]
+            Caption = 'Show:'
+            ParentColor = False
+          end
+          object Memo3: TMemo
+            Left = 1
+            Height = 102
+            Top = 1
+            Width = 272
+            Align = alLeft
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            Color = clBtnFace
+            Font.CharSet = ANSI_CHARSET
+            Font.Height = -11
+            Font.Name = 'Courier New'
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssBoth
+            TabOrder = 0
+            WordWrap = False
+          end
+          object Button2: TButton
+            Left = 282
+            Height = 18
+            Top = 21
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Params'
+            OnClick = Button2Click
+            TabOrder = 1
+          end
+          object Button3: TButton
+            Left = 282
+            Height = 18
+            Top = 42
+            Width = 64
+            Anchors = [akTop, akRight]
+            Caption = 'Asm'
+            OnClick = Button3Click
+            TabOrder = 2
+          end
+        end
+      end
+    end
+  end
+  object Panel9: TPanel
+    Left = 374
+    Height = 484
+    Top = 0
+    Width = 385
+    Align = alClient
+    ClientHeight = 484
+    ClientWidth = 385
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object Panel10: TPanel
+      Left = 1
+      Height = 48
+      Top = 1
+      Width = 383
+      Align = alTop
+      Caption = 'Cg Simple'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -19
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object GLSceneViewer1: TGLSceneViewer
+      Left = 1
+      Height = 434
+      Top = 49
+      Width = 383
+      Camera = GLCamera1
+      Buffer.AntiAliasing = aa4x
+      FieldOfView = 150.73388671875
+      Align = alClient
+      OnMouseDown = GLSceneViewer1MouseDown
+      OnMouseMove = GLSceneViewer1MouseMove
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 416
+    top = 56
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000000000002041000000000000803F
+      }
+      LightStyle = lsOmni
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLFreeForm1: TGLFreeForm
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial'
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        8FC2F53C8FC2F53C8FC2F53C00000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      AutoCentering = [macCenterX, macCenterY]
+    end
+    object GLXYZGrid1: TGLXYZGrid
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      XSamplingScale.Min = -2
+      XSamplingScale.Max = 2
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 0.10000000149012
+      YSamplingScale.Min = 0
+      YSamplingScale.Max = 0
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 0.10000000149012
+      ZSamplingScale.Min = -2
+      ZSamplingScale.Max = 2
+      ZSamplingScale.Origin = 0
+      ZSamplingScale.Step = 0.10000000149012
+      Parts = [gpX, gpZ]
+    end
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000003333333F000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLDummyCube1
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        0000004000004040000080400000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Material.FrontProperties.Ambient.Color = {
+          8988083E00000000000000000000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          DBDADA3ED5D4543EA1A0A03D0000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          EDEC6C3EDDDC5C3ED5D4543E0000803F
+        }
+        Tag = 0
+        Shader = CgShader1
+      end>
+    left = 384
+    top = 88
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 416
+    top = 88
+  end
+  object CgShader1: TCgShader
+    VertexProgram.OnApply = CgShader1ApplyVP
+    OnApplyVP = CgShader1ApplyVP
+    OnInitialize = CgShader1Initialize
+    left = 384
+    top = 56
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 452
+    top = 56
+  end
+end

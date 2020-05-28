@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 239
+  Height = 369
+  Top = 100
+  Width = 438
+  Caption = 'Form1'
+  ClientHeight = 369
+  ClientWidth = 438
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 369
+    Top = 0
+    Width = 438
+    Camera = GLCamera1
+    FieldOfView = 149.673782348632
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object BUBind: TButton
+    Left = 168
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Bind Shaders'
+    OnClick = BUBindClick
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 16
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00002041000000410000E0400000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Torus1: TGLTorus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial'
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      MajorRadius = 2.5
+      MinorRadius = 1.5
+    end
+    object Sphere1: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      Radius = 0.5
+    end
+    object GLAnnulus1: TGLAnnulus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial1'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000E04000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BottomInnerRadius = 0.30000001192092
+      TopInnerRadius = 0.30000001192092
+      TopRadius = 0.5
+    end
+    object GLAnnulus2: TGLAnnulus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial2'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000E0C000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BottomInnerRadius = 0.30000001192092
+      TopInnerRadius = 0.30000001192092
+      TopRadius = 0.5
+    end
+    object GLCube1: TGLCube
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial2'
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000000000000E0400000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+    end
+    object GLSphere1: TGLSphere
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial1'
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000000000000E0C00000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 1.5
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Torus1
+      Position.Coordinates = {
+        00006041000020410000C0400000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Tag = 0
+      end    
+      item
+        Name = 'LibMaterial1'
+        Tag = 0
+      end    
+      item
+        Name = 'LibMaterial2'
+        Tag = 0
+      end>
+    left = 16
+    top = 48
+  end
+end

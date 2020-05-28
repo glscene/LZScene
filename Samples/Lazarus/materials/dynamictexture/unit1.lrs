@@ -1,0 +1,24 @@
+LazarusResources.Add('TForm1','FORMDATA',[
+  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3#175#1#6'Height'#3';'#1#3'Top'#3'%'#1#5'Wi'
+  +'dth'#3#172#1#18'HorzScrollBar.Page'#3#171#1#18'VertScrollBar.Page'#3':'#1#7
+  +'Caption'#6#5'Form1'#12'ClientHeight'#3';'#1#11'ClientWidth'#3#172#1#11'Font'
+  +'.Height'#2#245#9'Font.Name'#6#6'Tahoma'#10'KeyPreview'#9#8'OnCreate'#7#10'F'
+  +'ormCreate'#9'OnKeyDown'#7#11'FormKeyDown'#8'OnResize'#7#10'FormResize'#0#14
+  +'TGLSceneViewer'#14'GLSceneViewer1'#4'Left'#2#8#6'Height'#3')'#1#3'Top'#2#8#5
+  +'Width'#3#145#1#6'Camera'#7#9'GLCamera1'#22'Buffer.BackgroundColor'#7#6'clGr'
+  +'ay'#11'FieldOfView'#5#0#0#0#0#0#128#200#142#6'@'#0#0#8'TGLScene'#8'GLScene1'
+  +#4'left'#3' '#2#3'top'#2'0'#0#15'TGLDirectOpenGL'#15'GLDirectOpenGL1'#8'OnRe'
+  +'nder'#7#21'GLDirectOpenGL1Render'#0#0#12'TGLDummyCube'#12'GLDummyCube1'#8'C'
+  +'ubeSize'#2#1#0#7'TGLCube'#7'GLCube1'#24'Material.MaterialLibrary'#7#18'GLMa'
+  +'terialLibrary1'#24'Material.LibMaterialName'#6#4'Anim'#0#0#0#14'TGLLightSou'
+  +'rce'#14'GLLightSource1'#16'ConstAttenuation'#2#1#20'Position.Coordinates'#10
+  +#16#0#0#0#0#0'@@'#0#0' A'#0#0' A'#0#0#128'?'#10'SpotCutOff'#3#180#0#0#0#9'TG'
+  +'LCamera'#9'GLCamera1'#11'DepthOfView'#2'd'#11'FocalLength'#2'2'#12'TargetOb'
+  +'ject'#7#12'GLDummyCube1'#20'Position.Coordinates'#10#16#0#0#0#0#0#128'?'#0#0
+  +#128'?'#0#0'@@'#0#0#128'?'#0#0#0#18'TGLMaterialLibrary'#18'GLMaterialLibrary'
+  +'1'#9'Materials'#14#1#4'Name'#6#4'Anim'#28'Material.Texture.TextureMode'#7#9
+  +'tmReplace'#0#0#4'left'#3' '#2#3'top'#2'`'#0#0#11'TGLCadencer'#11'GLCadencer'
+  +'1'#5'Scene'#7#8'GLScene1'#10'OnProgress'#7#19'GLCadencer1Progress'#4'left'#3
+  +' '#2#3'top'#3#136#0#0#0#6'TTimer'#6'Timer1'#8'Interval'#3#184#11#7'OnTimer'
+  +#7#11'Timer1Timer'#4'left'#3' '#2#3'top'#3#176#0#0#0#0
+]);

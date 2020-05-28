@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="GLScene_RunTime"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="PostShaderDemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="50" Y="8"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PostShaderDemoForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="46" Y="30"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="UMainForm.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="19" Column="31" TopLine="5"/>
+      </Position2>
+      <Position3>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="24" Column="23" TopLine="10"/>
+      </Position3>
+      <Position4>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="27" Column="42" TopLine="13"/>
+      </Position4>
+      <Position5>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="59" TopLine="45"/>
+      </Position5>
+      <Position6>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="57" Column="22" TopLine="41"/>
+      </Position6>
+      <Position7>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="139" TopLine="121"/>
+      </Position7>
+      <Position8>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="79" Column="14" TopLine="61"/>
+      </Position8>
+      <Position9>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="181"/>
+      </Position9>
+      <Position10>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="14"/>
+      </Position10>
+      <Position11>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="19" Column="28" TopLine="5"/>
+      </Position11>
+      <Position12>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="27" Column="42" TopLine="13"/>
+      </Position12>
+      <Position13>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="145" TopLine="139"/>
+      </Position13>
+      <Position14>
+        <Filename Value="UMainForm.pas"/>
+        <Caret Line="103" Column="30" TopLine="95"/>
+      </Position14>
+      <Position15>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="83" Column="22" TopLine="64"/>
+      </Position15>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+        <IncludeAssertionCode Value="True"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,236 @@
+object Form1: TForm1
+  Left = 318
+  Height = 554
+  Top = 150
+  Width = 650
+  Caption = 'GLSmoothNavigator Demo'
+  ClientHeight = 554
+  ClientWidth = 650
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnMouseWheel = FormMouseWheel
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 507
+    Top = 0
+    Width = 650
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clMoneyGreen
+    FieldOfView = 157.68455505371
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 47
+    Top = 507
+    Width = 650
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 47
+    ClientWidth = 650
+    TabOrder = 1
+    object MouseLookCheckBox: TCheckBox
+      Left = 8
+      Height = 22
+      Top = 6
+      Width = 281
+      Caption = 'Mouse Look Active (toggle by pressing the space bar)'
+      OnClick = MouseLookCheckBoxClick
+      TabOrder = 0
+    end
+    object GroupBox2: TGroupBox
+      Left = 312
+      Height = 46
+      Top = 1
+      Width = 193
+      Caption = 'FPS'
+      ClientHeight = 32
+      ClientWidth = 189
+      TabOrder = 1
+      object RadioButton6: TRadioButton
+        Left = 6
+        Height = 22
+        Top = 4
+        Width = 43
+        Caption = 'Max'
+        Checked = True
+        OnClick = RadioButton6Click
+        OnKeyPress = FormKeyPress
+        TabOrder = 0
+        TabStop = True
+      end
+      object RadioButton7: TRadioButton
+        Left = 62
+        Height = 22
+        Top = 4
+        Width = 56
+        Caption = 'Middle'
+        OnClick = RadioButton7Click
+        OnKeyPress = FormKeyPress
+        TabOrder = 1
+      end
+      object RadioButton8: TRadioButton
+        Left = 134
+        Height = 22
+        Top = 4
+        Width = 42
+        Caption = 'Low'
+        OnClick = RadioButton8Click
+        OnKeyPress = FormKeyPress
+        TabOrder = 2
+      end
+    end
+    object GroupBox1: TGroupBox
+      Left = 512
+      Height = 46
+      Top = 1
+      Width = 129
+      Caption = 'Controls'
+      ClientHeight = 32
+      ClientWidth = 125
+      TabOrder = 2
+      object Label1: TLabel
+        Left = 8
+        Height = 13
+        Top = 0
+        Width = 56
+        Caption = 'Fly = WASD'
+        ParentColor = False
+      end
+      object Panel1: TPanel
+        Left = 7
+        Height = 17
+        Top = 14
+        Width = 114
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        Caption = 'Accelerate = Hold Shift'
+        TabOrder = 0
+      end
+    end
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 8
+    top = 8
+    object scene: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 500
+      object GLXYZGrid1: TGLXYZGrid
+        TagFloat = 0
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          0000000000000000000080BF00000000
+        }
+        XSamplingScale.Min = -1000
+        XSamplingScale.Max = 1000
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 20
+        YSamplingScale.Min = -1000
+        YSamplingScale.Max = 1000
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 20
+        ZSamplingScale.Min = 0
+        ZSamplingScale.Max = 0
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 0.10000000149011
+      end
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Ambient.Color = {
+          CDCC4C3EC9C8483FCDCC4C3E0000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          E0DF5F3FCDCC4C3FCDCC4C3F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          AFAEAE3E000000008180803D0000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 10
+      end
+      object GLArrowLine1: TGLArrowLine
+        TagFloat = 0
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000004843000000000000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0000C8420000C8420000C84200000000
+        }
+        TurnAngle = 0
+        Up.Coordinates = {
+          0000000000000000000080BF00000000
+        }
+        BottomRadius = 0.10000000149011
+        Height = 1
+        TopRadius = 0.10000000149011
+        TopArrowHeadHeight = 0.5
+        TopArrowHeadRadius = 0.20000000298023
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.20000000298023
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100000
+      FocalLength = 50
+      TargetObject = GLArrowLine1
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        0000FAC300004843000061C40000803F
+      }
+      Direction.Coordinates = {
+        F304353F00000080F304353F00000000
+      }
+      Up.Coordinates = {
+        00000000FFFF7F3F0000000000000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 40
+    top = 8
+  end
+  object FPSTimer: TTimer
+    OnTimer = FPSTimerTimer
+    left = 72
+    top = 8
+  end
+end

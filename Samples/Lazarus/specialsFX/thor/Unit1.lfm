@@ -1,0 +1,454 @@
+object Form1: TForm1
+  Left = 176
+  Height = 468
+  Top = 84
+  Width = 557
+  BorderWidth = 3
+  Caption = 'Form1'
+  ClientHeight = 468
+  ClientWidth = 557
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnMouseWheel = FormMouseWheel
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 3
+    Height = 371
+    Top = 3
+    Width = 551
+    Camera = GLCamera1
+    FieldOfView = 149.829803466797
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 3
+    Height = 91
+    Top = 374
+    Width = 551
+    Align = alBottom
+    ClientHeight = 91
+    ClientWidth = 551
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 335
+      Height = 11
+      Top = 58
+      Width = 72
+      Caption = 'Camera Distance'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 344
+      Height = 11
+      Top = 28
+      Width = 47
+      Caption = 'Glow Alpha'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 432
+      Height = 11
+      Top = 28
+      Width = 37
+      Caption = 'Vibration'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 440
+      Height = 11
+      Top = 0
+      Width = 37
+      Caption = 'Wildness'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 344
+      Height = 11
+      Top = 0
+      Width = 40
+      Caption = 'Glow Size'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentColor = False
+      ParentFont = False
+    end
+    object DistanceBar: TTrackBar
+      Left = 312
+      Height = 16
+      Top = 67
+      Width = 115
+      Max = 20
+      Min = 1
+      OnChange = DistanceBarChange
+      Position = 5
+      SelEnd = 20
+      SelStart = 1
+      TabStop = False
+      TabOrder = 0
+    end
+    object GSbar: TTrackBar
+      Left = 312
+      Height = 16
+      Top = 10
+      Width = 115
+      Max = 50
+      OnChange = GSbarChange
+      Position = 10
+      SelEnd = 20
+      TabStop = False
+      TabOrder = 1
+    end
+    object GAbar: TTrackBar
+      Left = 312
+      Height = 16
+      Top = 38
+      Width = 115
+      Max = 50
+      OnChange = GAbarChange
+      Position = 15
+      SelEnd = 50
+      TabStop = False
+      TabOrder = 2
+    end
+    object WildBar: TTrackBar
+      Left = 424
+      Height = 16
+      Top = 10
+      Width = 115
+      Max = 20
+      OnChange = WildBarChange
+      Position = 4
+      SelEnd = 20
+      TabStop = False
+      TabOrder = 3
+    end
+    object VibBar: TTrackBar
+      Left = 424
+      Height = 16
+      Top = 38
+      Width = 115
+      Max = 20
+      OnChange = VibBarChange
+      Position = 0
+      SelEnd = 20
+      TabStop = False
+      TabOrder = 4
+    end
+    object SpinBox: TCheckBox
+      Left = 436
+      Height = 19
+      Top = 73
+      Width = 100
+      Caption = 'User Formula(Spin)'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      ParentFont = False
+      TabOrder = 5
+    end
+    object CoreBox: TCheckBox
+      Left = 436
+      Height = 19
+      Top = 58
+      Width = 41
+      Caption = 'Core'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      OnClick = CoreBoxClick
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 6
+    end
+    object Memo1: TMemo
+      Left = 2
+      Height = 87
+      Top = 2
+      Width = 311
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      Lines.Strings = (
+        '              ----------GLThorFX----------'
+        'This special-effect is mostly for creating lightning-effects.However, it is '
+        'very flexible. You can write your own formulas for the movement of the '
+        'particles, by using the OnCalcPoint event in the ThorManager.'
+        'If you turn the Core off, and set Wildness and Vibration to 0, you get a '
+        'lightbeam.    If you set the Glow-size small, the Alpha, and Vibration High, '
+        'and Core off, you get a sparkling effect.'
+        ''
+        ''
+      )
+      ParentFont = False
+      TabOrder = 7
+    end
+    object PauseBox: TCheckBox
+      Left = 488
+      Height = 19
+      Top = 58
+      Width = 47
+      Caption = 'Pause'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Small Fonts'
+      OnClick = PauseBoxClick
+      ParentFont = False
+      TabOrder = 8
+    end
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 8
+    top = 8
+    object SkyDome1: TGLSkyDome
+      TagFloat = 0
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000803F000000800000000000000000
+      }
+      Bands = <      
+        item
+          StartAngle = -90
+          StartColor.Color = {
+            0000000000000000000000000000803F
+          }
+          StopAngle = -30
+          StopColor.Color = {
+            CDCCCC3DCDCCCC3DCDCCCC3D0000803F
+          }
+          Slices = 9
+        end      
+        item
+          StartAngle = -30
+          StartColor.Color = {
+            CDCCCC3DCDCCCC3DCDCCCC3D0000803F
+          }
+          StopAngle = -15
+          StopColor.Color = {
+            9A99993E9A99993E9A99993E0000803F
+          }
+          Slices = 9
+        end      
+        item
+          StartAngle = -15
+          StartColor.Color = {
+            9A99993E9A99993E9A99993E0000803F
+          }
+          StopAngle = 0
+          StopColor.Color = {
+            B5B4343EE4E4E43EBEBD3D3F0000803F
+          }
+          Slices = 9
+        end      
+        item
+          StartAngle = 0
+          StartColor.Color = {
+            B5B4343EE5E4E43EBEBD3D3F0000803F
+          }
+          StopAngle = 15
+          StopColor.Color = {
+            B6B5353FD1D0503FEFEE6E3F0000803F
+          }
+          Slices = 9
+        end      
+        item
+          StartAngle = 15
+          StartColor.Color = {
+            8FC2353F60E5503F17D96E3F0000803F
+          }
+          StopAngle = 90
+          StopColor.Color = {
+            B2B1313FC8C7473FF2F1713F0000803F
+          }
+          Slices = 9
+          Stacks = 3
+        end>
+      Stars = <>
+    end
+    object HeightField1: TGLHeightField
+      TagFloat = 0
+      Material.Texture.MagFilter = maNearest
+      Material.Texture.MinFilter = miNearest
+      Material.Texture.TextureMode = tmModulate
+      Material.Texture.Compression = tcNone
+      Material.Texture.Disabled = False
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000040C0000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00002041000020410000803F00000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      XSamplingScale.Min = -1
+      XSamplingScale.Max = 1
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 0.200000002980232
+      YSamplingScale.Min = -1
+      YSamplingScale.Max = 1
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 0.200000002980232
+      Options = [hfoTextureCoordinates]
+      OnGetHeight = HeightField1GetHeight
+    end
+    object Objects: TGLDummyCube
+      TagFloat = 0
+      ObjectsSorting = osRenderBlendedLast
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object TargetCube: TGLCube
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          8180803E8180803E0000803F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          00000000000000008180003E0000803F
+        }
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000404000000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+      end
+      object ThorCube: TGLCube
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          8180803E8180803E0000803F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          00000000000000008180003E0000803F
+        }
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        PitchAngle = 0
+        Position.Coordinates = {
+          000040C000000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        EffectsData = {
+          0458434F4C02010201060A54474C4254686F7246580201020006000200020006
+          10474C54686F7246584D616E6167657231
+        }
+      end
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        LightStyle = lsOmni
+        SpotCutOff = 180
+        SpotDirection.Coordinates = {
+          00000000000080BF0000000000000000
+        }
+        SpotExponent = 0
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Objects
+      Position.Coordinates = {
+        00004040000000400000A0400000803F
+      }
+      left = 152
+      top = 104
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    left = 40
+    top = 8
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 8
+    top = 40
+  end
+  object GLThorFXManager1: TGLThorFXManager
+    Target.Coordinates = {
+      0000C040000000000000000000000000
+    }
+    Cadencer = GLCadencer1
+    Maxpoints = 64
+    GlowSize = 0.200000002980232
+    Vibrate = 0
+    InnerColor.Color = {
+      0000803F0000803F0000803F9A99993E
+    }
+    OuterColor.Color = {
+      00000000000000000000803F00000000
+    }
+    Disabled = False
+    Core = True
+    Glow = True
+    Wildness = 1
+    OnCalcPoint = GLThorFXManager1CalcPoint
+    left = 72
+    top = 8
+  end
+end

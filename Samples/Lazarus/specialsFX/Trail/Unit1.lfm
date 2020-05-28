@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 222
+  Height = 480
+  Top = 103
+  Width = 510
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 510
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 447
+    Top = 33
+    Width = 510
+    Camera = GLCamera1
+    Buffer.BackgroundColor = 4194304
+    FieldOfView = 154.779571533203
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 33
+    Top = 0
+    Width = 510
+    Align = alTop
+    Caption = ' '
+    ClientHeight = 33
+    ClientWidth = 510
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 13
+      Top = 12
+      Width = 34
+      Caption = 'Speed:'
+      ParentColor = False
+    end
+    object TrackBarSpeed: TTrackBar
+      Left = 48
+      Height = 25
+      Top = 4
+      Width = 133
+      Position = 1
+      TabOrder = 0
+    end
+  end
+  object GLScene1: TGLScene
+    left = 60
+    top = 36
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00000000E1A22B41000000000000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLSphere1: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000008E2EBA3F8C2EBA3E0000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 0.5
+    end
+    object Room: TGLSphere
+      TagFloat = 0
+      Material.PolygonMode = pmLines
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      NormalDirection = ndInside
+      Radius = 8
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Room
+      Position.Coordinates = {
+        CFBD804073312F409AF80A410000803F
+      }
+      Direction.Coordinates = {
+        82FABBBE331FC9BE96D857BF00000000
+      }
+      Up.Coordinates = {
+        3F9720BE056C6B3FE965B8BE00000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 100
+    top = 36
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 140
+    top = 36
+  end
+end

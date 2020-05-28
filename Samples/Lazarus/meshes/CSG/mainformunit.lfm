@@ -1,0 +1,208 @@
+object Form1: TForm1
+  Left = 321
+  Height = 611
+  Top = 128
+  Width = 624
+  Caption = 'Constructive Solid Geometry Demo'
+  ClientHeight = 611
+  ClientWidth = 624
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  LCLVersion = '0.9.31'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 569
+    Top = 0
+    Width = 624
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clTeal
+    Buffer.FaceCulling = False
+    FieldOfView = 160.064468383789
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseUp = GLSceneViewer1MouseUp
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 569
+    Width = 624
+    Align = alBottom
+    ClientHeight = 42
+    ClientWidth = 624
+    TabOrder = 1
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Clear'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 88
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Union'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+    object Button3: TButton
+      Left = 168
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Subtract A-B'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+    object Button4: TButton
+      Left = 248
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Subtract B-A'
+      OnClick = Button4Click
+      TabOrder = 3
+    end
+    object Button5: TButton
+      Left = 328
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Intersection'
+      OnClick = Button5Click
+      TabOrder = 4
+    end
+    object CheckBox1: TCheckBox
+      Left = 408
+      Height = 19
+      Top = 12
+      Width = 76
+      Caption = 'Solid Result'
+      Checked = True
+      OnClick = CheckBox1Click
+      State = cbChecked
+      TabOrder = 5
+    end
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLFreeForm3: TGLFreeForm
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      MaterialLibrary = GLMaterialLibrary1
+    end
+    object GLFreeForm1: TGLFreeForm
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        B1A8A83EB1A8A83EB1A8A83E0000803F
+      }
+      Material.FrontProperties.Diffuse.Color = {
+        9484843E9484843EDBDEDE3E0000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        EBE0E03EE4DB5B3F9A93133F0000803F
+      }
+      Material.FrontProperties.Specular.Color = {
+        9A99593F9A99593FCDCCCC3D0000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        00002042000020420000204200000000
+      }
+      TurnAngle = 0
+      AutoCentering = [macCenterX, macCenterY, macCenterZ]
+    end
+    object GLFreeForm2: TGLFreeForm
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        029F1F3FBEBEBE3E999F1F3F0000803F
+      }
+      Material.FrontProperties.Specular.Color = {
+        BEBEBE3E999F1F3F999F1F3F0000803F
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000804100000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        0000A0410000A0410000A04100000000
+      }
+      TurnAngle = 0
+      AutoCentering = [macCenterX, macCenterY, macCenterZ]
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 5000
+      FocalLength = 50
+      TargetObject = GLFreeForm3
+      Position.Coordinates = {
+        0000000000000000000096C30000803F
+      }
+      Direction.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        Diffuse.Color = {
+          CDCC4C3FCDCC4C3FCDCC4C3F0000803F
+        }
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        LightStyle = lsOmni
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = '1'
+        Tag = 0
+      end    
+      item
+        Name = '2'
+        Tag = 0
+        Material.FrontProperties.Diffuse.Color = {
+          6666E63E6666E63E6666E63E0000803F
+        }
+      end>
+    left = 48
+    top = 8
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    FormCaption = 'Constructive Solid Geometry Demo - %FPS'
+    Options = [snoMouseWheelHandled]
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 96
+    top = 8
+  end
+end

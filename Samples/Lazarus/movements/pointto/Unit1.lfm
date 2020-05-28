@@ -1,0 +1,215 @@
+object Form1: TForm1
+  Left = 173
+  Height = 316
+  Top = 110
+  Width = 457
+  BorderWidth = 3
+  Caption = 'Form1'
+  ClientHeight = 316
+  ClientWidth = 457
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 3
+    Height = 310
+    Top = 3
+    Width = 451
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 144.242614746093
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 16
+    object DCSphere: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Sphere: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          000000000000803F000000000000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000804000000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 0.5
+      end
+      object Lines2: TGLLines
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        LineColor.Color = {
+          000000000000803F000000000000803F
+        }
+        Nodes = <        
+          item
+            X = 4
+            Y = -4
+          end        
+          item
+            X = 4
+            Y = 4
+          end>
+        NodesAspect = lnaInvisible
+        Options = []
+      end
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        C1C0403FC1C0403FC1C0403F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000A04100007041000040410000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DCArrow: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object ArrowLine: TGLArrowLine
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          C9C8C83EC9C8C83E0000803F0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000080BF00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BottomRadius = 0.10000000149011
+        Height = 1
+        TopRadius = 0.10000000149011
+        TopArrowHeadHeight = 0.5
+        TopArrowHeadRadius = 0.20000000298023
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.20000000298023
+        object Lines1: TGLLines
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          LineColor.Color = {
+            D6D5553FD6D5553F0000803F0000803F
+          }
+          Nodes = <          
+            item
+              Z = -1
+            end          
+            item
+              Z = 7
+            end>
+          NodesAspect = lnaInvisible
+          Options = []
+        end
+        object Plane1: TGLPlane
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            00000000000000000000803F0000803F
+          }
+          Direction.Coordinates = {
+            000000800000803F0000000000000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            0000000000000000CDCC4CBE0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            0000803F000000000000000000000000
+          }
+          Height = 1
+          Width = 0.30000001192092
+          XOffset = 0
+          YOffset = 0
+        end
+      end
+    end
+    object Disk1: TGLDisk
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        00000000000000008180003F0000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        00000000000000008180003F0000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        E9DC72BF000000009BE8A13E00000000
+      }
+      InnerRadius = 0.89999997615814
+      Loops = 1
+      OuterRadius = 1
+      StartAngle = 0
+      SweepAngle = 360
+    end
+    object Disk2: TGLDisk
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        000000008180003F000000000000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        000000008180803E000000000000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        E9DC72BF000000009BE8A13E00000000
+      }
+      InnerRadius = 3.90000009536743
+      Loops = 1
+      OuterRadius = 4
+      Slices = 32
+      StartAngle = 0
+      SweepAngle = 360
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DCSphere
+      Position.Coordinates = {
+        0000A0400000E040000000410000803F
+      }
+      left = 208
+      top = 128
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 56
+    top = 16
+  end
+end

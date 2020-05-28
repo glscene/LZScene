@@ -1,0 +1,216 @@
+object Form1: TForm1
+  Left = 419
+  Height = 471
+  Top = 195
+  Width = 676
+  Caption = 'Form1'
+  ClientHeight = 471
+  ClientWidth = 676
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 471
+    Top = 0
+    Width = 676
+    Camera = GLCamera
+    Buffer.BackgroundColor = clBlack
+    Buffer.FaceCulling = False
+    Buffer.Lighting = False
+    FieldOfView = 165.480560302734
+    Align = alClient
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 16
+    top = 16
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000000400000A040000000000000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        Material.FrontProperties.Emission.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        Radius = 0.0500000007450581
+      end
+    end
+    object DOInitialize: TGLDirectOpenGL
+      TagFloat = 0
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      UseBuildList = False
+      OnRender = DOInitializeRender
+      Blend = False
+    end
+    object DOOceanPlane: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+      UseBuildList = False
+      OnRender = DOOceanPlaneRender
+      Blend = False
+    end
+    object GLHeightField1: TGLHeightField
+      TagFloat = 0
+      Material.MaterialLibrary = MatLib
+      Material.LibMaterialName = 'water'
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      XSamplingScale.Min = -100
+      XSamplingScale.Max = 100
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 2
+      YSamplingScale.Min = -100
+      YSamplingScale.Max = 100
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 2
+      OnGetHeight = GLHeightField1GetHeight
+    end
+    object GLSphere2: TGLSphere
+      TagFloat = 0
+      Material.MaterialLibrary = MatLib
+      Material.LibMaterialName = 'cubeMap'
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000000080BF0000008000000000
+      }
+      Radius = 150
+    end
+    object GLCamera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 200
+      FocalLength = 30
+      SceneScale = 2
+      TargetObject = GLHeightField1
+      Position.Coordinates = {
+        0000C8C10000A0C1000040400000803F
+      }
+      Direction.Coordinates = {
+        0000803F000000000000008000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object MatLib: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'water'
+        Tag = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmReplace
+        Material.Texture.TextureFormat = tfRGB
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+        Material.Texture.NormalMapScale = 0.0500000007450581
+        Shader = GLUserShader1
+      end    
+      item
+        Name = 'cubeMap'
+        Tag = 0
+        Material.Texture.ImageClassName = 'TGLCubeMapImage'
+        Material.Texture.TextureMode = tmReplace
+        Material.Texture.TextureWrap = twNone
+        Material.Texture.MappingMode = tmmCubeMapNormal
+        Material.Texture.Disabled = False
+      end>
+    left = 16
+    top = 56
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 16
+    top = 136
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 16
+    top = 176
+  end
+  object GLUserShader1: TGLUserShader
+    OnDoApply = GLUserShader1DoApply
+    OnDoUnApply = GLUserShader1DoUnApply
+    left = 16
+    top = 96
+  end
+  object GLMemoryViewer1: TGLMemoryViewer
+    Camera = CameraCubeMap
+    Width = 128
+    Height = 128
+    BeforeRender = GLMemoryViewer1BeforeRender
+    Buffer.BackgroundColor = clBlack
+    left = 64
+    top = 56
+  end
+  object GLScene2: TGLScene
+    left = 64
+    top = 16
+    object GLEarthSkyDome1: TGLEarthSkyDome
+      TagFloat = 0
+      Direction.Coordinates = {
+        FEFF7F27000080A7FFFF7F3F00000000
+      }
+      PitchAngle = 0
+      RollAngle = -45
+      TurnAngle = 0
+      Up.Coordinates = {
+        F30435BFF304353FD413D42600000000
+      }
+      Bands = <>
+      Stars = <>
+      SunElevation = 25
+      Turbidity = 75
+      SunDawnColor.Color = {
+        0000803F0000803F0000403F00000000
+      }
+      ExtendedOptions = []
+      Slices = 48
+      Stacks = 24
+    end
+    object CameraCubeMap: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      Direction.Coordinates = {
+        00000000000000800000803F00000000
+      }
+    end
+  end
+end

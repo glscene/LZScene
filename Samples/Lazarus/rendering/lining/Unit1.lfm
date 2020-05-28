@@ -1,0 +1,452 @@
+object Form1: TForm1
+  Left = 206
+  Height = 353
+  Top = 117
+  Width = 540
+  Caption = 'Lining Shaders'
+  ClientHeight = 353
+  ClientWidth = 540
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.31'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 353
+    Top = 0
+    Width = 385
+    Camera = GLCamera1
+    Buffer.AntiAliasing = aa4xHQ
+    FieldOfView = 148.366622924805
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 385
+    Height = 353
+    Top = 0
+    Width = 155
+    Align = alRight
+    BevelOuter = bvSpace
+    ClientHeight = 353
+    ClientWidth = 155
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 17
+      Height = 14
+      Top = 226
+      Width = 51
+      Caption = 'Drag with:'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 17
+      Height = 14
+      Top = 242
+      Width = 124
+      Caption = 'LMB - move around scene'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 17
+      Height = 14
+      Top = 258
+      Width = 90
+      Caption = 'RMB - rotate torus'
+      ParentColor = False
+    end
+    object Bevel1: TBevel
+      Left = 11
+      Height = 9
+      Top = 218
+      Width = 131
+      Shape = bsTopLine
+    end
+    object CheckBox1: TCheckBox
+      Left = 9
+      Height = 19
+      Top = 186
+      Width = 132
+      Caption = 'Outline Shader Enabled'
+      Checked = True
+      OnClick = CheckBox1Click
+      State = cbChecked
+      TabOrder = 0
+    end
+    object GroupBox1: TGroupBox
+      Left = 9
+      Height = 126
+      Top = 58
+      Width = 137
+      Caption = 'Shader on Torus'
+      ClientHeight = 108
+      ClientWidth = 133
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentFont = False
+      TabOrder = 1
+      object Bevel2: TBevel
+        Left = 8
+        Height = 9
+        Top = 52
+        Width = 117
+        Shape = bsTopLine
+      end
+      object CheckBox2: TCheckBox
+        Left = 10
+        Height = 19
+        Top = 16
+        Width = 58
+        Caption = 'Enabled'
+        Checked = True
+        OnClick = CheckBox2Click
+        State = cbChecked
+        TabOrder = 0
+      end
+      object CheckBox3: TCheckBox
+        Left = 10
+        Height = 19
+        Top = 56
+        Width = 42
+        Caption = 'Solid'
+        OnClick = CheckBox3Click
+        TabOrder = 1
+      end
+      object CheckBox4: TCheckBox
+        Left = 10
+        Height = 19
+        Top = 32
+        Width = 111
+        Caption = 'Dotted Hidden Line'
+        Checked = True
+        OnClick = CheckBox4Click
+        State = cbChecked
+        TabOrder = 2
+      end
+      object CheckBox5: TCheckBox
+        Left = 26
+        Height = 19
+        Top = 72
+        Width = 71
+        Caption = 'Surface Lit'
+        OnClick = CheckBox5Click
+        TabOrder = 3
+      end
+      object CheckBox6: TCheckBox
+        Left = 26
+        Height = 19
+        Top = 88
+        Width = 38
+        Caption = 'Flat'
+        OnClick = CheckBox6Click
+        TabOrder = 4
+      end
+    end
+    object Panel2: TPanel
+      Left = 1
+      Height = 43
+      Top = 1
+      Width = 153
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Lining Shaders'
+      Color = clBtnHighlight
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Trebuchet MS'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osRenderFarthestFirst
+    left = 8
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00002041000000410000E0400000803F
+      }
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Torus1: TGLTorus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial2'
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      MajorRadius = 2.5
+      MinorRadius = 1.5
+      StartAngle = 0
+      StopAngle = 360
+      Parts = [toSides, toStartDisk, toStopDisk]
+    end
+    object Sphere1: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      Radius = 0.5
+    end
+    object GLAnnulusOutlined: TGLAnnulus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000E04000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BottomInnerRadius = 0.30000001192093
+      TopInnerRadius = 0.30000001192093
+      TopRadius = 0.5
+    end
+    object GLAnnulusPink: TGLAnnulus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial4'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000E0C000000000000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BottomInnerRadius = 0.30000001192093
+      TopInnerRadius = 0.30000001192093
+      TopRadius = 0.5
+    end
+    object GLAnnulusDotted: TGLAnnulus
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial1'
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000000000000E0C00000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+      BottomRadius = 0.5
+      Height = 1
+      BottomInnerRadius = 0.30000001192093
+      TopInnerRadius = 0.30000001192093
+      TopRadius = 0.5
+    end
+    object GLCubeGreen: TGLCube
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial5'
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000000000000E0400000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000040000000400000004000000000
+      }
+      TurnAngle = 0
+    end
+    object GLCubeTransparent: TGLCube
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial3'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000008040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = {
+        000040400000404000004040
+      }
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Torus1
+      Position.Coordinates = {
+        00006041000020410000C0400000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          9190903D9190903D8786863E0000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          9796163F0000803F0000803F0000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Shader = GLOutlineShader1
+      end    
+      item
+        Name = 'LibMaterial1'
+        Tag = 0
+        Shader = GLHiddenLineShader1
+      end    
+      item
+        Name = 'LibMaterial2'
+        Tag = 0
+        Material.FrontProperties.Ambient.Color = {
+          C5C4443EBFBEBE3EB5B4343E0000803F
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          0000803FEBEAEA3E8180803C0000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        Material.BlendingMode = bmTransparency
+        Shader = GLHiddenLineShader2
+      end    
+      item
+        Name = 'LibMaterial3'
+        Tag = 0
+        Shader = GLHiddenLineShader3
+      end    
+      item
+        Name = 'LibMaterial4'
+        Tag = 0
+        Shader = GLHiddenLineShader4
+      end    
+      item
+        Name = 'LibMaterial5'
+        Tag = 0
+        Material.FrontProperties.Diffuse.Color = {
+          9998183E9796163F9190103E17D92E3F
+        }
+        Material.BlendingMode = bmTransparency
+        Shader = GLHiddenLineShader5
+      end>
+    left = 8
+    top = 40
+  end
+  object GLOutlineShader1: TGLOutlineShader
+    LineColor.Color = {
+      0000803F00000000000000000000803F
+    }
+    LineSmooth = True
+    LineWidth = 4
+    left = 8
+    top = 72
+  end
+  object GLHiddenLineShader1: TGLHiddenLineShader
+    FrontLine.Width = 1
+    FrontLine.Color.Color = {
+      938C0C3E938C0C3E938E0E3F0000803F
+    }
+    FrontLine.Pattern = 10101
+    BackLine.Width = 2
+    LineSmooth = True
+    Solid = True
+    left = 40
+    top = 8
+  end
+  object GLHiddenLineShader2: TGLHiddenLineShader
+    FrontLine.Width = 2
+    BackLine.Width = 1
+    BackLine.Color.Color = {
+      000000000000003F000000000000803F
+    }
+    BackLine.Pattern = 65280
+    LineSmooth = True
+    SurfaceLit = False
+    left = 40
+    top = 40
+  end
+  object GLHiddenLineShader3: TGLHiddenLineShader
+    FrontLine.Width = 5
+    FrontLine.Color.Color = {
+      EC51B83E0000803ECDCC4C3E9A99193F
+    }
+    BackLine.Width = 5
+    BackLine.Color.Color = {
+      0000003F0000003F0000003F9A99993E
+    }
+    LineSmooth = True
+    left = 40
+    top = 72
+  end
+  object GLHiddenLineShader4: TGLHiddenLineShader
+    FrontLine.Width = 2
+    FrontLine.Color.Color = {
+      B81E053F14AEC73E14AEC73E0000803F
+    }
+    BackLine.Width = 1
+    BackLine.Color.Color = {
+      E4DB5B3FEBE0E03E9A93133F0000803F
+    }
+    LineSmooth = True
+    left = 72
+    top = 8
+  end
+  object GLHiddenLineShader5: TGLHiddenLineShader
+    FrontLine.Width = 2
+    FrontLine.Color.Color = {
+      9A93133FE4DB5B3FEBE0E03E3333333F
+    }
+    BackLine.Width = 2
+    BackLine.Color.Color = {
+      000000000000003F000000000000803F
+    }
+    BackLine.Pattern = 65280
+    LineSmooth = True
+    Solid = True
+    BackgroundColor.Color = {
+      938C0C3E938E0E3F938C0C3E3333333F
+    }
+    SurfaceLit = False
+    left = 72
+    top = 40
+  end
+end

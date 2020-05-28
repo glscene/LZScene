@@ -1,0 +1,325 @@
+object Form1: TForm1
+  Left = 176
+  Height = 565
+  Top = 73
+  Width = 651
+  Caption = 'Form1'
+  ClientHeight = 565
+  ClientWidth = 651
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  Visible = True
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 565
+    Top = 0
+    Width = 651
+    Camera = GLCamera1
+    Buffer.BackgroundColor = 7168
+    Buffer.AmbientColor.Color = {
+      0000803F0000803F0000803F0000803F
+    }
+    FieldOfView = 163.881805419922
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 24
+    top = 24
+    object GLSkyBox1: TGLSkyBox
+      TagFloat = 0
+      Direction.Coordinates = {
+        9598A23144F7DFB20000803F00000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        1DB356B30000803FB3FA87B300000000
+      }
+      MaterialLibrary = GLMaterialLibrary1
+      MatNameTop = 'Top'
+      MatNameBottom = 'Bottom'
+      MatNameLeft = 'Left'
+      MatNameRight = 'Right'
+      MatNameFront = 'Front'
+      MatNameBack = 'Back'
+      MatNameClouds = 'Clouds'
+      CloudsPlaneOffset = 0.119999997317791
+      CloudsPlaneSize = 2
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Material.MaterialLibrary = GLMaterialLibrary1
+        Direction.Coordinates = {
+          18EBC2BE6823FE3E49BA47BF00000000
+        }
+        PitchAngle = 86.5
+        Position.Coordinates = {
+          000000C000008040000080BF0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 10.5
+        Up.Coordinates = {
+          CE00D4BE9A8D58BF0519ACBE00000000
+        }
+        Radius = 1
+        object GLSphere2: TGLSphere
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.MaterialLibrary = GLMaterialLibrary1
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = -8
+          Position.Coordinates = {
+            0000000000000000000000400000803F
+          }
+          RollAngle = 0
+          TurnAngle = 91.5
+          Up.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          Radius = 0.300000011920929
+        end
+      end
+    end
+    object GLSkyBox2: TGLSkyBox
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      MaterialLibrary = GLMaterialLibrary1
+      MatNameClouds = 'Clouds'
+      CloudsPlaneOffset = 0.100000001490116
+      CloudsPlaneSize = 4
+    end
+    object Castle: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLCube1: TGLCube
+        TagFloat = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Material.MaterialLibrary = GLMaterialLibrary1
+        PitchAngle = 0
+        Position.Coordinates = {
+          0BD43940FFFF7FC018230B400000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = {
+          0000803F000000420000803F
+        }
+        object GLCube2: TGLCube
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.MaterialLibrary = GLMaterialLibrary1
+          PitchAngle = 0
+          Position.Coordinates = {
+            000040C0000000BFCDCCCC3D0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = {
+            0000C0400000803F0000803F
+          }
+        end
+      end
+      object GLCube11: TGLCube
+        TagFloat = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Material.MaterialLibrary = GLMaterialLibrary1
+        Direction.Coordinates = {
+          000080BF000000001AE1F7B300000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          F42B46C0FFFF7FC018230B400000803F
+        }
+        RollAngle = 0
+        TurnAngle = -90
+        CubeSize = {
+          0000803F000000420000803F
+        }
+        object GLCube21: TGLCube
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.MaterialLibrary = GLMaterialLibrary1
+          PitchAngle = 0
+          Position.Coordinates = {
+            000040C0000000BFCDCCCC3D0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = {
+            0000C0400000803F0000803F
+          }
+        end
+      end
+      object GLCube111: TGLCube
+        TagFloat = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Material.MaterialLibrary = GLMaterialLibrary1
+        Direction.Coordinates = {
+          0000803F00000000B28FF03200000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0CD43940FFFF7FC0E8DC74C00000803F
+        }
+        RollAngle = 0
+        TurnAngle = 90
+        CubeSize = {
+          0000803F000000420000803F
+        }
+        object GLCube211: TGLCube
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.MaterialLibrary = GLMaterialLibrary1
+          PitchAngle = 0
+          Position.Coordinates = {
+            000040C0000000BFCDCCCC3D0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = {
+            0000C0400000803F0000803F
+          }
+        end
+      end
+      object GLCube112: TGLCube
+        TagFloat = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Material.MaterialLibrary = GLMaterialLibrary1
+        Direction.Coordinates = {
+          647F2B3300000000000080BF00000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          F42B46C0FFFF7FC0E8DC74C00000803F
+        }
+        RollAngle = 0
+        TurnAngle = -180
+        CubeSize = {
+          0000803F000000420000803F
+        }
+        object GLCube212: TGLCube
+          TagFloat = 0
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.MaterialLibrary = GLMaterialLibrary1
+          PitchAngle = 0
+          Position.Coordinates = {
+            000040C0000000BFCDCCCC3D0000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = {
+            0000C0400000803F0000803F
+          }
+        end
+      end
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        BEC0403FBEC0403FBEC0403F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0.0000999999974737875
+      Position.Coordinates = {
+        000088C100003042C0C6B5420000803F
+      }
+      LightStyle = lsOmni
+      SpotCutOff = 180
+      SpotExponent = 0
+      object GLLensFlare1: TGLLensFlare
+        TagFloat = 0
+        Seed = 1465
+        StreakAngle = 0
+        FlareIsNotOccluded = True
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 300
+      FocalLength = 40
+      NearPlaneBias = 0.200000002980232
+      Position.Coordinates = {
+        61EB8D3FD98541C02CCF94C00000803F
+      }
+      Direction.Coordinates = {
+        E2CB26BF5D9A063F40FD0B3F00000000
+      }
+      Up.Coordinates = {
+        A633CE3EC0C1593F8711ADBE00000000
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 64
+    top = 24
+  end
+  object GLNavigator1: TGLNavigator
+    VirtualUp.Coordinates = {
+      000000000000803F000000000000803F
+    }
+    MovingObject = GLCamera1
+    UseVirtualUp = True
+    AutoUpdateObject = True
+    MaxAngle = 90
+    MinAngle = -90
+    left = 104
+    top = 24
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    Enabled = False
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 24
+    top = 64
+  end
+  object GLUserInterface1: TGLUserInterface
+    MouseSpeed = 16
+    GLNavigator = GLNavigator1
+    left = 144
+    top = 24
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 248
+    top = 24
+  end
+end

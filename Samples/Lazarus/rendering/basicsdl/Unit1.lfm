@@ -1,0 +1,53 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  left = 248
+  top = 107
+  Height = 150
+  HorizontalOffset = 0
+  VerticalOffset = 0
+  Width = 215
+  object GLScene1: TGLScene
+    left = 16
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000484200004842000048420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Teapot1: TGLTeapot
+      TagFloat = 0
+      Material.Texture.ImageClassName = 'TGLCubeMapImage'
+      Material.Texture.TextureMode = tmReplace
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = Teapot1
+      Position.Coordinates = {
+        0000404000000040000000400000803F
+      }
+    end
+  end
+  object GLSDLViewer1: TGLSDLViewer
+    Camera = GLCamera1
+    Width = 640
+    Height = 480
+    Buffer.BackgroundColor = clBlack
+    Caption = 'GLScene SDL Test'
+    OnResize = GLSDLViewer1Resize
+    OnEventPollDone = GLSDLViewer1EventPollDone
+    left = 96
+    top = 8
+  end
+end
