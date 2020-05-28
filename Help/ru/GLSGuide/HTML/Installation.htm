@@ -1,0 +1,334 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<title>GLScene</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+a:link, span.MsoHyperlink
+	{color:black;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+code
+	{font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"\0422\0435\043A\0441\0442 \0432\044B\043D\043E\0441\043A\0438 \0417\043D\0430\043A";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.a
+	{mso-style-name:"\0422\0435\043A\0441\0442 \0432\044B\043D\043E\0441\043A\0438 \0417\043D\0430\043A";
+	mso-style-link:"\0422\0435\043A\0441\0442 \0432\044B\043D\043E\0441\043A\0438";
+	font-family:"Tahoma","sans-serif";}
+p.msolistparagraphcxspfirst, li.msolistparagraphcxspfirst, div.msolistparagraphcxspfirst
+	{mso-style-name:msolistparagraphcxspfirst;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.msolistparagraphcxspmiddle, li.msolistparagraphcxspmiddle, div.msolistparagraphcxspmiddle
+	{mso-style-name:msolistparagraphcxspmiddle;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.msolistparagraphcxsplast, li.msolistparagraphcxsplast, div.msolistparagraphcxsplast
+	{mso-style-name:msolistparagraphcxsplast;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=RU link=black vlink=purple>
+
+<div class=WordSection1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td width="15%" style='width:15.0%;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="70%" style='width:70.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><strong><span
+  style='font-size:24.0pt;font-family:"Arial","sans-serif";color:#FF8000'>&#1059;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1072;</span></strong><strong><span
+  lang=EN-US style='font-size:24.0pt;font-family:"Arial","sans-serif";
+  color:#FF8000'> GLScene</span></strong><b><span lang=EN-US style='font-size:
+  24.0pt;font-family:"Arial","sans-serif";color:#FF8000'><br>
+  </span></b><strong><span style='font-size:24.0pt;font-family:"Arial","sans-serif";
+  color:#FF8000'>&#1074; </span></strong><strong><span lang=EN-US
+  style='font-size:24.0pt;font-family:"Arial","sans-serif";color:#FF8000'>Lazarus</span></strong></p>
+  </td>
+  <td width="15%" style='width:15.0%;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+</table>
+
+</div>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=1 width="100%" noshade style='color:#FF8000' align=center>
+
+</div>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="90%"
+ style='width:90.0%'>
+ <tr>
+  <td width="100%" style='width:100.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p>&#1048;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;
+  &#1087;&#1086;
+  &#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1077;
+  &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1080; <span
+  lang=EN-US>GLScene</span><span lang=EN-US> </span>&#1074; <span lang=EN-US>Lazarus</span><span
+  lang=EN-US> </span>&#1076;&#1083;&#1103;
+  &#1088;&#1072;&#1073;&#1086;&#1090;&#1099; <span lang=EN-US>c</span><span
+  lang=EN-US> </span><span lang=EN-US>Free</span><span lang=EN-US> </span><span
+  lang=EN-US>Pascal</span><span lang=EN-US> </span><span lang=EN-US>Compiler</span>
+  (<span lang=EN-US>FPC</span>).
+  &#1042;&#1099;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;
+  &#1089;&#1083;&#1077;&#1076;&#1091;&#1102;&#1097;&#1080;&#1077;
+  &#1096;&#1072;&#1075;&#1080;: </p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+
+</div>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="90%"
+ style='width:90.0%'>
+ <tr>
+  <td width="99%" style='width:99.66%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoListParagraph style='text-indent:-18.0pt'><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'>1.<span style='font-size:7.0pt'>
+  </span>&#1047;&#1072;&#1075;&#1088;&#1091;&#1079;&#1080;&#1090;&#1077;
+  &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1080;&#1081;
+  &#1088;&#1077;&#1083;&#1080;&#1079; <span lang=EN-US>GLScene</span>_<span
+  lang=EN-US>LCL</span><span lang=EN-US> </span><span lang=EN-US>for</span><span
+  lang=EN-US> </span><span lang=EN-US>Lazarus</span><span lang=EN-US> </span>&#1089;&#1086;
+  &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1099; &nbsp;<span
+  lang=EN-US><a href="http://sourceforge.net/projects/glscene/files/">http<span
+  lang=RU>://</span>sourceforge<span lang=RU>.</span>net<span lang=RU>/</span>projects<span
+  lang=RU>/</span>glscene<span lang=RU>/</span>files<span lang=RU>/</span></a></span>.&nbsp;
+  &#1042;&#1099; &#1090;&#1072;&#1082;&#1078;&#1077;
+  &#1084;&#1086;&#1078;&#1077;&#1090;
+  &#1079;&#1072;&#1075;&#1088;&#1091;&#1079;&#1080;&#1090;&#1100; (<span
+  lang=EN-US>check</span><span lang=EN-US> </span><span lang=EN-US>out</span>)
+  &#1080;&#1089;&#1093;&#1086;&#1076;&#1085;&#1099;&#1077;
+  &#1082;&#1086;&#1076;&#1099;
+  &#1090;&#1077;&#1082;&#1091;&#1097;&#1077;&#1081; <span lang=EN-US>SVN</span><span
+  lang=EN-US> </span>&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; <span
+  lang=EN-US>GLScene</span><span lang=EN-US> </span>&#1080;&#1079;
+  &#1088;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;&#1086;&#1088;&#1080;&#1103;
+  <span lang=EN-US>Sourceforge</span><span lang=EN-US> </span><span lang=EN-US>c</span><span
+  lang=EN-US> </span><span lang=EN-US>URL</span><span lang=EN-US> </span><span
+  lang=EN-US><a href="https://svn.code.sf.net/p/glscene/code/branch">https<span
+  lang=RU>://</span>svn<span lang=RU>.</span>code<span lang=RU>.</span>sf<span
+  lang=RU>.</span>net<span lang=RU>/</span>p<span lang=RU>/</span>glscene<span
+  lang=RU>/</span>code<span lang=RU>/</span>branch</a>es</span></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal style='margin-left:18.0pt'>2.&#1044;&#1083;&#1103; &nbsp;<span
+  lang=EN-US>SVN</span><span lang=EN-US> </span>&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;
+  &#1089;&#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077;
+  &#1082;&#1086;&#1087;&#1080;&#1102;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080; <span
+  lang=EN-US>trunk</span><span lang=EN-US> </span>&#1074;
+  &#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1091;&#1102;
+  &#1087;&#1072;&#1087;&#1082;&#1091;,
+  &#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088; &#1074;
+  &#1088;&#1072;&#1073;&#1086;&#1095;&#1091;&#1102;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1102; ../<span
+  lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span>,
+  &#1095;&#1090;&#1086;&#1073;&#1099;
+  &#1087;&#1088;&#1077;&#1076;&#1086;&#1090;&#1074;&#1088;&#1072;&#1090;&#1080;&#1090;&#1100;
+  &#1089;&#1083;&#1091;&#1095;&#1072;&#1081;&#1085;&#1086;&#1077;
+  &#1080;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1077;
+  &#1080;&#1089;&#1093;&#1086;&#1076;&#1085;&#1099;&#1093;
+  &#1092;&#1072;&#1081;&#1083;&#1086;&#1074;.
+  &#1052;&#1086;&#1078;&#1077;&#1090;&#1077;
+  &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1090;&#1100;
+  &#1101;&#1090;&#1086;&#1090; &#1096;&#1072;&#1075;,
+  &#1077;&#1089;&#1083;&#1080; &#1074;&#1099; &#1085;&#1077;
+  &#1073;&#1091;&#1076;&#1077;&#1090;&#1077;
+  &#1076;&#1072;&#1083;&#1077;&#1077;
+  &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1103;&#1090;&#1100;
+  &#1092;&#1072;&#1081;&#1083;&#1099; &#1089;
+  &#1087;&#1086;&#1084;&#1086;&#1097;&#1100;&#1102;
+  &#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1099;
+  &#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1103;
+  &#1074;&#1077;&#1088;&#1089;&#1080;&#1081;. </p>
+  <p class=MsoNormal style='margin-left:18.0pt'>&nbsp;</p>
+  <p class=MsoListParagraph style='text-indent:-18.0pt'>3.&#1057;&#1082;&#1086;&#1087;&#1080;&#1088;&#1091;&#1081;&#1090;&#1077;
+  &#1080;&#1079;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080; ..<span
+  lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span>/<span lang=EN-US>Source</span>/<span
+  lang=EN-US>external</span><span lang=EN-US> </span>&#1074;
+  &#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1085;&#1091;&#1102;
+  &#1087;&#1072;&#1087;&#1082;&#1091;
+  &#1074;&#1085;&#1077;&#1096;&#1085;&#1080;&#1077;
+  &#1076;&#1080;&#1085;&#1072;&#1084;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;
+  &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1080; 3<span
+  lang=EN-US>D</span><span lang=EN-US> </span>&#1079;&#1074;&#1091;&#1082;&#1072;,
+  &#1096;&#1077;&#1081;&#1076;&#1077;&#1088;&#1086;&#1074; &#1080;
+  &#1092;&#1080;&#1079;&#1080;&#1082;&#1080; (<span lang=EN-US>BASS</span>, <span
+  lang=EN-US>FMOD</span>, <span lang=EN-US>OpenAL</span>, <span lang=EN-US>SDL</span>,
+  <span lang=EN-US>CG</span>, <span lang=EN-US>ODE</span>, <span lang=EN-US>Newton</span>).
+  &#1048;&#1083;&#1080; &#1076;&#1083;&#1103;
+  &#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;
+  &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;,
+  &#1086;&#1073;&#1088;&#1072;&#1097;&#1072;&#1102;&#1097;&#1077;&#1075;&#1086;&#1089;&#1103;
+  &#1082; &#1101;&#1090;&#1080;&#1084;
+  &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1072;&#1084;,
+  &#1087;&#1086;&#1084;&#1077;&#1089;&#1090;&#1080;&#1090;&#1077;
+  &#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1091;&#1102;&#1097;&#1080;&#1077;
+  <span lang=EN-US>DLL</span><span lang=EN-US> </span>&#1074;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080;
+  &#1089;
+  &#1080;&#1089;&#1087;&#1086;&#1083;&#1085;&#1103;&#1077;&#1084;&#1099;&#1084;&#1080;
+  &#1092;&#1072;&#1081;&#1083;&#1072;&#1084;&#1080;. </p>
+  <p class=MsoListParagraph>&nbsp;</p>
+  <p class=MsoNormal style='margin-left:18.0pt'>4.
+  &#1054;&#1087;&#1094;&#1080;&#1080; <span lang=EN-US>Delphi</span>.
+  &#1044;&#1086;&#1073;&#1072;&#1074;&#1100;&#1090;&#1077;
+  &#1087;&#1091;&#1090;&#1100; &#1074;
+  &#1089;&#1090;&#1088;&#1086;&#1082;&#1077; <span lang=EN-US>Library</span><span
+  lang=EN-US> </span><span lang=EN-US>Path</span><span lang=EN-US> </span>&#1082;
+  &#1080;&#1089;&#1093;&#1086;&#1076;&#1085;&#1099;&#1084;
+  &#1092;&#1072;&#1081;&#1083;&#1072;&#1084;
+  &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1080; <span
+  lang=EN-US>GLScene</span>,&nbsp;
+  &#1088;&#1072;&#1089;&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1085;&#1099;&#1084;
+  &#1074;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080; .../<span
+  lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span>/<span lang=EN-US>Source</span>:</p>
+  <p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-US>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:18.0pt'>5.
+  &#1054;&#1090;&#1082;&#1088;&#1086;&#1081;&#1090;&#1077; <span lang=EN-US>lpk</span><span
+  lang=EN-US> </span>&#1087;&#1072;&#1082;&#1077;&#1090;&#1099;,
+  &#1085;&#1072;&#1093;&#1086;&#1076;&#1103;&#1097;&#1080;&#1077;&#1089;&#1103;
+  &#1074;
+  &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080; ../<span
+  lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span>/<span lang=EN-US>Packages</span>.
+  &#1054;&#1090;&#1082;&#1086;&#1084;&#1087;&#1080;&#1083;&#1080;&#1088;&#1091;&#1081;&#1090;&#1077;
+  &#1074;&#1089;&#1077; &#1087;&#1072;&#1082;&#1077;&#1090;&#1099;.
+  &#1055;&#1086;&#1089;&#1083;&#1077;
+  &#1082;&#1086;&#1084;&#1087;&#1080;&#1083;&#1103;&#1094;&#1080;&#1080;
+  &#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1080;&#1090;&#1077;
+  &#1087;&#1072;&#1082;&#1077;&#1090;&#1099; &#1089;
+  &#1074;&#1080;&#1079;&#1091;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084;&#1080;
+  &#1082;&#1086;&#1084;&#1087;&#1086;&#1085;&#1077;&#1085;&#1090;&#1072;&#1084;&#1080;
+  &#1074; &#1087;&#1072;&#1083;&#1080;&#1090;&#1088;&#1091;
+  &#1082;&#1086;&#1084;&#1087;&#1086;&#1085;&#1077;&#1085;&#1090;&#1086;&#1074;
+  <span lang=EN-US>Lazarus</span><span lang=EN-US> </span>&#1089;
+  &#1087;&#1086;&#1084;&#1086;&#1097;&#1100;&#1102;
+  &#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1099; <span lang=EN-US>Install</span>.
+  </p>
+  <p class=MsoNormal style='margin-left:18.0pt'>&#1047;&#1072;&#1084;&#1077;&#1095;&#1072;&#1085;&#1080;&#1077;:
+  &#1087;&#1072;&#1082;&#1077;&#1090; <span lang=EN-US>SDL</span><span
+  lang=EN-US> </span>&#1082;&#1086;&#1085;&#1092;&#1083;&#1080;&#1082;&#1090;&#1091;&#1077;&#1090;
+  &#1089;&#1086; &#1089;&#1088;&#1077;&#1076;&#1086;&#1081; <span lang=EN-US>Lazarus</span><span
+  lang=EN-US>  </span>&#1074; <span lang=EN-US>Windows</span> 7/8/8.1, &#1087;&#1086;&#1101;&#1090;&#1086;&#1084;&#1091;
+  &#1087;&#1088;&#1080; &#1088;&#1072;&#1073;&#1086;&#1090;&#1077; &#1074;
+  &#1101;&#1090;&#1080;&#1093; &#1054;&#1057; &#1077;&#1075;&#1086;
+  &#1091;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1090;&#1100;
+  &#1085;&#1077; &#1089;&#1083;&#1077;&#1076;&#1091;&#1077;&#1090;.</p>
+  <p class=MsoNormal style='margin-left:18.0pt'>&nbsp;</p>
+  <p class=MsoNormal style='margin-left:18.0pt'>&#1059;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1072;
+  &#1087;&#1072;&#1082;&#1077;&#1090;&#1086;&#1074;
+  &#1082;&#1086;&#1084;&#1087;&#1086;&#1085;&#1077;&#1085;&#1090;&#1086;&#1074;
+  <span lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span><span lang=EN-US> </span>&#1079;&#1072;&#1074;&#1077;&#1088;&#1096;&#1077;&#1085;&#1072;.
+  &#1044;&#1072;&#1083;&#1077;&#1077; &#1084;&#1086;&#1078;&#1085;&#1086;
+  &#1087;&#1088;&#1080;&#1089;&#1090;&#1091;&#1087;&#1080;&#1090;&#1100;
+  &#1082; &#1088;&#1072;&#1073;&#1086;&#1090;&#1077; &#1089;
+  &#1073;&#1080;&#1073;&#1083;&#1080;&#1086;&#1090;&#1077;&#1082;&#1086;&#1081;
+  &#1080; &#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1100;
+  &nbsp;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;,
+  &#1085;&#1072;&#1093;&#1086;&#1076;&#1103;&#1097;&#1080;&#1077;&#1089;&#1103;
+  &#1074; &#1076;&#1080;&#1088;&#1077;&#1082;&#1090;&#1086;&#1088;&#1080;&#1080;
+  ..<span lang=EN-US>GLScene</span>_<span lang=EN-US>LCL</span>/<span
+  lang=EN-US>Samples</span>/<span lang=EN-US>Lazarus</span>.</p>
+  <p>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width="99%" style='width:99.66%;padding:.75pt .75pt .75pt .75pt'>
+  <p>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

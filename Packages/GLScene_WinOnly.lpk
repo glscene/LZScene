@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="GLScene_WinOnly"/>
+    <Type Value="RunAndDesignTime"/>
+    <AddToProjectUsesSection Value="True"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="../Source"/>
+        <OtherUnitFiles Value="../Source"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="GLScene Windows Only support"/>
+    <Version Major="1" Build="3"/>
+    <Files Count="6">
+      <Item1>
+        <Filename Value="../Source/GLJoystick.pas"/>
+        <UnitName Value="GLJoystick"/>
+      </Item1>
+      <Item2>
+        <Filename Value="../Source/GLScreenSaver.pas"/>
+        <UnitName Value="GLScreenSaver"/>
+      </Item2>
+      <Item3>
+        <Filename Value="../Source/GLSMWaveOut.pas"/>
+        <UnitName Value="GLSMWaveOut"/>
+      </Item3>
+      <Item4>
+        <Filename Value="../Source/GLAVIRecorder.pas"/>
+        <UnitName Value="GLAVIRecorder"/>
+      </Item4>
+      <Item5>
+        <Filename Value="../Source/GLSVfw.pas"/>
+        <UnitName Value="GLSVfw"/>
+      </Item5>
+      <Item6>
+        <Filename Value="../Source/GLSpaceText.pas"/>
+        <UnitName Value="GLSpaceText"/>
+      </Item6>
+    </Files>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="GLScene_DesignTime"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

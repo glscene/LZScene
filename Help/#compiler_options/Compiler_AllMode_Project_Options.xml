@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="bin\$(TargetOs)\$(BuildMode)\$NameOnly($(ProjFile))-$(TargetCPU)"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(BuildMode)\$(TargetOS)-$(TargetCPU)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <BuildModes Count="3">
+    <Item1 Name="Default" Default="True"/>
+    <Item2 Name="Debug">
+      <CompilerOptions>
+        <Version Value="11"/>
+        <PathDelim Value="\"/>
+        <Target>
+          <Filename Value="bin\$(TargetOs)\$(BuildMode)\$NameOnly($(ProjFile))-$(TargetCPU)"/>
+        </Target>
+        <SearchPaths>
+          <IncludeFiles Value="$(ProjOutDir)"/>
+          <UnitOutputDirectory Value="lib\$(BuildMode)\$(TargetOS)-$(TargetCPU)"/>
+        </SearchPaths>
+        <Parsing>
+          <Style Value="1"/>
+        </Parsing>
+        <CodeGeneration>
+          <Checks>
+            <IOChecks Value="True"/>
+            <OverflowChecks Value="True"/>
+          </Checks>
+        </CodeGeneration>
+        <Linking>
+          <Debugging>
+            <UseHeaptrc Value="True"/>
+          </Debugging>
+          <Options>
+            <Win32>
+              <GraphicApplication Value="True"/>
+            </Win32>
+          </Options>
+        </Linking>
+        <Other>
+          <Verbosity>
+            <ShowDebugInfo Value="True"/>
+          </Verbosity>
+        </Other>
+      </CompilerOptions>
+    </Item2>
+    <Item3 Name="Release">
+      <CompilerOptions>
+        <Version Value="11"/>
+        <PathDelim Value="\"/>
+        <Target>
+          <Filename Value="bin\$(TargetOs)\$(BuildMode)\$NameOnly($(ProjFile))-$(TargetCPU)"/>
+        </Target>
+        <SearchPaths>
+          <IncludeFiles Value="$(ProjOutDir)"/>
+          <UnitOutputDirectory Value="lib\$(BuildMode)\$(TargetOS)-$(TargetCPU)"/>
+        </SearchPaths>
+        <CodeGeneration>
+          <SmartLinkUnit Value="True"/>
+          <Optimizations>
+            <OptimizationLevel Value="3"/>
+          </Optimizations>
+        </CodeGeneration>
+        <Linking>
+          <Debugging>
+            <GenerateDebugInfo Value="False"/>
+          </Debugging>
+          <LinkSmart Value="True"/>
+          <Options>
+            <Win32>
+              <GraphicApplication Value="True"/>
+            </Win32>
+          </Options>
+        </Linking>
+      </CompilerOptions>
+    </Item3>
+  </BuildModes>
+</CONFIG>

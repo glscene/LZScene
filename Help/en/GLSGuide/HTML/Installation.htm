@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GLScene Lazarus Installation</title>
+    <meta name=description content="Installation.htm for GLSceneLCL Branche, the OpenGL solution for Lazarus and Delphi.">
+    <meta name=keywords content="Delphi, Lazarus, OpenGL, GLScene, graphics, 3D, programming, Shader, tutorial, 3DS, component, library, tools, IDE,  real-time, animation, rendering">
+    <style>
+        html {
+          /* set base font-size to equiv "10px", which is adapted to rem unit */  
+          /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+          /* thanks to @guardian, @victorbritopro and @eQRoeil */
+          font-size: 10px;
+          font-size: 62.5%;
+          font-size: calc(1em * 0.625);
+
+        }
+        body {
+          min-height: 240px;
+          height: 100%;
+          font-size: 16px;
+          font-size:1.6em;
+          font-size: 1.6rem;
+          font-family: "Roboto", Helvetica, Arial, sans-serif;
+          font-weight: normal;
+          line-height: 1.1;
+          /* min-height: 100000px; */
+        }
+        h1, h2, h3, h4 {
+            color: #ff8000;
+            font-weight: 500;
+            line-height: 1.5;
+            margin: 0 0 1rem;
+            text-align: center;	
+        }
+        .subtitle {
+            color:#000;
+        }
+        ul {
+            margin-top:1rem;
+        }
+        ul li {
+            margin-top:0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ol > li {
+            margin-top:0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .notice_box {
+            width:80%; margin:0.5rem auto; background-color:#dbbb72; padding:0.5rem
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 style="width:30%; margin:auto">Installation of GLScene into Lazarus since version 1.6.x</h1>
+    <hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+</header>
+<main style="width:66%; margin:auto">
+  <h2 class="subtitle">The Instruction for installing GLScene library into Lazarus 1.6x and up to work with Free Pascal Compiler (FPC)</h2>
+  <hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+  <ol>
+      <li><strong>Download the last release of GLSceneLCL for Lazarus</strong>  
+      <ul>
+          <li><p>From the page http://sourceforge.net/projects/glscene/files/ as archive file.<br>Select Branch->GLSceneLCL</p></li>
+          <li><p>From current SVN version of GLScene from the URL of repository https://svn.code.sf.net/p/glscene/code/branch/GLSceneLCL.</p><p class="notice_box">
+               <strong>NOTICE : </strong>Make a copy of the trunk in a separate directory, e.g. in the working directory ../GLSceneLCL, to prevent original source codes from occasional changes.              
+          </p></li>
+      </ul>
+    </li>
+    <li><strong> Copy auxiliary dynamic libraries </strong> 
+    <ul>
+      <li>Under Windows
+      <p>Run setup.bat in ..\GLSceneLCL\external directory as administrator to copy auxiliary dynamic libraries into C:\Windows\System32 and C:\Windows\SysWOW64 directories </p>      
+      </li>
+      <li>Under Linux</li>
+      <p></p>
+    </ul>
+    <p>... to support 3D sounds, shaders and physics (BASS, FMOD, OpenAL, SDL, CG, ODE, Newton). Otherwise you will need to have ones for every application directory with exe file that calls an appropriate dll. </p> 
+    <p class="notice_box">
+      <strong>NOTICE : </strong>BASS, FMOD, CG Are only supported under Windows.
+    </p>
+    <li><strong>Install Components</strong>
+       <p>Launch Lazarus IDE</p>
+        <ol>
+            <li><p>Open and Compile Package GLScene_Runtime<br><img src="laz_glscene_linstall_step_01.jpg" alt=""><br><img src="laz_glscene_linstall_step_02.jpg" alt=""></p></li>            
+            <li><p>Open and Compile Package GLScene_OpenAL</p><p>Do the same as step 1 above.</p></li>
+            <li><p>Open Compile and Install Package GLScene_Designtime<br><img src="laz_glscene_linstall_step_03.jpg" alt="">
+            <br><img src="laz_glscene_linstall_step_03a.jpg" alt=""><br><img src="laz_glscene_linstall_step_03b.jpg" alt=""></p></li>
+            <li><p>If you want using SDL Library</p>
+                <p class="notice_box">
+                   <strong>NOTICE : </strong> Compile package GLScene_SDL
+                </p>
+            </li> 
+            <li><p>If you are under Windows</p>
+                <p class="notice_box">
+                   <strong>NOTICE : </strong> You can compile others packages GLScene_Bass, GLScene_FMod, GLScene_ODE, GLScene_NGD, GLScene_CgShader and GLScene_WinOlnly 
+                </p>
+            </li>            
+        </ol>
+    </li>    
+    <li><strong>After restarting Lazarus IDE</strong><p>Normally you'll can open or create new GLScene projects</p>
+    <p><br><img style="max-width:95%;" src="laz_glscene_linstal_ok.jpg" alt=""></p></li>
+  </ol> 
+</main>
+<footer style="Text-align:center;">
+ <hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+  <p><a href="https://sourceforge.net/projects/glscene/">GLScene Home Page</a> - <a href="http://www.lazarus-ide.org">Lazarus Home Page</a></p>  
+  <hr size=1 width="66%" noshade style='color:#FF8000' align=center>
+</footer>
+
+</body>
+</html>

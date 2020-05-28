@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="GLScene_Physic_native"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\Source"/>
+        <OtherUnitFiles Value="..\Source"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\"/>
+      </SearchPaths>
+      <Parsing>
+        <Style Value="1"/>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+        </SyntaxOptions>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="GLScene Physic Native objects"/>
+    <Files Count="6">
+      <Item1>
+        <Filename Value="..\Source\GLForceFields.pas"/>
+        <UnitName Value="GLForceFields"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\GLForces.pas"/>
+        <UnitName Value="GLForces"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\Source\GLInertias.pas"/>
+        <UnitName Value="GLInertias"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\Source\GLJoints.pas"/>
+        <UnitName Value="GLJoints"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\Source\GLPhysics.pas"/>
+        <UnitName Value="GLPhysics"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\Source\GLPhysicsRegister.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="GLPhysicsRegister"/>
+      </Item6>
+    </Files>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="GLScene_DesignTime"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

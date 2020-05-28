@@ -1,0 +1,1 @@
+The directory for external DLL libraries in some way used by GLScene_LCL

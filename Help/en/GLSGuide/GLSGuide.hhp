@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=GLSGuide.chm
+Contents file=GLSGuide.hhc
+Default topic=HTML\Installation.htm
+Display compile progress=No
+Index file=GLSGuide.hhk
+Language=0x409 Английский (США)
+
+
+[FILES]
+HTML\Installation.htm
+
+[MAP]
+#include ..\..\#IDH\Idh_Main.h
+
+[TEXT POPUPS]
+..\..\#IDH\Idh_Popup.h
+
+[INFOTYPES]
+

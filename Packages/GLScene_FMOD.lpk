@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Package Version="3">
+    <Name Value="GLScene_FMOD"/>
+    <CompilerOptions>
+      <Version Value="9"/>
+      <SearchPaths>
+        <IncludeFiles Value="../Source"/>
+        <OtherUnitFiles Value="../Source/"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <SyntaxMode Value="Delphi"/>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <CodeGeneration>
+        <SmartLinkUnit Value="True"/>
+      </CodeGeneration>
+      <Linking>
+        <Debugging>
+          <GenerateDebugInfo Value="True"/>
+          <UseHeaptrc Value="True"/>
+        </Debugging>
+      </Linking>
+      <Other>
+        <CompilerPath Value="$(CompPath)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="GLScene FMOD support"/>
+    <Version Major="1" Build="3"/>
+    <Files Count="5">
+      <Item1>
+        <Filename Value="../Source/GLSMFMOD.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="GLSMFMOD"/>
+      </Item1>
+      <Item2>
+        <Filename Value="../Source/FmodPresets.pas"/>
+        <UnitName Value="fmodpresets"/>
+      </Item2>
+      <Item3>
+        <Filename Value="../Source/fmodtypes.pas"/>
+        <UnitName Value="fmodtypes"/>
+      </Item3>
+      <Item4>
+        <Filename Value="../Source/fmoderrors.pas"/>
+        <UnitName Value="fmoderrors"/>
+      </Item4>
+      <Item5>
+        <Filename Value="../Source/fmoddyn.pas"/>
+        <UnitName Value="fmoddyn"/>
+      </Item5>
+    </Files>
+    <Type Value="RunAndDesignTime"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="GLScene_DesignTime"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <CustomOptions Value="-dUseCThreads
+"/>
+      <UnitPath Value="$(PkgOutDir)/"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
