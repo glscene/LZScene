@@ -21,7 +21,7 @@ Unit GLRandomGenerator;
 
 Interface
 
-{$I ../GLScene.inc}
+{$I GLScene.inc}
 
 Uses
   Classes, Sysutils;
