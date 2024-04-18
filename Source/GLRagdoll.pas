@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
     Base abstract ragdoll class. Should be extended to use any physics system. 

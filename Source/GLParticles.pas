@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Particle systems for GLScene, based on replication of full-featured scene objects.

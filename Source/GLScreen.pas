@@ -1,32 +1,12 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
   Routines to interact with the screen/desktop.
-
-  History :  
-   04/11/10 - DaStr - Added Delphi5 and Delphi6 compatibility
-   06/06/10 - Yar - Fixed warnings
-   13/04/10 - Yar - Fixed conditional for delphi (thanks mif)
-   07/01/10 - DaStr - Enhanced cross-platform compatibility (thanks Predator)
-   17/12/09 - DaStr - Added screen utility functions from
-  GLCrossPlatform.pas (thanks Predator)
-   07/11/09 - DaStr - Improved FPC compatibility and moved to the /Source/Platform/
-  directory (BugtrackerID = 2893580) (thanks Predator)
-   23/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   03/07/04 - LR - Suppress CurrentScreenColorDepth because there are in GLCrossPlatform
-   24/07/03 - EG - Video modes now read on request only, removed
-  the non-standard low-res video modes
-   27/09/02 - EG - Added Ability to set display frequency
-   27/07/01 - EG - Removed the "absolute" in RestoreDefaultMode
-   08/02/00 - EG - TLowResMode & TVideoMode packed (wins 5 kb)
-   06/02/00 - EG - Javadocisation, added "default"s to properties
-   
 }
 unit GLScreen;
 
- // screen    - This units contains routines to interact with the screen/desktop.
+// screen    - This units contains routines to interact with the screen/desktop.
 // Version     - 0.0.8
 // Last Change - 30. September 1998
 // for more information see help file

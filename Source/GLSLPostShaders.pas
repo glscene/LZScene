@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Post shaders that simulate shader visions for a mask or the entire scene.

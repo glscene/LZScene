@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Just a good looking shader. And my first one;) 

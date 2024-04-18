@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
   Activate GLS_LOGGING in "GLSCene.inc" to turn on inner GLScene logger.

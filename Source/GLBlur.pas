@@ -1,31 +1,8 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
  Applies a blur effect over the viewport.
-
-  History :  
-         23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-         22/04/10 - Yar - Fixes after GLState revision
-         05/03/10 - DanB - More state added to TGLStateCache
-         30/01/08 - Mrqzzz - Several changes to GLBlur. Added Advenced Blur. Looks good now :)
-         06/06/07 - DaStr  - Added GLColor to uses (BugtrackerID = 1732211)
-         06/04/07 - DaStr  - Fixed TGLMotionBlur.InitializeObject -
-                                 component can only be disabled in run-time
-         03/04/07 - DaStr  - Optimized TGLMotionBlur.DoRender - now component
-                                 checks for supported extensions only once
-         25/03/07 - DaStr  - Renamed parameters in some methods
-                                (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-         22/03/07 - DaStr  - Added checks to TGLMotionBlur for supported extensions
-                                TGLMotionBlur is not rendered when picking now
-         25/02/07 - DaStr  - Added DesignTime check in TGLMotionBlur.DoRender
-         23/02/07 - DaStr  - TGLMotionBlur.StoreIntensity bugfixed
-                                TGLBlur - default values added to all properties,
-                                Made some cosmetic and alignment changes
-         20/02/07 - DaStr  - TGLMotionBlur added (based on ToxBlur by Dave Gravel)
-                                Added some default values to TGLBlur
-         11/06/04 - Mrqzzz - Creation
-    
 }
 unit GLBlur;
 

@@ -1,29 +1,5 @@
 //
-// Heavily based on Delphi Free Stuff Include File
-//                  by Brad Stowers: bstowers@pobox.com
-//                  Delphi Free Stuff: http://www.delphifreestuff.com/
-//
-// History:
-// 09/09/14 - PW - Dropped support for compilers older then Delphi7
-// 10/11/12 - PW - Added support for Delphi and C++Builder with
-//                 GLS_DELPHI and GLS_CPPB defines
-// 02/04/10 - Yar - Added GLS_NO_INLINE option
-// 13/12/09 - DaStr - Added GLS_MULTITHREAD option (thanks Controller)
-// 10/11/09 - DaStr - Added Delphi 2010 support
-// 07/11/09 - DaStr - Improved FPC compatibility (BugtrackerID = 2893580)
-//                    Added GLS_NO_ASM option
-// 12/09/07 - DaStr - Added GLS_DELPHI_OR_CPPB
-// 30/03/07 - DaStr - Added GLS_ENABLE_UNSAFE_WARNINGS
-// 25/03/07 - DaStr - Added UNIX and KYLIX defines
-// 14/01/07 - DaStr - Added GLS_DELPHI/COMPILER_XX_DOWN defines
-// 20/12/06 - DaStr - Added GLS_OPTIMIZATIONS option
-// 08/03/06 - ur - Added Delphi 2006 detection
-// 08/07/04 - LR - BCB5 and BCB6 detection
-// 30/08/02 - EG - Delphi 7 detection
-// 24/01/02 - EG - Linux/Kylix changes (Puthoon)
-// 28/12/01 - EG - Added GLS_Graphics32_SUPPORT
-// 27/07/01 - EG - Renamed and made GLScene-specific
-// 26/06/01 - EG - Added Delphi6 stuff
+// This unit is part of the GLScene Project, http://glscene.org
 //
 
 {$DEFINE GLSCENE}

@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
   How to use:
@@ -18,28 +18,6 @@
   - UseGravity: You can disable the gravity for that object
   - SlideOrBounce: The object can bounce like a ball or slide like an FPS
   - BounceFactor: Restituition factor, 1 means that it will bounce forever
-
-   History :  
-     21/01/01 - DanB - Added "inherited" call to TGLDCEDynamic/TGLDCEStatic.WriteToFiler
-     18/09/10 - YP - Moved published behaviours' events to public (they cannot be restored by the filer)
-     30/03/07 - DaStr - Added $I GLScene.inc
-     29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-     01/07/05 - MathX - Fixed memory leak on contactPoints (moveByDistance method)
-     23/01/05 - LucasG - Code reorganized, many fixes and some new features
-     19/11/04 - GAK - Added standardised collision selection (optionally use same selection criteria as other collision system)
-     17/11/04 - LucasG - Added support for static box colliders
-     17/11/04 - LucasG - Added UseGravity property to behaviour
-     14/11/04 - LucasG - Fixed average friction calculation
-     14/11/04 - LucasG - Added AirFriction property to DCEManager
-     13/11/04 - LucasG - Added Active property to behaviour
-     17/11/04 - LucasG - Added support for static box colliders
-     17/11/04 - LucasG - Added UseGravity property to behaviour
-     14/11/04 - LucasG - Fixed average friction calculation
-     14/11/04 - LucasG - Added AirFriction property to DCEManager
-     13/11/04 - LucasG - Added Active property to behaviour
-     03/09/04 - LucasG - First release
-     29/07/04 - LucasG - Creation
-   
 }
 
 unit GLDCE;

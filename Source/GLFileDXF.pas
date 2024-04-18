@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
   Support-Code to load DXF (Drawing eXchange Files) TGLFreeForm or

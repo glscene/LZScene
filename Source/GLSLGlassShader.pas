@@ -1,4 +1,4 @@
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Glass shader : Environment mapping with an

@@ -1,19 +1,8 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Cubic spline interpolation functions
-
-	 History :  
-      10/12/14 - PW - Renamed Spline unit to GLSpline
-      30/12/12 - PW - Restored CPP compatibility with record arrays
-      08/07/04 - LR - Removed ../ from the GLScene.inc
-      16/07/02 - Egg - Added methods to access slope per axis
-	    28/05/00 - Egg - Javadocisation, minor changes & optimizations,
-                           Renamed TSpline to TCubicSpline, added W component
-                           and a bunch of helper methods
-	    20/05/00 - RoC - Created, based on the C source code from Eric
-	 
 }
 unit GLSpline;
 
@@ -28,8 +17,6 @@ type
 
    TCubicSplineMatrix = array of array [0..3] of Single;
 
-   // TCubicSpline
-   //
    { 3D cubic spline handler class.
       This class allows to describe and calculate values of a time-based,
       three-dimensionnal cubic spline.

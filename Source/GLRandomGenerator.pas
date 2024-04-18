@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Custom Fast ThreadSafe Random Number Generator for Freepascal
@@ -11,10 +11,6 @@
     - https://en.wikipedia.org/wiki/Linear_congruential_generator
     - https://en.wikipedia.org/wiki/Xorshift
     - https://en.wikipedia.org/wiki/Multiply-with-carry
-
-   History :
-       17/11/17 - J.Delauney (BeanzMaster) - Creation
-
 }
 Unit GLRandomGenerator;
 

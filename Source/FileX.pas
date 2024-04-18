@@ -1,14 +1,8 @@
 //
-// This unit is part of the GLScene Project, http://glscene.org
+// This unit is part of the GLScene Engine https://github.com/glscene
 //
 {
    Simple X format support for Delphi (Microsoft's favorite format)
-
-    History :  
-       17/04/13 - YP - Warn user if file content unparsable (http://paulbourke.net/dataformats/directx/)
-       04/10/10 - Yar - Fixed TDXFileHeader type (thanks JironBach)
-       07/11/09 - DaStr - Initial version (Added from the GLScene-Lazarus SVN)
-    
 }
 unit FileX;
 
