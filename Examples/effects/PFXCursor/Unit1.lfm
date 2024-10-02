@@ -1,0 +1,471 @@
+object Form1: TForm1
+  Left = 566
+  Height = 500
+  Top = 281
+  Width = 718
+  ClientHeight = 500
+  ClientWidth = 718
+  OnShow = FormShow
+  LCLVersion = '1.6.4.0'
+  object vp: TGLSceneViewer
+    Cursor = crNone
+    Left = 161
+    Height = 500
+    Top = 0
+    Width = 557
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clNavy
+    Buffer.ContextOptions = [roDoubleBuffer, roRenderToWindow]
+    FieldOfView = 157.380142211914
+    Align = alClient
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 500
+    Top = 0
+    Width = 161
+    Align = alLeft
+    ClientHeight = 500
+    ClientWidth = 161
+    TabOrder = 1
+    object RadioGroup1: TRadioGroup
+      Left = 8
+      Height = 105
+      Top = 8
+      Width = 137
+      AutoFill = True
+      Caption = 'Fire'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 85
+      ClientWidth = 133
+      ItemIndex = 0
+      Items.Strings = (
+        'Burn'
+        'No Burn'
+      )
+      OnClick = RadioGroup1Click
+      TabOrder = 0
+    end
+    object RadioGroup2: TRadioGroup
+      Left = 8
+      Height = 105
+      Top = 120
+      Width = 137
+      AutoFill = True
+      Caption = 'Perlin'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 85
+      ClientWidth = 133
+      ItemIndex = 0
+      Items.Strings = (
+        'Trail'
+        'No Trail'
+      )
+      OnClick = RadioGroup2Click
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 224
+    top = 16
+    object GLParticleFXRenderer1: TGLParticleFXRenderer
+      TagFloat = 0
+    end
+    object Light1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000000000000A040000000400000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object cur: TGLHUDSprite
+      TagFloat = 0
+      Material.BlendingMode = bmTransparency
+      Material.MaterialOptions = [moNoLighting]
+      Material.Texture.ImageClassName = 'TGLBlankImage'
+      Material.Texture.Image.ColorFormat = 6408
+      Material.Texture.MagFilter = maNearest
+      Material.Texture.MinFilter = miNearest
+      Material.Texture.TextureMode = tmModulate
+      Material.Texture.Compression = tcNone
+      Material.Texture.Disabled = False
+      PitchAngle = 0
+      Position.Coordinates = {
+        00C08A4300C08A43000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Width = 32
+      Height = 32
+      Rotation = 0
+    end
+    object dc_cur: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 0.00999999977648258
+      VisibleAtRunTime = True
+      object dc1: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        CubeSize = 1
+        EffectsData = {
+          0458434F4C02010203061254474C536F75726365504658456666656374020202
+          00060002000200060470667831050000000000000080FE3F0206020009000000
+          00000000BF0000000000000000020008020008050000000000CDCCCCFC3F0500
+          00000000CDCCCCFC3F0500000000000AD7A3F83F020002000905000000000000
+          000000000902000200020202000600020002000617474C506F696E744C696768
+          745046584D616E6167657232050000000000000080FD3F020602000802000802
+          0008050000000000CDCCCCFD3F050000000000CDCCCCFC3F0500000000000AD7
+          A3F83F0200020009050000000000000000000009020002000202020006000200
+          02000617474C506F696E744C696768745046584D616E61676572330500000000
+          00000080FF3F0206020008020008020008050000000000000000000005000000
+          000000000000000500000000000AD7A3F73F0200020009050000000000000000
+          0000090200
+        }
+      end
+      object dc2: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Visible = False
+        CubeSize = 1
+        EffectsData = {
+          0458434F4C02010201061254474C536F75726365504658456666656374020202
+          00060002000200060470667832050000000000000080FF3F0206020009000000
+          00000000400000000000000000020008020008050000000000000080FE3F0500
+          00000000CDCCCCFC3F0500000000008FC2F5F83F020102010905000000000000
+          00000000090201
+        }
+      end
+      object dc3: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EffectsData = {
+          0458434F4C02010201061254474C536F75726365504658456666656374020202
+          00060002000200060470667833050000000000000080FF3F0206020008020008
+          0200080500000000000000800040050000000000CDCCCCFB3F0500000000000A
+          D7A3F73F02000200090500000000000000000000090200
+        }
+      end
+    end
+    object rend: TGLParticleFXRenderer
+      TagFloat = 0
+    end
+    object GLDummyCube3: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object GLCone1: TGLCone
+        TagFloat = 0
+        Material.FrontProperties.Emission.Color = {
+          CDCC4C3FACC8483E9A99193F0000803F
+        }
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Direction.Coordinates = {
+          000000002EBDBBB3000080BF00000000
+        }
+        PitchAngle = 180
+        Position.Coordinates = {
+          000080BF00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000080BF2EBDBB3300000000
+        }
+        BottomRadius = 0.300000011920929
+        Height = 0.5
+        object GLDummyCube1: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            000000009A9919BE000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EffectsData = {
+            0458434F4C02010201061254474C536F75726365504658456666656374020202
+            000600020002000613474C5065726C696E5046584D616E616765723105000000
+            0000000080FD3F0206020009000000000000803F000000000000000002000802
+            000805000000000000000000000500000000000000000000050000000000CDCC
+            CCFB3F02000200090500000000000000000000080200
+          }
+        end
+      end
+      object GLCone2: TGLCone
+        TagFloat = 0
+        Material.FrontProperties.Emission.Color = {
+          0000803FF8FEFE3E000000000000803F
+        }
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.Compression = tcNone
+        Direction.Coordinates = {
+          000000002EBDBBB3000080BF00000000
+        }
+        PitchAngle = 180
+        Position.Coordinates = {
+          0000803F00000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000080BF2EBDBB3300000000
+        }
+        BottomRadius = 0.300000011920929
+        Height = 0.5
+        object GLDummyCube2: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            000000009A9919BE000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EffectsData = {
+            0458434F4C02010201060A54474C424669726546580201020006000200020006
+            10474C4669726546584D616E6167657231
+          }
+        end
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLDummyCube3
+      Position.Coordinates = {
+        0000000000000040000080400000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'plane'
+        Tag = 0
+        Material.FrontProperties.Emission.Color = {
+          EBE0E03EE4DB5B3F9A93133F0000803F
+        }
+      end>
+    left = 224
+    top = 80
+  end
+  object cad: TGLCadencer
+    Scene = GLScene1
+    Enabled = False
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = cadProgress
+    left = 312
+    top = 16
+  end
+  object pfx1: TGLPointLightPFXManager
+    Cadencer = cad
+    Renderer = rend
+    Friction = 1
+    Rotation = 0
+    ColorMode = scmFade
+    ParticleSize = 1
+    ColorInner.Color = {
+      0000803F000000000000803F0000803F
+    }
+    ColorOuter.Color = {
+      0000803F00000000000000000000803F
+    }
+    LifeColors = <    
+      item
+        LifeTime = 5
+        SizeScale = 2
+        RotateAngle = 0
+      end>
+    left = 312
+    top = 80
+  end
+  object AsyncTimer1: TGLAsyncTimer
+    Enabled = True
+    Interval = 800
+    OnTimer = AsyncTimer1Timer
+    ThreadPriority = tpNormal
+    left = 384
+    top = 16
+  end
+  object GLPointLightPFXManager2: TGLPointLightPFXManager
+    Cadencer = cad
+    Renderer = rend
+    Acceleration.Coordinates = {
+      00000000000040BF0000000000000000
+    }
+    Friction = 1
+    Rotation = 0
+    ParticleSize = 0.5
+    ColorInner.Color = {
+      000000000000803F0000803F0000803F
+    }
+    ColorOuter.Color = {
+      0000803F0000803F0000803F0000803F
+    }
+    LifeColors = <    
+      item
+        LifeTime = 3
+        SizeScale = 0.5
+        RotateAngle = 0.300000011920929
+      end>
+    left = 224
+    top = 136
+  end
+  object GLPointLightPFXManager3: TGLPointLightPFXManager
+    Cadencer = cad
+    Renderer = rend
+    Friction = 1
+    Rotation = 0
+    ColorMode = scmFade
+    ParticleSize = 0.5
+    ColorInner.Color = {
+      ACC8483ECDCC4C3FACC8483E0000803F
+    }
+    ColorOuter.Color = {
+      0000803F0000803F000000000000803F
+    }
+    LifeColors = <    
+      item
+        LifeTime = 1
+        SizeScale = 1
+        RotateAngle = 0
+      end>
+    left = 224
+    top = 208
+  end
+  object pfx2: TGLCustomSpritePFXManager
+    Cadencer = cad
+    Renderer = rend
+    Friction = 1
+    Rotation = 0
+    OnPrepareTextureImage = pfx2PrepareTextureImage
+    ColorMode = scmFade
+    ParticleSize = 0.75
+    ColorInner.Color = {
+      0000803F1283C03E000000000000803F
+    }
+    LifeColors = <    
+      item
+        ColorInner.Color = {
+          0000003F0000003F0000000000000000
+        }
+        LifeTime = 0.75
+        SizeScale = 3
+        RotateAngle = 0
+      end>
+    left = 384
+    top = 80
+  end
+  object pfx3: TGLCustomSpritePFXManager
+    Cadencer = cad
+    Renderer = rend
+    Acceleration.Coordinates = {
+      000000009A9999BE0000000000000000
+    }
+    Friction = 1
+    Rotation = 0
+    OnPrepareTextureImage = pfx3PrepareTextureImage
+    ParticleSize = 0.75
+    ColorInner.Color = {
+      0000803FAE47E13D7B142E3F0000803F
+    }
+    LifeColors = <    
+      item
+        ColorInner.Color = {
+          CDCC4C3FACC8483E9A99193F00000000
+        }
+        LifeTime = 0.75
+        SizeScale = 3
+        RotateAngle = 0.949999988079071
+      end>
+    left = 456
+    top = 80
+  end
+  object GLPerlinPFXManager1: TGLPerlinPFXManager
+    Cadencer = cad
+    Renderer = GLParticleFXRenderer1
+    Friction = 1
+    Rotation = 0
+    Smoothness = 1
+    Brightness = 1
+    Gamma = 1
+    ParticleSize = 1
+    ColorInner.Color = {
+      0000803F000000000000803F0000803F
+    }
+    LifeColors = <    
+      item
+        LifeTime = 3
+        SizeScale = 1
+        RotateAngle = 0
+      end>
+    left = 552
+    top = 80
+  end
+  object GLFireFXManager1: TGLFireFXManager
+    FireDir.Coordinates = {
+      00000000000000BF0000000000000000
+    }
+    InitialDir.Coordinates = {
+      00000000000080BF0000000000000000
+    }
+    Cadencer = cad
+    ParticleSize = 0.25
+    FireDensity = 1
+    FireEvaporation = 0.860000014305115
+    FireCrown = 0
+    ParticleLife = 5
+    FireBurst = 1
+    FireRadius = 0.25
+    Disabled = False
+    Paused = False
+    ParticleInterval = 0.100000001490116
+    UseInterval = True
+    left = 672
+    top = 80
+  end
+end

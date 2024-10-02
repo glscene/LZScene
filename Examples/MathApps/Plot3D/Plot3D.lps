@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="18">
+      <Unit0>
+        <Filename Value="Plot3D.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="26" Y="25"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ViewForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="104" Y="150"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Functions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FunctionsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="491"/>
+        <CursorPos Y="509"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="GridOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GridOptionsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="118"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Evaluate.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="EvaluateForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="136"/>
+        <CursorPos X="39" Y="165"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="CoordOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CoordsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="88"/>
+        <CursorPos Y="3"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="DerivativeOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DerivativesForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="82"/>
+        <CursorPos X="51" Y="107"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="GridColors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GridColorsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="11" Y="7"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="PlotColors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PlotColorsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="10"/>
+        <CursorPos X="11" Y="8"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="AddPlotColors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AddPlotColorsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="11"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="uParser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="325"/>
+        <CursorPos X="13" Y="983"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="uGlobal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="194"/>
+        <CursorPos X="3" Y="7"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="1356"/>
+        <CursorPos X="72" Y="1392"/>
+        <UsageCount Value="12"/>
+        <Bookmarks Count="2">
+          <Item0 Y="8691" ID="1"/>
+          <Item1 X="44" Y="260" ID="2"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLImposter.pas"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="1174"/>
+        <CursorPos X="19" Y="1191"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Main.lfm"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="269"/>
+        <CursorPos X="29" Y="286"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\components\lazbeanz\sources\components\bzthreadtimer.pas"/>
+        <UnitName Value="bzThreadTimer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="185"/>
+        <CursorPos X="14" Y="204"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1642"/>
+        <CursorPos X="5" Y="1658"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLWindowsFont.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="277"/>
+        <CursorPos X="29" Y="294"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+    </Units>
+    <JumpHistory Count="27" HistoryIndex="26">
+      <Position1>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="1863" Column="3" TopLine="1850"/>
+      </Position1>
+      <Position2>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="1873" Column="18" TopLine="1855"/>
+      </Position2>
+      <Position3>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLImposter.pas"/>
+      </Position3>
+      <Position4>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="1872" TopLine="1855"/>
+      </Position4>
+      <Position5>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLImposter.pas"/>
+        <Caret Line="1191" Column="19" TopLine="7"/>
+      </Position5>
+      <Position6>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="1435" Column="20" TopLine="1468"/>
+      </Position6>
+      <Position7>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="8528" Column="11" TopLine="8518"/>
+      </Position7>
+      <Position8>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="8530" Column="17" TopLine="8517"/>
+      </Position8>
+      <Position9>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="297" Column="53" TopLine="285"/>
+      </Position9>
+      <Position10>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="1435" Column="17" TopLine="1406"/>
+      </Position10>
+      <Position11>
+        <Filename Value="C:\lazarus\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <Caret Line="8531" Column="20" TopLine="8526"/>
+      </Position11>
+      <Position12>
+        <Filename Value="AddPlotColors.pas"/>
+        <Caret Line="74" Column="60" TopLine="55"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Evaluate.pas"/>
+        <Caret Line="8" Column="3" TopLine="52"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Evaluate.pas"/>
+        <Caret Line="153" Column="39" TopLine="136"/>
+      </Position14>
+      <Position15>
+        <Filename Value="CoordOptions.pas"/>
+        <Caret Line="8" Column="3" TopLine="49"/>
+      </Position15>
+      <Position16>
+        <Filename Value="GridColors.pas"/>
+        <Caret Line="88" Column="3" TopLine="73"/>
+      </Position16>
+      <Position17>
+        <Filename Value="GridColors.pas"/>
+        <Caret Line="2"/>
+      </Position17>
+      <Position18>
+        <Filename Value="PlotColors.pas"/>
+        <Caret Line="74" Column="3" TopLine="55"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Functions.pas"/>
+        <Caret Line="9" Column="3" TopLine="112"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Functions.pas"/>
+        <Caret Line="2"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Functions.pas"/>
+        <Caret Line="214" Column="34" TopLine="196"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Main.pas"/>
+        <Caret Line="9" Column="40"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Main.lfm"/>
+      </Position23>
+      <Position24>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLWindowsFont.pas"/>
+        <Caret Line="286" TopLine="272"/>
+      </Position24>
+      <Position25>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLWindowsFont.pas"/>
+        <Caret Line="294" Column="29" TopLine="277"/>
+      </Position25>
+      <Position26>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLWindowsFont.pas"/>
+        <Caret Line="281" Column="29" TopLine="282"/>
+      </Position26>
+      <Position27>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLWindowsFont.pas"/>
+        <Caret Line="294" Column="29" TopLine="277"/>
+      </Position27>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

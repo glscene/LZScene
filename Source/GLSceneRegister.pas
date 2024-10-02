@@ -149,7 +149,6 @@ uses
   GLSound, 
   GLCompositeImage, 
   GLSLog, 
-  GLSLanguage,
   GLSArchiveManager, 
   GLUtils,
 
@@ -1247,7 +1246,7 @@ begin
     TGLMaterialScripter, TGLUserInterface, TGLNavigator, TGLSmoothNavigator,
     TGLSmoothUserInterface, TGLTimeEventsMGR, TGLApplicationFileIO,
     TGLVfsPAK, TGLSimpleNavigation, TGLCameraController, TGLGizmo,
-    TGLGizmoEx, TGLSLogger, TGLSLanguage, TGLSArchiveManager]);
+    TGLGizmoEx, TGLSLogger, TGLSArchiveManager]);
 
   RegisterComponents('GLScene Terrain',
     [TGLBitmapHDS, TGLCustomHDS, TGLHeightTileFileHDS, TGLBumpmapHDS,

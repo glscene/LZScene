@@ -1,0 +1,367 @@
+object frmMain: TfrmMain
+  Left = 548
+  Height = 478
+  Top = 265
+  Width = 680
+  Caption = 'Mesh Source'
+  ClientHeight = 478
+  ClientWidth = 680
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object Panel2: TPanel
+    Left = 495
+    Height = 455
+    Top = 0
+    Width = 185
+    Align = alRight
+    BevelInner = bvLowered
+    ClientHeight = 455
+    ClientWidth = 185
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 4
+      Height = 13
+      Top = 4
+      Width = 68
+      Caption = 'Polygon Mode'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 4
+      Height = 13
+      Top = 160
+      Width = 86
+      Caption = 'Camera X Position'
+      ParentColor = False
+    end
+    object cbPolygonMode: TComboBox
+      Left = 4
+      Height = 21
+      Top = 20
+      Width = 145
+      ItemHeight = 13
+      Items.Strings = (
+        'Fill'
+        'Lines / mesh'
+        'Points'
+      )
+      OnChange = cbPolygonModeChange
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object chbViewPoints: TCheckBox
+      Left = 4
+      Height = 19
+      Top = 52
+      Width = 106
+      Caption = 'View vertex points'
+      Checked = True
+      OnClick = chbViewPointsClick
+      State = cbChecked
+      TabOrder = 1
+    end
+    object GroupBox1: TGroupBox
+      Left = 8
+      Height = 65
+      Top = 80
+      Width = 169
+      Caption = 'Axis'
+      ClientHeight = 47
+      ClientWidth = 165
+      TabOrder = 2
+      object Label3: TLabel
+        Left = 8
+        Height = 13
+        Top = 24
+        Width = 29
+        Caption = 'X Axis'
+        Color = clBtnFace
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label4: TLabel
+        Left = 44
+        Height = 13
+        Top = 24
+        Width = 29
+        Caption = 'Y Axis'
+        Font.Color = clGreen
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 84
+        Height = 13
+        Top = 24
+        Width = 29
+        Caption = 'Z Axis'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+      end
+      object chbShowAxis: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 0
+        Width = 103
+        Caption = 'Show central axis'
+        Checked = True
+        OnClick = chbShowAxisClick
+        State = cbChecked
+        TabOrder = 0
+      end
+    end
+    object tbPos: TTrackBar
+      Left = 4
+      Height = 32
+      Top = 184
+      Width = 169
+      Max = 20
+      OnChange = tbPosChange
+      Position = 5
+      TabOrder = 3
+    end
+    object GroupBox2: TGroupBox
+      Left = 4
+      Height = 76
+      Top = 216
+      Width = 169
+      Caption = 'Movement Direction'
+      ClientHeight = 58
+      ClientWidth = 165
+      TabOrder = 4
+      object rbXY: TRadioButton
+        Left = 4
+        Height = 19
+        Top = 0
+        Width = 106
+        Caption = 'Move on X, Y axis'
+        Checked = True
+        TabOrder = 0
+        TabStop = True
+      end
+      object rbZY: TRadioButton
+        Left = 4
+        Height = 19
+        Top = 24
+        Width = 106
+        Caption = 'Move on Z, Y axis'
+        TabOrder = 1
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 4
+      Height = 81
+      Top = 304
+      Width = 169
+      Caption = 'Mesh Data'
+      ClientHeight = 63
+      ClientWidth = 165
+      TabOrder = 5
+      object btnVertex: TBitBtn
+        Left = 0
+        Height = 25
+        Top = 0
+        Width = 75
+        Caption = 'Vertex'
+        OnClick = btnVertexClick
+        TabOrder = 0
+      end
+      object btnNormals: TBitBtn
+        Left = 0
+        Height = 25
+        Top = 20
+        Width = 75
+        Caption = 'Normals'
+        OnClick = btnNormalsClick
+        TabOrder = 1
+      end
+      object btnTextcoords: TBitBtn
+        Left = 75
+        Height = 25
+        Top = 0
+        Width = 86
+        Caption = 'Tex-Coords'
+        OnClick = btnTextcoordsClick
+        TabOrder = 2
+      end
+      object btnGroups: TBitBtn
+        Left = 75
+        Height = 25
+        Top = 20
+        Width = 86
+        Caption = 'Triangle Count'
+        OnClick = btnGroupsClick
+        TabOrder = 3
+      end
+    end
+    object Label2: TLabel
+      Left = 6
+      Height = 26
+      Top = 423
+      Width = 173
+      Align = alBottom
+      BorderSpacing.Around = 4
+      Caption = 'LMB : Rotate Object'#13#10'CTRL+LMB Select and Move Vertex'
+      ParentColor = False
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 455
+    Top = 0
+    Width = 495
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 455
+    ClientWidth = 495
+    TabOrder = 1
+    object GLSceneViewer: TGLSceneViewer
+      Left = 2
+      Height = 451
+      Top = 2
+      Width = 491
+      Camera = GLCamera
+      BeforeRender = GLSceneViewerBeforeRender
+      Buffer.BackgroundColor = clBlack
+      Buffer.AmbientColor.Red = 0.200000002980232
+      Buffer.AmbientColor.Green = 0.200000002980232
+      Buffer.AmbientColor.Blue = 0.200000002980232
+      Buffer.AmbientColor.Alpha = 1
+      Buffer.FaceCulling = False
+      Buffer.ShadeModel = smSmooth
+      FieldOfView = 154.996200561523
+      Align = alClient
+      OnMouseDown = GLSceneViewerMouseDown
+      OnMouseMove = GLSceneViewerMouseMove
+      OnMouseUp = GLSceneViewerMouseUp
+      TabOrder = 0
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 455
+    Width = 680
+    Panels = <    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object GLScene: TGLScene
+    left = 416
+    top = 88
+    object GLFreeForm: TGLFreeForm
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      Material.PolygonMode = pmLines
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        0AD7233D0AD7233D0AD7233D00000000
+      }
+      TurnAngle = 0
+      MaterialLibrary = GLMaterialLibrary1
+    end
+    object dcModifiers: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object GLCamera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLFreeForm
+      Position.Coordinates = {
+        00000000000000000000A0400000803F
+      }
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        Ambient.Red = 0
+        Ambient.Green = 0
+        Ambient.Blue = 0
+        Ambient.Alpha = 1
+        ConstAttenuation = 1
+        Diffuse.Red = 1
+        Diffuse.Green = 1
+        Diffuse.Blue = 1
+        Diffuse.Alpha = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Specular.Red = 0
+        Specular.Green = 0
+        Specular.Blue = 0
+        Specular.Alpha = 1
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 416
+    top = 136
+  end
+end

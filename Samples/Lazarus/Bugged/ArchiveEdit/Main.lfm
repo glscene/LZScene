@@ -1,0 +1,290 @@
+object Form1: TForm1
+  Left = 502
+  Height = 486
+  Top = 229
+  Width = 539
+  Caption = 'GLScene Pak Editor'
+  ClientHeight = 466
+  ClientWidth = 539
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object Bevel1: TBevel
+    Left = 0
+    Height = 9
+    Top = 0
+    Width = 545
+    Anchors = [akTop, akLeft, akRight]
+    Shape = bsTopLine
+  end
+  object TreeView: TTreeView
+    Left = 8
+    Height = 277
+    Top = 8
+    Width = 161
+    Anchors = [akTop, akLeft, akBottom]
+    DefaultItemHeight = 16
+    Images = ImageList1
+    Indent = 19
+    ShowRoot = False
+    TabOrder = 0
+    ToolTips = False
+    OnChange = TreeViewChange
+    OnCollapsing = TreeViewCollapsing
+    OnKeyDown = TreeViewKeyDown
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoShowButtons, tvoShowLines, tvoThemedDraw]
+  end
+  object ListView: TListView
+    Left = 176
+    Height = 446
+    Top = 8
+    Width = 365
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Columns = <    
+      item
+        AutoSize = True
+        Caption = 'Name'
+        Width = 141
+      end    
+      item
+        Caption = 'Size'
+        Width = 194
+      end>
+    Enabled = False
+    Items.LazData = {
+      360000000100000000000000FFFFFFFFFFFFFFFF000000001A0000004F70656E
+      206F72206372656174652070616B2066696C652E2E2E
+    }
+    MultiSelect = True
+    SmallImages = ImageList1
+    TabOrder = 1
+    ViewStyle = vsReport
+    OnChange = ListViewChange
+    OnClick = ListViewClick
+    OnDblClick = ListViewDblClick
+    OnKeyDown = ListViewKeyDown
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 8
+    Height = 161
+    Top = 292
+    Width = 161
+    Camera = GLCamera1
+    VSync = vsmSync
+    Buffer.BackgroundColor = clWhite
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    Buffer.AntiAliasing = aa2x
+    FieldOfView = 77.6681289672852
+    Anchors = [akLeft, akBottom]
+    TabOrder = 2
+  end
+  object MainMenu1: TMainMenu
+    left = 184
+    top = 32
+    object File1: TMenuItem
+      Caption = 'File'
+      object New1: TMenuItem
+        Caption = 'New...'
+        OnClick = New1Click
+      end
+      object Open1: TMenuItem
+        Caption = 'Open...'
+        OnClick = Open1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object View: TMenuItem
+      Caption = 'View'
+      object ShowPreView: TMenuItem
+        AutoCheck = True
+        Caption = 'Show PreView'
+        Checked = True
+        OnClick = ShowPreViewClick
+      end
+    end
+    object Edit1: TMenuItem
+      Caption = 'Edit'
+      object Createfolder1: TMenuItem
+        Caption = 'Create folder...'
+        OnClick = Createfolder1Click
+      end
+      object Addfiles1: TMenuItem
+        Caption = 'Add file(s)...'
+        OnClick = Addfiles1Click
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object Compression1: TMenuItem
+        Caption = 'Compression'
+        object None1: TMenuItem
+          Caption = 'None'
+          Checked = True
+          GroupIndex = 2
+          OnClick = None1Click
+        end
+        object Fast1: TMenuItem
+          Tag = 1
+          Caption = 'Fast'
+          GroupIndex = 2
+          OnClick = None1Click
+        end
+        object Default1: TMenuItem
+          Tag = 2
+          Caption = 'Default'
+          GroupIndex = 2
+          OnClick = None1Click
+        end
+        object Max1: TMenuItem
+          Tag = 3
+          Caption = 'Max'
+          GroupIndex = 2
+          OnClick = None1Click
+        end
+      end
+      object N3: TMenuItem
+        Caption = '-'
+        GroupIndex = 2
+      end
+      object Deleteselectedfile1: TMenuItem
+        Caption = 'Delete selected file(s)'
+        GroupIndex = 2
+        OnClick = Deleteselectedfile1Click
+      end
+      object Deleteselectedfolder1: TMenuItem
+        Caption = 'Delete selected folder'
+        GroupIndex = 2
+        OnClick = Deleteselectedfolder1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+        GroupIndex = 2
+      end
+      object Extractselectedfiles1: TMenuItem
+        Caption = 'Extract selected file(s)'
+        GroupIndex = 2
+        OnClick = Extractselectedfiles1Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Options = [ofHideReadOnly, ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    left = 184
+    top = 64
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.glp'
+    Filter = 'All (Pak, Zlib)|*.pak;*.zlib|PAK files|*.pak|ZLib Files|*.zlib'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    left = 216
+    top = 64
+  end
+  object ImageList1: TImageList
+    left = 216
+    top = 32
+  end
+  object GLScene1: TGLScene
+    left = 248
+    top = 32
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100000
+      FocalLength = 100
+      NearPlaneBias = 0.100000001490116
+      TargetObject = GLCube1
+      Position.Coordinates = {
+        0000F04100002042000048420000803F
+      }
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        ConstAttenuation = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+    object GLFreeForm1: TGLFreeForm
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object GLSprite1: TGLSprite
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'image'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A0420000A042000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+      Width = 160
+      Height = 160
+      Rotation = 0
+    end
+    object GLCube1: TGLCube
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'image'
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'image'
+        Tag = 0
+        Material.Texture.ImageClassName = 'TGLCompositeImage'
+        Material.Texture.Image.Width = 256
+        Material.Texture.Image.Height = 256
+        Material.Texture.Image.Depth = 0
+        Material.Texture.Disabled = False
+      end>
+    left = 248
+    top = 64
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    FormCaption = 'GLScene Pak Editor - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 280
+    top = 32
+  end
+  object GLSArchiveManager1: TGLSArchiveManager
+    Archives = <    
+      item
+        Name = 'LibArchive'
+      end>
+    left = 280
+    top = 64
+  end
+end

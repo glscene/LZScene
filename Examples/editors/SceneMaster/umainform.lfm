@@ -1,0 +1,855 @@
+object MainForm: TMainForm
+  Left = 444
+  Height = 612
+  Top = 185
+  Width = 832
+  ActiveControl = GLSViewer
+  Caption = 'Scene Master'
+  ClientHeight = 612
+  ClientWidth = 832
+  Menu = MainMenu
+  OnCreate = FormCreate
+  OnMouseWheel = FormMouseWheel
+  OnShow = FormShow
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object Panel1: TPanel
+    Left = 0
+    Height = 83
+    Top = 479
+    Width = 832
+    Align = alBottom
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 662
+    Height = 453
+    Top = 26
+    Width = 170
+    Align = alRight
+    TabOrder = 1
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 832
+    Caption = 'ToolBar1'
+    Color = clGray
+    ParentColor = False
+    TabOrder = 2
+  end
+  object GLSViewer: TGLSceneViewer
+    Left = 0
+    Height = 453
+    Top = 26
+    Width = 662
+    Camera = Camera1
+    AfterRender = GLSViewerAfterRender
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 97.1108551025391
+    Align = alClient
+    OnMouseDown = GLSViewerMouseDown
+    OnMouseMove = GLSViewerMouseMove
+    OnMouseUp = GLSViewerMouseUp
+    OnMouseWheel = FormMouseWheel
+    TabOrder = 3
+  end
+  object MainStatusBar: TStatusBar
+    Left = 0
+    Height = 21
+    Top = 562
+    Width = 832
+    Panels = <    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object MainMenu: TMainMenu
+    left = 176
+    top = 552
+    object MenuItem1: TMenuItem
+      Caption = '&Fichier'
+      object MenuItem2: TMenuItem
+        Action = actOpenModel
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Quitter'
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Affichage'
+      object MenuItem10: TMenuItem
+        Action = acPointShading
+        AutoCheck = True
+      end
+      object MenuItem11: TMenuItem
+        Action = acWireFrameShading
+        AutoCheck = True
+      end
+      object MenuItem12: TMenuItem
+        Action = acFlatShading
+        AutoCheck = True
+      end
+      object MenuItem13: TMenuItem
+        Action = acSmoothShading
+        AutoCheck = True
+      end
+      object MenuItem17: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem23: TMenuItem
+        Action = actInvertNormals
+        AutoCheck = True
+      end
+      object MenuItem18: TMenuItem
+        Action = acTextureShading
+        AutoCheck = True
+      end
+      object MenuItem19: TMenuItem
+        Action = acSceneLighting
+        AutoCheck = True
+      end
+      object MenuItem14: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Shader'
+        object MenuItem16: TMenuItem
+          Action = acShaderNone
+          AutoCheck = True
+          GroupIndex = 2
+        end
+        object MenuItem20: TMenuItem
+          Caption = '-'
+        end
+        object MenuItem21: TMenuItem
+          Action = acShaderHiddenLines
+          AutoCheck = True
+          GroupIndex = 2
+        end
+        object MenuItem22: TMenuItem
+          Action = acShaderOutLines
+          AutoCheck = True
+          GroupIndex = 2
+        end
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Outils'
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Options'
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'Aide'
+      object MenuItem9: TMenuItem
+        Caption = 'A Propos'
+      end
+    end
+  end
+  object ImageList: TImageList
+    left = 112
+    top = 552
+  end
+  object GLScene: TGLScene
+    left = 456
+    top = 552
+    object DCRoot: TGLDummyCube
+      TagFloat = 0
+      ObjectsSorting = osRenderFarthestFirst
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object DCCamera: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object Camera1: TGLCamera
+          TagFloat = 0
+          DepthOfView = 1000
+          FocalLength = 200
+          NearPlaneBias = 0.00100000004749745
+          TargetObject = DCTarget
+          Position.Coordinates = {
+            00004842000048420000F0410000803F
+          }
+        end
+      end
+      object DCTarget: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+      end
+      object DCGrids: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object DCGridXY: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            0000000000000000000080C00000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object XYGrid: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            Pickable = False
+            AntiAliased = True
+            LineColor.Red = 1
+            LineColor.Green = 0
+            LineColor.Blue = 0
+            LineColor.Alpha = 1
+            LineColor.Color = {
+              0000803F00000000000000000000803F
+            }
+            XSamplingScale.Min = -4
+            XSamplingScale.Max = 4
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 1
+            YSamplingScale.Min = -4
+            YSamplingScale.Max = 4
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 1
+            ZSamplingScale.Min = 0
+            ZSamplingScale.Max = 0
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 0.100000001490116
+          end
+        end
+        object DCGridXZ: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000000080C0000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object XZGrid: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            Pickable = False
+            AntiAliased = True
+            LineColor.Red = 0.19607800245285
+            LineColor.Green = 0.600000023841858
+            LineColor.Blue = 0.800000011920929
+            LineColor.Alpha = 1
+            LineColor.Color = {
+              ACC8483E9A99193FCDCC4C3F0000803F
+            }
+            XSamplingScale.Min = -4
+            XSamplingScale.Max = 4
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 1
+            YSamplingScale.Min = 0
+            YSamplingScale.Max = 0
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 1
+            ZSamplingScale.Min = -4
+            ZSamplingScale.Max = 4
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 1
+            Parts = [gpX, gpZ]
+          end
+        end
+        object DCGridYZ: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            000080C000000000000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object YZGrid: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            Pickable = False
+            AntiAliased = True
+            LineColor.Red = 0.19607800245285
+            LineColor.Green = 0.800000011920929
+            LineColor.Blue = 0.19607800245285
+            LineColor.Alpha = 1
+            LineColor.Color = {
+              ACC8483ECDCC4C3FACC8483E0000803F
+            }
+            XSamplingScale.Min = 0
+            XSamplingScale.Max = 0
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 1
+            YSamplingScale.Min = -4
+            YSamplingScale.Max = 4
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 1
+            ZSamplingScale.Min = -4
+            ZSamplingScale.Max = 4
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 1
+            Parts = [gpY, gpZ]
+          end
+        end
+      end
+      object DCWorld: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object DCWorldAxis: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          ShowAxes = True
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+        end
+        object DCWorldGrid: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object WorldGrid: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            Position.Coordinates = {
+              000000000AD723BC000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            AntiAliased = True
+            LineColor.Red = 1
+            LineColor.Green = 1
+            LineColor.Blue = 1
+            LineColor.Alpha = 0.300000011920929
+            LineColor.Color = {
+              0000803F0000803F0000803F9A99993E
+            }
+            LineWidth = 0.00999999977648258
+            XSamplingScale.Min = -10
+            XSamplingScale.Max = 10
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 1
+            YSamplingScale.Min = 0
+            YSamplingScale.Max = 0
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 1
+            ZSamplingScale.Min = -10
+            ZSamplingScale.Max = 10
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 1
+            Parts = [gpX, gpZ]
+          end
+        end
+        object ffObject: TGLFreeForm
+          TagFloat = 0
+          Material.BackProperties.Ambient.Red = 0.200000002980232
+          Material.BackProperties.Ambient.Green = 0.200000002980232
+          Material.BackProperties.Ambient.Blue = 0.200000002980232
+          Material.BackProperties.Ambient.Alpha = 1
+          Material.BackProperties.Diffuse.Red = 0.800000011920929
+          Material.BackProperties.Diffuse.Green = 0.800000011920929
+          Material.BackProperties.Diffuse.Blue = 0.800000011920929
+          Material.BackProperties.Diffuse.Alpha = 1
+          Material.BackProperties.Emission.Red = 0
+          Material.BackProperties.Emission.Green = 0
+          Material.BackProperties.Emission.Blue = 0
+          Material.BackProperties.Emission.Alpha = 1
+          Material.BackProperties.Specular.Red = 0
+          Material.BackProperties.Specular.Green = 0
+          Material.BackProperties.Specular.Blue = 0
+          Material.BackProperties.Specular.Alpha = 1
+          Material.FrontProperties.Ambient.Red = 0.200000002980232
+          Material.FrontProperties.Ambient.Green = 0.200000002980232
+          Material.FrontProperties.Ambient.Blue = 0.200000002980232
+          Material.FrontProperties.Ambient.Alpha = 1
+          Material.FrontProperties.Diffuse.Red = 0.800000011920929
+          Material.FrontProperties.Diffuse.Green = 0.800000011920929
+          Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+          Material.FrontProperties.Diffuse.Alpha = 1
+          Material.FrontProperties.Emission.Red = 0
+          Material.FrontProperties.Emission.Green = 0
+          Material.FrontProperties.Emission.Blue = 0
+          Material.FrontProperties.Emission.Alpha = 1
+          Material.FrontProperties.Specular.Red = 0
+          Material.FrontProperties.Specular.Green = 0
+          Material.FrontProperties.Specular.Blue = 0
+          Material.FrontProperties.Specular.Alpha = 1
+          Material.Texture.ImageClassName = 'TGLBlankImage'
+          Material.Texture.Image.Width = 64
+          Material.Texture.Image.Height = 64
+          Material.Texture.Image.ColorFormat = 6408
+          Material.Texture.MagFilter = maNearest
+          Material.Texture.MinFilter = miNearest
+          Material.Texture.Compression = tcNone
+          Material.Texture.EnvColor.Red = 0
+          Material.Texture.EnvColor.Green = 0
+          Material.Texture.EnvColor.Blue = 0
+          Material.Texture.EnvColor.Alpha = 0
+          Material.Texture.BorderColor.Red = 0
+          Material.Texture.BorderColor.Green = 0
+          Material.Texture.BorderColor.Blue = 0
+          Material.Texture.BorderColor.Alpha = 0
+          Direction.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          ShowAxes = True
+          TurnAngle = 0
+          AutoCentering = [macUseBarycenter]
+          LightmapLibrary = LightMapLib
+          object BBox: TGLCube
+            TagFloat = 0
+            Material.BackProperties.Ambient.Red = 0.200000002980232
+            Material.BackProperties.Ambient.Green = 0.200000002980232
+            Material.BackProperties.Ambient.Blue = 0.200000002980232
+            Material.BackProperties.Ambient.Alpha = 1
+            Material.BackProperties.Diffuse.Red = 0.800000011920929
+            Material.BackProperties.Diffuse.Green = 0.800000011920929
+            Material.BackProperties.Diffuse.Blue = 0.800000011920929
+            Material.BackProperties.Diffuse.Alpha = 1
+            Material.BackProperties.Emission.Red = 0
+            Material.BackProperties.Emission.Green = 0
+            Material.BackProperties.Emission.Blue = 0
+            Material.BackProperties.Emission.Alpha = 1
+            Material.BackProperties.Specular.Red = 0
+            Material.BackProperties.Specular.Green = 0
+            Material.BackProperties.Specular.Blue = 0
+            Material.BackProperties.Specular.Alpha = 1
+            Material.FrontProperties.Ambient.Red = 1
+            Material.FrontProperties.Ambient.Green = 1
+            Material.FrontProperties.Ambient.Blue = 1
+            Material.FrontProperties.Ambient.Alpha = 1
+            Material.FrontProperties.Ambient.Color = {
+              0000803F0000803F0000803F0000803F
+            }
+            Material.FrontProperties.Diffuse.Red = 1
+            Material.FrontProperties.Diffuse.Green = 1
+            Material.FrontProperties.Diffuse.Blue = 1
+            Material.FrontProperties.Diffuse.Alpha = 1
+            Material.FrontProperties.Diffuse.Color = {
+              0000803F0000803F0000803F0000803F
+            }
+            Material.FrontProperties.Emission.Red = 1
+            Material.FrontProperties.Emission.Green = 1
+            Material.FrontProperties.Emission.Blue = 1
+            Material.FrontProperties.Emission.Alpha = 1
+            Material.FrontProperties.Emission.Color = {
+              0000803F0000803F0000803F0000803F
+            }
+            Material.FrontProperties.Specular.Red = 1
+            Material.FrontProperties.Specular.Green = 1
+            Material.FrontProperties.Specular.Blue = 1
+            Material.FrontProperties.Specular.Alpha = 1
+            Material.FrontProperties.Specular.Color = {
+              0000803F0000803F0000803F0000803F
+            }
+            Material.Texture.ImageClassName = 'TGLBlankImage'
+            Material.Texture.Image.Width = 64
+            Material.Texture.Image.Height = 64
+            Material.Texture.Image.ColorFormat = 6408
+            Material.Texture.MagFilter = maNearest
+            Material.Texture.MinFilter = miNearest
+            Material.Texture.Compression = tcNone
+            Material.Texture.EnvColor.Red = 0
+            Material.Texture.EnvColor.Green = 0
+            Material.Texture.EnvColor.Blue = 0
+            Material.Texture.EnvColor.Alpha = 0
+            Material.Texture.BorderColor.Red = 0
+            Material.Texture.BorderColor.Green = 0
+            Material.Texture.BorderColor.Blue = 0
+            Material.Texture.BorderColor.Alpha = 0
+            Material.PolygonMode = pmLines
+            PitchAngle = 0
+            RollAngle = 0
+            Scale.Coordinates = {
+              00000040000000400000004000000000
+            }
+            TurnAngle = 0
+            Pickable = False
+            object DCAxis: TGLDummyCube
+              TagFloat = 0
+              PitchAngle = 0
+              RollAngle = 0
+              ShowAxes = True
+              TurnAngle = 0
+              CubeSize = 1
+              EdgeColor.Red = 1
+              EdgeColor.Green = 1
+              EdgeColor.Blue = 1
+              EdgeColor.Alpha = 1
+            end
+          end
+        end
+      end
+      object DCLights: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object DCStaticLights: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object FrontAmbientLight: TGLLightSource
+            TagFloat = 0
+            Ambient.Red = 0
+            Ambient.Green = 0
+            Ambient.Blue = 0
+            Ambient.Alpha = 1
+            ConstAttenuation = 0.00999999977648258
+            Diffuse.Red = 0.600000023841858
+            Diffuse.Green = 0.600000023841858
+            Diffuse.Blue = 0.600000023841858
+            Diffuse.Alpha = 1
+            Diffuse.Color = {
+              9A99193F9A99193F9A99193F0000803F
+            }
+            LinearAttenuation = 0
+            QuadraticAttenuation = 0
+            Position.Coordinates = {
+              000048420000C8420000C8C20000803F
+            }
+            LightStyle = lsOmni
+            Shining = False
+            Specular.Red = 0
+            Specular.Green = 0
+            Specular.Blue = 0
+            Specular.Alpha = 1
+            SpotCutOff = 180
+            SpotExponent = 0
+          end
+          object KeyAmbientLigth: TGLLightSource
+            TagFloat = 0
+            Ambient.Red = 0
+            Ambient.Green = 0
+            Ambient.Blue = 0
+            Ambient.Alpha = 1
+            ConstAttenuation = 0.00999999977648258
+            Diffuse.Red = 0.200000002980232
+            Diffuse.Green = 0.200000002980232
+            Diffuse.Blue = 0.200000002980232
+            Diffuse.Alpha = 1
+            Diffuse.Color = {
+              CDCC4C3ECDCC4C3ECDCC4C3E0000803F
+            }
+            LinearAttenuation = 0.00999999977648258
+            QuadraticAttenuation = 0
+            Position.Coordinates = {
+              0000C8C200003442000016430000803F
+            }
+            LightStyle = lsParallel
+            Shining = False
+            Specular.Red = 0
+            Specular.Green = 0
+            Specular.Blue = 0
+            Specular.Alpha = 1
+            SpotCutOff = 180
+            SpotExponent = 0
+          end
+          object backAmbientLight: TGLLightSource
+            TagFloat = 0
+            Ambient.Red = 0
+            Ambient.Green = 0
+            Ambient.Blue = 0
+            Ambient.Alpha = 1
+            ConstAttenuation = 0.00999999977648258
+            Diffuse.Red = 0.100000001490116
+            Diffuse.Green = 0.100000001490116
+            Diffuse.Blue = 0.100000001490116
+            Diffuse.Alpha = 1
+            Diffuse.Color = {
+              CDCCCC3DCDCCCC3DCDCCCC3D0000803F
+            }
+            LinearAttenuation = 0
+            QuadraticAttenuation = 0
+            Position.Coordinates = {
+              000070C1000048420000C8420000803F
+            }
+            Shining = False
+            Specular.Red = 0
+            Specular.Green = 0
+            Specular.Blue = 0
+            Specular.Alpha = 1
+            SpotCutOff = 180
+            SpotExponent = 0
+          end
+        end
+        object DCDynamicLights: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object MainLightSource1: TGLLightSource
+            TagFloat = 0
+            Ambient.Red = 0
+            Ambient.Green = 0
+            Ambient.Blue = 0
+            Ambient.Alpha = 1
+            ConstAttenuation = 1
+            Diffuse.Red = 0.992156863212585
+            Diffuse.Green = 0.996078431606293
+            Diffuse.Blue = 0.945098042488098
+            Diffuse.Alpha = 1
+            Diffuse.Color = {
+              FEFD7D3FFFFE7E3FF2F1713F0000803F
+            }
+            LinearAttenuation = 0
+            QuadraticAttenuation = 0
+            Position.Coordinates = {
+              0000484200009642000048420000803F
+            }
+            LightStyle = lsOmni
+            Specular.Red = 0
+            Specular.Green = 0
+            Specular.Blue = 0
+            Specular.Alpha = 1
+            SpotCutOff = 180
+            SpotExponent = 0
+          end
+        end
+      end
+    end
+  end
+  object LightMapLib: TGLMaterialLibrary
+    left = 576
+    top = 552
+  end
+  object TextureMatLib: TGLMaterialLibrary
+    left = 656
+    top = 552
+  end
+  object Cadencer: TGLCadencer
+    Scene = GLScene
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = CadencerProgress
+    left = 512
+    top = 552
+  end
+  object ASyncTimer: TGLAsyncTimer
+    OnTimer = MainTimerTimer
+    ThreadPriority = tpNormal
+    left = 736
+    top = 552
+  end
+  object MainTimer: TTimer
+    Enabled = False
+    OnTimer = MainTimerTimer
+    left = 392
+    top = 552
+  end
+  object OpenDialog: TOpenDialog
+    left = 248
+    top = 552
+  end
+  object MainActionList: TActionList
+    left = 32
+    top = 552
+    object acPointShading: TAction
+      AutoCheck = True
+      Caption = 'Point'
+      GroupIndex = 1
+      OnExecute = acPointShadingExecute
+    end
+    object acWireFrameShading: TAction
+      AutoCheck = True
+      Caption = 'Fil de fer'
+      GroupIndex = 1
+      OnExecute = acWireFrameShadingExecute
+    end
+    object acFlatShading: TAction
+      AutoCheck = True
+      Caption = 'Plat'
+      GroupIndex = 1
+      OnExecute = acFlatShadingExecute
+    end
+    object acSmoothShading: TAction
+      AutoCheck = True
+      Caption = 'Lisse'
+      GroupIndex = 1
+      OnExecute = acSmoothShadingExecute
+    end
+    object acTextureShading: TAction
+      AutoCheck = True
+      Caption = 'Texturer'
+      OnExecute = acTextureShadingExecute
+    end
+    object acSceneLighting: TAction
+      AutoCheck = True
+      Caption = 'Eclairer'
+      Checked = True
+      OnExecute = acSceneLightingExecute
+    end
+    object actOpenModel: TAction
+      Caption = 'Ouvrir un model'
+      OnExecute = actOpenModelExecute
+    end
+    object acShaderHiddenLines: TAction
+      AutoCheck = True
+      Caption = 'Hidden Lines'
+      GroupIndex = 2
+      OnExecute = acShaderHiddenLinesExecute
+    end
+    object acShaderOutLines: TAction
+      AutoCheck = True
+      Caption = 'Outline'
+      GroupIndex = 2
+      OnExecute = acShaderOutLinesExecute
+    end
+    object acShaderNone: TAction
+      AutoCheck = True
+      Caption = 'None'
+      DisableIfNoHandler = False
+      GroupIndex = 2
+      OnExecute = acShaderNoneExecute
+    end
+    object actInvertNormals: TAction
+      AutoCheck = True
+      Caption = 'Inverser les normales'
+      OnExecute = actInvertNormalsExecute
+    end
+  end
+  object SaveDialog: TSaveDialog
+    left = 320
+    top = 552
+  end
+  object HiddenLineShader: TGLHiddenLineShader
+    FrontLine.Width = 1
+    FrontLine.Color.Red = 0.899999976158142
+    FrontLine.Color.Green = 0.899999976158142
+    FrontLine.Color.Blue = 0.899999976158142
+    FrontLine.Color.Alpha = 1
+    FrontLine.Color.Color = {
+      6666663F6666663F6666663F0000803F
+    }
+    BackLine.Width = 1
+    BackLine.Color.Red = 0.200000002980232
+    BackLine.Color.Green = 0.200000002980232
+    BackLine.Color.Blue = 0.200000002980232
+    BackLine.Color.Alpha = 1
+    LineSmooth = True
+    Solid = True
+    BackgroundColor.Red = 0
+    BackgroundColor.Green = 0
+    BackgroundColor.Blue = 0
+    BackgroundColor.Alpha = 1
+    BackgroundColor.Color = {
+      0000000000000000000000000000803F
+    }
+    left = 720
+    top = 48
+  end
+  object OutlineShader: TGLOutlineShader
+    LineColor.Red = 0.939999997615814
+    LineColor.Green = 0.810000002384186
+    LineColor.Blue = 0.990000009536743
+    LineColor.Alpha = 1
+    LineColor.Color = {
+      D7A3703F295C4F3FA4707D3F0000803F
+    }
+    LineSmooth = True
+    LineWidth = 1
+    left = 720
+    top = 120
+  end
+end

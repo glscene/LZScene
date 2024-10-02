@@ -1,28 +1,6 @@
 //
 // This unit is part of the GLScene Engine https://github.com/glscene
 //
-{
-  A FPC specific Scene viewer.
-
-   History :  
-       02/06/10 - Yar - Fixes for Linux x64
-       28/04/10 - Yar - Fixed conditions for windows platform
-                           Added Render method
-                           (by Rustam Asmandiarov aka Predator)
-       02/04/10 - Yar - Bugfix bad graphics under Windows
-                           (by Rustam Asmandiarov aka Predator)
-       22/12/09 - DaStr - Published TabStop, TabOrder, OnEnter, OnExit
-                              properties (thanks Yury Plashenkov)
-       07/11/09 - DaStr - Improved FPC compatibility (BugtrackerID = 2893580)
-                             (thanks Predator)
-       13/07/09 - DanB - added the FieldOfView property + reduced OpenGL dependencies
-       10/04/08 - DaStr - Bugfixed TGLSceneViewer.Notification()
-                              (thanks z80maniac) (Bugtracker ID = 1936108)
-       12/09/07 - DaStr - Removed old IFDEFs. Moved SetupVSync()
-                              to GLViewer.pas (Bugtracker ID = 1786279)
-       04/06/04 -  EG   - Created from GLWin32Viewer
-   
-}
 unit GLLCLViewer;
 
 interface
@@ -222,6 +200,7 @@ begin
   FBuffer.ViewerBeforeRender := DoBeforeRender;
   FBuffer.OnChange := DoBufferChange;
   FBuffer.OnStructuralChange := DoBufferStructuralChange;
+  DoubleBuffered := False;
 end;
 
 destructor TGLSceneViewer.Destroy;

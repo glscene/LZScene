@@ -39,7 +39,7 @@ uses
   GLProcTextures, GLProjectedTextures, GLProxyObjects, GLRagdoll, 
   GLRenderContextInfo, GLROAMPatch, GLSArchiveManager, GLScene, GLSelection, 
   GLShadowHDS, GLShadowPlane, GLShadowVolume, GLSilhouette, 
-  GLSimpleNavigation, GLSkyBox, GLSkydome, GLSLanguage, GLSLProjectedTextures, 
+  GLSimpleNavigation, GLSkyBox, GLSkydome, GLSLProjectedTextures, 
   GLSLBumpShader, GLSLDiffuseSpecularShader, GLSLParameter, GLSLShader, 
   GLSmoothNavigator, GLSpatialPartitioning, GLState, GLStrings, GLTeapot, 
   GLTerrainRenderer, GLTexLensFlare, GLTexture, GLTexturedHDS, 

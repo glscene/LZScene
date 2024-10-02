@@ -1,0 +1,389 @@
+object Form1: TForm1
+  Left = 1036
+  Height = 240
+  Top = 366
+  Width = 320
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.6.4.0'
+  object vp: TGLSceneViewer
+    Left = 0
+    Height = 240
+    Top = 0
+    Width = 320
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.ShadeModel = smSmooth
+    FieldOfView = 115.989234924316
+    Align = alClient
+    OnMouseDown = vpMouseDown
+    OnMouseUp = vpMouseUp
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 8
+    top = 8
+    object txt_gl: TGLSpaceText
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        CDCCCC3ECDCCCC3ECDCCCC3E00000000
+      }
+      TurnAngle = 0
+      Extrusion = 0.0199999995529652
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Lines.Strings = (
+        'GL'
+      )
+      allowedDeviation = 0
+      AspectRatio = 0
+      TextHeight = 0
+      Oblique = 0
+      Adjust.Horz = haCenter
+      Adjust.Vert = vaBottom
+      object txt_scene: TGLSpaceText
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 1
+        Material.FrontProperties.Diffuse.Green = 0.5
+        Material.FrontProperties.Diffuse.Blue = 0
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000003F000000000000803F
+        }
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Extrusion = 0.0199999995529652
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Lines.Strings = (
+          'Scene'
+        )
+        allowedDeviation = 0
+        AspectRatio = 0
+        TextHeight = 0
+        Oblique = 0
+        Adjust.Horz = haCenter
+        Adjust.Vert = vaTop
+      end
+    end
+    object GLParticleFXRenderer1: TGLParticleFXRenderer
+      TagFloat = 0
+      ZTest = False
+      ZSortAccuracy = saLow
+    end
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      EffectsData = {
+        0458434F4C02010203061254474C536F75726365504658456666656374020202
+        000600020002000617474C506F696E744C696768745046584D616E6167657231
+        050000000000000080FF3F02060200080200080200090000803F000000000000
+        803F0000000005000000000000000000000500000000000000A0014005000000
+        00006F1283F53F02000200080500000000000000000000080200020002020200
+        0600020002000617474C506F696E744C696768745046584D616E616765723205
+        0000000000000080FF3F02060200080200080200090000803F00000000000080
+        3F00000000050000000000000080FF3F0500000000000000A001400500000000
+        006F1283F53F0200020008050000000000000000000008020002000202020006
+        00020002000613474C5065726C696E5046584D616E6167657231050000000000
+        000080FF3F0206020009000000000000003F0000000000000000020009000000
+        00000040C0000000000000000002000900008040000000000000803F00000000
+        050000000000CDCCCCFC3F050000000000000080FF3F0500000000000AD7A3F7
+        3F0200020008050000000000000080FF3F080200
+      }
+      object dc_emitter: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000C03F00004040000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+      end
+    end
+    object GLHUDText1: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000020410000A040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = GLWindowsBitmapFont1
+      Rotation = 0
+      ModulateColor.Red = 1
+      ModulateColor.Green = 1
+      ModulateColor.Blue = 1
+      ModulateColor.Alpha = 1
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 75
+      TargetObject = GLDummyCube1
+      Position.Coordinates = {
+        0000000000000040000000410000803F
+      }
+      left = 152
+      top = 104
+      object GLLightSource1: TGLLightSource
+        TagFloat = 0
+        Ambient.Red = 0
+        Ambient.Green = 0
+        Ambient.Blue = 0
+        Ambient.Alpha = 1
+        ConstAttenuation = 1
+        Diffuse.Red = 1
+        Diffuse.Green = 1
+        Diffuse.Blue = 1
+        Diffuse.Alpha = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Specular.Red = 0
+        Specular.Green = 0
+        Specular.Blue = 0
+        Specular.Alpha = 1
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0.025
+    SleepLength = 1
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 40
+  end
+  object AsyncTimer1: TGLAsyncTimer
+    Enabled = True
+    OnTimer = AsyncTimer1Timer
+    ThreadPriority = tpHigher
+    left = 304
+    top = 8
+  end
+  object GLPointLightPFXManager1: TGLPointLightPFXManager
+    Cadencer = GLCadencer1
+    Renderer = GLParticleFXRenderer1
+    Friction = 1
+    AspectRatio = 0.0500000007450581
+    Rotation = 0
+    ParticleSize = 0.100000001490116
+    ColorInner.Red = 1
+    ColorInner.Green = 1
+    ColorInner.Blue = 1
+    ColorInner.Alpha = 0.300000011920929
+    ColorInner.Color = {
+      0000803F0000803F0000803F9A99993E
+    }
+    ColorOuter.Red = 0
+    ColorOuter.Green = 0
+    ColorOuter.Blue = 0
+    ColorOuter.Alpha = 0
+    LifeColors = <    
+      item
+        ColorInner.Red = 0
+        ColorInner.Green = 0
+        ColorInner.Blue = 0
+        ColorInner.Alpha = 0
+        ColorOuter.Red = 0
+        ColorOuter.Green = 0
+        ColorOuter.Blue = 0
+        ColorOuter.Alpha = 0
+        LifeTime = 3
+        SizeScale = 1
+        RotateAngle = 0
+      end>
+    left = 88
+    top = 8
+  end
+  object GLPointLightPFXManager2: TGLPointLightPFXManager
+    Cadencer = GLCadencer1
+    Renderer = GLParticleFXRenderer1
+    Friction = 1
+    AspectRatio = 0.5
+    Rotation = 0
+    ParticleSize = 0.100000001490116
+    ColorInner.Red = 1
+    ColorInner.Green = 1
+    ColorInner.Blue = 1
+    ColorInner.Alpha = 1
+    ColorInner.Color = {
+      0000803F0000803F0000803F0000803F
+    }
+    ColorOuter.Red = 0
+    ColorOuter.Green = 0
+    ColorOuter.Blue = 0
+    ColorOuter.Alpha = 0
+    LifeColors = <    
+      item
+        ColorInner.Red = 0
+        ColorInner.Green = 0
+        ColorInner.Blue = 0
+        ColorInner.Alpha = 0
+        ColorOuter.Red = 0
+        ColorOuter.Green = 0
+        ColorOuter.Blue = 0
+        ColorOuter.Alpha = 0
+        LifeTime = 3
+        SizeScale = 1
+        RotateAngle = 0
+      end>
+    left = 184
+    top = 8
+  end
+  object GLPerlinPFXManager1: TGLPerlinPFXManager
+    Cadencer = GLCadencer1
+    Renderer = GLParticleFXRenderer1
+    Friction = 1
+    Rotation = 0
+    Smoothness = 1
+    Brightness = 0.200000002980232
+    Gamma = 1
+    NoiseAmplitude = 75
+    ColorMode = scmFade
+    ParticleSize = 1.5
+    ColorInner.Red = 1
+    ColorInner.Green = 1
+    ColorInner.Blue = 1
+    ColorInner.Alpha = 0.5
+    ColorInner.Color = {
+      0000803F0000803F0000803F0000003F
+    }
+    ColorOuter.Red = 0
+    ColorOuter.Green = 0
+    ColorOuter.Blue = 0
+    ColorOuter.Alpha = 0
+    LifeColors = <    
+      item
+        ColorInner.Red = 0
+        ColorInner.Green = 0
+        ColorInner.Blue = 0
+        ColorInner.Alpha = 0
+        ColorOuter.Red = 0
+        ColorOuter.Green = 0
+        ColorOuter.Blue = 0
+        ColorOuter.Alpha = 0
+        LifeTime = 15
+        SizeScale = 1
+        RotateAngle = 1
+      end>
+    left = 160
+    top = 96
+  end
+  object GLWindowsBitmapFont1: TGLWindowsBitmapFont
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Ranges = <    
+      item
+        StartASCII = ' '
+        StopASCII = 'z'
+        StartGlyphIdx = 0
+      end>
+    left = 8
+    top = 104
+  end
+end

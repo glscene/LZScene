@@ -1,0 +1,1536 @@
+object AAtomForm: TAAtomForm
+  Left = 337
+  Height = 340
+  Top = 130
+  Width = 501
+  Caption = 'Atomics'
+  ClientHeight = 340
+  ClientWidth = 501
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnHelp = FormHelp
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowHint = True
+  Visible = False
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 317
+    Top = 0
+    Width = 501
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 129.354278564453
+    Align = alClient
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 317
+    Width = 501
+    Panels = <>
+    SimplePanel = False
+  end
+  object StaticText1: TStaticText
+    Left = 16
+    Height = 17
+    Top = 16
+    Width = 192
+    BorderStyle = sbsSingle
+    Caption = '??? FPS'
+    Color = clBlack
+    Font.Color = clSkyBlue
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentBidiMode = False
+    ParentFont = False
+    ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    Transparent = False
+    Visible = False
+  end
+  object MainMenu1: TMainMenu
+    left = 128
+    top = 16
+    object File1: TMenuItem
+      Caption = 'File'
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object View1: TMenuItem
+      Caption = 'View'
+      object Level11: TMenuItem
+        Caption = 'Period 1'
+        object Hydrogen1: TMenuItem
+          Tag = 1
+          Caption = 'Hydrogen'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Helium1: TMenuItem
+          Tag = 2
+          Caption = 'Helium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level21: TMenuItem
+        Caption = 'Period 2'
+        object Lithium1: TMenuItem
+          Tag = 3
+          Caption = 'Lithium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Beryllium1: TMenuItem
+          Tag = 4
+          Caption = 'Beryllium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Boron1: TMenuItem
+          Tag = 5
+          Caption = 'Boron'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Carbon1: TMenuItem
+          Tag = 6
+          Caption = 'Carbon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Nitrogen1: TMenuItem
+          Tag = 7
+          Caption = 'Nitrogen'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Oxygen1: TMenuItem
+          Tag = 8
+          Caption = 'Oxygen'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Fluorine1: TMenuItem
+          Tag = 9
+          Caption = 'Fluorine'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Neon1: TMenuItem
+          Tag = 10
+          Caption = 'Neon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level31: TMenuItem
+        Caption = 'Period 3'
+        object Sodium1: TMenuItem
+          Tag = 11
+          Caption = 'Sodium'
+          OnClick = SetCheck
+        end
+        object Magnesium1: TMenuItem
+          Tag = 12
+          Caption = 'Magnesium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Aluminum1: TMenuItem
+          Tag = 13
+          Caption = 'Aluminum'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Silicon1: TMenuItem
+          Tag = 14
+          Caption = 'Silicon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Phosphorus1: TMenuItem
+          Tag = 15
+          Caption = 'Phosphorus'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Sulfur1: TMenuItem
+          Tag = 16
+          Caption = 'Sulfur'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Chlorine1: TMenuItem
+          Tag = 17
+          Caption = 'Chlorine'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Argon1: TMenuItem
+          Tag = 18
+          Caption = 'Argon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level41: TMenuItem
+        Caption = 'Period 4'
+        object Potassium1: TMenuItem
+          Tag = 19
+          Caption = 'Potassium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Calcium1: TMenuItem
+          Tag = 20
+          Caption = 'Calcium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Scandium1: TMenuItem
+          Tag = 21
+          Caption = 'Scandium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Titanium1: TMenuItem
+          Tag = 22
+          Caption = 'Titanium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Vanadium1: TMenuItem
+          Tag = 23
+          Caption = 'Vanadium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Chromium1: TMenuItem
+          Tag = 24
+          Caption = 'Chromium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Manganese1: TMenuItem
+          Tag = 25
+          Caption = 'Manganese'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Iron1: TMenuItem
+          Tag = 26
+          Caption = 'Iron'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Cobalt1: TMenuItem
+          Tag = 27
+          Caption = 'Cobalt'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Nickel1: TMenuItem
+          Tag = 28
+          Caption = 'Nickel'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Copper1: TMenuItem
+          Tag = 29
+          Caption = 'Copper'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Zinc1: TMenuItem
+          Tag = 30
+          Caption = 'Zinc'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Gallium1: TMenuItem
+          Tag = 31
+          Caption = 'Gallium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Germanium1: TMenuItem
+          Tag = 32
+          Caption = 'Germanium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Arsenic1: TMenuItem
+          Tag = 33
+          Caption = 'Arsenic'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Selenium1: TMenuItem
+          Tag = 34
+          Caption = 'Selenium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Bromine1: TMenuItem
+          Tag = 35
+          Caption = 'Bromine'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Krypton1: TMenuItem
+          Tag = 36
+          Caption = 'Krypton'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level51: TMenuItem
+        Caption = 'Period 5'
+        object Rubidium1: TMenuItem
+          Tag = 37
+          Caption = 'Rubidium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Strontium1: TMenuItem
+          Tag = 38
+          Caption = 'Strontium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Yttrium1: TMenuItem
+          Tag = 39
+          Caption = 'Yttrium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Zirconium1: TMenuItem
+          Tag = 40
+          Caption = 'Zirconium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Niobium1: TMenuItem
+          Tag = 41
+          Caption = 'Niobium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Molybdenum1: TMenuItem
+          Tag = 42
+          Caption = 'Molybdenum'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Technetium1: TMenuItem
+          Tag = 43
+          Caption = 'Technetium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ruthenium1: TMenuItem
+          Tag = 44
+          Caption = 'Ruthenium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Rhodium1: TMenuItem
+          Tag = 45
+          Caption = 'Rhodium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Palladium1: TMenuItem
+          Tag = 46
+          Caption = 'Palladium'
+          Checked = True
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Silver1: TMenuItem
+          Tag = 47
+          Caption = 'Silver'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Cadmium1: TMenuItem
+          Tag = 48
+          Caption = 'Cadmium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Indium1: TMenuItem
+          Tag = 49
+          Caption = 'Indium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Tin1: TMenuItem
+          Tag = 50
+          Caption = 'Tin'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Antimony1: TMenuItem
+          Tag = 51
+          Caption = 'Antimony'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Tellurium1: TMenuItem
+          Tag = 52
+          Caption = 'Tellurium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Iodine1: TMenuItem
+          Tag = 53
+          Caption = 'Iodine'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Xenon1: TMenuItem
+          Tag = 54
+          Caption = 'Xenon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level61: TMenuItem
+        Caption = 'Period 6'
+        object Cesium1: TMenuItem
+          Tag = 55
+          Caption = 'Cesium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Barium1: TMenuItem
+          Tag = 56
+          Caption = 'Barium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Lutetium1: TMenuItem
+          Tag = 71
+          Caption = 'Lutetium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Hafnium1: TMenuItem
+          Tag = 72
+          Caption = 'Hafnium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Tantalum1: TMenuItem
+          Tag = 73
+          Caption = 'Tantalum'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Tungsten1: TMenuItem
+          Tag = 74
+          Caption = 'Tungsten'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Rhenium1: TMenuItem
+          Tag = 75
+          Caption = 'Rhenium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Osmium1: TMenuItem
+          Tag = 76
+          Caption = 'Osmium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Iridium1: TMenuItem
+          Tag = 77
+          Caption = 'Iridium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Platinum1: TMenuItem
+          Tag = 78
+          Caption = 'Platinum'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Gold1: TMenuItem
+          Tag = 79
+          Caption = 'Gold'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Mercury1: TMenuItem
+          Tag = 80
+          Caption = 'Mercury'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Thallium1: TMenuItem
+          Tag = 81
+          Caption = 'Thallium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Lead1: TMenuItem
+          Tag = 82
+          Caption = 'Lead'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Bismuth1: TMenuItem
+          Tag = 83
+          Caption = 'Bismuth'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Polonium1: TMenuItem
+          Tag = 84
+          Caption = 'Polonium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Astatine1: TMenuItem
+          Tag = 85
+          Caption = 'Astatine'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Radon1: TMenuItem
+          Tag = 86
+          Caption = 'Radon'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Lanthanide1: TMenuItem
+        Caption = 'Lanthanide'
+        object Lanthanum1: TMenuItem
+          Tag = 57
+          Caption = 'Lanthanum'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Cerium1: TMenuItem
+          Tag = 58
+          Caption = 'Cerium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Praseodymium1: TMenuItem
+          Tag = 59
+          Caption = 'Praseodymium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Neodymium1: TMenuItem
+          Tag = 60
+          Caption = 'Neodymium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Promethium1: TMenuItem
+          Tag = 61
+          Caption = 'Promethium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Samarium1: TMenuItem
+          Tag = 62
+          Caption = 'Samarium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Europium1: TMenuItem
+          Tag = 63
+          Caption = 'Europium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Gadolinium1: TMenuItem
+          Tag = 64
+          Caption = 'Gadolinium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Terbium1: TMenuItem
+          Tag = 65
+          Caption = 'Terbium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Dysprosium1: TMenuItem
+          Tag = 66
+          Caption = 'Dysprosium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Holmium1: TMenuItem
+          Tag = 67
+          Caption = 'Holmium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Erbium1: TMenuItem
+          Tag = 68
+          Caption = 'Erbium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Thulium1: TMenuItem
+          Tag = 69
+          Caption = 'Thulium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ytterbium1: TMenuItem
+          Tag = 70
+          Caption = 'Ytterbium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Level71: TMenuItem
+        Caption = 'Period 7'
+        object Francium1: TMenuItem
+          Tag = 87
+          Caption = 'Francium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Radium1: TMenuItem
+          Tag = 88
+          Caption = 'Radium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Lawrencium1: TMenuItem
+          Tag = 103
+          Caption = 'Lawrencium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Rutherfordium1: TMenuItem
+          Tag = 104
+          Caption = 'Rutherfordium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Dubnium1: TMenuItem
+          Tag = 105
+          Caption = 'Dubnium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Bohrium1: TMenuItem
+          Tag = 106
+          Caption = 'Bohrium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Seaborgium1: TMenuItem
+          Tag = 107
+          Caption = 'Seaborgium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Hassium1: TMenuItem
+          Tag = 108
+          Caption = 'Hassium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Meitnerium1: TMenuItem
+          Tag = 109
+          Caption = 'Meitnerium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ununnilium1: TMenuItem
+          Tag = 110
+          Caption = 'Ununnilium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Unununium1: TMenuItem
+          Tag = 111
+          Caption = 'Unununium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ununbium1: TMenuItem
+          Tag = 112
+          Caption = 'Ununbium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ununquadium1: TMenuItem
+          Tag = 113
+          Caption = 'Ununquadium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ununhexium1: TMenuItem
+          Tag = 114
+          Caption = 'Ununhexium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Ununoctium1: TMenuItem
+          Tag = 115
+          Caption = 'Ununoctium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object UnRealium1: TMenuItem
+          Tag = 116
+          Caption = 'UnRealium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object UraGasium1: TMenuItem
+          Tag = 117
+          Caption = 'UraGasium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object Actinide1: TMenuItem
+        Caption = 'Actinide'
+        object Actinium1: TMenuItem
+          Tag = 89
+          Caption = 'Actinium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Thorium1: TMenuItem
+          Tag = 90
+          Caption = 'Thorium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Protactinium1: TMenuItem
+          Tag = 91
+          Caption = 'Protactinium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Uranium1: TMenuItem
+          Tag = 92
+          Caption = 'Uranium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Neptunium1: TMenuItem
+          Tag = 93
+          Caption = 'Neptunium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Plutonium1: TMenuItem
+          Tag = 94
+          Caption = 'Plutonium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Americium1: TMenuItem
+          Tag = 95
+          Caption = 'Americium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Curium1: TMenuItem
+          Tag = 96
+          Caption = 'Curium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Berkelium1: TMenuItem
+          Tag = 97
+          Caption = 'Berkelium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Californium1: TMenuItem
+          Tag = 98
+          Caption = 'Californium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Einsteinium1: TMenuItem
+          Tag = 99
+          Caption = 'Einsteinium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Fermium1: TMenuItem
+          Tag = 100
+          Caption = 'Fermium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Mendelevium1: TMenuItem
+          Tag = 101
+          Caption = 'Mendelevium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+        object Nobelium1: TMenuItem
+          Tag = 102
+          Caption = 'Nobelium'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = SetCheck
+        end
+      end
+      object N1: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object View3D1: TMenuItem
+        Caption = 'View in 3D'
+        Checked = True
+        GroupIndex = 2
+        OnClick = View2D1Click
+      end
+      object View2D1: TMenuItem
+        Caption = 'View in 2D'
+        GroupIndex = 2
+        OnClick = View2D1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+        GroupIndex = 2
+      end
+      object Stereo1: TMenuItem
+        Caption = '[Red] [Blue] Stereo'
+        GroupIndex = 3
+        OnClick = Stereo1Click
+      end
+      object N3: TMenuItem
+        Caption = '-'
+        GroupIndex = 3
+      end
+      object RotationCommand: TMenuItem
+        Caption = 'Rotation Command...'
+        GroupIndex = 3
+        OnClick = RotationCommandClick
+      end
+      object ToggleFPSDisplay1: TMenuItem
+        Caption = 'Toggle FPS Display'
+        GroupIndex = 3
+        OnClick = ToggleFPSDisplay1Click
+      end
+    end
+    object Help1: TMenuItem
+      Caption = 'Help'
+      object About1: TMenuItem
+        Caption = 'About...'
+        OnClick = About1Click
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    Enabled = False
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 48
+    top = 56
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 64
+    top = 16
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 56
+    object DropMesh: TGLFreeForm
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Shininess = 33
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000000000F041000000000000803F
+      }
+      RollAngle = 0
+      Scale.Coordinates = {
+        CDCC4C3DCDCC4C3DCDCC4C3D00000000
+      }
+      TurnAngle = 0
+      Visible = False
+    end
+    object WhiteLight: TGLLightSource
+      TagFloat = 0
+      Ambient.Red = 0
+      Ambient.Green = 0
+      Ambient.Blue = 0
+      Ambient.Alpha = 1
+      ConstAttenuation = 0.300000011920929
+      Diffuse.Red = 1
+      Diffuse.Green = 1
+      Diffuse.Blue = 1
+      Diffuse.Alpha = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000C8C100000C42000048420000803F
+      }
+      Specular.Red = 0
+      Specular.Green = 0
+      Specular.Blue = 0
+      Specular.Alpha = 1
+      SpotCutOff = 180
+      SpotDirection.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      SpotExponent = 0
+    end
+    object Lines1: TGLLines
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      AntiAliased = True
+      LineColor.Red = 1
+      LineColor.Green = 1
+      LineColor.Blue = 1
+      LineColor.Alpha = 1
+      LineWidth = 2
+      NodeColor.Red = 0
+      NodeColor.Green = 0
+      NodeColor.Blue = 1
+      NodeColor.Alpha = 1
+      Nodes = <>
+      NodesAspect = lnaInvisible
+      Options = [loUseNodeColorForLines]
+    end
+    object LittleRed: TGLSphere
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 1
+      Material.FrontProperties.Diffuse.Green = 0
+      Material.FrontProperties.Diffuse.Blue = 0
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F00000000000000000000803F
+      }
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Shininess = 76
+      Material.FrontProperties.Specular.Red = 0.850000023841858
+      Material.FrontProperties.Specular.Green = 0.850000023841858
+      Material.FrontProperties.Specular.Blue = 0.850000023841858
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.FrontProperties.Specular.Color = {
+        9A99593F9A99593F9A99593F0000803F
+      }
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000000000020410000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 1
+    end
+    object LittleBlue: TGLSphere
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0
+      Material.FrontProperties.Diffuse.Green = 0.501960813999176
+      Material.FrontProperties.Diffuse.Blue = 0.752941191196442
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Diffuse.Color = {
+        000000008180003FC1C0403F0000803F
+      }
+      Material.FrontProperties.Emission.Red = 0.0941176488995552
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Emission.Color = {
+        C1C0C03D00000000000000000000803F
+      }
+      Material.FrontProperties.Shininess = 76
+      Material.FrontProperties.Specular.Red = 0.850000023841858
+      Material.FrontProperties.Specular.Green = 0.850000023841858
+      Material.FrontProperties.Specular.Blue = 0.850000023841858
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.FrontProperties.Specular.Color = {
+        9A99593F9A99593F9A99593F0000803F
+      }
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        9A99894000000000000020410000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 1
+    end
+    object GLSphereRed: TGLSphere
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Shininess = 76
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 2
+    end
+    object GLSphereBlue: TGLSphere
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Shininess = 76
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Radius = 2
+    end
+    object DummyCubeRed1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed2: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed3: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed4: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed5: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed6: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCubeRed7: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube2: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube3: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube4: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube5: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube6: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DummyCube7: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 500
+      FocalLength = 75
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000000000000000000084420000803F
+      }
+    end
+    object GLFreeForm1: TGLFreeForm
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+    end
+  end
+end

@@ -1,0 +1,673 @@
+object Form1: TForm1
+  Left = 490
+  Height = 528
+  Top = 375
+  Width = 870
+  Caption = 'Form1'
+  ClientHeight = 528
+  ClientWidth = 870
+  OnActivate = FormActivate
+  LCLVersion = '1.8.0.4'
+  object GLSceneViewer1: TGLSceneViewer
+    AnchorSideLeft.Control = TrackBar1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = GroupBox1
+    AnchorSideBottom.Control = TrackBar1
+    AnchorSideBottom.Side = asrBottom
+    Left = 42
+    Height = 508
+    Top = 0
+    Width = 525
+    Camera = GLCamera1
+    Buffer.BackgroundColor = 13753281
+    Buffer.AmbientColor.Red = 0.149019613862038
+    Buffer.AmbientColor.Green = 0.250980406999588
+    Buffer.AmbientColor.Blue = 0.176470592617989
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.AmbientColor.Color = {
+      9998183E8180803EB5B4343E0000803F
+    }
+    Buffer.ShadeModel = smSmooth
+    FieldOfView = 157.727386474609
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 0
+  end
+  object chkWireFrame: TCheckBox
+    AnchorSideLeft.Control = chkNormals
+    AnchorSideTop.Control = chkNormals
+    AnchorSideTop.Side = asrBottom
+    Left = 606
+    Height = 17
+    Top = 299
+    Width = 72
+    BorderSpacing.Top = 10
+    Caption = 'WireFrame'
+    OnChange = chkWireFrameChange
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = GroupBox3
+    Left = 584
+    Height = 127
+    Top = 0
+    Width = 114
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 6
+    Caption = 'Sectors'
+    ClientHeight = 109
+    ClientWidth = 110
+    TabOrder = 2
+    object RadioButton1: TRadioButton
+      Left = 16
+      Height = 17
+      Top = 16
+      Width = 26
+      Caption = '6'
+      OnChange = RadioButton1Change
+      TabOrder = 1
+    end
+    object RadioButton2: TRadioButton
+      Left = 16
+      Height = 17
+      Top = 48
+      Width = 32
+      Caption = '12'
+      Checked = True
+      OnChange = RadioButton2Change
+      TabOrder = 2
+      TabStop = True
+    end
+    object RadioButton3: TRadioButton
+      Left = 16
+      Height = 17
+      Top = 80
+      Width = 32
+      Caption = '17'
+      OnChange = RadioButton3Change
+      TabOrder = 0
+    end
+  end
+  object chkNormals: TCheckBox
+    AnchorSideLeft.Control = GroupBox1
+    AnchorSideTop.Control = GroupBox2
+    AnchorSideTop.Side = asrBottom
+    Left = 606
+    Height = 17
+    Top = 272
+    Width = 58
+    BorderSpacing.Left = 22
+    BorderSpacing.Top = 12
+    Caption = 'Normals'
+    OnChange = chkNormalsChange
+    TabOrder = 3
+  end
+  object GroupBox2: TGroupBox
+    AnchorSideTop.Control = GroupBox1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = GroupBox3
+    Left = 584
+    Height = 121
+    Top = 139
+    Width = 114
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 12
+    BorderSpacing.Right = 6
+    Caption = 'Slices'
+    ClientHeight = 103
+    ClientWidth = 110
+    TabOrder = 4
+    object RadioButton4: TRadioButton
+      Left = 16
+      Height = 17
+      Top = 16
+      Width = 26
+      Caption = '4'
+      OnChange = RadioButton4Change
+      TabOrder = 0
+    end
+    object RadioButton5: TRadioButton
+      Left = 17
+      Height = 17
+      Top = 48
+      Width = 26
+      Caption = '6'
+      Checked = True
+      OnChange = RadioButton5Change
+      TabOrder = 2
+      TabStop = True
+    end
+    object RadioButton6: TRadioButton
+      Left = 17
+      Height = 17
+      Top = 80
+      Width = 32
+      Caption = '12'
+      OnChange = RadioButton6Change
+      TabOrder = 1
+    end
+  end
+  object GroupBox3: TGroupBox
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 704
+    Height = 528
+    Top = 0
+    Width = 166
+    Anchors = [akTop, akRight, akBottom]
+    Caption = 'Tests'
+    ClientHeight = 510
+    ClientWidth = 162
+    TabOrder = 5
+    object radCylinder: TRadioButton
+      AnchorSideLeft.Control = GroupBox3
+      AnchorSideTop.Control = GroupBox3
+      Left = 10
+      Height = 17
+      Top = 8
+      Width = 59
+      BorderSpacing.Left = 10
+      BorderSpacing.Top = 8
+      Caption = 'Cylinder'
+      OnChange = Button1Click
+      TabOrder = 3
+    end
+    object radCone: TRadioButton
+      AnchorSideLeft.Control = radCylinder
+      AnchorSideTop.Control = radCylinder
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 33
+      Width = 45
+      BorderSpacing.Top = 8
+      Caption = 'Cone'
+      OnChange = Button1Click
+      TabOrder = 0
+    end
+    object radInvertedCone: TRadioButton
+      AnchorSideLeft.Control = radCone
+      AnchorSideTop.Control = radCone
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 58
+      Width = 87
+      BorderSpacing.Top = 8
+      Caption = 'InvertedCone'
+      OnChange = Button1Click
+      TabOrder = 1
+    end
+    object radConeCyclinder: TRadioButton
+      AnchorSideLeft.Control = radInvertedCone
+      AnchorSideTop.Control = radInvertedCone
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 83
+      Width = 92
+      BorderSpacing.Top = 8
+      Caption = 'Cone Cyclinder'
+      OnChange = Button1Click
+      TabOrder = 2
+    end
+    object radTipTest: TRadioButton
+      AnchorSideLeft.Control = radConeCyclinder
+      AnchorSideTop.Control = radConeCyclinder
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 108
+      Width = 58
+      BorderSpacing.Top = 8
+      Caption = 'Tip Test'
+      OnClick = Button1Click
+      TabOrder = 4
+    end
+    object radSteppedShaft: TRadioButton
+      AnchorSideLeft.Control = radTipTest
+      AnchorSideTop.Control = radTipTest
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 133
+      Width = 86
+      BorderSpacing.Top = 8
+      Caption = 'SteppedShaft'
+      OnClick = Button1Click
+      TabOrder = 5
+    end
+    object radDrilledHole: TRadioButton
+      AnchorSideLeft.Control = radSteppedShaft
+      AnchorSideTop.Control = radSteppedShaft
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 158
+      Width = 73
+      BorderSpacing.Top = 8
+      Caption = 'Drilled Hole'
+      OnClick = Button1Click
+      TabOrder = 6
+    end
+    object radTube: TRadioButton
+      AnchorSideLeft.Control = radDrilledHole
+      AnchorSideTop.Control = radDrilledHole
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 183
+      Width = 44
+      BorderSpacing.Top = 8
+      Caption = 'Tube'
+      OnClick = Button1Click
+      TabOrder = 7
+    end
+    object radPipeFlange: TRadioButton
+      AnchorSideLeft.Control = radTube
+      AnchorSideTop.Control = radTube
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 208
+      Width = 108
+      BorderSpacing.Top = 8
+      Caption = 'Pipe Flange / Bush'
+      OnClick = Button1Click
+      TabOrder = 8
+    end
+    object radTopDomedCap: TRadioButton
+      AnchorSideLeft.Control = radPipeFlange
+      AnchorSideTop.Control = radPipeFlange
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 233
+      Width = 96
+      BorderSpacing.Top = 8
+      Caption = 'Domed Cap Top'
+      OnClick = Button1Click
+      TabOrder = 9
+    end
+    object radCapsule: TRadioButton
+      AnchorSideLeft.Control = radTopDomedCap
+      AnchorSideTop.Control = radTopDomedCap
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 258
+      Width = 58
+      BorderSpacing.Top = 8
+      Caption = 'Capsule'
+      OnClick = Button1Click
+      TabOrder = 10
+    end
+    object radSphere: TRadioButton
+      AnchorSideLeft.Control = radCapsule
+      AnchorSideTop.Control = radCapsule
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 283
+      Width = 54
+      BorderSpacing.Top = 8
+      Caption = 'Sphere'
+      OnClick = Button1Click
+      TabOrder = 11
+    end
+    object radTorus: TRadioButton
+      AnchorSideLeft.Control = radSphere
+      AnchorSideTop.Control = radSphere
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 308
+      Width = 47
+      BorderSpacing.Top = 8
+      Caption = 'Torus'
+      OnClick = Button1Click
+      TabOrder = 12
+    end
+    object radFillet: TRadioButton
+      AnchorSideLeft.Control = radTorus
+      AnchorSideTop.Control = radTorus
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 333
+      Width = 66
+      BorderSpacing.Top = 8
+      Caption = 'Fillet Test'
+      OnClick = Button1Click
+      TabOrder = 13
+    end
+    object radFillet2: TRadioButton
+      AnchorSideLeft.Control = radFillet
+      AnchorSideTop.Control = radFillet
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 358
+      Width = 137
+      BorderSpacing.Top = 8
+      Caption = 'Fillet Test Single Surface'
+      OnClick = Button1Click
+      TabOrder = 14
+    end
+    object radMeshTrans: TRadioButton
+      AnchorSideLeft.Control = radFillet2
+      AnchorSideTop.Control = radFillet2
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 383
+      Width = 100
+      BorderSpacing.Top = 8
+      Caption = 'Mesh Transitions'
+      OnClick = Button1Click
+      TabOrder = 15
+    end
+    object radFilletTrans: TRadioButton
+      AnchorSideLeft.Control = radMeshTrans
+      AnchorSideTop.Control = radMeshTrans
+      AnchorSideTop.Side = asrBottom
+      Left = 10
+      Height = 17
+      Top = 408
+      Width = 120
+      BorderSpacing.Top = 8
+      Caption = 'Fillet with Transitions'
+      Checked = True
+      OnClick = Button1Click
+      TabOrder = 16
+      TabStop = True
+    end
+  end
+  object TrackBar1: TTrackBar
+    Left = 0
+    Height = 508
+    Top = 0
+    Width = 32
+    Max = 50
+    Min = -50
+    OnChange = TrackBar1Change
+    Orientation = trVertical
+    Position = 0
+    Align = alLeft
+    TabOrder = 6
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 20
+    Top = 508
+    Width = 870
+    Panels = <>
+  end
+  object chkGenQuads: TCheckBox
+    AnchorSideLeft.Control = chkWireFrame
+    AnchorSideTop.Control = chkEdges
+    AnchorSideTop.Side = asrBottom
+    Left = 606
+    Height = 17
+    Top = 374
+    Width = 73
+    BorderSpacing.Top = 8
+    Caption = 'Gen Quads'
+    OnChange = chkGenQuadsChange
+    OnClick = Button1Click
+    TabOrder = 8
+  end
+  object chkSolid: TCheckBox
+    AnchorSideLeft.Control = chkWireFrame
+    AnchorSideTop.Control = chkWireFrame
+    AnchorSideTop.Side = asrBottom
+    Left = 622
+    Height = 17
+    Top = 324
+    Width = 42
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 8
+    Caption = 'Solid'
+    Checked = True
+    Enabled = False
+    OnClick = chkSolidClick
+    State = cbChecked
+    TabOrder = 9
+  end
+  object chkEdges: TCheckBox
+    AnchorSideLeft.Control = chkSolid
+    AnchorSideTop.Control = chkSolid
+    AnchorSideTop.Side = asrBottom
+    Left = 622
+    Height = 17
+    Top = 349
+    Width = 49
+    BorderSpacing.Top = 8
+    Caption = 'Edges'
+    Enabled = False
+    OnClick = chkEdgesClick
+    TabOrder = 10
+  end
+  object GLScene1: TGLScene
+    left = 49
+    top = 27
+    object GLFreeForm1: TGLFreeForm
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'LibMaterial'
+      VisibilityCulling = vcHierarchical
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000000080BF0000000000000000
+      }
+      MaterialLibrary = GLMaterialLibrary1
+      object GLDirectOpenGL1: TGLDirectOpenGL
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        UseBuildList = False
+        OnRender = GLDirectOpenGL1Render
+        Blend = False
+      end
+    end
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      VisibilityCulling = vcObjectBased
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 200
+      FocalLength = 50
+      TargetObject = GLDummyCube1
+      Position.Coordinates = {
+        000048420000F0410000F0410000803F
+      }
+      Direction.Coordinates = {
+        0000803F000000000000008000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Red = 1
+      Ambient.Green = 1
+      Ambient.Blue = 1
+      Ambient.Alpha = 1
+      Ambient.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      ConstAttenuation = 1
+      Diffuse.Red = 1
+      Diffuse.Green = 1
+      Diffuse.Blue = 1
+      Diffuse.Alpha = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000C84200006C42000048420000803F
+      }
+      LightStyle = lsOmni
+      Specular.Red = 0
+      Specular.Green = 0
+      Specular.Blue = 0
+      Specular.Alpha = 1
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLArrowLine1: TGLArrowLine
+      TagFloat = 0
+      Material.BackProperties.Ambient.Red = 0.200000002980232
+      Material.BackProperties.Ambient.Green = 0.200000002980232
+      Material.BackProperties.Ambient.Blue = 0.200000002980232
+      Material.BackProperties.Ambient.Alpha = 1
+      Material.BackProperties.Diffuse.Red = 0.800000011920929
+      Material.BackProperties.Diffuse.Green = 0.800000011920929
+      Material.BackProperties.Diffuse.Blue = 0.800000011920929
+      Material.BackProperties.Diffuse.Alpha = 1
+      Material.BackProperties.Emission.Red = 0
+      Material.BackProperties.Emission.Green = 0
+      Material.BackProperties.Emission.Blue = 0
+      Material.BackProperties.Emission.Alpha = 1
+      Material.BackProperties.Specular.Red = 0
+      Material.BackProperties.Specular.Green = 0
+      Material.BackProperties.Specular.Blue = 0
+      Material.BackProperties.Specular.Alpha = 1
+      Material.FrontProperties.Ambient.Red = 0.200000002980232
+      Material.FrontProperties.Ambient.Green = 0.200000002980232
+      Material.FrontProperties.Ambient.Blue = 0.200000002980232
+      Material.FrontProperties.Ambient.Alpha = 1
+      Material.FrontProperties.Diffuse.Red = 0.800000011920929
+      Material.FrontProperties.Diffuse.Green = 0.800000011920929
+      Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+      Material.FrontProperties.Diffuse.Alpha = 1
+      Material.FrontProperties.Emission.Red = 0
+      Material.FrontProperties.Emission.Green = 0
+      Material.FrontProperties.Emission.Blue = 0
+      Material.FrontProperties.Emission.Alpha = 1
+      Material.FrontProperties.Specular.Red = 0
+      Material.FrontProperties.Specular.Green = 0
+      Material.FrontProperties.Specular.Blue = 0
+      Material.FrontProperties.Specular.Alpha = 1
+      Material.Texture.EnvColor.Red = 0
+      Material.Texture.EnvColor.Green = 0
+      Material.Texture.EnvColor.Blue = 0
+      Material.Texture.EnvColor.Alpha = 0
+      Material.Texture.BorderColor.Red = 0
+      Material.Texture.BorderColor.Green = 0
+      Material.Texture.BorderColor.Blue = 0
+      Material.Texture.BorderColor.Alpha = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000000000040410000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BottomRadius = 0.100000001490116
+      Height = 1
+      TopRadius = 0.100000001490116
+      TopArrowHeadHeight = 0.5
+      TopArrowHeadRadius = 0.200000002980232
+      BottomArrowHeadHeight = 0.5
+      BottomArrowHeadRadius = 0.200000002980232
+    end
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    FormCaption = 'Revolution Builder - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 218
+    top = 37
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Tag = 0
+        Material.BackProperties.Ambient.Red = 0.752941191196442
+        Material.BackProperties.Ambient.Green = 0.125490203499794
+        Material.BackProperties.Ambient.Blue = 0.00784313771873713
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Ambient.Color = {
+          C1C0403F8180003E8180003C0000803F
+        }
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.760784327983856
+        Material.FrontProperties.Ambient.Green = 0.0392156876623631
+        Material.FrontProperties.Ambient.Blue = 0.10196078568697
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Ambient.Color = {
+          C3C2423FA1A0203DD1D0D03D0000803F
+        }
+        Material.FrontProperties.Diffuse.Red = 0.850980401039124
+        Material.FrontProperties.Diffuse.Green = 0.0549019612371922
+        Material.FrontProperties.Diffuse.Blue = 0.270588248968124
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Diffuse.Color = {
+          DAD9593FE1E0603D8B8A8A3E0000803F
+        }
+        Material.FrontProperties.Emission.Red = 0.823529422283173
+        Material.FrontProperties.Emission.Green = 0.223529413342476
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Emission.Color = {
+          D3D2523FE5E4643E000000000000803F
+        }
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+      end>
+    left = 316
+    top = 50
+  end
+end

@@ -313,7 +313,7 @@
       <Item70>
         <Filename Value="../Source/GLFileTIN.pas"/>
         <UnitName Value="GLFileTIN"/>
-      </Item70>
+7      </Item70>
       <Item71>
         <Filename Value="../Source/GLFileVRML.pas"/>
         <UnitName Value="GLFileVRML"/>
@@ -718,10 +718,6 @@
         <Filename Value="../Source/GLSkydome.pas"/>
         <UnitName Value="GLSkydome"/>
       </Item171>
-      <Item172>
-        <Filename Value="../Source/GLSLanguage.pas"/>
-        <UnitName Value="GLSLanguage"/>
-      </Item172>
       <Item173>
         <Filename Value="../Source/GLSLProjectedTextures.pas"/>
         <UnitName Value="GLSLProjectedTextures"/>

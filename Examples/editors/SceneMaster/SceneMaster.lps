@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="67">
+      <Unit0>
+        <Filename Value="SceneMaster.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="31" Y="6"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMainform"/>
+        <TopLine Value="143"/>
+        <CursorPos X="16" Y="162"/>
+        <FoldState Value=" T3lR0m3 pidk90D07113167"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\UvMapping\Unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="447"/>
+        <CursorPos X="52" Y="460"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\GLZScene\package\glzscene_runtime.dpk"/>
+        <UnitName Value="Orus_Runtime"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="15" Y="3"/>
+        <UsageCount Value="12"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.VectorMaths.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12170"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLContext.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <UsageCount Value="12"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Plateform\OOE.CrossPlatform.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <UsageCount Value="12"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Tools\OOE.Logger.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\..\GLZScene\source\basis\glz.types.pas"/>
+        <UnitName Value="GLZ.Types"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="45" Y="691"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.ResStrings.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <UsageCount Value="12"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.Utils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="82"/>
+        <UsageCount Value="12"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.VectorTypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="314"/>
+        <UsageCount Value="12"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.ApplicationFileIO.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.BaseClasses.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="139"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.PersistentClasses.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="157"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Plateform\OOE.Win32Context.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="67"/>
+        <UsageCount Value="12"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Plateform\OOE.Win32Viewer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <UsageCount Value="12"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.SceneManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5834"/>
+        <UsageCount Value="12"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.GLColor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <UsageCount Value="12"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.Coordinates.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <UsageCount Value="12"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLState.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1597"/>
+        <UsageCount Value="12"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.VectorLists.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.XCollection.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="124"/>
+        <UsageCount Value="12"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GeometryBB.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="133"/>
+        <UsageCount Value="12"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.Viewer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="49"/>
+        <UsageCount Value="12"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.ContextHandles.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="949"/>
+        <UsageCount Value="12"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Tools\OOE.AsyncTimer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <UsageCount Value="12"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.ObjectManager.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="145"/>
+        <UsageCount Value="12"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.Screen.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <UsageCount Value="12"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Tools\OOELogForm.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.CustomShader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="247"/>
+        <UsageCount Value="12"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.GLObjects.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2980"/>
+        <CursorPos X="5" Y="1092"/>
+        <UsageCount Value="12"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLSLParameters.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.Cadencer.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.Matrix.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.SimpleNavigation.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\Tools\OOE.GLSLMemo.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\OOE.Material.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLTexture.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLGraphics.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.GLTextureFormat.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\base\OOE.ImageUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileBMP.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileDDS.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileHDR.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileJPEG.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileO3TC.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FilePNG.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileTGA.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBDDS.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBDXTC.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBFREETYPE.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBHDR.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBPNG.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.LIBTGA.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.SJPG.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.SRGBE.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="D:\Documents\projets\SVN\Temp\glscene\Orus\source\IO\2D\OOE.FileKTX.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="..\..\..\..\GLZScene\fileformats\glz.pictureregisteredformats.pas"/>
+        <UnitName Value="GLZ.PictureRegisteredFormats"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="87"/>
+        <CursorPos X="5" Y="21"/>
+        <UsageCount Value="10"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\..\..\..\GLZScene\source\basis\glz.texturecombiners.pas"/>
+        <UnitName Value="GLZ.TextureCombiners"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="52"/>
+        <CursorPos X="6" Y="22"/>
+        <UsageCount Value="10"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="..\..\..\..\GLZScene\source\glz.shaderlib.pas"/>
+        <UnitName Value="GLZ.ShaderLib"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="72"/>
+        <UsageCount Value="10"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\..\..\..\GLZScene\source\glz.shader.pas"/>
+        <UnitName Value="GLZ.Shader"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="85"/>
+        <CursorPos X="9" Y="291"/>
+        <UsageCount Value="10"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\..\..\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="190"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\..\..\Source\DesignTime\FGUISkinEditor.pas"/>
+        <ComponentName Value="GUISkinEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="11" Y="18"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\messages.pp"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\..\..\Source\DesignTime\GLSceneForm.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="4"/>
+        <CursorPos X="3" Y="25"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="uNavCube.pas"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="54" Y="10"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit66>
+    </Units>
+    <JumpHistory Count="13" HistoryIndex="12">
+      <Position1>
+        <Filename Value="umainform.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="531" Column="5" TopLine="507"/>
+      </Position2>
+      <Position3>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="390" Column="15" TopLine="380"/>
+      </Position3>
+      <Position4>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="648" Column="2" TopLine="605"/>
+      </Position4>
+      <Position5>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="514" Column="47" TopLine="514"/>
+      </Position5>
+      <Position6>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="515" Column="47" TopLine="515"/>
+      </Position6>
+      <Position7>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="516" Column="47" TopLine="516"/>
+      </Position7>
+      <Position8>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="517" Column="47" TopLine="517"/>
+      </Position8>
+      <Position9>
+        <Filename Value="..\..\..\Source\DesignTime\FGUISkinEditor.pas"/>
+        <Caret Line="19" Column="12"/>
+      </Position9>
+      <Position10>
+        <Filename Value="..\..\..\Source\DesignTime\GLSceneForm.pas"/>
+      </Position10>
+      <Position11>
+        <Filename Value="..\..\..\Source\DesignTime\FGUISkinEditor.pas"/>
+        <Caret Line="18" Column="11"/>
+      </Position11>
+      <Position12>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="8" Column="54"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uNavCube.pas"/>
+        <Caret Line="10" Column="54"/>
+      </Position13>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

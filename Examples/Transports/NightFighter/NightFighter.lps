@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="NightFighter.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="210"/>
+        <CursorPos X="5" Y="221"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLHeightData.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1255"/>
+        <CursorPos Y="1281"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="52" Column="13" TopLine="49"/>
+      </Position1>
+      <Position2>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLHeightData.pas"/>
+        <Caret Line="1646" Column="78" TopLine="1624"/>
+      </Position2>
+      <Position3>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLHeightData.pas"/>
+        <Caret Line="1651" TopLine="1627"/>
+      </Position3>
+      <Position4>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLHeightData.pas"/>
+        <Caret Line="435" Column="14" TopLine="422"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="91" Column="26" TopLine="118"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="218" Column="3" TopLine="230"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="241" Column="71" TopLine="252"/>
+      </Position7>
+    </JumpHistory>
+  </ProjectSession>
+  <SkipCheckLCLInterfaces Value="True"/>
+</CONFIG>

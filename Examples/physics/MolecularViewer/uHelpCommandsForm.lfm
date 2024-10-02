@@ -1,0 +1,56 @@
+object HelpCommandsForm: THelpCommandsForm
+  Left = 0
+  Height = 417
+  Top = 0
+  Width = 454
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Help : Commands'
+  ClientHeight = 417
+  ClientWidth = 454
+  Position = poScreenCenter
+  Visible = False
+  object btnClose: TButton
+    Left = 4
+    Height = 25
+    Top = 388
+    Width = 446
+    Align = alBottom
+    BorderSpacing.Around = 4
+    Caption = 'Close'
+    OnClick = btnCloseClick
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 0
+    Height = 384
+    Top = 0
+    Width = 454
+    Align = alClient
+    Lines.Strings = (
+      'Manipulation de la scene :'
+      '---------------------------'
+      ''
+      '  - Bouton Gauche enfoncé = Rotation de la scene'
+      '  - Bouton Droit enfoncé  = Zoom (FOV)'
+      '  - Shift + Bouton Droit enfoncés  = Distance Camera (Sans ajustement du FOV)'
+      '  - Molette = Distance Camera (Avec ajustement du FOV)'
+      '______________________________________________'
+      ''
+      'Manipulation de l''objet :'
+      '-------------------------  '
+      '  - X + Bouton gauche enfoncés = Translation de l''objet sur l''axe des X'
+      '  - Y + Bouton gauche enfoncés = Translation de l''objet sur l''axe des Y'
+      '  - Z + Bouton gauche enfoncés = Translation de l''objet sur l''axe des Z'
+      '  - CTRL + Bouton droit enfoncés = Rotation sur les axes X et Y'
+      '  - CTRL + ALT + Bouton droit enfoncés = Rotation fine sur les axes X et Y'
+      ''
+      'Si un atome est sélectionné :'
+      '  - Click bouton gauche = Affichage informations sur cet atome'
+      '______________________________________________'
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 1
+    WordWrap = False
+  end
+end

@@ -1,0 +1,853 @@
+object GridOptionsForm: TGridOptionsForm
+  Left = 450
+  Height = 419
+  Top = 268
+  Width = 320
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  ClientHeight = 419
+  ClientWidth = 320
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  LCLVersion = '1.6.4.0'
+  object GroupBoxXY: TGroupBox
+    Left = 0
+    Height = 104
+    Top = 0
+    Width = 320
+    Align = alTop
+    Anchors = [akBottom]
+    Caption = '  X, Y Grid Range  '
+    ClientHeight = 86
+    ClientWidth = 316
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object Label7: TLabel
+      Left = 41
+      Height = 13
+      Top = 15
+      Width = 40
+      Caption = 'Minimum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 106
+      Height = 13
+      Top = 15
+      Width = 44
+      Caption = 'Maximum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 172
+      Height = 13
+      Top = 15
+      Width = 49
+      Alignment = taRightJustify
+      Caption = 'Increment'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = -2
+      Height = 13
+      Top = 31
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'x :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label12: TLabel
+      Left = -2
+      Height = 13
+      Top = 53
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'y :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 242
+      Height = 13
+      Top = 15
+      Width = 59
+      Caption = 'Position ( z )'
+      ParentColor = False
+    end
+    object EditxyGridMinx: TEdit
+      Left = 21
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridMinxChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EditxyGridMaxx: TEdit
+      Left = 92
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridMaxxChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 1
+    end
+    object EditxyGridStpx: TEdit
+      Left = 164
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridStpxChange
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 2
+    end
+    object EditxyGridMiny: TEdit
+      Left = 21
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridMinyChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EditxyGridMaxy: TEdit
+      Left = 92
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridMaxyChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 5
+    end
+    object EditxyGridStpy: TEdit
+      Left = 164
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridStpyChange
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 6
+    end
+    object EditxyGridPosz: TEdit
+      Left = 236
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxyGridPoszChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 3
+    end
+    object xyLock: TCheckBox
+      Cursor = crHandPoint
+      Left = 241
+      Height = 19
+      Top = 53
+      Width = 66
+      Caption = 'Lock x,y'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      OnClick = xyLockClick
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 7
+    end
+  end
+  object GroupBoxXZ: TGroupBox
+    Left = 0
+    Height = 100
+    Top = 200
+    Width = 320
+    Align = alTop
+    Anchors = [akBottom]
+    Caption = '  X, Z Grid Range  '
+    ClientHeight = 82
+    ClientWidth = 316
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    object Label13: TLabel
+      Left = 41
+      Height = 13
+      Top = 15
+      Width = 40
+      Caption = 'Minimum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label18: TLabel
+      Left = 106
+      Height = 13
+      Top = 15
+      Width = 44
+      Caption = 'Maximum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label20: TLabel
+      Left = 172
+      Height = 13
+      Top = 15
+      Width = 49
+      Alignment = taRightJustify
+      Caption = 'Increment'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label21: TLabel
+      Left = -2
+      Height = 13
+      Top = 31
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'x :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label22: TLabel
+      Left = -2
+      Height = 13
+      Top = 53
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'z :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 242
+      Height = 13
+      Top = 15
+      Width = 60
+      Caption = 'Position ( y )'
+      ParentColor = False
+    end
+    object EditxzGridMinx: TEdit
+      Left = 21
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridMinxChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EditxzGridMaxx: TEdit
+      Left = 92
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridMaxxChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 1
+    end
+    object EditxzGridStpx: TEdit
+      Left = 164
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridStpxChange
+      OnExit = EditxzGridStpxExit
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 2
+    end
+    object EditxzGridMinz: TEdit
+      Left = 21
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridMinzChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EditxzGridMaxz: TEdit
+      Left = 92
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridMaxzChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 5
+    end
+    object EditxzGridStpz: TEdit
+      Left = 164
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridStpzChange
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 6
+    end
+    object EditxzGridPosy: TEdit
+      Left = 236
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditxzGridPosyChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 3
+    end
+    object zLock: TCheckBox
+      Cursor = crHandPoint
+      Left = 241
+      Height = 19
+      Top = 56
+      Width = 55
+      Caption = 'Lock z'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      OnClick = zLockClick
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 7
+    end
+  end
+  object GroupBoxYZ: TGroupBox
+    Left = 0
+    Height = 96
+    Top = 104
+    Width = 320
+    Align = alTop
+    Anchors = [akBottom]
+    Caption = '  Y, Z Grid Range  '
+    ClientHeight = 78
+    ClientWidth = 316
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    object Label24: TLabel
+      Left = 41
+      Height = 13
+      Top = 15
+      Width = 40
+      Caption = 'Minimum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label25: TLabel
+      Left = 106
+      Height = 13
+      Top = 15
+      Width = 44
+      Caption = 'Maximum'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label26: TLabel
+      Left = 172
+      Height = 13
+      Top = 15
+      Width = 49
+      Alignment = taRightJustify
+      Caption = 'Increment'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label27: TLabel
+      Left = -1
+      Height = 13
+      Top = 32
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'y :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label28: TLabel
+      Left = -2
+      Height = 13
+      Top = 53
+      Width = 20
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'z :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label29: TLabel
+      Left = 242
+      Height = 13
+      Top = 15
+      Width = 60
+      Caption = 'Position ( x )'
+      ParentColor = False
+    end
+    object EdityzGridMiny: TEdit
+      Left = 21
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridMinyChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EdityzGridMaxy: TEdit
+      Left = 92
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridMaxyChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 1
+    end
+    object EdityzGridStpy: TEdit
+      Left = 164
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridStpyChange
+      OnExit = EdityzGridStpyExit
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 2
+    end
+    object EdityzGridMinz: TEdit
+      Left = 21
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridMinzChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 4
+    end
+    object EdityzGridMaxz: TEdit
+      Left = 92
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridMaxzChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 5
+    end
+    object EdityzGridStpz: TEdit
+      Left = 164
+      Height = 21
+      Top = 51
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridStpzChange
+      OnExit = EdityzGridStpzExit
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 6
+    end
+    object EdityzGridPosx: TEdit
+      Left = 236
+      Height = 21
+      Top = 29
+      Width = 73
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EdityzGridPosxChange
+      OnKeyPress = FloatKeyPress
+      ParentFont = False
+      TabOrder = 3
+    end
+    object MinLock: TCheckBox
+      Cursor = crHandPoint
+      Left = 241
+      Height = 19
+      Top = 53
+      Width = 65
+      Caption = 'Minimum'
+      Checked = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -9
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      OnClick = MinLockClick
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 7
+    end
+  end
+  object GroupBoxOp: TGroupBox
+    Left = 4
+    Height = 111
+    Top = 304
+    Width = 312
+    Align = alClient
+    BorderSpacing.Around = 4
+    Caption = '  Options  '
+    ClientHeight = 93
+    ClientWidth = 308
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    object Label14: TLabel
+      Left = 4
+      Height = 13
+      Top = 15
+      Width = 36
+      AutoSize = False
+      Caption = 'Show :'
+      ParentColor = False
+    end
+    object Label19: TLabel
+      Left = 191
+      Height = 13
+      Top = 40
+      Width = 61
+      Caption = 'View Depth :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Colors: TSpeedButton
+      Cursor = crHandPoint
+      Left = 172
+      Height = 21
+      Top = 64
+      Width = 54
+      Caption = '&Colours'
+      Flat = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      NumGlyphs = 2
+      OnClick = ColorsClick
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 4
+      Height = 13
+      Top = 40
+      Width = 40
+      Caption = 'Scale z :'
+      ParentColor = False
+    end
+    object Centre: TSpeedButton
+      Cursor = crHandPoint
+      Left = 89
+      Height = 21
+      Top = 64
+      Width = 78
+      Caption = 'Grids Centre '
+      Flat = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      NumGlyphs = 2
+      OnClick = CentreClick
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 97
+      Height = 13
+      Top = 40
+      Width = 47
+      Caption = 'Box Line :'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object PlotValues: TSpeedButton
+      Cursor = crHandPoint
+      Left = 7
+      Height = 21
+      Top = 64
+      Width = 74
+      Caption = 'Plot Values'
+      Flat = True
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      NumGlyphs = 2
+      OnClick = PlotValuesClick
+      ParentFont = False
+    end
+    object xyGridCB: TCheckBox
+      Cursor = crHandPoint
+      Left = 41
+      Height = 19
+      Top = 14
+      Width = 54
+      Caption = 'xy Grid'
+      OnClick = xyGridCBClick
+      TabOrder = 0
+    end
+    object xzGridCB: TCheckBox
+      Cursor = crHandPoint
+      Left = 104
+      Height = 19
+      Top = 14
+      Width = 53
+      Caption = 'xz Grid'
+      OnClick = xzGridCBClick
+      TabOrder = 1
+    end
+    object yzGridCB: TCheckBox
+      Cursor = crHandPoint
+      Left = 167
+      Height = 19
+      Top = 14
+      Width = 53
+      Caption = 'yz Grid'
+      OnClick = yzGridCBClick
+      TabOrder = 2
+    end
+    object EditViewDepth: TEdit
+      Left = 254
+      Height = 21
+      Top = 37
+      Width = 52
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnChange = EditViewDepthChange
+      OnKeyPress = PositiveKeyPress
+      ParentFont = False
+      TabOrder = 6
+      Text = '10000'
+    end
+    object EditzScale: TEdit
+      Left = 47
+      Height = 21
+      Top = 37
+      Width = 45
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnKeyPress = PositiveKeyPress
+      OnKeyUp = EditzScaleKeyUp
+      ParentFont = False
+      TabOrder = 4
+    end
+    object BoxOutlineCB: TCheckBox
+      Cursor = crHandPoint
+      Left = 230
+      Height = 19
+      Top = 12
+      Width = 75
+      Caption = 'Box Outline'
+      OnClick = BoxOutlineCBClick
+      TabOrder = 3
+    end
+    object EditBoxLnWidth: TEdit
+      Tag = 1
+      Left = 145
+      Height = 21
+      Top = 37
+      Width = 43
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      OnKeyPress = IntKeyPress
+      OnKeyUp = EditBoxLnWidthKeyUp
+      ParentFont = False
+      TabOrder = 5
+    end
+    object BitBtn1: TBitBtn
+      Left = 230
+      Height = 29
+      Top = 61
+      Width = 75
+      Caption = '&Close'
+      Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        040000000000800000000000000000000000100000001000000000000000FFFF
+        000000008400FF00FF0000FFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00330000000000
+        0333330244444444033333022444444403333302224444440333330222044444
+        0333330222044444033333022204444403333302220444440333330222044444
+        0333330222044444033333022240444403333302220444440333330222044444
+        0333330212044444033333021104444403333300000000000333
+      }
+      OnClick = BitBtn1Click
+      TabOrder = 7
+    end
+  end
+end
