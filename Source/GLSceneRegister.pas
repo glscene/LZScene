@@ -1491,7 +1491,7 @@ end;
 
 initialization
 
-{$I ../../Resources/GLScene.lrs}
+{$I ../Resources/GLScene.lrs}
 
   GLColor.vUseDefaultColorSets := True;
   GLCoordinates.vUseDefaultCoordinateSets := True;
