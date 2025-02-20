@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Engine https://github.com/glscene
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
   Implementation of an universal 3DS file reader (and writer). This is the main file of the

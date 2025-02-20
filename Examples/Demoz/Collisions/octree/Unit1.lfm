@@ -1,0 +1,221 @@
+object Form1: TForm1
+  Left = 175
+  Height = 429
+  Top = 104
+  Width = 562
+  Caption = 'Form1'
+  ClientHeight = 429
+  ClientWidth = 562
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer2: TGLSceneViewer
+    Left = 0
+    Height = 380
+    Top = 49
+    Width = 562
+    Camera = GLCamera2
+    Buffer.BackgroundColor = 8404992
+    Buffer.ShadeModel = smSmooth
+    FieldOfView = 150.512878417969
+    Align = alClient
+    OnMouseDown = GLSceneViewer2MouseDown
+    OnMouseMove = GLSceneViewer2MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 49
+    Top = 0
+    Width = 562
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 49
+    ClientWidth = 562
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 360
+      Height = 13
+      Top = 0
+      Width = 32
+      Caption = 'Label1'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 360
+      Height = 13
+      Top = 16
+      Width = 32
+      Caption = 'Label2'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 360
+      Height = 13
+      Top = 32
+      Width = 32
+      Caption = 'Label3'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 32
+      Caption = 'Label5'
+      ParentColor = False
+    end
+    object LABuild: TLabel
+      Left = 8
+      Height = 13
+      Top = 24
+      Width = 36
+      Caption = 'LABuild'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 168
+      Height = 13
+      Top = 32
+      Width = 32
+      Caption = 'Label4'
+      ParentColor = False
+    end
+    object CheckBox1: TCheckBox
+      Left = 168
+      Height = 19
+      Top = 16
+      Width = 75
+      Caption = 'Auto collide'
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+    end
+    object CBOctree: TCheckBox
+      Left = 168
+      Height = 19
+      Top = 0
+      Width = 93
+      Caption = 'Octree enabled'
+      Checked = True
+      State = cbChecked
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 112
+    top = 80
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        000000001283003F0000803F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00004842000016430000C8420000803F
+      }
+      LightStyle = lsOmni
+      Specular.Color = {
+        0000803F00000000000000000000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object FreeForm1: TGLFreeForm
+        TagFloat = 0
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        Scale.Coordinates = {
+          CDCCCC3DCDCCCC3DCDCCCC3D00000000
+        }
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+      end
+    end
+    object Sphere1: TGLSphere
+      TagFloat = 0
+      Material.FrontProperties.Emission.Color = {
+        0000803F0000803F000000000000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        E9DC72BF000000009BE8A13E00000000
+      }
+      Radius = 0.300000011920929
+      Slices = 6
+      Stacks = 6
+      object ArrowLine1: TGLArrowLine
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          CDCC4C3FCDCC4C3FCDCC4C3F9A99193F
+        }
+        Material.FrontProperties.Emission.Color = {
+          1283803E1283803E000000000000803F
+        }
+        Material.BlendingMode = bmTransparency
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000CDCCCC3D0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BottomRadius = 0.0500000007450581
+        Height = 1
+        TopRadius = 0.100000001490116
+        TopArrowHeadHeight = 0.5
+        TopArrowHeadRadius = 0.200000002980232
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.200000002980232
+      end
+    end
+    object GLCamera2: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000A040000010C10000A0410000803F
+      }
+      Direction.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      Up.Coordinates = {
+        67C57BBF3B5B393E0000000000000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 16
+    top = 80
+  end
+  object Timer1: TTimer
+    Interval = 300
+    OnTimer = Timer1Timer
+    left = 64
+    top = 80
+  end
+end

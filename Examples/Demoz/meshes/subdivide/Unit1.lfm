@@ -1,0 +1,179 @@
+object Form1: TForm1
+  Left = 173
+  Height = 357
+  Top = 100
+  Width = 511
+  BorderWidth = 2
+  Caption = 'Form1'
+  ClientHeight = 357
+  ClientWidth = 511
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  ShowHint = True
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 392
+    Height = 353
+    Top = 2
+    Width = 2
+    Align = alRight
+    AutoSize = False
+    ParentColor = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 2
+    Height = 353
+    Top = 2
+    Width = 390
+    Camera = GLCamera1
+    Buffer.BackgroundColor = 13619151
+    Buffer.FaceCulling = False
+    FieldOfView = 148.366622924805
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 394
+    Height = 353
+    Top = 2
+    Width = 115
+    Align = alRight
+    BevelOuter = bvLowered
+    ClientHeight = 353
+    ClientWidth = 115
+    TabOrder = 1
+    object LASubdivideTime: TLabel
+      Left = 6
+      Height = 13
+      Top = 190
+      Width = 97
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'LASubdivideTime'
+      ParentColor = False
+    end
+    object BULoad: TButton
+      Left = 16
+      Height = 25
+      Top = 8
+      Width = 83
+      Caption = 'Load'
+      OnClick = BULoadClick
+      TabOrder = 0
+    end
+    object BUSubdivide: TButton
+      Left = 8
+      Height = 25
+      Top = 112
+      Width = 99
+      Caption = 'Subdivide'
+      Enabled = False
+      OnClick = BUSubdivideClick
+      TabOrder = 1
+    end
+    object TrackBar1: TTrackBar
+      Left = 6
+      Height = 44
+      Hint = 'Subdivision smoothness'
+      Top = 142
+      Width = 97
+      Position = 5
+      TabOrder = 2
+    end
+    object RBWireFrame: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 40
+      Width = 68
+      Caption = 'Wireframe'
+      OnClick = RBWireFrameClick
+      TabOrder = 3
+    end
+    object RBSolid: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 56
+      Width = 43
+      Caption = 'Solid'
+      Checked = True
+      OnClick = RBSolidClick
+      TabOrder = 4
+      TabStop = True
+    end
+    object CBAnimate: TCheckBox
+      Left = 16
+      Height = 19
+      Top = 80
+      Width = 58
+      Caption = 'Animate'
+      OnClick = CBAnimateClick
+      TabOrder = 5
+    end
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 16
+    object GLActor1: TGLActor
+      TagFloat = 0
+      Material.Texture.MagFilter = maNearest
+      Material.Texture.MinFilter = miNearest
+      Material.Texture.TextureMode = tmReplace
+      Material.Texture.Compression = tcNone
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        CDCCCC3DCDCCCC3DCDCCCC3D00000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      CurrentFrameDelta = 0
+      Interval = 100
+      AutoCentering = [macCenterX, macCenterY, macCenterZ]
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000204100002041000020410000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLActor1
+      Position.Coordinates = {
+        0000A04000008040000040400000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 48
+    top = 16
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 80
+    top = 16
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 40
+    top = 56
+  end
+end

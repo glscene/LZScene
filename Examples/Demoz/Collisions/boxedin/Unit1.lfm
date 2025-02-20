@@ -1,0 +1,265 @@
+object Form1: TForm1
+  Left = 170
+  Height = 574
+  Top = 275
+  Width = 705
+  Caption = 'Form1'
+  ClientHeight = 574
+  ClientWidth = 705
+  Color = clGray
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer2: TGLSceneViewer
+    Left = 0
+    Height = 509
+    Top = 65
+    Width = 705
+    Camera = GLCamera2
+    Buffer.BackgroundColor = 8404992
+    Buffer.ShadeModel = smFlat
+    FieldOfView = 157.770050048828
+    Align = alClient
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 65
+    Top = 0
+    Width = 705
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 65
+    ClientWidth = 705
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 424
+      Height = 13
+      Top = 8
+      Width = 32
+      Caption = 'Label1'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 424
+      Height = 13
+      Top = 24
+      Width = 32
+      Caption = 'Label2'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 424
+      Height = 13
+      Top = 40
+      Width = 32
+      Caption = 'Label3'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 216
+      Height = 13
+      Top = 8
+      Width = 37
+      Caption = 'Velocity'
+      ParentColor = False
+    end
+    object TrackBar1: TTrackBar
+      Left = 112
+      Height = 25
+      Top = 24
+      Width = 265
+      Max = 50
+      Position = 1
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 24
+      Width = 75
+      Caption = 'Reset'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object GLScene1: TGLScene
+    left = 72
+    top = 88
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        000000001283003F9CC4403F0000803F
+      }
+      ConstAttenuation = 1
+      Diffuse.Color = {
+        1283003F1283003F1283003F0000803F
+      }
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00004842000016430000C8420000803F
+      }
+      LightStyle = lsOmni
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object FreeForm1: TGLFreeForm
+        TagFloat = 0
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+      end
+    end
+    object Sphere1: TGLSphere
+      TagFloat = 0
+      Material.FrontProperties.Emission.Color = {
+        0000803F0000803F000000000000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        E9DC72BF000000009BE8A13E00000000
+      }
+      Radius = 0.100000001490116
+      Slices = 6
+      Stacks = 6
+      object ArrowLine1: TGLArrowLine
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          CDCC4C3FCDCC4C3FCDCC4C3F9A99193F
+        }
+        Material.FrontProperties.Emission.Color = {
+          1283803E1283803E000000000000803F
+        }
+        Material.BlendingMode = bmTransparency
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000CDCCCC3D0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        BottomRadius = 0.0500000007450581
+        Height = 1
+        TopRadius = 0.100000001490116
+        TopArrowHeadHeight = 2
+        TopArrowHeadRadius = 0.200000002980232
+        BottomArrowHeadHeight = 0.5
+        BottomArrowHeadRadius = 0.200000002980232
+      end
+    end
+    object DummyCube2: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object Sphere2: TGLSphere
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        0000803F00000000000000000000803F
+      }
+      Material.FrontProperties.Shininess = 128
+      Material.FrontProperties.Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      VisibilityCulling = vcObjectBased
+      Direction.Coordinates = {
+        4A602B3FC61C69BE490635BF00000000
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        000000000000E040000000C00000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        B819C33EF71E6C3FCDAE823D00000000
+      }
+      Radius = 20
+      Slices = 24
+      Stacks = 24
+    end
+    object GLLightSource2: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        000000001283803E1283003F0000803F
+      }
+      ConstAttenuation = 1
+      Diffuse.Color = {
+        BEC0403FBEC0403FBEC0403F0000803F
+      }
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Lines1: TGLLines
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      LineColor.Color = {
+        0000803F0000803F0000003F3333733F
+      }
+      LineWidth = 3
+      NodeColor.Color = {
+        0000803F0000803F000000000000803F
+      }
+      Nodes = <>
+      NodesAspect = lnaCube
+      NodeSize = 10
+      Options = [loUseNodeColorForLines]
+    end
+    object GLCamera2: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000
+      FocalLength = 50
+      TargetObject = Sphere2
+      Position.Coordinates = {
+        0000000000008040000040C00000803F
+      }
+      Direction.Coordinates = {
+        00000000000000800000803F00000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 8
+    top = 88
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 40
+    top = 88
+  end
+end

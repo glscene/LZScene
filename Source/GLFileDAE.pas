@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Engine https://github.com/glscene
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
    Quake2 MD2 vector file format implementation.

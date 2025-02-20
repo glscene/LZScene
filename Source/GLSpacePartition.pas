@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Engine https://github.com/glscene
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
   Space Partition speeds up geometrical queries, like what objects does A

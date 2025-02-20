@@ -1,0 +1,155 @@
+object frmRagdoll: TfrmRagdoll
+  Left = 236
+  Height = 572
+  Top = 242
+  Width = 733
+  Caption = 'GLScene + ODE Skinned ragdoll (by Lucas Goraieb)'
+  ClientHeight = 572
+  ClientWidth = 733
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnMouseWheel = FormMouseWheel
+  Position = poDesktopCenter
+  LCLVersion = '0.9.29'
+  WindowState = wsMaximized
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 572
+    Top = 0
+    Width = 733
+    Camera = GLCamera1
+    Buffer.BackgroundColor = 15648684
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    FieldOfView = 150.611511230469
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    object ODEScene: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object Actor1: TGLActor
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803FE0DF5F3FB5B4343E0000803F
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CurrentFrameDelta = 0
+        AnimationMode = aamLoop
+        Interval = 100
+        MaterialLibrary = GLMaterialLibrary1
+      end
+      object Targetrag: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000000000C0400000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+      end
+      object GLShadowPlane1: TGLShadowPlane
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          F5F4743E9392123F9F9E9E3E0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000CDCC4CBD0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Height = 100
+        Width = 100
+        XOffset = 0
+        XTiles = 50
+        YOffset = 0
+        YTiles = 50
+        Style = [psTileTexture]
+        ShadowingObject = ODEScene
+        ShadowedLight = GLLightSource1
+        ShadowColor.Color = {
+          0AD7A33E48E1FA3E1F85EB3E0000803E
+        }
+      end
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Color = {
+        BEC0403FBEC0403FBEC0403F0000803F
+      }
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00004041000048C2000048420000803F
+      }
+      LightStyle = lsOmni
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLHUDText1: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = GLWindowsBitmapFont1
+      Text = 'Keys: Q,W,E,A,S,D -> Apply forces  | X,C -> Start, stop ragdoll | F1,F2, F3 -> Switch animation | Return -> Explode'
+      Rotation = 0
+      ModulateColor.Color = {
+        0000000000000000000000000000803F
+      }
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000
+      FocalLength = 75
+      TargetObject = Targetrag
+      Position.Coordinates = {
+        0000B8C10000B8C1000080410000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0.02
+    MinDeltaTime = 0
+    FixedDeltaTime = 0.0169
+    SleepLength = 1
+    OnProgress = GLCadencer1Progress
+    top = 32
+  end
+  object GLWindowsBitmapFont1: TGLWindowsBitmapFont
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    top = 64
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 32
+    top = 32
+  end
+end

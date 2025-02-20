@@ -1,5 +1,5 @@
 ﻿//
-// This unit is part of the GLScene Engine https://github.com/glscene
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
   Conversion of OpenCL header file: cl_platform.h to Delphi,

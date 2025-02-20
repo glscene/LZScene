@@ -1,0 +1,244 @@
+object Form1: TForm1
+  Left = 351
+  Height = 493
+  Top = 124
+  Width = 482
+  Caption = 'Form1'
+  ClientHeight = 493
+  ClientWidth = 482
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer: TGLSceneViewer
+    Left = 0
+    Height = 493
+    Top = 0
+    Width = 482
+    Camera = GLCamera
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 156.558380126953
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene: TGLScene
+    left = 16
+    top = 8
+    object DCFire1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000040C000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EffectsData = {
+        0458434F4C02010202061254474C536F75726365504658456666656374020202
+        000600020002000608466C616D65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F020002000905000000000000000000000802000200020202
+        000600020002000608536D6F6B65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F02000200090500000000000000000000080200
+      }
+    end
+    object DCFire2: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EffectsData = {
+        0458434F4C02010202061254474C536F75726365504658456666656374020202
+        000600020002000608466C616D65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F020002000905000000000000000000000802000200020202
+        000600020002000608536D6F6B65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F02000200090500000000000000000000080200
+      }
+    end
+    object DCFire3: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000404000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EffectsData = {
+        0458434F4C02010202061254474C536F75726365504658456666656374020202
+        000600020002000608466C616D65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F020002000905000000000000000000000802000200020202
+        000600020002000608536D6F6B65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F02000200090500000000000000000000080200
+      }
+    end
+    object DCFire4: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000000000040400000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EffectsData = {
+        0458434F4C02010202061254474C536F75726365504658456666656374020202
+        000600020002000608466C616D65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F020002000905000000000000000000000802000200020202
+        000600020002000608536D6F6B65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F02000200090500000000000000000000080200
+      }
+    end
+    object DCFire5: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000000000040C00000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EffectsData = {
+        0458434F4C02010202061254474C536F75726365504658456666656374020202
+        000600020002000608466C616D65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F020002000905000000000000000000000802000200020202
+        000600020002000608536D6F6B65504658050000000000000080FF3F02060200
+        08020008020008050000000000CDCCCCFC3F050000000000CDCCCCFB3F050000
+        0000000AD7A3F83F02000200090500000000000000000000080200
+      }
+    end
+    object ParticleFXRenderer: TGLParticleFXRenderer
+      TagFloat = 0
+      BlendingMode = bmTransparency
+    end
+    object DCTarget: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object GLCamera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DCTarget
+      Position.Coordinates = {
+        00004040000040400000A0400000803F
+      }
+    end
+  end
+  object SmokePFX: TGLPerlinPFXManager
+    Cadencer = GLCadencer
+    Renderer = ParticleFXRenderer
+    Acceleration.Coordinates = {
+      000000000000803F0000000000000000
+    }
+    Friction = 1
+    BlendingMode = bmTransparency
+    Rotation = 0
+    Smoothness = 1
+    Brightness = 1
+    Gamma = 1
+    ParticleSize = 0.5
+    ColorInner.Color = {
+      0000803F0000803F0000803F00000000
+    }
+    ColorOuter.Color = {
+      0000803F0000803F0000803F00000000
+    }
+    LifeColors = <    
+      item
+        ColorInner.Color = {
+          0000803F0000803F0000803F00000000
+        }
+        ColorOuter.Color = {
+          0000803F0000803F0000803F00000000
+        }
+        LifeTime = 0.75
+        SizeScale = 1
+        RotateAngle = 0
+      end    
+      item
+        ColorInner.Color = {
+          0000803F0000803F0000803F9A99993E
+        }
+        ColorOuter.Color = {
+          0000803F0000803F0000803F00000000
+        }
+        LifeTime = 3
+        SizeScale = 2
+        RotateAngle = 0
+      end    
+      item
+        ColorInner.Color = {
+          0000803F0000803F0000803F00000000
+        }
+        ColorOuter.Color = {
+          0000803F0000803F0000803F00000000
+        }
+        LifeTime = 5
+        SizeScale = 3
+        RotateAngle = 0
+      end>
+    left = 56
+    top = 8
+  end
+  object FlamePFX: TGLCustomSpritePFXManager
+    Cadencer = GLCadencer
+    Renderer = ParticleFXRenderer
+    Acceleration.Coordinates = {
+      000000000000803F0000000000000000
+    }
+    Friction = 1
+    Rotation = 0
+    ShareSprites = SmokePFX
+    ParticleSize = 0.200000002980232
+    ColorInner.Color = {
+      0000803F0000803F000000000000003F
+    }
+    ColorOuter.Color = {
+      0000803F0000803F0000000000000000
+    }
+    LifeColors = <    
+      item
+        ColorInner.Color = {
+          0000803F0000803F0000000000000000
+        }
+        ColorOuter.Color = {
+          0000803F000000000000000000000000
+        }
+        LifeTime = 2
+        SizeScale = 1
+        RotateAngle = 0
+      end>
+    left = 56
+    top = 48
+  end
+  object GLCadencer: TGLCadencer
+    Scene = GLScene
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencerProgress
+    left = 16
+    top = 48
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    left = 104
+    top = 8
+  end
+end

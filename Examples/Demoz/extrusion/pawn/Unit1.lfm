@@ -1,0 +1,244 @@
+object Form1: TForm1
+  Left = 166
+  Height = 306
+  Top = 89
+  Width = 391
+  ActiveControl = CheckBox1
+  AutoSize = True
+  BorderWidth = 3
+  Caption = 'Form1'
+  ClientHeight = 306
+  ClientWidth = 391
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object Label1: TLabel
+    Left = 296
+    Height = 18
+    Top = 8
+    Width = 59
+    Caption = 'Options'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 272
+    Height = 13
+    Top = 240
+    Width = 22
+    Caption = 'Stop'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 272
+    Height = 13
+    Top = 152
+    Width = 28
+    Caption = 'Slices'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 272
+    Height = 13
+    Top = 192
+    Width = 42
+    Caption = 'Divisions'
+    ParentColor = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 273
+    Top = 0
+    Width = 257
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBackground
+    FieldOfView = 137.477478027344
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object CheckBox1: TCheckBox
+    Left = 264
+    Height = 19
+    Top = 48
+    Width = 109
+    Caption = 'Spline interpolation'
+    Checked = True
+    OnClick = CheckBox1Click
+    State = cbChecked
+    TabOrder = 1
+  end
+  object CheckBox2: TCheckBox
+    Left = 264
+    Height = 19
+    Top = 72
+    Width = 109
+    Caption = 'Normals smoothing'
+    Checked = True
+    OnClick = CheckBox2Click
+    State = cbChecked
+    TabOrder = 2
+  end
+  object CheckBox3: TCheckBox
+    Left = 264
+    Height = 19
+    Top = 96
+    Width = 79
+    Caption = 'Texture map'
+    Checked = True
+    OnClick = CheckBox3Click
+    State = cbChecked
+    TabOrder = 3
+  end
+  object TrackBar1: TTrackBar
+    Left = 264
+    Height = 17
+    Top = 256
+    Width = 113
+    Frequency = 45
+    Max = 360
+    Min = 30
+    OnChange = TrackBar1Change
+    Position = 360
+    TabOrder = 4
+  end
+  object CheckBox4: TCheckBox
+    Left = 264
+    Height = 19
+    Top = 120
+    Width = 99
+    Caption = 'Modulate texture'
+    Checked = True
+    OnClick = CheckBox4Click
+    State = cbChecked
+    TabOrder = 5
+  end
+  object TrackBar2: TTrackBar
+    Left = 264
+    Height = 17
+    Top = 168
+    Width = 113
+    Frequency = 16
+    Max = 64
+    Min = 4
+    OnChange = TrackBar2Change
+    Position = 24
+    TabOrder = 6
+  end
+  object TrackBar3: TTrackBar
+    Left = 264
+    Height = 17
+    Top = 208
+    Width = 113
+    Frequency = 10
+    Max = 30
+    Min = 1
+    OnChange = TrackBar3Change
+    Position = 10
+    TabOrder = 7
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000484200004842000048420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object RotationSolid1: TGLRevolutionSolid
+        TagFloat = 0
+        Material.Texture.MinFilter = miLinear
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Disabled = False
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Nodes = <        
+          item
+            Y = 0.899999976158142
+          end        
+          item
+            X = 0.400000005960464
+            Y = 0.800000011920929
+          end        
+          item
+            X = 0.449999988079071
+            Y = 0.5
+          end        
+          item
+            X = 0.25
+            Y = 0.300000011920929
+          end        
+          item
+            X = 0.25
+            Y = -0.100000001490116
+          end        
+          item
+            X = 0.600000023841858
+            Y = -0.5
+          end        
+          item
+            X = 0.600000023841858
+            Y = -0.899999976158142
+          end        
+          item
+            X = 0.589999973773956
+            Y = -0.949999988079071
+          end        
+          item
+            X = 0.600000023841858
+            Y = -1
+          end        
+          item
+            X = 0.600000023841858
+            Y = -1
+          end        
+          item
+            X = 0.5
+            Y = -1
+          end        
+          item
+            Y = -1
+          end>
+        SplineMode = lsmCubicSpline
+        StartAngle = 0
+        YOffsetPerTurn = 0
+        Slices = 24
+        Normals = nsSmooth
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000804000000000000000000000803F
+      }
+      left = 208
+      top = 136
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 8
+    top = 40
+  end
+end

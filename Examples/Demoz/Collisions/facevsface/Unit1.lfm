@@ -1,0 +1,422 @@
+object Form1: TForm1
+  Left = 251
+  Height = 527
+  Top = 124
+  Width = 696
+  HorzScrollBar.Page = 695
+  VertScrollBar.Page = 526
+  Caption = 'Form1'
+  ClientHeight = 527
+  ClientWidth = 696
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '0.9.29'
+  object Splitter1: TSplitter
+    Left = 482
+    Height = 375
+    Top = 0
+    Width = 4
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 121
+    Height = 375
+    Top = 0
+    Width = 361
+    Camera = GLCamera2
+    Buffer.BackgroundColor = 8404992
+    FieldOfView = 48.5745544433593
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 4
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 375
+    Top = 0
+    Width = 121
+    Align = alLeft
+    BevelOuter = bvLowered
+    ClientHeight = 375
+    ClientWidth = 121
+    FullRepaint = False
+    TabOrder = 0
+    object Shape1: TShape
+      Left = 88
+      Height = 25
+      Top = 10
+      Width = 25
+      Shape = stCircle
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 14
+      Top = 8
+      Width = 62
+      Caption = 'Collision test:'
+      ParentColor = False
+    end
+    object LATime: TLabel
+      Left = 8
+      Height = 13
+      Top = 24
+      Width = 73
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'LATime'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 14
+      Top = 96
+      Width = 104
+      Caption = 'Teapot collision mode'
+      ParentColor = False
+    end
+    object cbCollisionMode: TRadioGroup
+      Left = 8
+      Height = 105
+      Top = 112
+      Width = 105
+      AutoFill = True
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 87
+      ClientWidth = 101
+      ItemIndex = 4
+      Items.Strings = (
+        'cbmPoint'
+        'cbmSphere'
+        'cbmEllipsoid'
+        'cbmCube'
+        'cbmFaces'
+      )
+      OnClick = cbCollisionModeClick
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 152
+    Top = 375
+    Width = 696
+    Align = alBottom
+    ClientHeight = 152
+    ClientWidth = 696
+    FullRepaint = False
+    TabOrder = 1
+    object StringGrid1: TStringGrid
+      Left = 8
+      Height = 137
+      Top = 8
+      Width = 553
+      ColCount = 6
+      DefaultColWidth = 90
+      GridLineWidth = 0
+      RowCount = 6
+      TabOrder = 0
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+    end
+  end
+  object Memo1: TMemo
+    Left = 486
+    Height = 375
+    Top = 0
+    Width = 210
+    Align = alRight
+    TabOrder = 2
+  end
+  object GLScene1: TGLScene
+    left = 184
+    top = 8
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000204100002041000020410000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLLightSource2: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000020C100002041000020C10000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Color = {
+        0000003F0000003F0000003F0000803F
+      }
+      object GLCamera2: TGLCamera
+        TagFloat = 0
+        DepthOfView = 1000
+        FocalLength = 400
+        TargetObject = DummyCube1
+        Position.Coordinates = {
+          0000704100002041000070410000803F
+        }
+      end
+      object Teapot1: TGLFreeForm
+        TagFloat = 0
+        Direction.Coordinates = {
+          613D73BDD128723F4D43A3BE00000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          00000000000000003333B33E0000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0AD7233C0AD7233C0AD7233C00000000
+        }
+        TurnAngle = 0
+        Up.Coordinates = {
+          C9B14FBFC3BE0F3ED548113F00000000
+        }
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object Teapot2: TGLFreeForm
+        TagFloat = 0
+        Direction.Coordinates = {
+          0DFB4AB20000803F7A829A3200000000
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000CDCCCCBE0000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0AD7233C0AD7233C0AD7233C00000000
+        }
+        TurnAngle = 0
+        Up.Coordinates = {
+          F30435BFD41F8BB3F30435BF00000000
+        }
+        AutoCentering = [macCenterX, macCenterY, macCenterZ]
+      end
+      object CubePoint1: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000000000803F000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = {
+          CDCC4C3DCDCC4C3DCDCC4C3D
+        }
+      end
+      object CubePoint2: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          CDCC4CBE0000803F000000000000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          CDCC4C3DCDCC4C3DCDCC4C3D00000000
+        }
+        TurnAngle = 0
+      end
+      object Cube2: TGLCube
+        TagFloat = 0
+        Material.BackProperties.Ambient.Color = {
+          CDCC4C3ECDCC4C3ECDCC4C3E0000003F
+        }
+        Material.BackProperties.Diffuse.Color = {
+          CDCC4C3FCDCC4C3FCDCC4C3F0000003F
+        }
+        Material.BackProperties.Emission.Color = {
+          0000000000000000000000000000003F
+        }
+        Material.BackProperties.Specular.Color = {
+          0000000000000000000000000000003F
+        }
+        Material.FrontProperties.Ambient.Color = {
+          CDCC4C3ECDCC4C3ECDCC4C3ECDCC4C3E
+        }
+        Material.FrontProperties.Diffuse.Color = {
+          CDCC4C3FCDCC4C3FCDCC4C3F0000003F
+        }
+        Material.FrontProperties.Emission.Color = {
+          0000000000000000000000000000003F
+        }
+        Material.BlendingMode = bmTransparency
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000803F00000000000080BF0000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          0000803F000000400000803F00000000
+        }
+        TurnAngle = 0
+        CubeSize = {
+          0000803F0000803F0000003F
+        }
+      end
+      object Bar: TGLCube
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F5839343E5839343E0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000803F000000000000803F0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = {
+          CDCC4C3DCDCC4C3D00000040
+        }
+      end
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000C000000000000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 0.5
+      end
+      object GLSphere2: TGLSphere
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          000000C000000000000080BF0000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          CDCC4C3FCDCC4C3FCDCC4C3F00000000
+        }
+        TurnAngle = 0
+        Radius = 0.30000001192092
+      end
+      object GLSphereEllipsoid1: TGLSphere
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          000080BF00000000000000C00000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          9A99193F0000803F0000803F00000000
+        }
+        TurnAngle = 0
+        Radius = 0.5
+      end
+      object GLSphereEllipsoid2: TGLSphere
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000000000C00000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          CDCC4C3FCDCCCC3F3333333F00000000
+        }
+        TurnAngle = 0
+        Radius = 0.30000001192092
+      end
+      object GLCube1: TGLCube
+        TagFloat = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000803F000080BF000000000000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          3333333F3333B33F0000803F00000000
+        }
+        TurnAngle = 0
+        CubeSize = {
+          0000803F0000803F6666A63F
+        }
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+    end
+    object GLCamera3: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+    end
+    object GLSpaceText1: TGLSpaceText
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Extrusion = 0
+      Font.Name = 'Arial'
+      AllowedDeviation = 0
+      AspectRatio = 0
+      TextHeight = 0
+      Oblique = 0
+    end
+    object GLSpaceText2: TGLSpaceText
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Extrusion = 0
+      Font.Name = 'Arial'
+      AllowedDeviation = 0
+      AspectRatio = 0
+      TextHeight = 0
+      Oblique = 0
+    end
+    object GLSpaceText3: TGLSpaceText
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Extrusion = 0
+      Font.Name = 'Arial'
+      AllowedDeviation = 0
+      AspectRatio = 0
+      TextHeight = 0
+      Oblique = 0
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 224
+    top = 8
+  end
+  object CollisionManager1: TGLCollisionManager
+    OnCollision = CollisionManager1Collision
+    left = 136
+    top = 8
+  end
+end

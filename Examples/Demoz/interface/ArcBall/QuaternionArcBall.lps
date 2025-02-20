@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="QuaternionArcBall.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uMainForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <CursorPos Y="13"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\..\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1308"/>
+        <CursorPos X="76" Y="1331"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\Source\Basis\GLVectorTypes.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="15"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\..\Source\GLScene.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="4015"/>
+        <CursorPos Y="4029"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\..\Source\Basis\GLState.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="112"/>
+        <CursorPos X="22" Y="130"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\..\..\Source\Basis\GLCoordinates.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="175"/>
+        <CursorPos X="64" Y="200"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+    </Units>
+    <JumpHistory Count="27" HistoryIndex="26">
+      <Position1>
+        <Filename Value="..\..\..\..\Source\GLScene.pas"/>
+        <Caret Line="554" Column="24" TopLine="540"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="47" Column="15" TopLine="39"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="238" Column="3" TopLine="222"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\..\..\Source\Basis\GLCoordinates.pas"/>
+        <Caret Line="164" Column="3" TopLine="149"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\..\..\..\Source\Basis\GLCoordinates.pas"/>
+        <Caret Line="81" Column="20" TopLine="64"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\..\..\Source\Basis\GLCoordinates.pas"/>
+        <Caret Line="333" Column="46" TopLine="327"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="55" Column="25" TopLine="36"/>
+      </Position7>
+      <Position8>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="296" TopLine="264"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="297" TopLine="265"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="298" TopLine="266"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="299" TopLine="267"/>
+      </Position11>
+      <Position12>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="300" TopLine="268"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="301" TopLine="269"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="308" TopLine="273"/>
+      </Position14>
+      <Position15>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="243" Column="3" TopLine="235"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="235" Column="43" TopLine="222"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="246" Column="3" TopLine="230"/>
+      </Position17>
+      <Position18>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="237" Column="44" TopLine="231"/>
+      </Position18>
+      <Position19>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="253" Column="3" TopLine="246"/>
+      </Position19>
+      <Position20>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="239" TopLine="233"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="198" TopLine="196"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="251" Column="2" TopLine="249"/>
+      </Position22>
+      <Position23>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="236" TopLine="170"/>
+      </Position23>
+      <Position24>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="256" Column="6" TopLine="255"/>
+      </Position24>
+      <Position25>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="206" Column="37" TopLine="202"/>
+      </Position25>
+      <Position26>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="259" Column="64" TopLine="257"/>
+      </Position26>
+      <Position27>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="254" Column="3" TopLine="243"/>
+      </Position27>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

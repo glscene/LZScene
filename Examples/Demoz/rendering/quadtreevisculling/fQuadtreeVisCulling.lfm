@@ -1,0 +1,309 @@
+object frmQuadtreeVisCulling: TfrmQuadtreeVisCulling
+  Left = 297
+  Height = 480
+  Top = 155
+  Width = 640
+  Caption = 'Quadtree Visibility Culling'
+  ClientHeight = 480
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object Label2: TLabel
+    Left = 288
+    Height = 13
+    Top = 10
+    Width = 32
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 430
+    Top = 27
+    Width = 633
+    Camera = GLCamera1
+    Buffer.FogEnvironment.FogStart = 3000
+    Buffer.FogEnvironment.FogEnd = 3950
+    Buffer.BackgroundColor = clWhite
+    Buffer.Lighting = False
+    FieldOfView = 153.816223144531
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 0
+  end
+  object cbUseQuadtree: TCheckBox
+    Left = 8
+    Height = 19
+    Top = 8
+    Width = 64
+    Caption = 'Quadtree'
+    Checked = True
+    State = cbChecked
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 224
+    Height = 49
+    Top = 216
+    Width = 185
+    ClientHeight = 49
+    ClientWidth = 185
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 8
+      Height = 13
+      Top = 8
+      Width = 82
+      Caption = 'Generating Trees'
+      ParentColor = False
+    end
+    object ProgressBar1: TProgressBar
+      Left = 8
+      Height = 17
+      Top = 24
+      Width = 169
+      TabOrder = 0
+    end
+  end
+  object cbShowQuadtree: TCheckBox
+    Left = 184
+    Height = 19
+    Top = 8
+    Width = 94
+    Caption = 'Show &Quadtree'
+    OnClick = cbShowQuadtreeClick
+    TabOrder = 3
+  end
+  object cbUseExtendedFrustum: TCheckBox
+    Left = 72
+    Height = 19
+    Top = 8
+    Width = 105
+    Caption = 'E&xtended Frustum'
+    Checked = True
+    State = cbChecked
+    TabOrder = 4
+  end
+  object GLScene1: TGLScene
+    left = 92
+    top = 40
+    object GLSkyDome1: TGLSkyDome
+      TagFloat = 0
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000000000000000000080BF00000000
+      }
+      Bands = <      
+        item
+          StartAngle = 0
+          StartColor.Color = {
+            0000803F0000803F0000803F0000803F
+          }
+          StopAngle = 15
+        end      
+        item
+          StartAngle = 15
+          StopAngle = 90
+          StopColor.Color = {
+            938C0C3E938C0C3E938E0E3F0000803F
+          }
+          Stacks = 4
+        end>
+      Stars = <>
+    end
+    object GLTerrainRenderer1: TGLTerrainRenderer
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = '1'
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        00000042000000420000004000000000
+      }
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      HeightDataSource = GLBitmapHDS1
+      TileSize = 32
+      TilesPerTexture = 8
+      QualityDistance = 0
+    end
+    object queryVisible: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      UseBuildList = False
+      OnRender = queryVisibleRender
+      Blend = False
+    end
+    object GLDirectOpenGL1: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      UseBuildList = False
+      Blend = False
+    end
+    object trees: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object GLHUDText1: TGLHUDText
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000804000008040000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      BitmapFont = GLWindowsBitmapFont1
+      Text = '0'
+      Rotation = 0
+    end
+    object tree: TGLSprite
+      TagFloat = 0
+      Material.BlendingMode = bmTransparency
+      Material.Texture.ImageClassName = 'TGLBlankImage'
+      Material.Texture.Image.Width = 64
+      Material.Texture.Image.Height = 64
+      Material.Texture.Image.ColorFormat = 6408
+      Material.Texture.ImageAlpha = tiaSuperBlackTransparent
+      Material.Texture.MagFilter = maNearest
+      Material.Texture.MinFilter = miNearest
+      Material.Texture.TextureMode = tmReplace
+      Material.Texture.Compression = tcNone
+      Material.Texture.Disabled = False
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Width = 280
+      Height = 300
+      Rotation = 0
+    end
+    object GLDirectOpenGL2: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+      UseBuildList = False
+      OnRender = GLDirectOpenGL2Render
+      Blend = False
+    end
+    object GLSphere1: TGLSphere
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000000000000FAC30000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Visible = False
+      Radius = 90
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 4000
+      FocalLength = 50
+      Position.Coordinates = {
+        0000000000000000000020410000803F
+      }
+    end
+  end
+  object GLBitmapHDS1: TGLBitmapHDS
+    MaxPoolSize = 0
+    left = 180
+    top = 84
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = '1'
+        Tag = 0
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmReplace
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+        Texture2Name = '2'
+      end    
+      item
+        Name = '2'
+        Tag = 0
+        Material.Texture.ImageClassName = 'TGLBlankImage'
+        Material.Texture.Image.Width = 64
+        Material.Texture.Image.Height = 64
+        Material.Texture.Image.ColorFormat = 6408
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+      end>
+    left = 80
+    top = 156
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 136
+    top = 32
+  end
+  object GLNavigator1: TGLNavigator
+    VirtualUp.Coordinates = {
+      000000000000803F000000000000803F
+    }
+    MovingObject = GLCamera1
+    UseVirtualUp = True
+    AutoUpdateObject = True
+    MaxAngle = 0
+    MinAngle = 0
+    left = 292
+    top = 160
+  end
+  object GLUserInterface1: TGLUserInterface
+    MouseSpeed = 12
+    GLNavigator = GLNavigator1
+    left = 276
+    top = 64
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 208
+    top = 260
+  end
+  object GLWindowsBitmapFont1: TGLWindowsBitmapFont
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    left = 224
+    top = 200
+  end
+end

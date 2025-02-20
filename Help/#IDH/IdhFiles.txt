@@ -1,2 +1,0 @@
-..\..\Help\IDH_MAIN.H
-..\..\Help\IDH_POPUP.H

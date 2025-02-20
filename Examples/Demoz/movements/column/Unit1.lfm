@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 203
+  Height = 369
+  Top = 102
+  Width = 219
+  BorderWidth = 5
+  Caption = 'Form1'
+  ClientHeight = 369
+  ClientWidth = 219
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 5
+    Height = 342
+    Top = 5
+    Width = 209
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 92.5211715698242
+    Align = alClient
+    TabOrder = 0
+  end
+  object StaticText1: TStaticText
+    Left = 5
+    Height = 17
+    Top = 347
+    Width = 209
+    Align = alBottom
+    Alignment = taCenter
+    BorderStyle = sbsSingle
+    Caption = '???.? FPS'
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 24
+    top = 16
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 100
+      TargetObject = DummyCube1
+      Position.Coordinates = {
+        0000A04100002041000020410000803F
+      }
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 24
+    top = 72
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 24
+    top = 128
+  end
+end

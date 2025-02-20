@@ -1,0 +1,170 @@
+object Form1: TForm1
+  Left = 179
+  Height = 343
+  Top = 106
+  Width = 505
+  AutoSize = True
+  BorderWidth = 4
+  Caption = 'Form1'
+  ClientHeight = 343
+  ClientWidth = 505
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '0.9.29'
+  object Label1: TLabel
+    Left = 392
+    Height = 14
+    Top = 32
+    Width = 76
+    Caption = 'XY Grid position'
+    ParentColor = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 297
+    Top = 0
+    Width = 377
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 99.8219528198242
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object CBCentered: TCheckBox
+    Left = 384
+    Height = 17
+    Top = 0
+    Width = 86
+    Caption = 'Centered grids'
+    Checked = True
+    OnClick = CBCenteredClick
+    State = cbChecked
+    TabOrder = 1
+  end
+  object TBXYPosition: TTrackBar
+    Left = 408
+    Height = 249
+    Top = 48
+    Width = 45
+    Min = -10
+    OnChange = TBXYPositionChange
+    Orientation = trVertical
+    Position = 0
+    TickMarks = tmBoth
+    TabOrder = 2
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 16
+    object HeightField1: TGLHeightField
+      TagFloat = 0
+      Direction.Coordinates = {
+        0044F4970000803F2EBD3BB300000000
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      Up.Coordinates = {
+        0000803F583DAF262EBD3B3300000000
+      }
+      XSamplingScale.Min = -1
+      XSamplingScale.Max = 1
+      XSamplingScale.Origin = 0
+      XSamplingScale.Step = 0.01999999955296
+      YSamplingScale.Min = -1
+      YSamplingScale.Max = 1
+      YSamplingScale.Origin = 0
+      YSamplingScale.Step = 0.01999999955296
+      OnGetHeight = HeightField1GetHeight
+      object YZGrid: TGLXYZGrid
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        LineColor.Color = {
+          0000803F00000000000000000000803F
+        }
+        XSamplingScale.Min = -1
+        XSamplingScale.Max = 1
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 0.10000000149011
+        YSamplingScale.Min = -1
+        YSamplingScale.Max = 1
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 0.10000000149011
+        ZSamplingScale.Min = -1
+        ZSamplingScale.Max = 1
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 0.10000000149011
+        Parts = [gpY, gpZ]
+      end
+      object XZGrid: TGLXYZGrid
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        LineColor.Color = {
+          000000000000803F000000000000803F
+        }
+        XSamplingScale.Min = -1
+        XSamplingScale.Max = 1
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 0.10000000149011
+        YSamplingScale.Min = -1
+        YSamplingScale.Max = 1
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 0.10000000149011
+        ZSamplingScale.Min = -1
+        ZSamplingScale.Max = 1
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 0.10000000149011
+        Parts = [gpX, gpZ]
+      end
+      object XYGrid: TGLXYZGrid
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        LineColor.Color = {
+          00000000000000000000803F0000803F
+        }
+        XSamplingScale.Min = -1
+        XSamplingScale.Max = 1
+        XSamplingScale.Origin = 0
+        XSamplingScale.Step = 0.10000000149011
+        YSamplingScale.Min = -1
+        YSamplingScale.Max = 1
+        YSamplingScale.Origin = 0
+        YSamplingScale.Step = 0.10000000149011
+        ZSamplingScale.Min = -1
+        ZSamplingScale.Max = 1
+        ZSamplingScale.Origin = 0
+        ZSamplingScale.Step = 0.10000000149011
+      end
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000F041000048420000C8420000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 125
+      TargetObject = HeightField1
+      Position.Coordinates = {
+        0000404000008040000000410000803F
+      }
+      left = 208
+      top = 168
+    end
+  end
+end

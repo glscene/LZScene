@@ -1,0 +1,646 @@
+object frmClothify: TfrmClothify
+  Left = 34
+  Height = 542
+  Top = 114
+  Width = 723
+  Caption = 'Clothify'
+  ClientHeight = 542
+  ClientWidth = 723
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnMouseWheel = FormMouseWheel
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object Label1: TLabel
+    Left = 671
+    Height = 13
+    Top = 0
+    Width = 38
+    Anchors = [akTop, akRight]
+    Caption = '0,0 FPS'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 13
+    Top = 0
+    Width = 27
+    Caption = 'Slack'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 104
+    Height = 13
+    Top = 0
+    Width = 43
+    Caption = 'Iterations'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 192
+    Height = 13
+    Top = 0
+    Width = 34
+    Caption = 'Friction'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 416
+    Height = 13
+    Top = 0
+    Width = 44
+    Caption = 'Shadows'
+    ParentColor = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 465
+    Top = 48
+    Width = 715
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clGray
+    Buffer.AmbientColor.Color = {
+      CDCC4C3DCDCC4C3DCDCC4C3D0000803F
+    }
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow, roTwoSideLighting]
+    Buffer.FaceCulling = False
+    FieldOfView = 144.242614746094
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object GroupBox_LoadForm: TGroupBox
+    Left = 48
+    Height = 65
+    Top = 88
+    Width = 649
+    Caption = 'Load Settings'
+    ClientHeight = 47
+    ClientWidth = 645
+    TabOrder = 1
+    Visible = False
+    object Label2: TLabel
+      Left = 8
+      Height = 13
+      Top = 16
+      Width = 26
+      Caption = 'Mesh'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 152
+      Height = 13
+      Top = 16
+      Width = 27
+      Caption = 'Mode'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 248
+      Height = 13
+      Top = 16
+      Width = 34
+      Caption = 'Collider'
+      ParentColor = False
+    end
+    object ComboBox_MeshName: TComboBox
+      Left = 8
+      Height = 23
+      Top = 32
+      Width = 137
+      ItemHeight = 13
+      Items.Strings = (
+        'Trinityrage.smd, 0.15'
+        'HalfSphere.ms3d, 2'
+        'Cylinder.ms3d, 0.3'
+        'lgrid.3ds, 3'
+        'BigHoleBox2.ms3d, 0.5'
+        'mushroom.3ds, 0.08'
+        'polyhedron.3ds, 2'
+        'teapot.3ds, 0.1'
+      )
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object ComboBox_ConstraintType: TComboBox
+      Left = 152
+      Height = 23
+      Top = 32
+      Width = 89
+      ItemHeight = 13
+      Items.Strings = (
+        'Constraints'
+        'Forces'
+      )
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object ComboBox_Collider: TComboBox
+      Left = 248
+      Height = 23
+      Top = 32
+      Width = 73
+      ItemHeight = 13
+      Items.Strings = (
+        'Sphere'
+        'Infinite Cylinder'
+        'Cube'
+        'Stairs'
+        'Capsule'
+        'ODE Sphere'
+        '(none)'
+      )
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object Button_LoadMesh: TButton
+      Left = 549
+      Height = 21
+      Top = 32
+      Width = 36
+      Caption = 'OK'
+      Default = True
+      OnClick = Button_LoadMeshClick
+      TabOrder = 3
+    end
+    object CheckBox_UseOctree: TCheckBox
+      Left = 384
+      Height = 19
+      Top = 34
+      Width = 74
+      Caption = 'Use Octree'
+      TabOrder = 4
+    end
+    object CheckBox_SolidEdges: TCheckBox
+      Left = 464
+      Height = 19
+      Top = 34
+      Width = 76
+      Caption = 'Solid Edges'
+      TabOrder = 5
+    end
+    object CheckBox_Weld: TCheckBox
+      Left = 328
+      Height = 19
+      Top = 34
+      Width = 45
+      Caption = 'Weld'
+      Checked = True
+      State = cbChecked
+      TabOrder = 6
+    end
+    object Button_CancelLoad: TButton
+      Left = 589
+      Height = 21
+      Top = 32
+      Width = 44
+      Caption = 'Cancel'
+      OnClick = Button_CancelLoadClick
+      TabOrder = 7
+    end
+  end
+  object Button_OpenLoadForm: TButton
+    Left = 360
+    Height = 21
+    Top = 11
+    Width = 51
+    Caption = '&Load'
+    OnClick = Button_OpenLoadFormClick
+    TabOrder = 2
+  end
+  object TrackBar_Slack: TTrackBar
+    Left = 0
+    Height = 25
+    Top = 14
+    Width = 97
+    Max = 100
+    OnChange = TrackBar_SlackChange
+    Position = 0
+    TickStyle = tsNone
+    TabOrder = 3
+  end
+  object TrackBar_Iterations: TTrackBar
+    Left = 96
+    Height = 25
+    Top = 14
+    Width = 81
+    Max = 30
+    Min = 1
+    OnChange = TrackBar_IterationsChange
+    Position = 4
+    TickStyle = tsNone
+    TabOrder = 4
+  end
+  object TrackBar_Friction: TTrackBar
+    Left = 184
+    Height = 25
+    Top = 14
+    Width = 81
+    Max = 100
+    OnChange = TrackBar_FrictionChange
+    Position = 60
+    TickStyle = tsNone
+    TabOrder = 5
+  end
+  object CheckBox_ShowOctree: TCheckBox
+    Left = 272
+    Height = 19
+    Top = 15
+    Width = 82
+    Caption = 'Show Octree'
+    TabOrder = 6
+  end
+  object ComboBox_Shadow: TComboBox
+    Left = 416
+    Height = 23
+    Top = 16
+    Width = 145
+    ItemHeight = 13
+    Items.Strings = (
+      '(no shadows)'
+      'Shadow Volumes'
+      'Simple Shadow Plane'
+    )
+    OnChange = ComboBox_ShadowChange
+    Style = csDropDownList
+    TabOrder = 7
+  end
+  object GLScene1: TGLScene
+    left = 248
+    top = 192
+    object GLShadowVolume1: TGLShadowVolume
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Lights = <      
+        item
+          EffectiveRadius = 0
+          LightSource = GLLightSource1
+        end>
+      Occluders = <      
+        item
+          EffectiveRadius = 0
+          Caster = GLCube_Stair1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLCube_Stair2
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLCube_Stair3
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLCube_Stair4
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLCube1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLCylinder1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLShadowPlane1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLSphere1
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLSphere2
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GLSphere3
+        end      
+        item
+          EffectiveRadius = 0
+          Caster = GL_Capsule
+        end>
+      Options = [svoCacheSilhouettes, svoScissorClips, svoWorldScissorClip, svoDesignVisible]
+      Mode = svmDarkening
+      object GLDummyCube1: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        object GLDummyCube_Light: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          object GLLightSource1: TGLLightSource
+            TagFloat = 0
+            ConstAttenuation = 1
+            LinearAttenuation = 0
+            QuadraticAttenuation = 0
+            Position.Coordinates = {
+              0000C040000090410000C0400000803F
+            }
+            SpotCutOff = 180
+            SpotExponent = 0
+          end
+        end
+        object GL_Capsule: TGLCylinder
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            1283003F1283003F0000803F0000803F
+          }
+          Direction.Coordinates = {
+            F304353FF304353F0000000000000000
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            F30435BFF304353F0000000000000000
+          }
+          BottomRadius = 1.5
+          Height = 2
+          TopRadius = 1.5
+          object GLSphere2: TGLSphere
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            Position.Coordinates = {
+              000000000000803F000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            Radius = 1.5
+          end
+          object GLSphere3: TGLSphere
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            Position.Coordinates = {
+              00000000000080BF000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            Radius = 1.5
+          end
+        end
+        object GLDummyCube2: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          Position.Coordinates = {
+            0000000000007041000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          object GLActor1: TGLActor
+            TagFloat = 0
+            Material.BackProperties.Diffuse.Color = {
+              0000803F0000803F000000000000803F
+            }
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F0000803F000000000000803F
+            }
+            Material.FaceCulling = fcNoCull
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            CurrentFrameDelta = 0
+            Interval = 100
+            MaterialLibrary = GLMaterialLibrary1
+          end
+          object GLActor2: TGLActor
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            CurrentFrameDelta = 0
+            Interval = 100
+          end
+        end
+        object GLSphere1: TGLSphere
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            1283003F1283003F0000803F0000803F
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000000000C0000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Visible = False
+          Radius = 2
+        end
+        object GLCylinder1: TGLCylinder
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            1283003F1283003F0000803F0000803F
+          }
+          Direction.Coordinates = {
+            0000803F000000000000008000000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            000000000000C0BF000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            00000000000000000000803F00000000
+          }
+          Visible = False
+          BottomRadius = 1.5
+          Height = 50
+          Slices = 24
+          Stacks = 16
+          TopRadius = 1.5
+        end
+        object GLShadowPlane1: TGLShadowPlane
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            1283003F1283003F000000000000803F
+          }
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000EC51A0C0000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          Visible = False
+          Height = 60
+          Width = 60
+          XOffset = 0
+          XTiles = 30
+          YOffset = 0
+          YTiles = 30
+          Style = [psTileTexture]
+          ShadowingObject = GLDummyCube1
+          ShadowedLight = GLLightSource1
+          ShadowOptions = [spoUseStencil]
+        end
+        object GLCube1: TGLCube
+          TagFloat = 0
+          Material.FrontProperties.Diffuse.Color = {
+            8180003F8180003F0000803F0000803F
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000000000C0000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Visible = False
+          CubeSize = {
+            000040400000404000004040
+          }
+        end
+        object GLDummyCube_Stairs: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Visible = False
+          CubeSize = 1
+          object GLCube_Stair1: TGLCube
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            Position.Coordinates = {
+              0000000000000040000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            CubeSize = {
+              000000400000004000006041
+            }
+          end
+          object GLCube_Stair2: TGLCube
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            CubeSize = {
+              0000C0400000004000006041
+            }
+          end
+          object GLCube_Stair3: TGLCube
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            Position.Coordinates = {
+              00000000000000C0000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            CubeSize = {
+              000020410000004000006041
+            }
+          end
+          object GLCube_Stair4: TGLCube
+            TagFloat = 0
+            Material.FrontProperties.Diffuse.Color = {
+              1283003F1283003F0000803F0000803F
+            }
+            PitchAngle = 0
+            Position.Coordinates = {
+              00000000000080C0000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            CubeSize = {
+              000060410000004000006041
+            }
+          end
+        end
+        object GLPlane1: TGLPlane
+          TagFloat = 0
+          Material.FrontProperties.Ambient.Color = {
+            0000000000000000000000000000803F
+          }
+          Material.FrontProperties.Diffuse.Color = {
+            1283003F1283003F000000000000803F
+          }
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            000000000000A0C0000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          Height = 60
+          Width = 60
+          XOffset = 0
+          XTiles = 30
+          YOffset = 0
+          YTiles = 30
+          Style = [psTileTexture]
+        end
+      end
+    end
+    object GLDirectOpenGL1: TGLDirectOpenGL
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      UseBuildList = False
+      OnRender = GLDirectOpenGL1Render
+      Blend = False
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1.00000003318135E32
+      FocalLength = 75
+      TargetObject = GLDummyCube1
+      Position.Coordinates = {
+        0000704100002041000070410000803F
+      }
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 288
+    top = 192
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 360
+    top = 192
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 328
+    top = 192
+  end
+end

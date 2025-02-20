@@ -1,0 +1,618 @@
+object MainForm: TMainForm
+  Left = 283
+  Height = 496
+  Top = 186
+  Width = 1024
+  ActiveControl = ComboBox1
+  Caption = ' Quaternions '
+  ClientHeight = 496
+  ClientWidth = 1024
+  Color = clBtnFace
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  Visible = False
+  object Panel3: TPanel
+    Left = 558
+    Height = 496
+    Top = 0
+    Width = 466
+    Align = alRight
+    ClientHeight = 496
+    ClientWidth = 466
+    TabOrder = 0
+    object GLSceneViewer1: TGLSceneViewer
+      Left = 1
+      Height = 494
+      Top = 1
+      Width = 464
+      Camera = GLCamera1
+      Buffer.AmbientColor.Red = 0.200000002980232
+      Buffer.AmbientColor.Green = 0.200000002980232
+      Buffer.AmbientColor.Blue = 0.200000002980232
+      Buffer.AmbientColor.Alpha = 1
+      FieldOfView = 155.675598144531
+      Align = alClient
+      TabOrder = 0
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 496
+    Top = 0
+    Width = 558
+    Align = alClient
+    ClientHeight = 496
+    ClientWidth = 558
+    TabOrder = 1
+    object Panel4: TPanel
+      Left = 1
+      Height = 218
+      Top = 1
+      Width = 556
+      Align = alTop
+      ClientHeight = 218
+      ClientWidth = 556
+      TabOrder = 0
+      object Panel5: TPanel
+        Left = 13
+        Height = 50
+        Top = 21
+        Width = 511
+        Alignment = taLeftJustify
+        ClientHeight = 50
+        ClientWidth = 511
+        Color = clInfoBk
+        ParentColor = False
+        TabOrder = 0
+        object ComboBox1: TComboBox
+          Left = 352
+          Height = 32
+          Top = 11
+          Width = 100
+          Font.Color = clBlack
+          Font.Height = 24
+          Font.Name = 'Tahoma'
+          ItemHeight = 24
+          ItemIndex = 4
+          Items.Strings = (
+            'XYZ'
+            'XZY'
+            'YXZ'
+            'YZX'
+            'ZXY'
+            'ZYX'
+          )
+          OnChange = ComboBox1Change
+          ParentFont = False
+          Style = csDropDownList
+          TabOrder = 0
+          Text = 'ZXY'
+        end
+        object Label15: TLabel
+          Left = 5
+          Height = 40
+          Top = 5
+          Width = 416
+          Align = alLeft
+          AutoSize = False
+          BorderSpacing.Around = 4
+          Caption = 'Quaternion Test : EULER ORDER :'
+          Font.Color = clBlack
+          Font.Height = 24
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          Layout = tlCenter
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object ScrollBar2: TScrollBar
+        Left = 16
+        Height = 20
+        Top = 90
+        Width = 345
+        Max = 360
+        PageSize = 0
+        Position = 180
+        TabOrder = 1
+        OnChange = ScrollBar2Change
+      end
+      object ScrollBar1: TScrollBar
+        Left = 13
+        Height = 20
+        Top = 129
+        Width = 345
+        Max = 360
+        PageSize = 0
+        Position = 180
+        TabOrder = 2
+        OnChange = ScrollBar1Change
+      end
+      object ScrollBar3: TScrollBar
+        Left = 17
+        Height = 20
+        Top = 165
+        Width = 344
+        Max = 360
+        PageSize = 0
+        Position = 180
+        TabOrder = 3
+        OnChange = ScrollBar3Change
+      end
+      object Label2: TLabel
+        Left = 488
+        Height = 13
+        Top = 92
+        Width = 56
+        Caption = 'PITCH = Z'
+        Color = clBlue
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label1: TLabel
+        Left = 488
+        Height = 13
+        Top = 131
+        Width = 50
+        Caption = 'ROLL = X'
+        Color = clRed
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object Label3: TLabel
+        Left = 488
+        Height = 13
+        Top = 167
+        Width = 48
+        Caption = 'YAW = Y'
+        Color = clGreen
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object edtPitch: TSpinEdit
+        Left = 368
+        Height = 21
+        Top = 90
+        Width = 114
+        MaxValue = 180
+        MinValue = -180
+        OnEditingDone = edtPitchEditingDone
+        TabOrder = 4
+        Value = 180
+      end
+      object edtRoll: TSpinEdit
+        Left = 368
+        Height = 21
+        Top = 128
+        Width = 114
+        MaxValue = 180
+        MinValue = -180
+        OnEditingDone = edtPitchEditingDone
+        TabOrder = 5
+        Value = 180
+      end
+      object edtYaw: TSpinEdit
+        Left = 368
+        Height = 21
+        Top = 165
+        Width = 114
+        MaxValue = 180
+        MinValue = -180
+        OnEditingDone = edtPitchEditingDone
+        TabOrder = 6
+        Value = 180
+      end
+    end
+    object Panel2: TPanel
+      Left = 1
+      Height = 264
+      Top = 231
+      Width = 556
+      Align = alBottom
+      ClientHeight = 264
+      ClientWidth = 556
+      TabOrder = 1
+      object GroupBox1: TGroupBox
+        Left = 5
+        Height = 121
+        Top = 7
+        Width = 546
+        Align = alBottom
+        BorderSpacing.Around = 4
+        Caption = 'EULER to Quaternion'
+        ClientHeight = 103
+        ClientWidth = 542
+        TabOrder = 0
+        object Label4: TLabel
+          Left = 400
+          Height = 13
+          Top = 8
+          Width = 14
+          Caption = 'qw'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 16
+          Height = 13
+          Top = 8
+          Width = 12
+          Caption = 'qx'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 142
+          Height = 13
+          Top = 8
+          Width = 12
+          Caption = 'qy'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 269
+          Height = 13
+          Top = 8
+          Width = 11
+          Caption = 'qz'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 16
+          Height = 14
+          Top = 48
+          Width = 28
+          Caption = 'Angle'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Label8'
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 143
+          Height = 13
+          Top = 48
+          Width = 12
+          Caption = 'Vx'
+          ParentColor = False
+        end
+        object Label10: TLabel
+          Left = 269
+          Height = 13
+          Top = 49
+          Width = 12
+          Caption = 'Vy'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 396
+          Height = 13
+          Top = 49
+          Width = 11
+          Caption = 'Vz'
+          ParentColor = False
+        end
+        object Edit4: TEdit
+          Left = 16
+          Height = 21
+          Top = 24
+          Width = 100
+          TabOrder = 0
+        end
+        object Edit5: TEdit
+          Left = 142
+          Height = 21
+          Top = 24
+          Width = 100
+          TabOrder = 1
+        end
+        object Edit6: TEdit
+          Left = 269
+          Height = 21
+          Top = 24
+          Width = 100
+          TabOrder = 2
+        end
+        object Edit7: TEdit
+          Left = 400
+          Height = 21
+          Top = 24
+          Width = 100
+          TabOrder = 3
+        end
+        object Edit8: TEdit
+          Left = 16
+          Height = 21
+          Top = 62
+          Width = 100
+          TabOrder = 4
+          Text = 'Edit8'
+        end
+        object Edit9: TEdit
+          Left = 143
+          Height = 21
+          Top = 62
+          Width = 100
+          TabOrder = 5
+          Text = 'Edit9'
+        end
+        object Edit10: TEdit
+          Left = 269
+          Height = 21
+          Top = 62
+          Width = 100
+          TabOrder = 6
+          Text = 'Edit10'
+        end
+        object Edit11: TEdit
+          Left = 396
+          Height = 21
+          Top = 62
+          Width = 100
+          TabOrder = 7
+          Text = 'Edit11'
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 5
+        Height = 127
+        Top = 132
+        Width = 546
+        Align = alBottom
+        BorderSpacing.Around = 4
+        Caption = 'Quaternion To EULER'
+        ClientHeight = 109
+        ClientWidth = 542
+        TabOrder = 1
+        object Label12: TLabel
+          Left = 32
+          Height = 13
+          Top = 40
+          Width = 33
+          Caption = 'Roll-X'
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Edit12: TEdit
+          Left = 72
+          Height = 21
+          Top = 56
+          Width = 100
+          TabOrder = 0
+        end
+        object Label13: TLabel
+          Left = 344
+          Height = 13
+          Top = 40
+          Width = 40
+          Caption = 'Pitch-Z'
+          Font.Color = clBlue
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Edit13: TEdit
+          Left = 224
+          Height = 21
+          Top = 56
+          Width = 100
+          TabOrder = 1
+        end
+        object Label14: TLabel
+          Left = 183
+          Height = 13
+          Top = 40
+          Width = 35
+          Caption = 'Yaw-Y'
+          Font.Color = clGreen
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Edit14: TEdit
+          Left = 392
+          Height = 21
+          Top = 56
+          Width = 100
+          TabOrder = 2
+        end
+        object Label16: TLabel
+          Left = 116
+          Height = 13
+          Top = 88
+          Width = 291
+          Caption = 'Note : Values are in Degres and results  are rounded'
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object lblrealRoll: TLabel
+          Left = 72
+          Height = 13
+          Top = 40
+          Width = 45
+          Caption = 'lblrealRoll'
+          ParentColor = False
+        end
+        object lblRealPitch: TLabel
+          Left = 392
+          Height = 13
+          Top = 40
+          Width = 54
+          Caption = 'lblRealPitch'
+          ParentColor = False
+        end
+        object lblRealYaw: TLabel
+          Left = 223
+          Height = 13
+          Top = 40
+          Width = 51
+          Caption = 'lblRealYaw'
+          ParentColor = False
+        end
+        object ComboBox2: TComboBox
+          Left = 32
+          Height = 24
+          Top = 8
+          Width = 100
+          Font.Color = clBlack
+          Font.Height = 16
+          Font.Name = 'Tahoma'
+          ItemHeight = 16
+          ItemIndex = 4
+          Items.Strings = (
+            'XYZ'
+            'XZY'
+            'YXZ'
+            'YZX'
+            'ZXY'
+            'ZYX'
+          )
+          OnChange = ComboBox2Change
+          ParentFont = False
+          Style = csDropDownList
+          TabOrder = 3
+          Text = 'ZXY'
+        end
+      end
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 48
+    top = 88
+  end
+  object GLScene1: TGLScene
+    left = 48
+    top = 144
+    object DCWorld: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      VisibleAtRunTime = True
+      object GLCube1: TGLCube
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        PitchAngle = 0
+        RollAngle = 0
+        ShowAxes = True
+        TurnAngle = 0
+        CubeSize = {
+          000040400000003F0000A040
+        }
+      end
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 100
+        FocalLength = 50
+        TargetObject = GLCube1
+        Position.Coordinates = {
+          000000000000A040000020C10000803F
+        }
+        object GLLightSource1: TGLLightSource
+          TagFloat = 0
+          Ambient.Red = 0
+          Ambient.Green = 0
+          Ambient.Blue = 0
+          Ambient.Alpha = 1
+          ConstAttenuation = 1
+          Diffuse.Red = 1
+          Diffuse.Green = 1
+          Diffuse.Blue = 1
+          Diffuse.Alpha = 1
+          LinearAttenuation = 0
+          QuadraticAttenuation = 0
+          Position.Coordinates = {
+            000000C00000A0400000A0C00000803F
+          }
+          Specular.Red = 0
+          Specular.Green = 0
+          Specular.Blue = 0
+          Specular.Alpha = 1
+          SpotCutOff = 180
+          SpotExponent = 0
+        end
+      end
+    end
+  end
+end

@@ -1,5 +1,5 @@
 //
-// This unit is part of the GLScene Engine https://github.com/glscene
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {================================================================================================ }
 { FMOD Types header file. Copyright (c), Firelight Technologies Pty, Ltd. 1999-2004.              }

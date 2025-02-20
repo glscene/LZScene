@@ -1,0 +1,221 @@
+object Form1: TForm1
+  Left = 238
+  Height = 480
+  Top = 119
+  Width = 640
+  Caption = 'blur demo by Dave Gravel.'
+  ClientHeight = 480
+  ClientWidth = 640
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '0.9.31'
+  WindowState = wsMaximized
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 480
+    Top = 0
+    Width = 640
+    Camera = Cam
+    Buffer.BackgroundColor = clWhite
+    Buffer.AmbientColor.Color = {
+      0000000000000000000000000000803F
+    }
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    Buffer.AntiAliasing = aaNone
+    FieldOfView = 149.691864013672
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    top = 16
+    object Light: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00000000000048C30000FA430000803F
+      }
+      LightStyle = lsOmni
+      Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCube1: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        00000000000000000000803F0000803F
+      }
+      Material.FrontProperties.Shininess = 128
+      Material.FrontProperties.Specular.Color = {
+        0000803F0000803F0000803F0000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = {
+        0000A0400000803F0000803F
+      }
+      object GLSphere1: TGLSphere
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          000000000000803F000000000000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000004000004040000000000000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Radius = 0.69999998807907
+      end
+      object GLTorus1: TGLTorus
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F0000803F000000000000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000040C00000A0400000803F0000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        MajorRadius = 0.69999998807907
+        MinorRadius = 0.30000001192093
+        StartAngle = 0
+        StopAngle = 360
+        Parts = [toSides, toStartDisk, toStopDisk]
+      end
+      object GLIcosahedron1: TGLIcosahedron
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803F00000000000000000000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          000080400000C0C0000040C00000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          00000040000000400000004000000000
+        }
+        TurnAngle = 0
+      end
+      object GLTeapot1: TGLTeapot
+        TagFloat = 0
+        Material.FrontProperties.Diffuse.Color = {
+          0000803FCFCECE3E0000803F0000803F
+        }
+        Material.FrontProperties.Shininess = 128
+        Material.FrontProperties.Specular.Color = {
+          0000803F0000803F0000803F0000803F
+        }
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000A04000008040000080400000803F
+        }
+        RollAngle = 0
+        Scale.Coordinates = {
+          00000040000000400000004000000000
+        }
+        TurnAngle = 0
+      end
+    end
+    object GLMotionBlur1: TGLMotionBlur
+      TagFloat = 0
+    end
+    object GLCube2: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        000000000000803F0000803F0000803F
+      }
+      Direction.Coordinates = {
+        6C61D83E7C1BC43EDC46523F00000000
+      }
+      PitchAngle = 25
+      RollAngle = 25
+      TurnAngle = 25
+      Up.Coordinates = {
+        7E1BC4BEAC99653F287562BE00000000
+      }
+    end
+    object GLCube3: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000A04000008040000080400000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object Cam: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 65
+      TargetObject = GLCube3
+      Position.Coordinates = {
+        00000000000070C1000000000000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0.02
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    top = 48
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Tag = 0
+      end>
+    top = 112
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    FormCaption = 'blur demo by Dave Gravel. - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 32
+    top = 16
+  end
+end

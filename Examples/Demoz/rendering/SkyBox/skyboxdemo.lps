@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="skyboxdemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SkyboxDemo"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="84" Y="78"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="625"/>
+        <CursorPos X="14" Y="701"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\..\..\Source\GLTexture.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="1270"/>
+        <CursorPos Y="1265"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="unit1.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="74" Column="32" TopLine="59"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <Caret Line="3486" Column="35" TopLine="3469"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <Caret Line="3487" Column="50" TopLine="3470"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <Caret Line="3497" Column="6" TopLine="3470"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <Caret Line="3477" Column="25" TopLine="3465"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="183" Column="69" TopLine="151"/>
+      </Position7>
+      <Position8>
+        <Filename Value="..\..\..\..\Source\GLMaterial.pas"/>
+        <Caret Line="3477" Column="2" TopLine="3462"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

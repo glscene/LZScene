@@ -1,0 +1,83 @@
+object Form1: TForm1
+  Left = 135
+  Height = 334
+  Top = 85
+  Width = 316
+  Caption = 'Form1'
+  ClientHeight = 334
+  ClientWidth = 316
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  LCLVersion = '1.6.2.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 334
+    Top = 0
+    Width = 316
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 55.5485649108887
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 136
+    Height = 25
+    Top = 8
+    Width = 163
+    Caption = 'Apply Cube Environment Map'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object DummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 0.800000011920929
+      VisibleAtRunTime = True
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000E0400000A040000040400000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object Teapot1: TGLTeapot
+      TagFloat = 0
+      Material.Texture.ImageClassName = 'TGLBlankImage'
+      Material.Texture.Image.Width = 64
+      Material.Texture.Image.Height = 64
+      Material.Texture.Image.ColorFormat = 6408
+      Material.Texture.MagFilter = maNearest
+      Material.Texture.MinFilter = miNearest
+      Material.Texture.TextureMode = tmReplace
+      Material.Texture.Compression = tcNone
+      PitchAngle = 0
+      Position.Coordinates = {
+        00000000000080BE000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 300
+      TargetObject = Teapot1
+      Position.Coordinates = {
+        000040400000A0400000E0400000803F
+      }
+    end
+  end
+end

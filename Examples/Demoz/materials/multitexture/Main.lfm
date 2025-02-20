@@ -1,0 +1,152 @@
+object Form1: TForm1
+  Left = 144
+  Height = 427
+  Top = 81
+  Width = 559
+  BorderStyle = bsSingle
+  Caption = 'Multitexture'
+  ClientHeight = 427
+  ClientWidth = 559
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object Image1: TImage
+    Left = 416
+    Height = 128
+    Top = 56
+    Width = 128
+    OnClick = Image1Click
+    Stretch = True
+  end
+  object Image2: TImage
+    Left = 416
+    Height = 128
+    Top = 208
+    Width = 128
+    OnClick = Image2Click
+    Stretch = True
+  end
+  object Label1: TLabel
+    Left = 416
+    Height = 13
+    Top = 40
+    Width = 69
+    Caption = 'Texture Map 1'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 416
+    Height = 13
+    Top = 192
+    Width = 69
+    Caption = 'Texture Map 2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 416
+    Height = 13
+    Top = 368
+    Width = 60
+    Caption = 'Map 2 Scale'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 432
+    Height = 19
+    Top = 8
+    Width = 93
+    Caption = 'MultiTexture'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 8
+    Height = 393
+    Top = 8
+    Width = 393
+    Camera = GLCamera1
+    FieldOfView = 151.447769165039
+    Enabled = False
+    TabOrder = 0
+  end
+  object TrackBar1: TTrackBar
+    Left = 416
+    Height = 37
+    Top = 390
+    Width = 126
+    Max = 30
+    Min = 5
+    OnChange = TrackBar1Change
+    Position = 10
+    TabOrder = 1
+  end
+  object CBClampTex2: TCheckBox
+    Left = 416
+    Height = 19
+    Top = 344
+    Width = 97
+    Caption = 'Clamp Texture 2'
+    OnClick = CBClampTex2Click
+    TabOrder = 2
+  end
+  object GLScene1: TGLScene
+    left = 48
+    top = 32
+    object Plane1: TGLPlane
+      TagFloat = 0
+      Material.MaterialLibrary = GLMaterialLibrary1
+      Material.LibMaterialName = 'Base'
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000000000000000000080BF0000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      Height = 1
+      Width = 1
+      XOffset = 0
+      YOffset = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      left = 192
+      top = 192
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'Base'
+        Tag = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmReplace
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+        Texture2Name = 'Second'
+      end    
+      item
+        Name = 'Second'
+        Tag = 0
+        Material.Texture.MagFilter = maNearest
+        Material.Texture.MinFilter = miNearest
+        Material.Texture.TextureMode = tmModulate
+        Material.Texture.Compression = tcNone
+        Material.Texture.Disabled = False
+      end>
+    left = 48
+    top = 64
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    left = 480
+    top = 8
+  end
+end

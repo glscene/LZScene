@@ -1,0 +1,189 @@
+object Form1: TForm1
+  Left = 281
+  Height = 442
+  Top = 118
+  Width = 568
+  Caption = 'Form1'
+  ClientHeight = 442
+  ClientWidth = 568
+  Font.Height = -11
+  Font.Name = 'Arial'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnMouseWheel = FormMouseWheel
+  OnResize = FormResize
+  LCLVersion = '0.9.31'
+  object Viewer: TGLSceneViewer
+    Left = 0
+    Height = 401
+    Top = 41
+    Width = 568
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    FieldOfView = 151.994766235352
+    Align = alClient
+    OnMouseDown = ViewerMouseDown
+    OnMouseMove = ViewerMouseMove
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 0
+    Width = 568
+    Align = alTop
+    ClientHeight = 41
+    ClientWidth = 568
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 308
+      Height = 15
+      Top = 14
+      Width = 34
+      Caption = 'Result:'
+      ParentColor = False
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Test!'
+      Default = True
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object CheckBox1: TCheckBox
+      Left = 99
+      Height = 19
+      Top = 12
+      Width = 67
+      Caption = 'View box'
+      Checked = True
+      OnClick = CheckBox1Click
+      State = cbChecked
+      TabOrder = 1
+    end
+    object CheckBox2: TCheckBox
+      Left = 178
+      Height = 19
+      Top = 12
+      Width = 107
+      Caption = 'Change pos scale'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object GLScene: TGLScene
+    left = 480
+    top = 8
+    object DCCamTarg: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      object DCCube1: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        object GLCube1: TGLCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+        end
+      end
+    end
+    object GLLines1: TGLLines
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      Nodes = <>
+      NodesAspect = lnaInvisible
+      Division = 1
+      SplineMode = lsmSegments
+      Options = []
+    end
+    object GLPoints1: TGLPoints
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      NoZWrite = False
+      Static = False
+      size = 7
+    end
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 0.10000000149012
+      VisibleAtRunTime = True
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        00007A4400004844000016440000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLLightSource2: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000FAC30000C8C3000096C30000803F
+      }
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 500
+      FocalLength = 50
+      NearPlaneBias = 0.10000000149012
+      TargetObject = DCCamTarg
+      Position.Coordinates = {
+        0000A04000000040000040400000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000008000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+      left = 256
+      top = 144
+    end
+  end
+  object GLCadencer: TGLCadencer
+    Scene = GLScene
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencerProgress
+    left = 512
+    top = 8
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 480
+    top = 40
+  end
+  object GLMaterialLibrary: TGLMaterialLibrary
+    left = 512
+    top = 40
+  end
+end

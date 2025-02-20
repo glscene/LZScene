@@ -1,0 +1,135 @@
+object Form1: TForm1
+  Left = 192
+  Height = 343
+  Top = 101
+  Width = 457
+  Caption = 'Form1'
+  ClientHeight = 343
+  ClientWidth = 457
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 320
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnResize = FormResize
+  LCLVersion = '0.9.31'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 8
+    Height = 273
+    Top = 8
+    Width = 433
+    Camera = GLCamera1
+    VSync = vsmSync
+    Buffer.BackgroundColor = clSilver
+    FieldOfView = 107.546936035156
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 0
+  end
+  object TrackBar: TTrackBar
+    Left = 56
+    Height = 38
+    Top = 296
+    Width = 385
+    Frequency = 10
+    Max = 360
+    OnChange = TrackBarChange
+    PageSize = 10
+    Position = 0
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 1
+  end
+  object CBPlay: TCheckBox
+    Left = 8
+    Height = 19
+    Top = 311
+    Width = 40
+    Anchors = [akLeft, akBottom]
+    Caption = 'Play'
+    Checked = True
+    State = cbChecked
+    TabOrder = 2
+  end
+  object StaticText1: TStaticText
+    Left = 16
+    Height = 17
+    Top = 16
+    Width = 45
+    BorderStyle = sbsSingle
+    Caption = '??? FPS'
+    TabOrder = 3
+  end
+  object GLScene1: TGLScene
+    left = 16
+    top = 48
+    object Cube1: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Ambient.Color = {
+        0000000000000000000000000000803F
+      }
+      Material.FrontProperties.Diffuse.Color = {
+        0000000000000000000000000000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        0000803F0000803F000000000000803F
+      }
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+    end
+    object Cube2: TGLCube
+      TagFloat = 0
+      Material.FrontProperties.Diffuse.Color = {
+        8786063F8786063F0000803F0000803F
+      }
+      Material.FrontProperties.Emission.Color = {
+        0000000000000000A1A0203F0000803F
+      }
+      PitchAngle = 0
+      Position.Coordinates = {
+        0000404000000000000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = {
+        0000003F0000003F0000003F
+      }
+    end
+    object Cube3: TGLCube
+      TagFloat = 0
+      PitchAngle = 0
+      Position.Coordinates = {
+        000040400000803F000000000000803F
+      }
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = {
+        CDCC4C3ECDCC4C3ECDCC4C3E
+      }
+    end
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      ConstAttenuation = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 100
+      TargetObject = Cube1
+      Position.Coordinates = {
+        000020410000A040000020410000803F
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencer1Progress
+    left = 16
+    top = 80
+  end
+end
