@@ -5,18 +5,6 @@
   Asynchronous timer component (actual 1 ms resolution).
 
   This component is based on ThreadedTimer by Carlos Barbosa.
-
-   History :  
-   17/11/14 - PW - Refactored TAsyncTimer to TGLAsyncTimer
-   15/11/14 - PW - Renamed AsynchTimer.pas unit to GLAsyncTimer.pas
-   06/05/09 - DanB - removed TThreadPriority, was needed for Kylix, but not FPC
-   17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-   28/06/04 - LR - Added TThreadPriority for Linux
-   24/09/02 - EG - Fixed ThreadPriority default value (Nelson Chu)
-   20/01/02 - EG - Simplifications, dropped Win32 dependencies
-   05/04/00 - GrC - Enabled checks to prevent events after destroy
-   01/04/00 - EG - Re-Creation, minor changes over Carlos's code
-   
 }
 unit GLAsyncTimer;
 

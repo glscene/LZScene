@@ -3,23 +3,6 @@
 //
 {
     Platform independant viewer.
-
-    History:
-       13/06/12 - Yar - Bugfix synchronization control for Mac OS (thanks to pchev)	
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       30/04/10 - Yar - Added vertical synchronization cntrol for Linux (by Rustam Asmandiarov aka Predato) 
-       17/09/07 - DaStr - Replaced $IFNDEF KYLIX to $IFDEF MSWINDOWS in 
-                              SetupVSync() because wgl* functions are Windows-specific
-       12/09/07 - DaStr - Fixed SetupVSync() function (Bugtracker ID = 1786279)
-                             Made cross-platform code easier to read
-       12/07/07 - DaStr - Added SetupVSync
-       30/03/07 - DaStr - Another update after the previous fix (removed class())
-                             Added TVSyncMode type and constants.
-       24/03/07 - DaStr - Update for Windows after the previous fix
-       21/03/07 - DaStr - Improved Cross-Platform compatibility
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1684432)
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTrackerID=1681585)
-       24/01/02 -  EG   - Initial version
 }
 
 unit GLViewer;
@@ -42,7 +25,8 @@ procedure SetupVSync(const AVSyncMode : TVSyncMode);
 implementation
 
 uses
-  OpenGLTokens, OpenGLAdapter;
+  OpenGLTokens, 
+  OpenGLAdapter;
 
 procedure SetupVSync(const AVSyncMode : TVSyncMode);
 {$IFDEF MSWINDOWS}

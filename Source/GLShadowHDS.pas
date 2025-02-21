@@ -3,20 +3,6 @@
 //
 {
   Implements an HDS that automatically generates a terrain lightmap texture.
-	 History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/01/10 - Yar - Added GLTextureFormat to uses
-       13/11/07 - LIN - Added SkipGenerate flag. Set to true in "OnSourceDataFetched"
-                           to generate a blank shadow map. Then load your cached Shadowmap during OnThreadBmp32 event.
-       17/07/07 - LIN - Added OnThreadBmp32 event. This event can be used to
-                           modify the lightmap, before it is sent to texture memory.
-                           When used with TAsyncHDS, this event runs in the HeightData thread,
-                           and NOT in the main thread, so make sure code in this event is thread-safe.
-       22/03/07 - LIN - Thread-safe. (Now works with TGLAsyncHDS)
-       02/03/07 - LIN - Now works with InfiniteWrap terrain
-       14/02/07 - LIN - Creation
-	 
 
  Issues:1:Ambient and Diffuse light properties can not be set to 0, to avoid what
           seems to be a Delphi bug: If a property of type 'Single' is set to 0,
@@ -39,8 +25,14 @@ unit GLShadowHDS;
 interface
 
 uses
-  Classes, GLHeightData, GLGraphics, GLVectorGeometry, GLTexture,
-  GLVectorTypes, GLCoordinates, GLMaterial;
+  Classes, 
+  GLHeightData, 
+  GLGraphics, 
+  GLVectorGeometry, 
+  GLTexture,
+  GLVectorTypes, 
+  GLCoordinates, 
+  GLMaterial;
 
 type
    TGLShadowHDS = class;

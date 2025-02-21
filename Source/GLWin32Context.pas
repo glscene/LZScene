@@ -3,55 +3,6 @@
 //
 {
    Win32 specific Context.
-
-    History :  
-       11/09/11 - Yar - Added layers support (not tested because need Quadro or FireFX VGA)
-       18/07/11 - Yar - Added ability of creating OpenGL ES 2.0 profile context
-       03/12/10 - Yar - Fixed window tracking (thanks to Gabriel Corneanu)
-       04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility   
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens. Improved context creation.
-       18/06/10 - Yar - Changed context sharing method for similarity to GLX
-       06/06/10 - Yar - Moved forward context creation to DoCreateContext
-                           make outputDevice HWND type
-       19/05/10 - Yar - Added choice between hardware and software acceleration
-       06/05/10 - Yar - Added vLastVendor clearing when multithreading is enabled
-       06/04/10 - Yar - Added DoGetHandles to TGLWin32Context (thanks Rustam Asmandiarov aka Predator)
-       28/03/10 - Yar - Added 3.3 forward context creation and eliminate memory leaks when multithreading
-       06/03/10 - Yar - Added forward context creation in TGLWin32Context.DoActivate
-       20/02/10 - DanB - Allow double-buffered memory viewers, if you want single
-                            buffered, or no swapping, then change buffer options instead.
-                            Some changes from Cardinal to the appropriate HDC /HGLRC type.
-       15/01/10 - DaStr - Bugfixed TGLWin32Context.ChooseWGLFormat()
-                             (BugtrackerID = 2933081) (thanks YarUndeoaker)
-       08/01/10 - DaStr - Added more AntiAliasing modes (thanks YarUndeoaker)
-       13/12/09 - DaStr - Modified for multithread support (thanks Controller)
-       30/08/09 - DanB - vIgnoreContextActivationFailures renamed to
-                            vContextActivationFailureOccurred + check removed.
-       06/11/07 - mrqzzz - Ignore ContextActivation failure
-                   if GLContext.vIgnoreContextActivationFailures=true
-       15/02/07 - DaStr - Integer -> Cardinal because $R- was removed in GLScene.pas
-       11/09/06 - NC - Added support for Multiple-Render-Target
-       03/10/04 - NC - Added float texture support
-       03/07/02 - EG - ChooseWGLFormat Kyro fix (Patrick Chevalley)
-       13/03/02 - EG - aaDefault now prefers non-AA when possible
-       03/03/02 - EG - Fixed aaNone mode (AA specifically off)
-       01/03/02 - EG - Fixed CurrentPixelFormatIsHardwareAccelerated
-       22/02/02 - EG - Unified ChooseWGLFormat for visual & non-visual
-       21/02/02 - EG - AntiAliasing support *experimental* (Chris N. Strahm)
-       05/02/02 - EG - Fixed UnTrackWindow
-       03/02/02 - EG - Added experimental Hook-based window tracking
-       29/01/02 - EG - Improved recovery for ICDs without pbuffer  support
-       21/01/02 - EG - More graceful recovery for ICDs without pbuffer support
-       07/01/02 - EG - DoCreateMemoryContext now retrieved topDC when needed
-       15/12/01 - EG - Added support for AlphaBits
-       30/11/01 - EG - Hardware acceleration support now detected
-       20/11/01 - EG - New temp HWnd code for memory contexts (improved compat.)
-       04/09/01 - EG - Added ChangeIAttrib, support for 16bits depth buffer
-       25/08/01 - EG - Added pbuffer support and CreateMemoryContext interface
-       24/08/01 - EG - Fixed PropagateSharedContext
-       12/08/01 - EG - Handles management completed
-       22/07/01 - EG - Creation (glcontext.omm)
-    
 }
 unit GLWin32Context;
 

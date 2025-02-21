@@ -3,14 +3,6 @@
 //
 {
    Support for Windows WAV format.
-
-	 History :  
-       17/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       25/07/09 - DaStr - Added $I GLScene.inc
-       26/05/09 - DanB - Fix for LengthInBytes when chunks occur after data chunk
-       06/05/09 - DanB - Creation from split from GLSoundFileObjects.pas
-	 
 }
 unit GLFileWAV;
 
@@ -19,35 +11,26 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLApplicationFileIO, GLSoundFileObjects{$IFDEF MSWINDOWS} ,MMSystem{$ENDIF};
+  Classes, 
+  GLApplicationFileIO, 
+  GLSoundFileObjects{$IFDEF MSWINDOWS} ,MMSystem{$ENDIF};
 
 type
-
-   // TGLWAVFile
-   //
    { Support for Windows WAV format. }
    TGLWAVFile = class (TGLSoundFile)
       private
-          
          {$IFDEF MSWINDOWS}
          waveFormat : TWaveFormatEx;
          pcmOffset : Integer;
          {$ENDIF}
          FPCMDataLength: Integer;
          data : array of Byte; // used to store WAVE bitstream
-
       protected
-          
-
       public
-          
          function CreateCopy(AOwner: TPersistent) : TGLDataFile; override;
-
          class function Capabilities : TGLDataFileCapabilities; override;
-
          procedure LoadFromStream(Stream: TStream); override;
          procedure SaveToStream(Stream: TStream); override;
-
          procedure PlayOnWaveOut; override;
 
 	      function WAVData : Pointer; override;

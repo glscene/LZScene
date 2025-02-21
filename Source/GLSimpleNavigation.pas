@@ -2,43 +2,9 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-    A simple component written by request from someone at the www.glscene.ru forums.
     Allows to view the FPS and do the usual Zoom and MoveAroundTarget stuff 
     that all demos usually have in themselves. All that is just by dropping 
     this component on the form.
-
-    History :  
-       14/12/10 - DaStr - Fixed compiler hint
-       12/12/10 - Yar   - Adapted to using with TGLSceneForm
-       01/07/10 - Yar   - Fixed zooming for FPC (by Rustam Asmandiarov aka Predator)
-       17/06/10 - YP    - Fixed Zoom in/out inconsistence (mousewheel up/down inverted)
-       11/06/10 - YP    - Fixed wheeldata can be equal to 0 in FormMouseWheel (div by 0 exception)
-       21/01/10 - Yar   - Bugfixed zooming in design time (BugtrackerID = 2936266)
-       25/12/09 - DaStr - Added OnMouseMove event (thanks YarUnderoaker)
-       18/10/09 - DaStr - Added snoShowFPS option (thanks YarUnderoaker)
-                             Fixed a small bug with FPS string
-       29/09/07 - DaStr - Component now automaticly detects Form Caption
-       24/03/07 - DaStr - Replaced GLWin32Viewer with GLViewer
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1684432)
-                             Got rid of Types dependancy
-       20/03/07 - DaStr - Improved SceneViewer detection
-       02/03/07 - DaStr - Added default values to all properties
-                             Added TGLSimpleNavigationOptions
-                             Added TGLSimpleNavigationKeyCombination
-                             Some renamings
-                             Added TGLSimpleNavigation.Assign
-                             MouseWheel is now handled by default
-       06/02/07 - DaStr - Creation (donated to GLScene)
-  
-
-   Previous version history:
-           v1.0   08 May        '2006  Creation
-           v1.1   04 September  '2006  FreeNotification fix
-                                       Automatic Form detection fix
-           v1.2   11 September  '2006  Automatic SceneViewer detection
-                                       FormCaption added
-           v1.3   06 February   '2007  FPS is only updated in Run-Time now
-                                       Donated to GLScene
 }
 
 unit GLSimpleNavigation;
@@ -48,10 +14,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, TypInfo, Forms, Controls, ExtCtrls,
+  Classes, 
+  SysUtils, 
+  TypInfo, 
+  Forms, 
+  Controls, 
+  ExtCtrls,
    
-  GLSceneForm, GLVectorGeometry, GLScene,
-  GLViewer, GLStrings, GLCrossPlatform;
+  GLSceneForm, 
+  GLVectorGeometry, 
+  GLScene,
+  GLViewer, 
+  GLStrings, 
+  GLCrossPlatform;
 
 type
 

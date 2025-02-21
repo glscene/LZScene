@@ -4,10 +4,6 @@
 {
    Lattice shader that simulate Lattice.
    At this time only one light source is supported
-
-    History :  
-     08/12/15 - J.Delauney - Made compatible with the latest SVN version of GLScene
-     02/11/06 - Da Stranger - Creation
 }
 
 
@@ -20,13 +16,23 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLVectorGeometry, GLCoordinates,
-  GLTextureFormat,GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLVectorGeometry, 
+  GLCoordinates,
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
-//TGLCustomGLSLSimpleLatticeShader
-//
 { Custom class for GLSLSimpleLatticeShader.
  A shader that simulate Lattice }
 type
@@ -47,8 +53,6 @@ type
   end;
 
 
-//TGLCustomGLSLLatticeShader
-//
 { Custom class for GLSLLatticeShader.
  A shader that simulate Lattice with Diffuse/Specular and support Texture }
   TGLCustomGLSLLatticeShader = class(TGLCustomGLSLSimpleLatticeShader)

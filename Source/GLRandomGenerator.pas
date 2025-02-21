@@ -4,7 +4,7 @@
 {
    Custom Fast ThreadSafe Random Number Generator for Freepascal
    Implementation of XorShift algorithm for random numbers generation.
-   (based on the "castle game engine"'s random number generator : https://castle-engine.sourceforge.io)
+   (based on the "castle game engine"'s random number generator)
    In some cases it works 2 to 3 times faster than native FPC random function.
 
   Infos :
@@ -19,8 +19,9 @@ Interface
 
 {$I ../GLScene.inc}
 
-Uses
-  Classes, Sysutils;
+uses
+  Classes, 
+  Sysutils;
 
 Type
    { Methode aléatoire :

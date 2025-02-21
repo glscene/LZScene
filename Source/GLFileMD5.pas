@@ -3,23 +3,21 @@
 //
 {
    Doom3 MD5 mesh and animation vector file format implementation.
-
-    History : 
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       02/12/04 - SG - Updated to support MD5 version 10,
-                          version 6 support has been dropped.
-       01/06/04 - SG - Initial
-    
 }
 unit GLFileMD5;
 
 interface
 
 uses
-  Classes, SysUtils, GLVectorFileObjects, GLUtils, GLApplicationFileIO,
-  GLVectorTypes, GLVectorGeometry, GLVectorLists;
+  Classes, 
+  SysUtils, 
+  
+  GLVectorFileObjects, 
+  GLUtils, 
+  GLApplicationFileIO,
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLVectorLists;
 
 type
 

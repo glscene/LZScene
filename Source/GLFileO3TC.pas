@@ -2,18 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-
-  History :  
-         23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-         31/05/10 - Yar - Fixes for Linux x64
-         08/05/10 - Yar - Removed check for residency in AssignFromTexture
-         22/04/10 - Yar - Fixes after GLState revision
-         27/01/10 - Yar   - Bugfix in BlockOffset with negative result
-         23/11/10 - DaStr - Added $I GLScene.inc
-         23/01/10 - Yar - Added to AssignFromTexture CurrentFormat parameter
-                             Fixed cube map loading bug
-         20/01/10 - Yar - Creation
-    
+  The O3TC File format
 }
 unit GLFileO3TC;
 

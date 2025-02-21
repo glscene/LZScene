@@ -4,44 +4,6 @@
 {
    Lens flare object.
 
-  History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       13/03/09 - DanB - changed glReadPixels/glTexImage2D calls to glCopyTexImage2D
-       10/10/08 - DanB - changed Lensflare buildlists to use rci.cameraPosition instead
-                            of Scene.CurrentGLCamera.DistanceTo
-       08/08/07 - Lin - Bugfix for AutoZTest:
-                           Lensflare is no longer occluded by objects BEHIND the flare.
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Moved all UNSAFE_TYPE, UNSAFE_CODE checks to GLSCene.inc
-       25/03/07 - DaStr - UNSAFE_TYPE and UNSAFE_CODE warnings are now ignored
-       23/03/07 - DaStr - Added missing parameters in procedure's implementation
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1681409)
-       22/03/07 - DaStr - Cleanup after previous fix - now object does not
-                             igore its children in picking state
-                             Removed "unsafe type/unsafe code" warnings
-       15/03/07 - DaStr - Removed flicker that occured when LensFlare was
-                             rendered in a picking state (BugTracker ID = 1681031)
-       19/04/04 - EG - Fixed occlusion test and pojection matrix stack issues
-       16/04/04 - EG - Added StreakAngle
-       15/04/04 - EG - Texture-based Lens-flare moved to GLTexLensFlare,
-                          replaced gradient arrays with design-time editable colors
-       25/09/03 - EG - Increased occlusion testing robustness
-       20/09/03 - EG - Can now use occlusion testing/query for AutoZTest
-       19/09/03 - EG - Misc. cleanup, added PreRender
-       18/08/03 - SG - Added TGLTextureLensFlare (Tobias Peirick)
-       26/03/03 - EG - Framerate independant glow transitions (Tobias Peirick)
-       08/12/02 - EG - Added AutoZTest
-       29/10/02 - EG - Initial, added defaults and encapsulation,
-                          fixed positionning, RandSeed now preserved,
-                          minor speedup
-  
-
-   Author  : Tobias Peirick 
-   eMail   : peirick@onlinehome.de 
-   Homepage: http://www.TobSoft.de
 }
 Unit GLLensFlare;
 
@@ -50,15 +12,24 @@ Interface
 {$I GLScene.inc}
 
 Uses
-  Classes, SysUtils,
-  GLScene, GLVectorGeometry, GLObjects, OpenGLTokens,
-  GLContext, GLColor, GLBaseClasses, GLRenderContextInfo, GLState,
-  GLVectorTypes, GLUtils, GLTextureFormat, GLRandomGenerator;
+  Classes, 
+  SysUtils,
+
+  GLScene, 
+  GLVectorGeometry, 
+  GLObjects, 
+  OpenGLTokens,
+  GLContext, 
+  GLColor, 
+  GLBaseClasses, 
+  GLRenderContextInfo, 
+  GLState,
+  GLVectorTypes, 
+  GLUtils, 
+  GLTextureFormat, 
+  GLRandomGenerator;
 
 Type
-
-  // TFlareElement
-
   TFlareElement  = (feGlow, feRing, feStreaks, feRays, feSecondaries);
   TFlareElements = Set Of TFlareElement;
 

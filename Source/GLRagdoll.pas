@@ -3,14 +3,6 @@
 //
 {
     Base abstract ragdoll class. Should be extended to use any physics system. 
-
-	 History : 
-     10/11/12 - PW - Added CPP compatibility: changed vector arrays to arrays of records
-     23/08/10 - Yar - Added GLVectorTypes to uses
-     09/11/05 - LucasG - Fixed joint and few small things
-     07/11/05 - LucasG - Fixed bone position and rotation (Align to animation)
-     02/11/05 - LucasG - First version created.
-   
 }
 
 unit GLRagdoll;
@@ -18,8 +10,12 @@ unit GLRagdoll;
 interface
 
 uses
-  GLScene, GLPersistentClasses, GLVectorGeometry, GLVectorFileObjects,
-  GLVectorLists, GLObjects;
+  GLScene, 
+  GLPersistentClasses, 
+  GLVectorGeometry, 
+  GLVectorFileObjects,
+  GLVectorLists, 
+  GLObjects;
 
 type
   TGLRagdoll = class;

@@ -11,11 +11,23 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
 
-  GLStrings, GLCrossPlatform, GLBaseClasses, OpenGLTokens,
-  GLVectorGeometry, GLGraphics, GLContext, GLState, GLColor, GLCoordinates,
-  GLRenderContextInfo, GLTextureFormat, GLApplicationFileIO, GLUtils;
+  GLStrings, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  OpenGLTokens,
+  GLVectorGeometry, 
+  GLGraphics, 
+  GLContext, 
+  GLState, 
+  GLColor, 
+  GLCoordinates,
+  GLRenderContextInfo, 
+  GLTextureFormat, 
+  GLApplicationFileIO, 
+  GLUtils;
 
 const
   cDefaultNormalMapScale = 0.125;

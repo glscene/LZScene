@@ -3,53 +3,6 @@
 //
 {
    Scene Editor, for adding + removing scene objects within the Delphi IDE.
-
-	 History :  
-   02/01/15 - PW - Fixed for Lazarus 1.2.6
-   20/05/10 - Yar - Fixes for Linux x64
-   18/05/10 - Yar - Fixed for Lazarus-0.9.29-25483 (thanks Predator)
-   26/03/10 - Yar - Added Expand and Collapse buttons, fix for Unix-based systems
-                       (thanks to Rustam Asmandiarov aka Predator)
-   14/03/09 - DanB - Removed Cameras node, instead cameras are now placed into scene
-   19/03/08 - mrqzzz - Little change to "stay on top" (references self, not GLSceneEditorForm )
-   17/03/08 - mrqzzz - By dAlex: Added "stay on top" button
-   12/07/07 - DaStr - Improved cross-platform compatibility
-                         (BugTrackerID=1684432)
-   29/03/07 - DaStr - Renamed LINUX to KYLIX (BugTrackerID=1681585)
-   25/03/07 - DaStr - Abstracted IsSubComponent for Delphi5 compatibility
-   17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTrackerID=1681585)
-   07/02/07 - DaStr - TGLSceneEditorForm.ACDeleteObjectExecute bugfixed
-                         TGLSceneEditorForm.AddNodes - removed warning
-                          (all for proper Subcomponent support)
-   20/01/07 - DaStr - TGLSceneEditorForm.ACCutExecute bugfixed
-   19/12/06 - DaStr - TGLSceneEditorForm.AddNodes bugfixed - SubComponents are
-                          no longer displayed in the Editor (BugTraker ID = 1585913)
-   24/06/06 - PvD - Fixed bug with DELETE key when editing name in Treeview
-   03/07/04 - LR - Updated for Linux
-   18/12/04 - PhP - Added support for deleting objects/effects/behaviours by pressing "Delete"
-   03/07/04 - LR - Make change for Linux
-   14/12/03 - EG - Paste fix (Mrqzzz)
-   31/06/03 - EG - Cosmetic changes, form position/state now saved to the registry
-   21/06/03 - DanB - Added behaviours/effects listviews
-   22/01/02 - EG - Fixed controls state after drag/drop (Anton Zhuchkov)
-   06/08/00 - EG - Added basic Clipboard support
-   14/05/00 - EG - Added workaround for VCL DesignInfo bug (thx Nelson Chu)
-   28/04/00 - EG - Fixed new objects not being immediately reco by IDE
-   26/04/00 - EG - Added support for objects categories
-   17/04/00 - EG - Added access to TInfoForm
-   16/04/00 - EG - Fixed occasionnal crash when rebuilding GLScene dpk
-                      while GLSceneEdit is visible
-   10/04/00 - EG - Minor Create/Release change
-   24/03/00 - EG - Fixed SetScene not updating enablings
-   13/03/00 - EG - Object names (ie. node text) is now properly adjusted
-                      when a GLScene object is renamed,
-                      Added Load/Save whole scene
-   07/02/00 - EG - Fixed notification logic
-   06/02/00 - EG - DragDrop now starts after moving the mouse a little,
-                      Form is now auto-creating, fixed Notification,
-                      Added actionlist and moveUp/moveDown
-   05/02/00 - EG - Fixed DragDrop, added root nodes auto-expansion
-   
 }
 unit GLSceneEditLCL;
 
@@ -63,10 +16,20 @@ uses
   {$IFDEF MSWINDOWS}
   Registry,
   {$ENDIF}
-  GLXCollection, GLScene, Classes, SysUtils,
-  Controls, Forms, ComCtrls,
-  Dialogs, Menus, ActnList, ExtCtrls, StdCtrls,
-  propedits, componenteditors,
+  GLXCollection, 
+  GLScene, 
+  Classes, 
+  SysUtils,
+  Controls, 
+  Forms, 
+  ComCtrls,
+  Dialogs, 
+  Menus, 
+  ActnList, 
+  ExtCtrls, 
+  StdCtrls,
+  propedits, 
+  componenteditors,
 
   GLViewer, 
   GLSceneRegisterLCL, 

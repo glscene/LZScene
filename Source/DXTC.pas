@@ -3,18 +3,7 @@
 //
 {
    DXTC (also S3TC) decoding. 
-   Adapted from DevIL image library (http://openil.sourceforge.net)
-
-    History :  
-       04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility     
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       05/03/10 - Yar - Added float types in GLEnumToDDSHeader
-       23/01/10 - Yar - Added more support DX9 DDS color formats
-                           and DX11 DXGI constants to future
-       31/03/07 - DaStr - Added $I GLScene.inc
-       03/09/04 - SG - Delphi 5 compatibilty fixes (Ivan Lee Herring)
-       01/09/04 - SG - Creation
-    
+   Adapted from DevIL image library 
 }
 unit DXTC;
 

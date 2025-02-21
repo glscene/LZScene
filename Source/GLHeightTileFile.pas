@@ -13,14 +13,6 @@
        "Smooth" terrain   1:100 to 1:1000
        Random terrain     1:100
        
-    
-
-   History :  
-       17/11/14 - PW - Renamed from HeightTileFile.pas to GLHeightTileFile.pas
-       20/05/10 - Yar - Fixes for Linux x64
-       30/03/07 - DaStr - Added $I GLScene.inc
-       21/12/01 - Egg - Creation
-    
 }
 unit GLHeightTileFile;
 
@@ -29,9 +21,11 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLCrossPlatform, GLApplicationFileIO;
+  GLCrossPlatform, 
+  GLApplicationFileIO;
 
 type
 
@@ -49,8 +43,6 @@ type
    PShortIntArray = ^TShortIntArray;
    PShortInt = ^ShortInt;
 
-   // THeightTileInfo
-   //
    THeightTileInfo = packed record
       left, top, width, height : Integer;
       min, max, average : SmallInt;
@@ -59,16 +51,12 @@ type
    PHeightTileInfo = ^THeightTileInfo;
    PPHeightTileInfo = ^PHeightTileInfo;
 
-   // THeightTile
-   //
    THeightTile = packed record
       info : THeightTileInfo;
       data : array of SmallInt;
    end;
    PHeightTile = ^THeightTile;
 
-   // THTFHeader
-   //
    THTFHeader = packed record
       FileVersion : array [0..5] of AnsiChar;
       TileIndexOffset : Int64;
@@ -83,8 +71,6 @@ const
 
 type
 
-   // THeightTileFile
-   //
    { Interfaces a Tiled file }
    THeightTileFile = class (TObject)
       private
@@ -99,7 +85,6 @@ type
          FCreating : Boolean;
          FHeightTile : THeightTile;
          FInBuf : array of ShortInt;
-
       protected
           
          function GetTiles(index : Integer) : PHeightTileInfo;
@@ -163,11 +148,7 @@ type
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 const

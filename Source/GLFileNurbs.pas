@@ -3,27 +3,23 @@
 //
 {
    Nurbs surfaces vector file loading.
-
-    History : 
-       11/08/03 - SG - Some minor changes
-       05/08/03 - SG - Initial, adapted LoadFromStream from earlier tests
-                          with GLNurbsSurface (depricated), originally coded
-                          by Eric Grange.
-	 
 }
 unit GLFileNurbs;
 
 interface
 
 uses
-  Classes, SysUtils, GLVectorFileObjects,
-  GLVectorGeometry, GLVectorLists, GLApplicationFileIO,
-  GLParametricSurfaces, GLUtils;
+  Classes, 
+  SysUtils, 
+  
+  GLVectorFileObjects,
+  GLVectorGeometry, 
+  GLVectorLists, 
+  GLApplicationFileIO,
+  GLParametricSurfaces, 
+  GLUtils;
 
 type
-
-   // TGLNurbsSurface
-   //
    TGLNurbsVectorFile = class(TGLVectorFile)
       public
           
@@ -32,26 +28,18 @@ type
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 // ------------------
 // ------------------ TGLNurbsVectorFile ------------------
 // ------------------
 
-// Capabilities
-//
 class function TGLNurbsVectorFile.Capabilities : TGLDataFileCapabilities;
 begin
   Result:=[dfcRead];
 end;
 
-// LoadFromStream
-//
 procedure TGLNurbsVectorFile.LoadFromStream(stream : TStream);
 
    function CleanupLine(const line : String) : String;

@@ -3,29 +3,6 @@
 //
 {
    Simple X format support for Delphi (Microsoft's favorite format)
-   
-    History :  
-       07/11/09 - DaStr - Initial version (Added from the GLScene-Lazarus SVN)
-    
-
-
-    Previous version history :  
-      $Log$
-      Revision 1.1  2009/11/07 22:12:25  da_stranger
-      Initial version (Added from the GLScene-Lazarus SVN)
-
-      Revision 1.1  2006/01/10 20:50:44  z0m3ie
-      recheckin to make shure that all is lowercase
-
-      Revision 1.1  2006/01/09 21:02:31  z0m3ie
-      *** empty log message ***
-
-      Revision 1.3  2005/12/04 16:53:04  z0m3ie
-      renamed everything to lowercase to get better codetools support and avoid unit finding bugs
-
-      Revision 1.2  2005/08/03 00:41:38  z0m3ie
-      - added automatical generated History from CVS
-    
 }
 
 unit GLFileX;
@@ -35,13 +12,16 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
 
-  GLVectorFileObjects, GLApplicationFileIO, GLVectorGeometry, GLTexture,
-  GLVectorLists, GLMaterial,
+  GLVectorFileObjects, 
+  GLApplicationFileIO, 
+  GLVectorGeometry, 
+  GLTexture,
+  GLVectorLists, 
+  GLMaterial,
 
-  // Misc
   FileX;
 
 type

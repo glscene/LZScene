@@ -3,24 +3,6 @@
 //
 {
   In GL windows management classes and structures
-
-  History :  
-       15/04/11 - Yar - Added TGLGuiLayout.Assign
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       11/06/10 - YP - Link GUI elements to their parent
-       06/06/10 - Yar - Fixed warnings
-       30/03/07 - DaStr - Added $I GLScene.inc, cosmetic changes
-       17/02/07 - DaStr - TGLGuiElement.Create - vectors creation fixed
-                          Changed some types from TGLCoordinates to TGLCoordinates2
-                          Removed some empty lines
-       16/12/05 - DK - Removed GuiSkinEditorFormUnit dependancy
-       30/11/04 - DB - Fixed memory leaks (thanks dikoe Kenguru)
-       16/07/03 - EG - TGLBaseGuiObject moved in along with RecursiveVisible mechanism
-       25/11/02 - EG - TGLGuiLayout.Clear fix (Sternas Stefanos)
-       06/09/02 - JAJ - Updated and added to CVS..
-       01/06/02 - JAJ - Base Unit built..
-  
 }
 unit GLGui;
 
@@ -31,8 +13,16 @@ interface
 uses
   Classes, SysUtils,
 
-  GLScene, GLBitmapFont, GLMaterial, GLCrossPlatform, OpenGLTokens, GLContext,
-  GLPersistentClasses, GLVectorGeometry, GLCoordinates, GLBaseClasses;
+  GLScene, 
+  GLBitmapFont, 
+  GLMaterial, 
+  GLCrossPlatform, 
+  OpenGLTokens, 
+  GLContext,
+  GLPersistentClasses, 
+  GLVectorGeometry, 
+  GLCoordinates, 
+  GLBaseClasses;
 
 type
 

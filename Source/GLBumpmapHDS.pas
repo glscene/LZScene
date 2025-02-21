@@ -6,34 +6,6 @@
 
   The object-space elevation bumpmap can be used for dynamic terrain lighting.
   A bumpmap texture is generated for each terrain tile, and placed into a TGLMaterialLibrary.
-
-   History :  
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   22/01/10 - Yar - Added GLTextureFormat to uses
-   13/02/07 - LIN- Thread-safe, for use with TGLAsyncHDS
-  Also takes advantage of texture-coodrinates, calculated by HeightDataSource
-   02/02/07 - LIN- GLBumpmapHDS is now derived from TGLHeightDataSourceFilter.
-  HeightDataSource replaces ElevationHDS.
-  (More efficient, since it no longer has to copy and release the entire Source HDS's TGLHeightData object.)
-   01/02/07 - LIN- Added 'MaxTextures' property.
-  if the MaterialLibrary.Materials.Count > MaxTextures, then unused textures are deleted.
-  Set MaxTextures=0 to disable Auto-deletes, and manage your normal-map textures manually.
-
-  WARNING: If you use TGLHeightData.MaterialName, instead of TGLHeightData.LibMaterial,
-  then HeightData does NOT register the texture as being used.
-  So make sure MaxTextures=0 if you use MaterialName.
-
-   25/01/07 - LIN- Replaced 'StartPreparingData' and 'GenerateBumpmap' functions.
-  Now supports a TGLBitmap with multiple tiles.
-  Now works with HeightTileFileHDS.
-  World texture coordinates for individual textures are now calculated,
-  (TGLLibMaterial.TextureOffset and TGLLibMaterial.TextureScale)
-  Bugfix: Terrain position no longer jumps when InfiniteWrap is turned off.
-   15/04/04 - EG - Fixed hdsNone support (Phil Scadden)
-   20/03/04 - EG - Works, reasonnably seamless but still quite inefficient
-   20/02/04 - EG - Creation
-   
 }
 unit GLBumpmapHDS;
 

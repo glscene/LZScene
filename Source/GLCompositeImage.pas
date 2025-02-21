@@ -4,14 +4,6 @@
 {
     This class is required for loading images such classes as TGLDDSImage,
     TGLO3TCImage, TGLHDRImage etc.
-
-  History :  
-         23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-         22/04/10 - Yar - Fixes after GLState revision
-         22/02/10 - Yar - Added LoadFromStream (thanks to mif)
-         23/01/10 - Yar - Replaced TextureFormat to TextureFormatEx
-         21/01/10 - Yar - Creation
-    
 }
 
 unit GLCompositeImage;

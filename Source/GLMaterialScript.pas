@@ -3,44 +3,12 @@
 //
 {
    Material Script Batch loader for TGLMaterialLibrary for runtime.
-
-	 History :  
-       22/04/10 - Yar - Fixes after GLState revision
-       22/01/10 - Yar   - Added GLTextureFormat to uses
-       24/03/08 - DaStr - Moved TGLMinFilter and TGLMagFilter from GLUtils.pas
-                              to GLGraphics.pas (BugTracker ID = 1923844)
-       02/04/07 - DaStr - TGLMaterialScripter is now notified of
-                               DebugMemo's and MaterialLibrary's destruction
-                             TGLShaderItems and TGLMaterialLibraryItems now
-                               descent from TOwnedCollection
-                             Removed unused stuff from "uses" section
-                             Alligned and formated the "interface" section
-       29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-       09/06/04 - Mathx - Addition to GLScene (created by Kenneth Poulter)
-	 
-}
-{
    Author : Kenneth Poulter (aka SpiriT aka Difacane)
    Base : none, apart from glscene materiallibrary
-
-   History :
-   26/06/2004 - KP - started basic script idea using repeat statements
-   26/06/2004 - KP - script is now half functional and method proved to be effective
-   27/06/2004 - KP - finished script, but not dynamic, error handling needs some work
-   28/06/2004 - KP - cleaned it all up, nearly ready for realease
-   29/06/2004 - KP - Converted to a component class, ready for release
-   29/06/2004 - KP - Updated strtofloat to strtofloatdef and replaced "," with ";"
-   29/06/2004 - KP - Added MaterialLibraries and Shaders for use
-   06/07/2004 - KP - Added Append and Overwrite
    
    Future notes :
-   Implementation of variables
-   Implementation of constants
-
+   Implementation of variables and constants
    This source falls under the GNU GPL license, unless stated otherwise by the author(Kenneth Poulter).
-
-   Additions are welcome
-
 }
 
 unit GLMaterialScript;
@@ -50,11 +18,18 @@ interface
 {$I GLScene.inc}
 
 uses
-  SysUtils, Classes,
+  SysUtils, 
+  Classes,
   StdCtrls,
 
-  GLTexture, GLTextureFormat, GLGraphics, GLUtils, GLColor, GLCoordinates,
-  GLMaterial, GLState;
+  GLTexture, 
+  GLTextureFormat, 
+  GLGraphics, 
+  GLUtils, 
+  GLColor, 
+  GLCoordinates,
+  GLMaterial, 
+  GLState;
 
 type
   TGLShaderItem = class(TCollectionItem)

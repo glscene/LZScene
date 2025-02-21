@@ -2,23 +2,13 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   Implements the standard Teapot, build from evaluators.
-
-	 History :  
-       06/04/08 - DaStr - Fixed sizes of some array pointer types.
-                             Now $R- is not required for units that use them.
-       30/03/07 - DaStr - Added $I GLScene.inc
-       20/07/00 -  Egg  - Fixed array declarations (non null range to allow bound checks),
-                             Renamed "TIntegerList" to "TIntegerArray"
-    
+   Implements the Types3DS
 }
 
 // This unit contains all of the data types used by the core routines. Most of these are only used
 // with the internal database, created when a file is loaded.
+// Mike Lischke
 //
-// Last change - 03. October 1999
-//
-// (c) Copyright 1999, Dipl. Ing. Mike Lischke (public@lischke-online.de)
 
 unit Types3DS;
 
@@ -29,7 +19,8 @@ interface
 
 {$I GLScene.inc}
 
-uses Classes; // for TStringList
+uses 
+  Classes; // for TStringList
 
 //---------------- commonly used structures ----------------------------------
 

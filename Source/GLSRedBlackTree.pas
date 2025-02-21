@@ -29,13 +29,6 @@
   given a _Key_, NextKey replace it with the smallest key that
   is larger than _Key_, PrevKey returns the largest key that is
   smaller than _Key_. For Last and First key result not returned.
-
-    History :  
-       05/05/11 - Yar - Fugfixed method Add for Lazarus (unclear node's fields)
-       04/12/10 - Yar - Improved duplicate keys storing
-       04/08/10 - Yar - Fixed field section for FPC 2.5.1 (Bugtracker ID = 3039424)
-       19/04/10 - Yar - Creation (based on grbtree jzombi aka Jani Matyas)
-    
 }
 
 unit GLSRedBlackTree;
@@ -46,14 +39,13 @@ interface
 
 uses
   LCLVersion,
-  Classes, GLCrossPlatform;
+  Classes, 
+  GLCrossPlatform;
 
 type
 
   TRBColor = (clRed, clBlack);
 
-  // TRedBlackTree
-  //
 {$IFDEF GLS_GENERIC_PREFIX}
   generic
 {$ENDIF}

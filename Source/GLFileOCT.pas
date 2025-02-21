@@ -4,15 +4,6 @@
 {
     Support-code to load OCT Files into TGLFreeForm-Components in GLScene. 
     (OCT being the format output from FSRad, http://www.fluidstudios.com/fsrad.html).
-
-   History :  
-       19/06/11 - Yar - Fixed problem with image converting in Lazarus (thanks to Johannes Pretorius, Bugtracker ID = 3322324)
-       22/01/10 - Yar - Added GLTextureFormat to uses
-       31/03/07 - DaStr - Added $I GLScene.inc
-       19/09/03 - EG - "Lighmap" -&gt; "LightMap"
-       06/05/03 - mrqzzz - added Gamma and Brightness correction variables (vGLFileOCTLightmapBrightness, vGLFileOCTLightmapGammaCorrection)
-       02/02/03 - EG     - Creation
-    
 }
 unit GLFileOCT;
 
@@ -21,19 +12,18 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLVectorFileObjects, GLVectorGeometry, GLApplicationFileIO,
-  FileOCT, intfgraphics;
+  Classes, 
+  GLVectorFileObjects, 
+  GLVectorGeometry, 
+  GLApplicationFileIO,
+  FileOCT, 
+  intfgraphics;
 
 type
-
-  // TGLOCTGLVectorFile
-
   { The OCT vector file (FSRad output). }
   TGLOCTGLVectorFile = class(TGLVectorFile)
   public
-     
     class function Capabilities: TGLDataFileCapabilities; override;
-
     procedure LoadFromStream(aStream: TStream); override;
   end;
 
@@ -43,19 +33,22 @@ var
   vGLFileOCTLightmapGammaCorrection: single = 1;
   // Mrqzzz : scaling factor, 1.0 = unchanged
   vGLFileOCTAllocateMaterials: boolean = True;
-// Mrqzzz : Flag to avoid loading materials (useful for IDE Extensions or scene editors)
+  // Mrqzzz : Flag to avoid loading materials (useful for IDE Extensions or scene editors)
 
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 
 uses
-  SysUtils, GLTexture, GLMaterial, GLGraphics, GLCrossPlatform, GLState,
-  GLUtils, GLTextureFormat;
+  SysUtils, 
+  
+  GLTexture, 
+  GLMaterial, 
+  GLGraphics, 
+  GLCrossPlatform, 
+  GLState,
+  GLUtils, 
+  GLTextureFormat;
 
 // ------------------
 // ------------------ TGLOCTGLVectorFile ------------------
@@ -69,7 +62,6 @@ begin
 end;
 
 // LoadFromStream
-
 procedure TGLOCTGLVectorFile.LoadFromStream(aStream: TStream);
 var
   i, y, n: integer;

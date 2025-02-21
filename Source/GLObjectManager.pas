@@ -9,16 +9,6 @@
 
    TODO: add some notification code, so that when a scene object is registered/
    unregistered, any editor that is using the object manager can be notified.
-
-  History :  
-       11/11/09 - DaStr - Improved FPC compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       25/07/09 - DaStr - Added $I GLScene.inc
-       26/03/09 - DanB - Added PopulateMenuWithRegisteredSceneObjects procedure.
-       14/03/09 - DanB - Created by moving TGLObjectManager in from GLSceneRegister.pas,
-                            made some slight adjustments to allow resources being loaded
-                            from separate packages.
-  
 }
 
 unit GLObjectManager;
@@ -35,7 +25,8 @@ uses
   Menus,
    
   GLCrossPlatform,
-  GLScene,LResources;
+  GLScene,
+  LResources;
 
 type
 

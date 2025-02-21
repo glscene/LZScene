@@ -5,21 +5,6 @@
   Binary Space Partion mesh support for GLScene.
 
   The classes of this unit are designed to operate within a TGLBaseMesh.
-
-  History :  
-   04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility
-   22/06/08 - DaStr - Fixups after converting TGLMeshObject.LightMapTexCoords
-  to TAffineVectorList (thanks Ast) (Bugtracker ID = 2000089)
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   31/03/07 - DaStr - Added $I GLScene.inc
-   14/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   07/03/03 - EG - T-junctions now properly supported and repaired
-   05/03/03 - EG - Preliminary BSP splitting support
-   31/01/03 - EG - Materials support, added CleanupUnusedNodes,
-  MaterialCache support
-   30/01/03 - EG - Creation
-   
 }
 unit GLBSP;
 
@@ -28,8 +13,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLVectorFileObjects, GLMaterial, GLCrossPlatform, GLVectorGeometry,
-  GLVectorLists, GLColor, GLRenderContextInfo;
+  Classes, 
+  GLVectorFileObjects, 
+  GLMaterial, 
+  GLCrossPlatform, 
+  GLVectorGeometry,
+  GLVectorLists, 
+  GLColor, 
+  GLRenderContextInfo;
 
 type
 

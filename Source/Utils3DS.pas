@@ -5,27 +5,6 @@
    Utility functions for the universal 3DS file reader and writer (TFile3DS).
    Essentially, the functions here are the heart of the import library as
    they deal actually with the database and chunks.
-
-  History : 
-       19/06/11 - Yar - Bugfixed undefined result of GetKFSegment (thanks to Johannes Pretorius, Bugtracker ID = 3319394)
-       12/06/10 - Yar - Fixes for Linux x64
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       02/11/07 - DaStr - Fixed incorrect positioning when importing 3ds
-                              animation (Bugtracker ID = 1824372)
-                             Fixed memory leaks in the FreeChunkData() procedure
-                              (Bugtracker ID = 1823781)
-                             Added a standard GLScene header
-       30/03/07 - DaStr - Added $I GLScene.inc
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                              (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       09/03/07 - DaStr - Fixed a potential AV in two InitMeshObj procedures
-                              (thanks Burkhard Carstens) (BugtrackerID = 1678649)
-       27/10/06 - LC - Fixed memory leak in RelMeshObjField (Bugtracker ID = 1585639)
-       12/08/02 -  EG  - ReadMatEntryChunk fix / COLOR_F chunk (coerni)
-  
-
-   (c) Copyright 1999, Dipl. Ing. Mike Lischke (public@lischke-online.de)
-
 }
 unit Utils3DS;
 
@@ -34,7 +13,8 @@ interface
 {$I GLScene.inc}
 {$R-}
 
-uses Classes,
+uses 
+  Classes,
   File3DS,
   Types3DS;
 

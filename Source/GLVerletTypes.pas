@@ -8,43 +8,6 @@
    Note that currently, the SatisfyConstraintForEdge methods push the nodes in
    the edge uniformly - it should push the closer node more for correct physics.
    It's a matter of leverage. 
-
-	 History :  
-       18/11/14 - PW - Renamed VerletClasses.pas to GLVerletTypes
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       25/11/09 - DanB - Fix for TGLVerletGlobalConstraint.TranslateKickbackTorque
-       31/03/07 - DaStr - Added $I GLScene.inc
-       14/04/04 - MF - Fixed force for springs, was referring to deltaP...
-       13/04/04 - MF - Minor drag changes
-       13/04/04 - EG - Added TVCHeightField and TVCSlider, fixed TVCFloor
-                          and TVFSpring, altered the way world Drag operates 
-       06/03/04 - MF - Small updates to accomodate hair
-       11/07/03 - EG - Optimized TVCCube collider
-       11/07/03 - MF - A bit of a documentation effort
-       10/07/03 - MF - Verlets now use spatial partitioning objects to speed
-                          up space queries
-       10/07/03 - MF - Renaming TVerletAssembly to TGLVerletWorld
-       24/06/03 - MF - Added force kickbacks for integration with external
-                          physics. Needs to be split into force+torque and add
-                          friction to the kickback
-       19/06/03 - MF - Added TGLVerletGlobalConstraint.SatisfyConstraintForEdge
-                          and implemented for TVCSphere and TVCCapsule 
-       19/06/03 - MF - Added friction to TVCCylinder
-       19/06/03 - MF - Added surface normals to all colliders - surface
-                          normal is identical to Normalize(Movement)!
-       18/06/03 - MF - Moved FrictionRatio to TGLVerletGlobalFrictionConstraint
-       18/06/03 - EG - Updated TVCCapsule
-       18/06/03 - MF - Updated TVCFloor to use a normal and a point
-       18/06/03 - MF - Added TVCCapsule
-       17/06/03 - MF - Added TVFAirResistance
-       17/06/03 - MF - Added TVCCube collider
-       16/06/03 - MF - Fixed TVFSpring.SetRestlengthToCurrent
-       24/07/02 - EG - Added TVCCylinder
-       18/07/02 - EG - Improved forces & constraints
-       23/06/02 - EG - Stricter encapsulation, fixed some leaks,
-                          Various optimizations (+25%)
-       21/06/02 - EG - Creation (original code by Mattias Fagerlund)
-    
 }
 unit GLVerletTypes;
 
@@ -53,10 +16,16 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, Types,
- //GLScene
-  GLCrossPlatform, GLVectorGeometry, GLVectorLists, GLSpacePartition,
-  GLGeometryBB, GLVectorTypes;
+  Classes, 
+  SysUtils, 
+  Types,
+
+  GLCrossPlatform, 
+  GLVectorGeometry, 
+  GLVectorLists, 
+  GLSpacePartition,
+  GLGeometryBB, 
+  GLVectorTypes;
 
 const
    G_DRAG = 0.0001;

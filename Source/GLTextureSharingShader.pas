@@ -9,23 +9,6 @@
     it uses that material's texture. The referenced material settings will be ignored,
     but the texture's settings (like TextureMode, ImageGamma, ImageBrightness) will be used.
     Instead the local material settings (listed in the collection) will be used.
-    </p>
-
-   History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Fixed light state changes
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       10/04/08 - DaStr - Added a Delpi 5 interface bug work-around
-                              (BugTracker ID = 1938988).
-                             TGLTextureSharingShaderMaterial.GetTextureSharingShader()
-                              is now more safe
-       24/03/08 - DaStr - Small fixups with setting LibMaterial and for
-                               Delphi 5 compatibility (thanks Pascal)
-       21/03/08 - DaStr - Reformated according to VCL standard, made some renamings
-       17/03/08 - mrqzzz - Added IGLMaterialLibrarySupported, moved registration
-       14/03/08 - Pascal - Initial version (contributed to GLScene)
-
 }
 
 unit GLTextureSharingShader;
@@ -33,12 +16,20 @@ unit GLTextureSharingShader;
 interface
 
 uses
-  // VCL
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
 
-  GLScene, GLVectorGeometry, GlColor, GLMaterial, GLStrings,
-  GLVectorFileObjects, XOpenGL, GLState, GLPersistentClasses,
-  {Needed for Delphi 5} GlCrossPlatform, GLCoordinates, GLRenderContextInfo;
+  GLScene, 
+  GLVectorGeometry, 
+  GlColor, GLMaterial, 
+  GLStrings,
+  GLVectorFileObjects, 
+  XOpenGL, 
+  GLState, 
+  GLPersistentClasses, {Needed for Delphi 5} 
+  GlCrossPlatform, 
+  GLCoordinates, 
+  GLRenderContextInfo;
 
 type
   TGLTextureSharingShader = class;

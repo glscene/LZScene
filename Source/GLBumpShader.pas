@@ -22,40 +22,6 @@
    The boUseSecondaryTexCoords bump option tells the shader to use
    the secondary texture coordinates for the diffuse and specular
    texture lookups.
-
-    History :  
-       23/08/10 - Yar - Upgraded program hadles
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       31/03/07 - DaStr - Added $I GLScene.inc
-       25/02/07 - DaStr - Moved registration to GLSceneRegister.pas
-       15/04/05 - SG - Added parallax offset mapping for the BasicARBfp bump method (experimental)
-                          Height data is expected in the normal map alpha channel.
-       21/12/04 - SG - Added light attenutation support through the
-                          boLightAttenutation option in the BumpOptions property.
-       27/10/04 - SG - Added boUseSecondaryTexCoords option to BumpOptions
-       11/10/04 - SG - Added SpecularMode to define the specular highlight equation,
-                          Removed the boDisableSpecular bump option (depricated).
-       06/10/04 - SG - Added special functions for generating the ARB programs
-                          which replace the string constants.
-       02/10/04 - SG - Changed render order a little, minimum texture units
-                          is now 2 for dot3 texcombiner bump method.
-                          Changed vertex programs to accept local program
-                          params, now only 1 vertex and 1 fragment program is
-                          required for all lights.
-                          Vertex programs now apply the primary texture matrix.
-       30/09/04 - SG - Added fragment program logic,
-                          Added bmBasicARBFP bump method, bsTangentExternal
-                          bump space and associated ARB programs,
-                          Various name changes and fixes
-       28/09/04 - SG - Vertex programs now use ARB_position_invariant option.
-       29/06/04 - SG - Quaternion tangent space fix in tangent bump vertex
-                          program.
-       23/06/04 - SG - Added bsTangent option to TBumpSpace,
-                          Added tangent space light vector vertex program.
-       22/06/04 - SG - Creation.
-    
 }
 unit GLBumpShader;
 

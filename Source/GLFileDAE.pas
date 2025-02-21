@@ -3,12 +3,6 @@
 //
 {
    Quake2 MD2 vector file format implementation.
-
-	 History : 
-       17/01/14 - PW - Bugfixed for XE5
-       16/01/14 - PW - Added $I GLScene.inc
-       15/01/14 - PW - Creation
-	 
 }
 unit GLFileDAE;
 
@@ -17,8 +11,11 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLVectorFileObjects, GLApplicationFileIO{, Fmx.FileDAE};
+  Classes, 
+  SysUtils,
+
+  GLVectorFileObjects, 
+  GLApplicationFileIO{, Fmx.FileDAE};
 
 type
    // TGLDAEVectorFile

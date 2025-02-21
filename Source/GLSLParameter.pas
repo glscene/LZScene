@@ -2,9 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-	 History :  
-     14/03/11 - Yar - Creation
-   
+   Parameters for GLSL   
 }
 unit GLSLParameter;
 
@@ -15,7 +13,10 @@ interface
 
 uses
   Classes,
-  OpenGLTokens, GLVectorTypes, GLTextureFormat, GLRenderContextInfo;
+  OpenGLTokens, 
+  GLVectorTypes, 
+  GLTextureFormat, 
+  GLRenderContextInfo;
 
 type
 

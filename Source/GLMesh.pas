@@ -3,31 +3,6 @@
 //
 {
   Raw Mesh support in GLScene.
-
-  This unit is for simple meshes and legacy support, GLVectorFileObjects
-  implements more efficient (though more complex) mesh tools.
-   History :  
-   10/11/12 - PW - Added CPP compatibility: changed some vector arrays to records
-   26/04/11 - Yar - Added VertexColor property (thanks to Filippo Forlani)
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   31/07/07 - DanB - Implemented AxisAlignedDimensionsUnscaled for TGLMesh
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   14/03/07 - DaStr - Added explicit pointer dereferencing
-                  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   06/07/02 - EG - Mesh vertex lock only performed if context is active
-   18/03/02 - EG - Color "leak" fix (Nelson Chu)
-   21/01/02 - EG - TGLVertexList.OnNotifyChange now handled
-   21/02/01 - EG - Now XOpenGL based (multitexture)
-   30/01/01 - EG - Added VertexList locking
-   19/07/00 - EG - Introduced enhanced mesh structure
-   11/07/00 - EG - Just discovered and made use of "fclex" :)
-   18/06/00 - EG - Creation from split of GLObjects,
-                    TGLVertexList now uses TVertexData,
-                    Rewrite of TGLMesh.CalcNormals (smaller & faster)
-   
 }
 unit GLMesh;
 
@@ -36,10 +11,20 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLStrings,  XOpenGL,  GLContext,  GLScene,
-  GLVectorGeometry,  OpenGLTokens,  OpenGLAdapter,  GLState,
-  GLColor, GLBaseClasses,  GLRenderContextInfo, GLVectorTypes;
+  Classes, 
+  SysUtils,
+  GLStrings,  
+  XOpenGL,  
+  GLContext,  
+  GLScene,
+  GLVectorGeometry,  
+  OpenGLTokens,  
+  OpenGLAdapter,  
+  GLState,
+  GLColor, 
+  GLBaseClasses,  
+  GLRenderContextInfo, 
+  GLVectorTypes;
 
 type
   TMeshMode = (mmTriangleStrip, mmTriangleFan, mmTriangles, mmQuadStrip,

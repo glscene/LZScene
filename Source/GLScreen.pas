@@ -6,11 +6,6 @@
 }
 unit GLScreen;
 
-// screen    - This units contains routines to interact with the screen/desktop.
-// Version     - 0.0.8
-// Last Change - 30. September 1998
-// for more information see help file
-
 interface
 
 {$I GLScene.inc}
@@ -36,8 +31,6 @@ type
   // window-to-screen fitting
   TWindowFitting = (wfDefault, wfFitWindowToScreen, wfFitScreenToWindow);
 
-  // TGLDisplayOptions
-  //
   TGLDisplayOptions = class(TPersistent)
   private
     FFullScreen: Boolean;

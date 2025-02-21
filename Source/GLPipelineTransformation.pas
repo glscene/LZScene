@@ -2,12 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-    History :  
-     13/12/13 - PW - Added GLSLog unit
-     11/05/11 - Yar - Ranamed TGLPipelineTransformation to TGLTransformation
-     16/11/10 - Yar - Added NormalModelMatrix
-     23/08/10 - Yar - Creation
-  
+  PipelineTransformations
 }
 
 unit GLPipelineTransformation;

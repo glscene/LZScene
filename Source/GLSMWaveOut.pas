@@ -3,14 +3,6 @@
 //
 {
    Basic sound manager based on WinMM 
-
-	 History :  
-       17/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       25/07/09 - DaStr - Added $I GLScene.inc
-       30/05/09 - DanB - Fixes for AV when sound finishes, and was repeating the same code more than necessary.
-       24/04/09 - DanB - Creation, split from GLSound.pas, to remove windows dependency
-	 
 }
 unit GLSMWaveOut;
 
@@ -19,12 +11,14 @@ interface
 {$I GLScene.inc}
 {$IFDEF UNIX}{$Message Error 'Unit not supported'}{$ENDIF}
 
-uses Classes, GLSound, MMSystem, GLSoundFileObjects;
+uses 
+  Classes, 
+  GLSound, 
+  MMSystem, 
+  GLSoundFileObjects;
 
 type
 
-	// TGLSMWaveOut
-	//
    { Basic sound manager based on WinMM <i>waveOut</i> function.
       This manager has NO 3D miximing capacity, this is merely a default manager
       that should work on any windows based system, and help showcasing/testing

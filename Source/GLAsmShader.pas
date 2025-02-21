@@ -5,21 +5,6 @@
     TGLAsmShader is a wrapper for all ARB shaders
     This component is only a template and has to be replaced with a
     proper version by someone who uses ARB shaders more then me.
-
-  History :  
-       23/08/10 - Yar - Upgraded program hadles
-       04/06/10 - Yar - Replace OpenGL functons to OpenGLAdapter
-       28/07/09 - DaStr - Added GeomertyShader support (thanks YarUnderoaker)
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)
-       20/03/07 - DaStr - TGLCustomAsmShader now generates its own events
-                             All outside stuff moved back to TGLPhongShader
-       22/02/07 - DaStr - Initial version (contributed to GLScene)
-
-    Previous version history:
-      v1.0    12 March     '2005  Creation
-      v1.1    31 October   '2006  TGLCustomAsmShader.DoUnApply() Fix
-                                  TGLAsmShader has more stuff in the published section
 }
 unit GLAsmShader;
 

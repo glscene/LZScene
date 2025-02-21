@@ -3,9 +3,6 @@
 //
 {
   Edits a TGLXCollection
-   History :  
-     06/04/00 - Egg - Creation
-
 }
 unit FXCollectionEditor;
 

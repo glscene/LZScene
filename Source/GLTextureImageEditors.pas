@@ -3,14 +3,6 @@
 //
 {
    Standard texture image editors for standard texture image classes.
-
-	 History :  
-       10/11/12 - PW - Added CPPB compatibility: used dummy method instead
-                          abstract class function Edit for GLS_CPPB
-       22/01/10 - Yar - Added to TGLBlankImage property editor ability to set the depth
-       03/07/04 - LR - Make change for Linux
-       24/07/03 - EG - Creation
-    
 }
 unit GLTextureImageEditors;
 
@@ -19,13 +11,12 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLTexture, GLProcTextures;
+  Classes, 
+  GLTexture, 
+  GLProcTextures;
 
 
 type
-
-   // TGLTextureImageEditor
-   //
    TGLTextureImageEditor = class(TObject)
 		public
          { Public Properties }
@@ -37,8 +28,6 @@ type
 
    TGLTextureImageEditorClass = class of TGLTextureImageEditor;
 
-   // TGLBlankTIE
-   //
    TGLBlankTIE = class(TGLTextureImageEditor)
 		public
          { Public Properties }

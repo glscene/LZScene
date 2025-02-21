@@ -3,22 +3,20 @@
 //
 {
    Helper classes and methods for Quake3 MD3 actors
-
-   History :
-    14/04/03 - SG - Streamlined the TMD3TagList.LoadFromStream a little
-    04/04/03 - SG - Changes made to LoadQ3Skin procedure (as suggested by Mrqzzz)
-    03/04/03 - SG - Added LoadQ3Skin procedure
-    01/04/03 - Mrqzzz - "LEGS_" animations read from .CFG fixed
-    17/02/03 - SG - Creation
 }
 unit Q3MD3;
 
 interface
 
 uses
-  Classes, SysUtils,
-  GLApplicationFileIO, GLVectorGeometry, GLVectorFileObjects,
-  GLVectorLists, GLMaterial, FileMD3;
+  Classes, 
+  SysUtils,
+  GLApplicationFileIO, 
+  GLVectorGeometry, 
+  GLVectorFileObjects,
+  GLVectorLists, 
+  GLMaterial, 
+  FileMD3;
 
 type
   // This class is used to extract the tag transform information

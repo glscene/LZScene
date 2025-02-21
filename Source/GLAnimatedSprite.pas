@@ -3,37 +3,26 @@
 //
 {
   A sprite that uses a scrolling texture for animation.
-
-   History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       10/04/08 - DaStr - Added a Delpi 5 interface bug work-around to
-                              TSpriteAnimation (BugTracker ID = 1938988)
-       25/03/07 - DaStr - Added GLCrossPlatform to uses for Delphi5 compatibility
-       14/03/07 - DaStr - Added IGLMaterialLibrarySupported to TSpriteAnimation
-                             Published TGLAnimatedSprite.Visible
-                             Fixed TGLAnimatedSprite.SetMaterialLibrary
-                                                      (subcribed for notification)
-       21/07/04 - SG - Added Margins to Animations, Added comments.
-       20/07/04 - SG - Added FrameRate (alternative for Interval),
-                          Added Interval to Animations, will override
-                          sprite interval if not equal to zero.
-                          Some minor fixes.
-       13/07/04 - SG - Creation
-     
 }
 unit GLAnimatedSprite;
 
 interface
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLScene, GLVectorGeometry, OpenGLTokens, GLMaterial,
-  GLPersistentClasses, GLXCollection, GLCrossPlatform, GLRenderContextInfo,
-  GLBaseClasses, GLContext, GLState;
+  GLScene, 
+  GLVectorGeometry, 
+  OpenGLTokens, 
+  GLMaterial,
+  GLPersistentClasses, 
+  GLXCollection, 
+  GLCrossPlatform, 
+  GLRenderContextInfo,
+  GLBaseClasses, 
+  GLContext, 
+  GLState;
 
 type
   TSpriteAnimFrame = class;

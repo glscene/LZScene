@@ -3,28 +3,6 @@
 //
 {
   Class for managing a ROAM (square) patch.
-
-   History :  
-   29/12/14 - PW - Fixed SafeTesselation function that caused gaps between tiles
-   22/08/10 - DaStr - Fixed compiler warning
-   27/07/10 - YP - Safe tesselation operation to avoid AV after a memory shift
-   26/07/10 - YP - Invalid range test when splitting, we need to check space for n and n+1
-   20/05/10 - Yar - Fixes for Linux x64
-   16/10/08 - UweR - Compatibility fix for Delphi 2009
-   30/03/07 - DaStr - Added $I GLScene.inc
-   19/10/06 - LC - Added code to gracefully handle the case when MaxCLODTriangles is reached.
-  It will now increase the buffer instead of not splitting. Bugtracker ID=1574111
-   09/10/06 - Lin - Added OnMaxCLODTrianglesReached event.
-   09/06/06 - Lin - Bugfix: Stop splitting Triangles when MaxCLODTriangles is reached (prevents Access Violations)
-   10/06/05 - Mathx - Protection against cards that have GL_EXT_compiled_vertex_array
-  but not GL_EXT_draw_range_elements
-   25/04/04 - EG - Occlusion testing support
-   06/02/03 - EG - Adaptative variance computation
-   03/12/02 - EG - Minor ROAM tessel/render optimizations
-   15/06/02 - EG - Fixed patch rendering bug "introduced" by TBaseList fix
-   24/02/02 - EG - Hybrid ROAM-stripifier engine
-   10/09/01 - EG - Creation
-   
 }
 unit GLROAMPatch;
 
@@ -34,16 +12,19 @@ interface
 
 uses
   SysUtils,
-  GLVectorGeometry, GLHeightData, GLVectorLists, GLCrossPlatform, GLContext,
-  OpenGLTokens, XOpenGL;
+  GLVectorGeometry, 
+  GLHeightData, 
+  GLVectorLists, 
+  GLCrossPlatform, 
+  GLContext,
+  OpenGLTokens, 
+  XOpenGL;
 
 type
 
   // Exception use by Split for SafeTesselate
   EGLROAMException = class(Exception);
 
-  // TROAMTriangleNode
-  //
   PROAMTriangleNode = ^TROAMTriangleNode;
 
   TROAMTriangleNode = packed record

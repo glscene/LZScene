@@ -6,53 +6,6 @@
 
    See readme.txt in the Demos/SpecialsFX/Shadows directory. 
    By René Lindsay.
-
-  History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       29/05/08 - DaStr - Removed unused variables in TGLZShadows.CalcShadowTexture()
-       20/01/08 - DaStr - Bugfixed TGLZShadows.HardSet(Bugtracker ID = 1875708)
-                             Removed some old commented out code
-                             Removed TGLZShadows.Trnc() procedure - there is a
-                              similar procedure in GLVectorGeometry.pas
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       24/03/07 - DaStr - Improved Cross-Platform compatibility
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1684432)
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-       16/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       08/02/07 - Lin - LONG overdue bugfix: Now sets GL_BLEND to prevent black screen.(thanks Jurgen Linker)
-       08/03/06 - ur - Fixed warnigs for Delphi 2006
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-       03/07/04 - LR - Added ifdef for Linux
-       07/03/02 - Lin - Removed XRes/YRes properties - Shadow-res now always matches viewer-res.
-       21/02/02 - Lin - Now uses 1 Byte per pixel, instead of 4. Faster, and uses less Video Ram.
-       14/02/02 - Lin - Bugfix: No longer stalls the Cadencer + small speed improvements
-       12/02/02 - Lin - Bilinear filtering of soft shadow edges - much better quality
-       08/02/02 - Lin - Removed the material property (not used)
-       05/02/02 - Lin - Tolerance scaling - reduces shadow-creeping(far) and self-shadowing(near)
-       05/02/02 - Lin - A little more speed in 16in1 mode (but 9in1 is still the best quality)
-       05/02/02 - EG  - Fixed glTex[Sub]Image calls
-       20/11/01 - EG  - Removed warnings (axed out... hope I didn't broke anything)
-       17/10/01 - Lin - Added Xres and Yres...makes shadow texture size independent from viewer.
-                           Calculations now use z-depth in stead of world distance
-                           - more acurate, and 15% faster.
-       27/09/01 - Lin - Bypass the GLScene Material.texture.image, and send the shadow
-                           texture directly to OpenGL. This increased speed by almost 20%
-       25/09/01 - Lin - Add Optimise property to specify faster rastering methods
-       07/09/01 - Lin - Restructure zBuffer code, to support the new TGLMemoryViewer
-       06/09/01 - Lin - Created TGLZShadows object, for casting shadows
-       30/08/01 - Lin - More speed + bugfixes
-       24/07/01 - Lin - Greatly improved speed
-       07/07/01 - Lin - Added PixelToWorld, WorldToPixel, and PixelToDistance
-       01/07/01 - Lin - Precalculate the corner vectors in GetDepthBuffer,
-                            to speed up FastVectorToScreen and FastScreenToVector
-       28/06/01 - Lin - First operational code
-       26/06/01 - Lin - Creation of zBuffer class
-  
 }
 
    //--------These formulas are the key to making use of the z-Buffer--------
@@ -75,11 +28,22 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLScene, GLVectorGeometry, GLGraphics, GLObjects, GLContext, GLViewer,
-  GLColor, GLRenderContextInfo, GLState, GLTextureFormat,
-  OpenGLTokens, XOpenGL , GLVectorTypes;
+  GLScene, 
+  GLVectorGeometry, 
+  GLGraphics, 
+  GLObjects, 
+  GLContext, 
+  GLViewer,
+  GLColor, 
+  GLRenderContextInfo, 
+  GLState, 
+  GLTextureFormat,
+  OpenGLTokens, 
+  XOpenGL, 
+  GLVectorTypes;
 
 
 type

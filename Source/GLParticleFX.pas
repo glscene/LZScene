@@ -8,62 +8,6 @@
    particle depth-sorting (allowing correct rendering of interwoven separate
    fire and smoke particle systems for instance).
 
-    History :  
-       21/01/01 - DanB - Added "inherited" call to TGLParticleFXEffect.WriteToFiler
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       22/01/10 - Yar  - Added bmp32.Blank:=false for memory allocation
-                            and fix RegisterAsOpenGLTexture
-       12/10/08 - DanB - fix to TGLLifeColoredPFXManager.ComputeRotateAngle (it used lck.FDoScale
-                            instead of lck.FDoRotate), made more use of RCI instead of accessing via global variables.
-                            Changed order of transformations when rendering particles, now does rotation+scaling before translation.
-                            Disabled FRotationCenter,
-       15/02/08 - Mrqzzz - Fixed SizeScale in Lifetimes of TGLBaseSpritePFXManager (was ignored)
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       02/04/07 - DaStr - TPFXLifeColors now inherits from TOwnedCollection
-                             (thanks Burkhard Carstens)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       14/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       24/01/07 - DaStr - TGLSourcePFXEffect.Burst and TGLBaseSpritePFXManager.RenderParticle bugfixed
-                             TGLLifeColoredPFXManager.RotateVertexBuf bugfixed (all based on old code)
-       28/10/06 - LC - Fixed access violation in TGLParticleFXRenderer. Bugtracker ID=1585907 (thanks Da Stranger)
-       19/10/06 - LC - Fixed memory leak in TGLParticleFXManager. Bugtracker ID=1551866 (thanks Dave Gravel)
-       08/10/05 - Mathx - Fixed access violation when a PFXManager was removed from
-                             form but a particleFX still had a reference to it (added
-                             the FUsers property). Butracker ID=783625.
-       17/02/05 - EG - Restored correct PFXSource.Burst relative/absolute behaviour,
-                          EffectsScale support not added back (no clue what it does... Mrqz?)
-       23/11/04 - SG - Fixed memory leak in TGLLifeColoredPFXManager (kenguru)
-       03/10/04 - Mrqzzz - added property TGLParticleFXEffect.DisabledIfOwnerInvisible. Fixed PositionDispersionRange to honour VelocityMode=svmRelative
-       25/09/04 - Graham Kennedy - Fixed restore of currentTexturingMode
-       09/09/04 - Mrqzzz - added property TGLParticleFXEffect.EffectScale allowing different scaling of effect with same manager. TGLParticleFXEffect.ArchiveVersion updated to 4
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-                               Replace direct access of some properties by
-                               a getter and a setter.
-                               fixed undefined TPFXRegion error in BCB
-       29/08/04 - Mrqzzz - fixed particles initial position when VelocityMode=svmRelative
-       28/08/04 - Mrqzzz - fixed particles direction when VelocityMode=svmRelative
-       09/07/04 - Mrqzzz - small fixup (TGLSourcePFXEffect.WriteToFiler Archive V.4)
-       08/07/04 - Eugene Kryukov - Added rotation for particles, RotateAngle in
-                                      LifeColor. And added AbsoluteRotation for TGLDynamicPFXManager
-       25/04/04 - EG - Added friction, Life sizes, multiple sprites per texture
-                          and sprites sharing
-       24/04/04 - Mrqzzz - Added property "enabled" to TGLSourcePFXEffect
-       15/04/04 - EG - AspectRatio and Rotation added to sprite PFX,
-                          improved texturing mode switches
-       26/05/03 - EG - Improved TGLParticleFXRenderer.BuildList
-       05/11/02 - EG - Enable per-manager blending mode control
-       27/01/02 - EG - Added TGLLifeColoredPFXManager, TGLBaseSpritePFXManager
-                          and TGLPointLightPFXManager.
-       23/01/02 - EG - Added ZWrite and BlendingMode to the PFX renderer,
-                          minor sort and render optims
-       22/01/02 - EG - Another RenderParticle color lerp fix (GliGli)
-       20/01/02 - EG - Several optimization (35% faster on Volcano bench)
-       18/01/02 - EG - RenderParticle color lerp fix (GliGli)
-       08/09/01 - EG - Creation (GLParticleFX.omm)
-    
 }
 unit GLParticleFX;
 
@@ -72,11 +16,28 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene,  OpenGLTokens,  GLCrossPlatform,  GLState, GLVectorTypes,
-  GLPersistentClasses,  GLVectorGeometry,  GLXCollection,  GLMaterial,
-  GLCadencer, GLVectorLists,  GLGraphics,  GLContext,  GLColor,  GLBaseClasses,
-  GLCoordinates,  GLRenderContextInfo,  GLManager,  GLTextureFormat, GLRandomGenerator;
+  Classes, 
+  SysUtils,
+  GLScene,  
+  OpenGLTokens,  
+  GLCrossPlatform,  
+  GLState, 
+  GLVectorTypes,
+  GLPersistentClasses,  
+  GLVectorGeometry,  
+  GLXCollection,  
+  GLMaterial,
+  GLCadencer, 
+  GLVectorLists,  
+  GLGraphics,  
+  GLContext,  
+  GLColor,  
+  GLBaseClasses,
+  GLCoordinates,  
+  GLRenderContextInfo,  
+  GLManager,  
+  GLTextureFormat, 
+  GLRandomGenerator;
 
 const
   cPFXNbRegions = 128; // number of distance regions
@@ -88,8 +49,6 @@ type
   TGLParticleFXManager = class;
   TGLParticleFXEffect = class;
 
-  // TGLParticle
-  //
   { Base class for particles.
      The class implements properties for position, velocity and time, whatever
      you need in excess of that will have to be placed in subclasses (this
@@ -202,8 +161,6 @@ type
   TGLParticleFXRenderer = class;
   TPFXCreateParticleEvent = procedure(Sender: TObject; aParticle: TGLParticle) of object;
 
-  // TGLParticleFXManager
-  //
   { Base class for particle FX managers.
      Managers take care of life and death of particles for a particular
      particles FX system. You can have multiple scene-wide particle
@@ -314,8 +271,6 @@ type
     property Cadencer;
   end;
 
-  // TGLParticleFXEffect
-  //
   { Base class for linking scene objects to a particle FX manager. }
   TGLParticleFXEffect = class(TGLObjectPostEffect)
   private
@@ -520,8 +475,6 @@ type
     property DisabledIfOwnerInvisible: boolean read FDisabledIfOwnerInvisible write FDisabledIfOwnerInvisible;
   end;
 
-  // TGLDynamicPFXManager
-  //
   { An abstract PFX manager for simple dynamic particles.
      Adds properties and progress implementation for handling moving particles
      (simple velocity and const acceleration integration). }
@@ -563,8 +516,6 @@ type
     property Friction: Single read FFriction write FFriction;
   end;
 
-  // TPFXLifeColor
-  //
   TPFXLifeColor = class(TCollectionItem)
   private
      
@@ -610,8 +561,6 @@ type
 
   end;
 
-  // TPFXLifeColors
-  //
   TPFXLifeColors = class(TOwnedCollection)
   protected
      
@@ -632,8 +581,6 @@ type
     procedure PrepareIntervalRatios;
   end;
 
-  // TGLLifeColoredPFXManager
-  //
   { Base PFX manager for particles with life colors.
      Particles have a core and edge color, for subclassing. }
   TGLLifeColoredPFXManager = class(TGLDynamicPFXManager)
@@ -741,8 +688,6 @@ type
     property LifeColors;
   end;
 
-  // TGLPolygonPFXManager
-  //
   { Polygonal particles FX manager.
      The particles of this manager are made of N-face regular polygon with
      a core and edge color. No texturing is available. 
@@ -782,8 +727,6 @@ type
     property LifeColors;
   end;
 
-  // TSpriteColorMode
-  //
   { Sprite color modes.
       
       scmFade: vertex coloring is used to fade inner-outer
@@ -941,15 +884,8 @@ type
 function GetOrCreateSourcePFX(obj: TGLBaseSceneObject; const name: string = ''): TGLSourcePFXEffect;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
-
-// GetOrCreateSourcePFX
-//
 
 function GetOrCreateSourcePFX(obj: TGLBaseSceneObject; const name: string = ''): TGLSourcePFXEffect;
 var

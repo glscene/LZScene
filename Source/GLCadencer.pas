@@ -3,41 +3,6 @@
 //
 {
    Cadencing composant for GLScene (ease Progress processing)
-
-  History :  
-       10/11/12 - PW - Added CPP compatibility: restored GetCurrenttime instead of GetCurrentTime
-       07/08/11 - Yar - Added OnTotalProgress event, which happens after all iterations with fixed delta time (thanks Controller)
-       06/02/11 - Predator - Improved TGLCadencer for Lazarus
-       29/11/10 - Yar - Changed TASAPHandler.FMessageTime type to unsigned (thanks olkondr)
-       21/11/09 - DaStr - Bugfixed FSubscribedCadenceableComponents
-                             (thanks Roshal Sasha)
-       09/11/09 - DaStr - Improved FPC compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       21/09/07 - DaStr - Added TGLCadencer.SetCurrentTime()
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-       02/08/04 - LR, YHC - BCB corrections: changed GetCurrentTime to GetCurrenttime
-       28/06/04 - LR - Added some ifdef Win32 for Linux
-       20/10/03 - EG - Fixed issues about cadencer destruction
-       29/08/03 - EG - Added MinDeltaTime and FixedDeltaTime
-       21/08/03 - EG - Fixed Application.OnIdle reset bug (Solerman Kaplon)
-       04/07/03 - EG - Improved TimeMultiplier transitions (supports zero)
-       06/06/03 - EG - Added cmApplicationIdle Mode
-       19/05/03 - EG - Added Reset (Roberto Bussola)
-       04/03/02 - EG - Added SetTimeMultiplier
-       01/07/02 - EG - Added TGLCadencedComponent
-       05/12/01 - EG - Fix in subscription mechanism (D6 IDE freezes gone?)
-       30/11/01 - EG - Added IsBusy (thx Chris S)
-       08/09/01 - EG - Added MaxDeltaTime limiter
-       23/08/01 - EG - No more "deprecated" warning for Delphi6
-       12/08/01 - EG - Protection against "timer flood"
-       19/07/01 - EG - Fixed Memory Leak in RegisterASAPCadencer,
-                          Added speed limiter TASAPHandler.WndProc
-       01/02/01 - EG - Fixed "Freezing" when Enabled set to False
-       08/10/00 - EG - Added TASAPHandler to support multiple ASAP cadencers
-       19/06/00 - EG - Fixed TGLCadencer.Notification
-       14/04/00 - EG - Minor fixes
-       13/04/00 - EG - Creation
-  
 }
 unit GLCadencer;
 
@@ -46,8 +11,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  GLScene, GLCrossPlatform, GLBaseClasses,
-  Classes, Types, Forms, lmessages, SyncObjs;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses,
+  Classes, 
+  Types, 
+  Forms, 
+  lmessages, 
+  SyncObjs;
 //**************************************
 
 type

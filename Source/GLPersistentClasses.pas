@@ -11,35 +11,6 @@
 
    Internal Note: stripped down versions of XClasses & XLists.
 
-  History :  
-       10/12/14 - PW - Renamed PersistentClasses to GLPersistentClasses
-       10/05/12 - Yar - Patched TBinaryReader.ReadFloat/WriteFloat for Win64 (thanks Massimo Zanoletti)
-                           In future need to replase extended floating point type! 
-       06/12/10 - DaStr - Added GUID to IPersistentObject
-       19/08/10 - Yar - Fixed WriteWideString for empty strings
-       20/05/10 - Yar - Fixes for Linux x64
-       07/11/09 - DaStr - Improved FPC compatibility (BugtrackerID = 2893580)
-       16/10/08 - UweR - Delphi 2009 compatibility fix for TPersistentObject, TTextReader and TTextWriter
-       16/10/08 - DanB - Delphi 2009 compatibility fix for TBinaryReader.ReadString / WriteString
-       10/04/08 - DaStr - Added classes TGLInterfacedPersistent and
-                              TGLInterfacedCollectionItem (BugTracker ID = 1938988)
-       11/02/08 - DaStr - Bugfixed TPersistentObjectList.Move() once again
-                             (BugTracker ID = 1857974)
-                             (thanks Yann PAPOUIN and Burkhard Carstens)
-       04/02/08 - DaStr - Bugfixed TPersistentObjectList.Move() (BugTracker ID = 1857974)
-       06/03/07 - DaStr - Added TGLOwnedPersistent
-       04/01/04 - EG - Fixed ReadString & ReadWideString for empty strings (thx Kenguru)
-       28/06/04 - LR - Removed ..\ from the GLScene.inc
-       08/12/03 - EG - TBinaryReader/Writer no longer rely on VCL TReader/TWriter
-       26/12/03 - EG - Added sorting support to TPersistentObjectList + misc. changes
-       04/09/03 - EG - Improved some TPersistentObjectList methods
-       12/02/03 - EG - Added IPersistentObject
-       09/09/01 - EG - Optimized Pack (x2.5)
-       14/08/01 - EG - Added AfterObjectCreatedByReader
-       03/08/01 - EG - Big update with addition of Virtual filers
-       24/07/01 - EG - D6-related changes
-       15/03/01 - EG - Creation
-  
 }
 unit GLPersistentClasses;
 
@@ -62,8 +33,6 @@ type
   end;
 
 
-  // TVirtualReader
-  //
   { Virtual layer similar to VCL's TReader (but reusable) }
   TVirtualReader = class
   private

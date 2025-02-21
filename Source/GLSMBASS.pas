@@ -8,23 +8,6 @@
        sound source velocity
        looping (sounds are played either once or forever)
        source priorities (not relevant, channels are not limited)
-    
-
-	 History :  
-       14/01/14 - PW - Updated to BASS 2.4 thanks to Ian Luck
-       07/01/10 - DaStr - Fixed a bug with an initial Paused or Muted state of
-                              sound source and with sscSample in aSource.Changes
-       07/11/09 - DaStr - Improved FPC compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       21/03/08 - DanB - Updated to BASS Version 2.3
-       15/03/08 - DaStr - Added $I GLScene.inc
-       09/05/04 - GAK - Updated to BASS Version 2.0, and swapped to Dynamic DLL loading
-       24/09/02 - EG - BASS activation errors no longer result in Asserts (ignored)
-       27/02/02 - EG - Added 3D Factors and Environment support
-       05/02/02 - EG - BASS 1.4 compatibility
-       05/02/01 - EG - Fixed TGLSMBASS.CPUUsagePercent
-	    13/01/01 - EG - Creation (compat BASS 0.8)
-	 
 }
 unit GLSMBASS;
 
@@ -33,19 +16,20 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, Forms, Controls,
+  Classes, 
+  SysUtils, 
+  Forms, 
+  Controls,
 
-  //GLScene
-  GLSound, GLScene, Bass, GLVectorGeometry;
+  Bass,
+  GLSound, 
+  GLScene, 
+  GLVectorGeometry;
 
 type
 
-   // TBASS3DAlgorithm
-   //
    TBASS3DAlgorithm = (algDefault, algOff, algFull, algLight);
 
-	// TGLSMBASS
-	//
 	TGLSMBASS = class (TGLSoundManager)
 	   private
 	       

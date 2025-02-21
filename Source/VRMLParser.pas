@@ -3,14 +3,6 @@
 //
 {
    VRML file format parser.
-
-    History : 
-       02/04/07 - DaStr - Added $I GLScene.inc
-       29/03/07 - DaStr - Added missing parameters in procedure's implementation
-                              (thanks Burkhard Carstens) (Bugtracker ID = 1681409)
-       25/01/05 - SG - Added ShapeHints (creaseAngle), Normal and TexCoord support
-       14/01/05 - SG - Added to CVS
-    
 }
 unit VRMLParser;
 
@@ -19,7 +11,11 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, GLVectorTypes, GLVectorLists;
+  Classes, 
+  SysUtils, 
+  
+  GLVectorTypes, 
+  GLVectorLists;
 
 type
   TVRMLNode = class

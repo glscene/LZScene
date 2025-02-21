@@ -1,11 +1,6 @@
 //
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
-{
-    History: 
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC
-                                                         (BugTracekrID=1681585)
-}
 unit GLSModuleLoader;
 {******************************************************************}
 {                                                                  }

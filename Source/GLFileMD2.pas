@@ -3,12 +3,6 @@
 //
 {
    Quake2 MD2 vector file format implementation.
-
-	 History : 
-       28/08/10 - Yar - Bugfix for FPC 2.5.1 (Thanks Predator)
-       31/03/07 - DaStr - Added $I GLScene.inc
-       05/06/03 - SG - Separated from GLVectorFileObjects.pas
-
 }
 unit GLFileMD2;
 
@@ -17,13 +11,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLVectorFileObjects, GLApplicationFileIO, 
+  Classes, 
+  SysUtils,
+
+  GLVectorFileObjects, 
+  GLApplicationFileIO, 
   FileMD2;
 
 type
-   // TGLMD2VectorFile
-   //
    { The MD2 vector file (Quake2 actor file).
       Stores a set of "frames" describing the different postures of the actor,
       it may be animated by TGLActor. The "Skin" must be loaded indepentendly
@@ -37,29 +32,19 @@ type
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
-
-
 
 
 // ------------------
 // ------------------ TGLMD2VectorFile ------------------
 // ------------------
 
-// Capabilities
-//
 class function TGLMD2VectorFile.Capabilities : TGLDataFileCapabilities;
 begin
    Result:=[dfcRead];
 end;
 
-// LoadFromStream
-//
 procedure TGLMD2VectorFile.LoadFromStream(aStream : TStream);
 var
    i, j : Integer;

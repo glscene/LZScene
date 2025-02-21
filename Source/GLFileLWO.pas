@@ -3,19 +3,7 @@
 //
 {
     Support-code to load Lightwave LWO Files (v6.0+, partial support).
-
-  History :  
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       30/03/07 - DaStr - Added $I GLScene.inc$I GLScene.inc
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       14/11/02 - EG - Added header, fixed warnings
-       16/11/02 - BJ - Added smooth normals with crease angle
-       17/11/02 - BJ - Added 2 and 4 point ngons -> triangles
-       17/11/02 - BJ - Added Enviroment Map Image -> Cubic Projection Map
-    
-
-   Original code: "Brian Johns" <brianjohns1@hotmail.com>
+    Original code: "Brian Johns"
 }
 unit GLFileLWO;
 
@@ -23,7 +11,9 @@ interface
 
 {$I GLScene.inc}
 
-uses Classes,
+uses 
+  Classes,
+
   GLVectorFileObjects,
   LWObjects;
 

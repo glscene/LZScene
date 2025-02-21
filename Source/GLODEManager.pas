@@ -4,119 +4,6 @@
 {
   An ODE Manager for GLScene.
 
-  Where can I find ... ? 
-     GLScene              (http://glscene.org)
-     Open Dynamics Engine (http://opende.sourceforge.org)
-     DelphiODE            (http://www.cambrianlabs.com/Mattias/DelphiODE)
-   
-
-  Notes:
-  This code is still being developed so any part of it may change at anytime.
-  To install use the GLS_ODE?.dpk in the GLScene/Delphi? folder.
-
-   History :  
-     10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-     21/01/01 - DanB - Added "inherited" call to TODEElementPlane.WriteToFiler
-     23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-     14/06/10 - YP  - Sub-element translation code in CalibrateCenterOfMass removed
-     22/04/10 - Yar - Fixes after GLState revision
-     05/03/10 - DanB - More state added to TGLStateCache
-     17/11/09 - DaStr - Improved Unix compatibility
-                           (thanks Predator) (BugtrackerID = 2893580)
-     08/12/08 - PR - dBodySetMass no longer accepts zero mass. check added
-                         joint parms now have a 1 appended to them for first parm
-                         example dParamLoStop is now dParamLoStop1
-     17/10/08 - DanB - changed some NotifyChange(Sender) calls to NotifyChange(Self)
-     12/04/08 - DaStr - Cleaned up uses section
-                            (thanks Sandor Domokos) (BugtrackerID = 1808373)
-     10/04/08 - DaStr - Removed compiler hints from TGLODEDynamic.AddNewElement()
-     19/03/08 - Mrqzzz - by DAlex : Added different geom colors;
-                            Don't create contact between static objects;
-                            In Destroying procedures placed to last line the "Inherited"
-     28/02/08 - Mrqzzz - Changed Axis2 to XHMGVector on universal joint
-                             creation in TODEJointUniversal.Create
-     06/02/08 - Mrqzzz - Upgrade to ODE 0.9 (upgrade by by Paul Robello;
-                             fixes for runtime creation)
-     25/12/07 - DaStr  - Fixed access violation in TGLODEManager.Destroy()
-                             (thanks Sandor Domokos) (BugtrackerID = 1808371)
-     30/11/07 - Mrqzzz - Changed parameters in OnCollision event (TODEObjectCollisionEvent)
-     10/10/07 - Mrqzzz - Fixed in TGLODEDynamic.AlignObject the explocit
-                             reference to ODEGL.ODERToGLSceneMatrix(m,R^,pos^)
-                             to avoid ambiguous overloading
-     08/09/07 - Mrqzzz - small changes in unit references (last reference is to odeimport) in order to
-                           make GLODEManager compatible with non-GLODEManager based ODE worlds
-                           Added public property "ContactGroup"
-     24/08/07 - Mrqzzz - Updated GetSurfaceFromObject to support correctly Trimesh collision
-     07/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-                           Added $I GLScene.inc
-     28/03/07 - DaStr - Renamed parameters in some methods
-                           (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-     01/03/05 - Mrqzzz - Moved in TODEJointBase protected code from Loaded to
-                          public DoLoaded.
-     20/12/04 - SG - TGLODEStatic objects now realign geoms on step,
-                        Fix for Hinge2 and Universal joints,
-                        Fix for TGLODEDynamic.Enabled property persistence.
-     10/12/04 - SG - Added TODEElementPlane,
-                        Fixed TODEElementCone.Render function.
-     09/12/04 - Mathx - Added getX and getOrCreateX functions.
-     19/11/04 - SG - Major structural changes/improvements,
-                        Dropped TGLBaseSceneObject style object in favour of
-                        TGLBehaviour style ones,
-                        TGLODEBaseBehaviour is now TGLODEBehaviour,
-                        TGLODEDynamicBehaviour is now TGLODEDynamic,
-                        TGLODEStaticBehaviour is now TGLODEStatic,
-                        Added TODEJointParams to handle joint axis parameters,
-                        Added RenderPoint to GLODEManager to handle rendering.
-     17/11/04 - SG - Changed Deinitialize to Finalize,
-                        Changed TGLODEDummy to TGLODEDynamicDummy.
-     09/11/04 - SG - Fixed problems with contact geom generation (k00m).
-     03/05/04 - SG - Tri-mesh and various fixes/enhancements.
-     23/04/04 - SG - Fixes for object registration,
-                        Exception raised now if ODE fails to initialize at run-time.
-     21/04/04 - SG - Changed to dynamic linking DelphiODE,
-                        Design-time no longer makes any DelphiODE calls.
-     15/04/04 - SG - Added OnCustomCollision event to TGLODEManager.
-     14/04/04 - SG - Minor DelphiODE compatibility changes.
-     30/03/04 - SG - Joint objects are now fully persistent.
-     05/03/04 - SG - SetSurfaceMode fix (Alex)
-     25/02/04 - SG - Added the GLODEStaticBehaviour.
-     24/02/04 - SG - Added the static GLODETerrain collider.
-     23/02/04 - SG - Fix for design to real time gravity persistence.
-                        Added cone, cylinder and tri-mesh elements.
-                        Other various fixes/enhancements.
-     28/01/04 - SG - Added TGLODEStaticDummy. Fixed Element alignment code.
-                        Other minor fixes/changes.
-     13/11/03 - SG - Fixed bug with destroying geoms, manager now forces
-                        registered objects to Deinitialize.
-                        Fixed up some comments.
-     12/11/03 - SG - Fixed bug with TGLODEManager.Collision
-     01/09/03 - SG - Changed all relevant floating point types to TdReal,
-                        Changed Read/Write Single/Double to Read/Write Float.
-     19/08/03 - SG - Added GetBodyFromGLSceneObject (Dan Bartlett),
-                        Added StepFast and FastIterations to GLODEManager.
-     11/08/03 - SG - Added some force/torque methods to dynamic objects.
-     30/07/03 - SG - Split terrain collider into GLODECustomColliders unit.
-     25/07/03 - SG - Fixed Manager property persistence, other minor changes.
-     24/07/03 - SG - ReadFromFiler and WriteToFiler routines added,
-                        improved object and joint initialization system.
-                        Manager properties not persitent in joints and behaviours.
-     26/06/03 - EG - Replaced TObjectList with TPersistentObjectList,
-                        dropped Contnrs dependency (D5 compatibility)
-     23/06/03 - SG - Added GLODETerrainCollider, an implementation from DelphiODE
-                        terrain demo (buggy caused assertion error in GLHeightData.pas).
-     13/06/03 - SG - Added more joints.
-     11/06/03 - SG - Base joint classes implemented and added hinge joint.
-     09/06/03 - SG - Added OnCollision event for ODE Objects and Behaviours.
-     08/06/03 - SG - Added rolling friction (experimental).
-     06/06/03 - SG - Added cylinder element (experimental).
-     04/06/03 - SG - Changes to structures, added TGLODEDynamicBehaviour.
-     30/05/03 - SG - Added capsule element and plane object,
-                        Fixed problems with Collision callback method.
-     29/05/03 - SG - Better GetCollisionSurface code (thanks to Mattias Fagerlund).
-     28/05/03 - SG - Some fixes to ODE Elements (thanks to Mattias Fagerlund).
-                        Added TGLODEDummy.CalibrateCenterOfMass
-     01/03/03 - SG - Creation.
-   
 }
 
 unit GLODEManager;
@@ -126,9 +13,25 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, ODEGL, ODEImport, GLScene, GLVectorGeometry, GLTexture, OpenGLTokens,
-  XOpenGL, SysUtils, GLObjects, GLXCollection, GLPersistentClasses, GLVectorLists,
-  GLColor, GLCoordinates, GLRenderContextInfo, GLManager, GLState;
+  SysUtils,
+  Classes, 
+
+  ODEGL, 
+  ODEImport, 
+  GLScene, 
+  GLVectorGeometry, 
+  GLTexture, 
+  OpenGLTokens,
+  XOpenGL, 
+  GLObjects, 
+  GLXCollection, 
+  GLPersistentClasses, 
+  GLVectorLists,
+  GLColor, 
+  GLCoordinates, 
+  GLRenderContextInfo, 
+  GLManager, 
+  GLState;
 
 type
 
@@ -153,8 +56,6 @@ type
   TODEElementBase = class;
   TODEJointBase = class;
 
-  // TGLODEManager
-  //
   TGLODEManager = class (TComponent)
     private
        
@@ -241,8 +142,6 @@ type
 
   end;
 
-  // TODECollisionSurface
-  //
   TODECollisionSurface = class (TPersistent)
     private
        
@@ -306,8 +205,6 @@ type
 
   TODEElementClass = class of TODEElementBase;
 
-  // TGLODEBehaviour
-  //
   { Basis structures for GLScene behaviour style implementations. }
   TGLODEBehaviour = class (TGLBehaviour)
     private
@@ -412,8 +309,6 @@ type
 
   end;
 
-  // TGLODEStatic
-  //
   TGLODEStatic = class (TGLODEBehaviour)
     private
        
@@ -444,8 +339,6 @@ type
 
   end;
 
-  // TODEElements
-  //
   TODEElements = class(TGLXCollection)
     private
        
@@ -466,8 +359,6 @@ type
 
   end;
 
-  // TODEElementBase
-  //
   TODEElementBase = class (TGLXCollectionItem)
     private
        

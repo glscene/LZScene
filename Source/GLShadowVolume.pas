@@ -7,28 +7,6 @@
    Be aware that only objects that support silhouette determination have a chance
    to cast correct shadows. Transparent/blended/shader objects among the receivers
    or the casters will be rendered incorrectly.
-
-  History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       31/05/10 - Yar - Fixes forLinux x64
-       01/05/10 - Yar - Moved ignoreBlendingRequests and ignoreDepthRequests behind RenderChildren
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       31/03/07 - DaStr - Fixed issue with invalid typecasting
-                            (thanks Burkhard Carstens) (Bugtracker ID = 1692016)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       08/12/04 - DB - Fixed bug in TGLShadowVolumeCaster.SetCaster
-       02/12/04 - MF - Added some documentation
-       23/03/04 - EG - Added Active property
-       29/11/03 - MF - Removed a "feature" that would draw the shadow of
-                          (hierarchially) invisible objects
-       27/11/03 - MF - TGLShadowVolumeCaster now registers with the FCaster
-                          for delete notification
-       11/06/03 - EG - Added silhouette cache
-       04/06/03 - EG - Creation (based on code from Mattias Fagerlund)
-   
 }
 unit GLShadowVolume;
 

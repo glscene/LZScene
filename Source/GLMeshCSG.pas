@@ -12,13 +12,6 @@
    Contributed to the GLScene community.
 
    Features: CSG_Union, CSG_Subtraction, CSG_Intersection.
-
-  History :  
-       06/06/10 - Yar - Added GLVectorTypes to uses
-       30/03/07 - DaStr - Added $I GLScene.inc
-       18/07/04 - JAJ - Bug fix, causing triangles to dissapear, once in a while.
-       29/11/03 - JAJ - Created and Submitted to GLScene.
-  
 }
 unit GLMeshCSG;
 
@@ -27,10 +20,16 @@ interface
 {$I GLScene.inc}
 
 uses
-  SysUtils, Classes, Math,
+  SysUtils, 
+  Classes, 
+  Math,
    
-  GLScene, GLVectorTypes, GLVectorFileObjects,
-  GLVectorGeometry, GLBSP, GLVectorLists;
+  GLScene, 
+  GLVectorTypes, 
+  GLVectorFileObjects,
+  GLVectorGeometry, 
+  GLBSP, 
+  GLVectorLists;
 
 type
   TCSGOperation = (CSG_Union, CSG_Subtraction, CSG_Intersection);

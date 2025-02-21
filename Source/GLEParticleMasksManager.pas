@@ -4,16 +4,10 @@
 {
    A pretty particle mask effect manager.
 
-    History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       24/03/07 - Improved Cross-Platform compatibility (BugTracker ID = 1684432)
-                     Got rid of Types dependancy
-       29/01/07 - DaStr - Initial version (donated to GLScene by Kenneth Poulter)
-
 Original Header:
 
    GLEParticleMasksManager.pas
-   This unit is part of GLE - GLScene Game Utilities Engine set by Kenneth Poulter difacane@telkomsa.net
+   This unit is part of GLE - GLScene Game Utilities Engine set by Kenneth Poulter
    Module Number: 37
 
    Description: This is merely an addon to GLScene, since i don't want to edit GLScene's source code directly
@@ -24,21 +18,10 @@ Original Header:
 
    ActualUsage: Create the component, create a new ParticleMask, set the material library, set the materials,
                 and use the procedures provided in the managers root. positioning and scaling applicable aswell.
-
                 The images should be
 
    Licenses: Removed. Donated to GLScene's Code Base as long as the author (Kenneth Poulter) is not altered in this file.
              Theft of code also is not allowed, although alterations are allowed.
-
-   History:
-   28/12/2005 - Added - LX,LY,LZ for correct positioning;
-                        Rotating;
-                        GenerateParticleMaskFromProjection;
-                        Targeting Objects (scales, positions and rotation of object applies)
-   27/12/2005 - Added - Scale and Positioning
-   27/12/2005 - Improved code speed significantly (could do better)
-   26/12/2005 - Creation of base code from experimentation
-
 }
 
 unit GLEParticleMasksManager;

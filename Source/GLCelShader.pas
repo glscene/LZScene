@@ -4,21 +4,6 @@
 {
    A shader that applies cel shading through a vertex program
    and shade definition texture.
-
-    History :  
-       23/08/10 - Yar - Upgraded program hadles
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       22/01/10 - Yar   - Added bmp32.Blank:=false for memory allocation
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       31/03/07 - DaStr - Added $I GLScene.inc
-       21/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       25/02/07 - DaStr - Moved registration to GLSceneRegister.pas
-       28/09/04 - SG - Vertex program now uses ARB_position_invariant option.
-       09/06/04 - SG - Added OutlineColor, vertex programs now use GL state.
-       28/05/04 - SG - Creation.
-    
 }
 unit GLCelShader;
 

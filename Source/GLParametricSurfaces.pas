@@ -23,16 +23,6 @@
    The MinU, MaxU, MinV and MaxV properties allow for drawing specific
    parts of the bezier surface, which can be used to blend a patch with
    other patches.
-
-    History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       05/03/10 - DanB - More state added to TGLStateCache
-       31/03/07 - DaStr - Added $I GLScene.inc
-       11/05/04 - SG - Mesh building and texture coord fixes.
-       05/02/04 - SG - Added FGBezierSurface facegroup descendant.
-       20/08/03 - SG - Weighted control points.
-       18/07/03 - SG - Creation.
-    
 }
 unit GLParametricSurfaces;
 

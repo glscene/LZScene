@@ -7,7 +7,12 @@ unit GLScene_WinOnly;
 interface
 
 uses
-  GLJoystick, GLScreenSaver, GLSMWaveOut, GLAVIRecorder, GLSVfw, GLSpaceText, 
+  GLJoystick, 
+  GLScreenSaver, 
+  GLSMWaveOut, 
+  GLAVIRecorder, 
+  GLSVfw, 
+  GLSpaceText, 
   LazarusPackageIntf;
 
 implementation

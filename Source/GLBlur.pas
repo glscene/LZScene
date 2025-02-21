@@ -11,7 +11,9 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,  Graphics,
+  Classes, 
+  SysUtils,  
+  Graphics,
    
   GLScene, GLVectorGeometry, GLObjects, GLBitmapFont, GLTexture, GLMaterial,
   GLHudObjects, GLColor, GLGraphics, GLContext, OpenGLTokens,

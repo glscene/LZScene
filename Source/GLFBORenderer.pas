@@ -3,26 +3,6 @@
 //
 {
   Implements FBO support for GLScene.
-
-  Original author of the unit is Riz.
-  Modified by C4 and YarUnderoaker (hope, I didn't miss anybody).
-
-   History :  
-   30/08/13 - NelC - Added OnSetTextureTargets
-   09/07/12 - Yar - Fixed DoPostInitialize and DoPreInitialize events (thanks to Gabriel Corneanu)
-   22/04/11 - Yar - Bugfixed lighting state restoration
-   13/02/11 - Yar - Added RenderContextInfo to BeforeRender and AfterRender event
-   07/01/11 - Yar - Added properties Active and PickableTarget
-   23/08/10 - Yar - Changes for forward core
-   02/06/10 - Yar - Replaced OpenGL functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   15/02/10 - Yar - Added notification of freeing RootObject
-   22/01/10 - Yar - Added ClearOptions, Level, Layer, PostGenerateMipmap
-  UseBufferBackground moved to coUseBufferBackground
-   14/12/09 - DaStr - Fixed memory leak (thanks YarUnderoaker)
-   11/11/09 - DaStr - Added $I GLScene.inc
-   09/11/09 - DaStr - Initial version (contributed to GLScene)
-   
 }
 unit GLFBORenderer;
 
@@ -31,10 +11,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLVectorGeometry, GLScene, GLTexture, GLContext, GLFBO, GLColor,
-  GLMaterial, GLRenderContextInfo, GLState, OpenGLTokens,
+  GLVectorGeometry, 
+  GLScene, 
+  GLTexture, 
+  GLContext, 
+  GLFBO, 
+  GLColor,
+  GLMaterial, 
+  GLRenderContextInfo, 
+  GLState, 
+  OpenGLTokens,
   GLTextureFormat,
   GLVectorTypes,
   GLMultisampleImage,

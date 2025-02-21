@@ -3,17 +3,6 @@
 //
 {
    A PFX whose particles are lines
-
-    History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       12/10/08 - DanB - updated to use RCI
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       20/02/05 - EG - Creation
-    
 }
 unit GLLinePFX;
 
@@ -22,14 +11,20 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, GLPersistentClasses, GLVectorGeometry,
-  GLParticleFX, GLTexture, GLColor, GLRenderContextInfo,
-  OpenGLTokens, GLContext , GLVectorTypes;
+  Classes, 
+  SysUtils, 
+  
+  GLPersistentClasses, 
+  GLVectorGeometry,
+  GLParticleFX, 
+  GLTexture, 
+  GLColor, 
+  GLRenderContextInfo,
+  OpenGLTokens, 
+  GLContext, 
+  GLVectorTypes;
 
 type
-
-   // TGLLineParticle
-   //
    { Linear particle. }
    TGLLineParticle = class (TGLParticle)
       private
@@ -51,8 +46,6 @@ type
          property Length : Single read FLength write FLength;
    end;
 
-   // TGLLinePFXManager
-   //
    { Polygonal particles FX manager.
       The particles of this manager are made of N-face regular polygon with
       a core and edge color. No texturing is available. 
@@ -95,11 +88,7 @@ type
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 // ------------------
@@ -143,8 +132,6 @@ begin
    Result:=0;
 end;
 
-// InitializeRendering
-//
 procedure TGLLinePFXManager.InitializeRendering(var rci: TGLRenderContextInfo);
 var
    i : Integer;
@@ -160,15 +147,11 @@ begin
    FNvy:=VectorNormalize(Fvy);
 end;
 
-// BeginParticles
-//
 procedure TGLLinePFXManager.BeginParticles(var rci: TGLRenderContextInfo);
 begin
    ApplyBlendingMode(rci);
 end;
 
-// RenderParticle
-//
 procedure TGLLinePFXManager.RenderParticle(var rci: TGLRenderContextInfo; aParticle : TGLParticle);
 var
    lifeTime, sizeScale, fx, fy, f : Single;

@@ -7,17 +7,15 @@
    designed to make it a little easier to implement a 
    customized shader. Be sure to keep the shader balanced
    by returning the OpenGL state to how you found it.
-
-    History :  
-       25/02/07 - DaStr - Moved registration to GLSceneRegister.pas
-       05/08/03 - SG - Creation
 }
 unit GLUserShader;
 
 interface
 
 uses
-  Classes, GLMaterial, GLRenderContextInfo;
+  Classes, 
+  GLMaterial, 
+  GLRenderContextInfo;
 
 type
   TOnDoApplyEvent = procedure (Sender : TObject; var rci : TGLRenderContextInfo) of Object;

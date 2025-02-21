@@ -4,36 +4,22 @@
 {
   Procedural textures.
 
-  History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       22/01/10 - Yar - Added bmp32.Blank:=false for memory allocation,
-                           Depth dimension, NativeTextureTarget becomes property
-       16/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       01/10/04 - ilh - Added SetPermFromData and SetPermToDefault
-                            moved PERM array to protected from inside Noise procedure
-                            so it can be changed by SetPermFromData and SetPermToDefault
-                           Added FNoiseRandSeed property so a Seed can be set
-                            Starts with a random Generated Seed...
-                            One must be set to BE Seeded
-       11/12/02 - ??? - Initial, procedural perlin noise texture
-                           code by Tobias Peirick
-  
-
-  I used the following references for my implementation:
-
   http://freespace.virgin.net/hugo.elias/models/m_perlin.htm 
   http://freespace.virgin.net/hugo.elias/models/m_clouds.htm 
-  http://www.delphi3d.net
-
   Tobias Peirick
 }
 unit GLProcTextures;
 
 interface
 
-uses Classes, GLTexture, GLGraphics, OpenGLTokens, GLCrossPlatform, SysUtils,
+uses 
+  SysUtils,
+  Classes, 
+
+  GLTexture, 
+  GLGraphics, 
+  OpenGLTokens, 
+  GLCrossPlatform, 
   GLTextureFormat;
 
 const

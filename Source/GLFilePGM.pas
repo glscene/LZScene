@@ -2,10 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-   08/05/10 - Yar - Removed check for residency in AssignFromTexture
-   04/02/10 - Yar - Creation
-   
+  The PGM file format
 }
 unit GLFilePGM;
 
@@ -14,9 +11,13 @@ unit GLFilePGM;
 interface
 
 uses
-  System.Classes, System.SysUtils,
+  System.Classes, 
+  System.SysUtils,
    
-  OpenGLTokens, GLContext, GLGraphics, GLTextureFormat,
+  OpenGLTokens, 
+  GLContext, 
+  GLGraphics, 
+  GLTextureFormat,
   GLApplicationFileIO;
 
 type
@@ -47,7 +48,6 @@ resourcestring
   // ------------------
   // ------------------ TGLPGMImage ------------------
   // ------------------
-
    
   //
 procedure TGLPGMImage.LoadFromFile(const filename: string);

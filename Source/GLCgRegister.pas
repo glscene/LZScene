@@ -3,12 +3,6 @@
 //
 {
    Registration unit for CG shader.
-
-    History : 
-       11/11/09 - DaStr - Improved FPC compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       23/02/07 - DaStr - Initial version
-
 }
 unit GLCgRegister;
 

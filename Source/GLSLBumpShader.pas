@@ -3,24 +3,6 @@
 //
 {
    A GLSL shader that applies bump mapping.
-
-	 History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       20/10/10 - Yar - Bugfixed memory leak
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       07/01/10 - DaStr - Bugfixed all DoInitialize() calls
-                              (thanks YarUnderoaker)
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)
-                              Fixed a bug with "fRDotV" clamping, which occured
-                              on all GeForce 8x and later graphic cards
-       20/03/07 - DaStr - Made changes related to the new parameter passing model
-       06/03/07 - DaStr - Again replaced DecimalSeparator stuff with
-                              a single Str procedure (thanks Uwe Raabe)
-       03/03/07 - DaStr - Made compatible with Delphi6
-       22/02/07 - DaStr - Initial version (contributed to GLScene)
-
-
     This is a collection of GLSL Bump shaders, comes in these variaties
          (to know what these abriviations mean, see GLCustomShader.pas):
 
@@ -42,36 +24,6 @@
       1) Implement IGLShaderDescription in all shaders.
 
 
-    Previous version history:
-      v1.0    03 September '2006  Creation
-      v1.1    09 September '2006  Camera Positioning bugfix
-                                  Artefacts on the non-lit side removed
-      v1.2    16 September '2006  Shader made ATI-compatible
-      v1.2.2  02 November  '2006  Small optimization if Do(Un)Apply
-      v1.3    27 November  '2006  TGLCustomGLSLMLBumpShaderMT added
-      v1.3.2  30 November  '2006  LightCompensation added
-                                  gl_FragColor() calculation optimized a bit
-      v1.4    16 December  '2006  All Shaders renamed according to the new
-                                    naming convention
-                                  SCS_SHADER_NEEDS_AT_LEAST_ONE_LIGHT_SOURCE
-                                    moved to GLCustomShader
-                                  TGLBaseCustomGLSLBumpShader,
-                                    TGLBaseMatlibGLSLBumpShader(MT) abstracted
-                                  7 diferent versions of this shader added
-                                  All shaders made design-time compatible
-      v1.4.2  18 December  '2006  MultiLight versions of this shader bugfixed
-                                    (the specular light was sometimes "cut")
-                                  The use of SpecularMap made optional
-      v1.4.6  20 December  '2006  TGLBaseMatlibGLSLBumpShader and
-                                    TGLBaseCustomGLSLBumpShader merged
-                                  The use of NormalMap is optional
-                                  MultiLight shaders optimized a bit
-      v1.4.8  06 February  '2007  IGLMaterialLibrarySupported renamed to
-                                    IGLMaterialLibrarySupported
-      v1.5    16 February  '2007  Updated to the latest CVS version of GLscene
-      v1.5.2  18 February  '2007  Removed the StrangeTextureUtilities dependancy
-
-
 }
 unit GLSLBumpShader;
 
@@ -80,12 +32,20 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
   
-
-  GLTexture, GLScene, GLVectorGeometry, GLVectorTypes, GLCadencer, GLStrings,
-  OpenGLTokens, GLSLShader, GLCustomShader, GLColor, GLRenderContextInfo,
+  GLTexture, 
+  GLScene, 
+  GLVectorGeometry, 
+  GLVectorTypes, 
+  GLCadencer, 
+  GLStrings,
+  OpenGLTokens, 
+  GLSLShader, 
+  GLCustomShader, 
+  GLColor, 
+  GLRenderContextInfo,
   GLMaterial;
 
 type

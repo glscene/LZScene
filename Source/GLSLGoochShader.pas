@@ -9,10 +9,6 @@
    In Gooch shading intensity of diffuse lighting is used to determine how to blend warm and cold colors together.
 
    At this time only one light source is supported
-
-    History :  
-     08/12/15 - J.Delauney - Creation
-
 }
 unit GLSLGoochShader;
 

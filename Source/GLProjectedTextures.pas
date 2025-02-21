@@ -3,19 +3,6 @@
 //
 {
    Implements projected textures through a GLScene object.
-
-    History :  
-       10/11/12 - PW - Added CPP compatibility: changed const cBase matrix
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       15/06/05 - Mathx - Added the Style property and inverse rendering
-       07/05/05 - Mathx - Support for tmBlend textures (by Ruben Javier)
-       01/10/04 - SG - Initial (by Matheus Degiovani)
-    
 }
 unit GLProjectedTextures;
 

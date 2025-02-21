@@ -3,12 +3,6 @@
 //
 {
    GLScene RGBE
-
-   History :  
-   17/11/14 - PW - Renamed from RGBE.pas to GLSRGBE.pas
-   15/06/10 - Yar - Fixes for Linux x64
-   20/01/10 - Yar - Creation
-   
 }
 unit GLSRGBE;
 
@@ -17,9 +11,12 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLVectorTypes, GLVectorGeometry, GLCrossPlatform;
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLCrossPlatform;
 
 procedure Float2rgbe(var RGBE: TVector4b; const Red, Green, Blue: Single);
 procedure Rgbe2float(var Red, Green, Blue: Single; const RGBE: TVector4b);

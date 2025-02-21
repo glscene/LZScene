@@ -3,24 +3,23 @@
 //
 {
    Preliminary VRML vector file support for GLScene.
-    10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-    History : 
-       29/03/07 - DaStr - RecursNodes bugfixed (thanks Burkhard Carstens)
-       25/01/05 - SG - Improved auto-normal generation using creaseAngle,
-                          Added Normal and TexCoord reading,
-                          Fixes for the polygon tessellation routine (Carsten Pohl)
-       18/01/05 - SG - Added polygon tessellation routine to decompose 
-                          a polygon mesh to a triangle mesh
-       14/01/05 - SG - Added to CVS
-    
 }
 unit GLFileVRML;
 
 interface
 
 uses
-  Classes, SysUtils, GLVectorFileObjects, GLMaterial, GLApplicationFileIO,
-  GLVectorTypes, GLVectorGeometry, GLVectorLists, VRMLParser, GLMeshUtils;
+  Classes, 
+  SysUtils, 
+
+  GLVectorFileObjects, 
+  GLMaterial, 
+  GLApplicationFileIO,
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLVectorLists, 
+  VRMLParser, 
+  GLMeshUtils;
 
 type
 
@@ -31,15 +30,9 @@ type
   end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 
-// TessellatePolygon
-//
 procedure TessellatePolygon(PolyVerts : TAffineVectorList;
   PolyIndices, TriIndices : TIntegerList);
 

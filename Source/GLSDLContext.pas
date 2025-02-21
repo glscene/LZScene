@@ -9,13 +9,6 @@
          "ignore OpenGL errors" mode during destruction, thus potentially
          leaking memory (depending on hardware drivers willingness to perform
          automatic releases)
-
-    History :  
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       06/06/10 - Yar - Make outputDevice HWND type
-       15/02/07 - DaStr - Integer -> Cardinal because $R- was removed in GLScene.pas
-       11/09/06 - NC - Changes for Multiple-Render-Target
-       12/12/01 - EG - Creation
 }
 unit GLSDLContext;
 
@@ -34,9 +27,6 @@ uses
   SDL;
 
 type
-
-  // TGLSDLViewer
-  //
   { A viewer using SDL.
      Beware: only one at a time, no other viewers allowed! 
      Will also close the application when the window is closed! }

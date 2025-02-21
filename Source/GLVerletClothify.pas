@@ -3,21 +3,6 @@
 //
 {
    Methods for turning a TGLBaseMesh into a Verlet cloth / jelly
-
-	 History :  
-       16/09/10 - YP - Created public NodeList property of TFaceExtractor, it allow us to nail some vertex
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       06/06/10 - Yar - Fixed warnings
-       05/03/10 - DanB - More state added to TGLStateCache
-       22/02/10 - Yar - Optimization of switching states
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Added explicit pointer dereferencing (even more)
-       16/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       27/05/04 - MF - Added some length information to edges
-       24/06/03 - MF - Removed several embarrassing warnings
-       17/06/03 - MF - Creation
-    
 }
 
 unit GLVerletClothify;
@@ -27,11 +12,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLVectorFileObjects, GLVerletTypes, GLVectorTypes, GLVectorLists,
-  GLVectorGeometry, GLTexture, OpenGLTokens, GLRenderContextInfo,
-  GLState, GLContext;
+  GLVectorFileObjects, 
+  GLVerletTypes, 
+  GLVectorTypes, 
+  GLVectorLists,
+  GLVectorGeometry, 
+  GLTexture, 
+  OpenGLTokens, 
+  GLRenderContextInfo,
+  GLState, 
+  GLContext;
 
 
 type

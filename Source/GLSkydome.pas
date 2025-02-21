@@ -3,40 +3,6 @@
 //
 {
    Skydome object
-
-  History :  
-       17/02/13 - Yar - Added SetSunAtTime method (thanks to Dimitriy) 
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       24/03/11 - Yar - Added esoDepthTest to TEarthSkydomeOption
-                           (Drawing sky dome latest with depth test reduce pixels overdraw)
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       10/10/08 - DanB - changed Skydome buildlists to use rci instead
-                            of Scene.CurrentGLCamera
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Moved all UNSAFE_TYPE, UNSAFE_CODE checks to GLSCene.inc
-       25/03/07 - DaStr - Fixed compiler directives for Delphi5 compatibility
-       22/03/07 - DaStr - Removed "unsafe type/unsafe code" warnings
-       19/12/06 - DaStr - TGLSkyDomeStars.AddRandomStars() overloaded
-       29/06/06 - PvD - Fixed small bug to properly deal with polygon fill
-       20/01/05 - Mathx - Added the ExtendedOptions of the EarthSkyDome
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-       09/01/04 - EG - Now based on TGLCameraInvariantObject
-       04/08/03 - SG - Fixed small bug with random star creation
-       17/06/03 - EG - Fixed PolygonMode (Carlos Ferreira)
-       26/02/02 - EG - Enhanced star support (generation and twinkle),
-                          Skydome now 'exports' its coordinate system to children
-       21/01/02 - EG - Skydome position now properly ignored
-       23/09/01 - EG - Fixed and improved TGLEarthSkyDome
-       26/08/01 - EG - Added SkyDomeStars
-       12/08/01 - EG - DepthMask no set to False during rendering
-       18/07/01 - EG - VisibilityCulling compatibility changes
-       12/03/01 - EG - Reversed polar caps orientation
-       28/01/01 - EG - Fixed TGLSkyDomeBand rendering (vertex coordinates)
-       18/01/01 - EG - First working version of TGLEarthSkyDome
-       14/01/01 - EG - Creation
-  
 }
 unit GLSkydome;
 
@@ -57,9 +23,6 @@ uses
   GLRenderContextInfo;
 
 type
-
-  // TGLSkyDomeBand
-  //
   TGLSkyDomeBand = class(TCollectionItem)
   private
      
@@ -98,9 +61,6 @@ type
     property Slices: Integer read FSlices write SetSlices default 12;
     property Stacks: Integer read FStacks write SetStacks default 1;
   end;
-
-  // TGLSkyDomeBands
-  //
   TGLSkyDomeBands = class(TCollection)
   protected
      
@@ -121,8 +81,6 @@ type
     procedure BuildList(var rci: TGLRenderContextInfo);
   end;
 
-  // TGLSkyDomeStar
-  //
   TGLSkyDomeStar = class(TCollectionItem)
   private
      
@@ -155,8 +113,6 @@ type
 
   end;
 
-  // TGLSkyDomeStars
-  //
   TGLSkyDomeStars = class(TCollection)
   protected
      

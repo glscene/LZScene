@@ -3,11 +3,6 @@
 //
 {
   GLScene cross IDE generic classes collection.
-
-   History :  
-   10/11/12 - PW - Added CPP compatibility: redeclared FOnChange: TNotifyEvent;
-   06/10/10 - Yar - Creation
-   
 }
 
 unit GLSGenerics;

@@ -4,21 +4,21 @@
 {
    Code for loading animated MD3 files into GLScene
               FreeForms and Actors.
-
-  History :
-     10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-     02/08/04 - LR, YHC - BCB corrections: use record instead array
-     21/08/03 - EG - Fixed GetNormalFromMD3Normal (lat/lon were inverted)
-     28/02/03 - SG - Creation
 }
 unit GLFileMD3;
 
 interface
 
 uses
-  Classes, SysUtils,
-  GLVectorFileObjects, GLMaterial, GLApplicationFileIO,
-  GLVectorGeometry, FileMD3, GLTexture;
+  Classes, 
+  SysUtils,
+
+  GLVectorFileObjects, 
+  GLMaterial, 
+  GLApplicationFileIO,
+  GLVectorGeometry, 
+  FileMD3, 
+  GLTexture;
 
 type
 
@@ -29,19 +29,13 @@ type
   end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 // ------------------
 // ------------------ TGLMD3VectorFile ------------------
 // ------------------
 
-// Capabilities
-//
 class function TGLMD3VectorFile.Capabilities : TGLDataFileCapabilities;
 begin
   Result:=[dfcRead];

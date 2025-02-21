@@ -12,20 +12,19 @@
    Contributed to the GLScene community.
 
    Features: BuildCube, BuildCylinder.
-
-	 History :  
-       22/01/10 - Yar - Added GLVectorTypes to uses
-       29/11/03 - JAJ - Created and Submitted to GLScene.
-       21/07/03 - JAJ - Added BuildCylinder2 submitted by Gorka?
-	 
 }
 unit GLMeshBuilder;
 
 interface
 
-Uses
-  SysUtils, Classes, GLScene, GLVectorFileObjects,
-  GLVectorTypes, GLVectorGeometry, GLVectorLists;
+uses
+  SysUtils, 
+  Classes, 
+  GLScene, 
+  GLVectorFileObjects,
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLVectorLists;
 
 Procedure BuildCube(Mesh : TGLMeshObject; Position, Scale : TAffineVector);
 Procedure BuildCylinder(Mesh : TGLMeshObject; Position, Scale : TAffineVector; Slices : Integer);

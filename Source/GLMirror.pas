@@ -6,26 +6,6 @@
 
    It is strongly recommended to read and understand the explanations in the
    materials/mirror demo before using this component.
-
-  History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       15/12/08- Paul Robello - corrected call to  FOnEndRenderingMirrors
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       18/07/04 - Orlando - added custom shapes
-       13/02/03 - DanB - added TGLMirror.AxisAlignedDimensionsUnscaled
-       13/11/02 - EG - Fixed TGLMirror.DoRender transform
-       06/11/02 - EG - Fixed Stencil setup
-       30/10/02 - EG - Added OnBegin/EndRenderingMirrors
-       25/10/02 - EG - Fixed Stencil cleanup
-       22/02/01 - EG - Fixed change notification,
-                          Fixed special effects support (PFX, etc.)
-       07/12/01 - EG - Creation
-    
 }
 unit GLMirror;
 
@@ -35,16 +15,19 @@ interface
 
 uses
   Classes,
-  GLScene, GLVectorGeometry, OpenGLAdapter, OpenGLTokens, GLContext,
-  GLMaterial, GLColor, GLRenderContextInfo,
+  GLScene, 
+  GLVectorGeometry, 
+  OpenGLAdapter, 
+  OpenGLTokens, 
+  GLContext,
+  GLMaterial, 
+  GLColor, 
+  GLRenderContextInfo,
   GLState
   , GLVectorTypes;
 
 
 type
-
-  // TMirrorOptions
-  //
   TMirrorOption = (moUseStencil, moOpaque, moMirrorPlaneClip, moClearZBuffer);
   TMirrorOptions = set of TMirrorOption;
 

@@ -6,32 +6,6 @@
     again in your own shader classes.
     It also contains a procedures and function that can be used in all shaders.
 
-	 History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       15/16/10 - Yar - Rewrited static procedures (InitTexture, etc.)
-       04/06/10 - Yar - Added unsigned integer uniforms
-       22/04/10 - Yar - Fixes after GLState revision
-       22/01/10 - Yar - Added to TGLCustomShaderParameter property AsTexture
-       25/10/09 - DaStr - Updated TGLGeometryProgram (thanks YarUnderoaker)
-       24/08/09 - DaStr - Separated TGLShaderProgram into TGLVertexProgram,
-                              TGLFragmentProgram and TGLGeometryProgram
-                             Added TGLCustomShaderParameter.AsUniformBuffer
-                              (thanks YarUnderoaker)
-       28/07/09 - DaStr - Added GeometryShader support (thanks YarUnderoaker)
-                             Fixed TGLCustomShader.[...]Program serialization
-       24/07/09 - DaStr - Added TGLCustomShader.DebugMode
-                             Fixed spelling mistake in TGLShaderUnAplyEvent
-                             Added TGLShaderFogSupport, IsFogEnabled()
-       03/04/07 - DaStr - Added TGLCustomShaderParameter.AsFloat and AsInteger
-       25/03/07 - DaStr - Added TGLCustomShaderParameter.SetToTextureOf
-       20/03/07 - DaStr - Added DrawTexturedScreenQuad[4/5/6]
-                             "TextureType" parameter renamed to "TextureTarget"
-                             Finished working on TGLCustomShaderParameter
-       04/03/07 - DaStr - Added IGLPostShader
-       03/03/07 - DaStr - Added TGLCustomShaderParameter (beta state)
-       22/02/07 - DaStr - Initial version (contributed to GLScene)
-
-
     What different shader prefixes might mean:
 
       ML - Multi Light      -    Shader supports up to 8 lights.
@@ -71,31 +45,6 @@
                                        or Direct OpenGL API)
                                        In all other cases they are taken from
                                        the shader's properties
-
-
-    Previous version history:
-      v1.0    11 March     '2006  Creation, separated from GLSLShader
-      v1.1    06 August    '2006  TGLCustomShader.HandleShaderNotSupportedException added
-                                  TGLCustomShader.ShaderNotSupportedExceptionMessage added
-      v1.2    14 August    '2006  IGLShaderSupported separated
-                                  TGLShaderTextureSource added
-      v1.2.2  19 August    '2006  IMultiShaderCompatible added
-      v1.2.4  24 August    '2006  TGLCustomShader.ParameterTexture[1-3]D added
-      v1.2.6  04 September '2006  Minor fixes
-      v1.3    04 November  '2006  TGLShaderUnUplyEvent added
-                                  OnApply, OnUnApply, OnInitialize moved to
-                                   the protected section
-                                  (Un)ApplyBlendingMode added
-                                  (Get/Set)ParameterTexture[1/2/3]DHandle added
-                                  InitTexture(), DrawTexturedScreenQuad() added
-                                  (Get/Set)ParameterCustomTextureHandle support added
-      v1.3.2  16 December  '2006  Added shader Naming convention in the comments
-                                  STR_SHADER_NEEDS_AT_LEAST_ONE_LIGHT_SOURCE
-                                   moved here from StrangeGLSLBumpShader
-                                  vStrangeShaderClassList and all shader
-                                   registration utility functions added
-      v1.3.4  18 February  '2007  StrangeTextureUtilities dependancy removed
-                                  Updated to the latest CVS version of GLScene
 
 
 }

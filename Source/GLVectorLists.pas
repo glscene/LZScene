@@ -3,57 +3,6 @@
 //
 {
    Misc. lists of vectors and entities
-
-    History :  
-       10/12/14 - PW - Renamed VectorList unit to GLVectorList
-       23/02/11 - Yar - Added Revision mechanism to TAffineVectorList
-       15/12/10 - DaStr - Added Min() and Max() for TSingleList and TDoubleList
-       04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility
-       24/08/10 - Yar - Added to T4ByteList more overload of Add method
-       11/06/10 - Yar - Bugfixed binary reading TTexPointList for FPC
-       20/05/10 - Yar - Fixes for Linux x64
-       27/02/10 - Yar - Added TLongWordList
-       06/02/10 - Yar - Added methods to TSingleList
-                           Added T4ByteList
-       25/11/09 - DanB - Fixed FastQuickSortLists for 64bit (thanks YarUnderoaker)
-                            ASM code protected with IFDEFs
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       01/03/08 - DaStr - Added Borland-style persistency support to TBaseList
-       29/03/07 - DaStr - Added more explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       25/01/07 - DaStr - Reformated code according to VCL standard
-                             Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       23/01/07 - fig - Added FindOrAdd() or IndexOf() to TTexpointList
-       16/01/07 - DaStr - Added TDoubleList
-       28/06/04 - LR - Removed ..\ from the GLScene.inc
-       03/09/03 - EG - Added TBaseList.Move, faster TIntegerList.Offset
-       22/08/03 - EG - Faster FastQuickSortLists
-       13/08/03 - SG - Added TQuaternionList
-       05/06/03 - EG - Added MinInteger, some TIntegerList optimizations
-       03/06/03 - EG - Added TIntegerList.BinarySearch and AddSorted (Mattias Fagerlund)
-       22/01/03 - EG - Added AddIntegers
-       20/01/03 - EG - Added TIntegerList.SortAndRemoveDuplicates
-       22/10/02 - EG - Added TransformXxxx to TAffineVectorList
-       04/07/02 - EG - Fixed TIntegerList.Add( 2 at once )
-       15/06/02 - EG - Added TBaseListOption stuff
-       28/05/02 - EG - TBaseList.SetCount now properly resets new items
-       23/02/02 - EG - Added TBaseList.UseMemory
-       20/01/02 - EG - Now uses new funcs Add/ScaleVectorArray and VectorArrayAdd
-       06/12/01 - EG - Added Sort & MaxInteger to TIntegerList
-       04/12/01 - EG - Added TIntegerList.IndexOf
-       18/08/01 - EG - Fixed TAffineVectorList.Add (list)
-       03/08/01 - EG - Added TIntegerList.AddSerie
-       19/07/01 - EG - Added TAffineVectorList.Add (list variant)
-       18/03/01 - EG - Additions and enhancements
-       16/03/01 - EG - Introduced new PersistentClasses
-       04/03/01 - EG - Optimized TAffineVectorList.Normalize (x2 speed on K7)
-       26/02/01 - EG - VectorArrayLerp 3DNow optimized (x2 speed on K7)
-       08/08/00 - EG - Added TSingleList
-     20/07/00 - EG - Creation
-  
 }
 unit GLVectorLists;
 
@@ -62,18 +11,18 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  //GLScene
-  GLVectorTypes, GLVectorGeometry, GLPersistentClasses, GLCrossPlatform;
+  Classes, 
+  SysUtils,
+
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLPersistentClasses, 
+  GLCrossPlatform;
 
 type
-  // TBaseListOption
-  //
   TBaseListOption = (bloExternalMemory, bloSetCountResetsMemory);
   TBaseListOptions = set of TBaseListOption;
 
-  // TBaseList
-  //
   { Base class for lists, introduces common behaviours. }
   TBaseList = class(TPersistentObject)
   private
@@ -261,8 +210,6 @@ type
     procedure Scale(const factors: TAffineVector); overload;
   end;
 
-  // TVectorList
-  //
   { A list of TVector.
    Similar to TList, but using TVector as items.
        The list has stack-like push/pop methods. }

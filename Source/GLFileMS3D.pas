@@ -3,30 +3,6 @@
 //
 {
    Support for MS3D file format.
-
-   History :
-     24/11/10 - Yar - Foxed range check error
-     22/06/10 - Yar - Added checking of existing material in material library
-     31/05/10 - Yar - Fixes for Linux x64
-     04/23/10 - TL - Animations now load properly (note: All animations must be full key frames. All bones selected in MS3D)
-                          The entire animation will be available in TActor.Animations[0]
-     04/23/10 - TL - Added support for double sided textures. To make a double sided texture, you must set the transparency
-                          slider to the left just a little bit in MS3D. This loader will notice that,  and turn off backface culling for
-                          that group.
-     04/23/10 - TL - Added weighted vertex animations
-     04/23/10 - TL - Fixed the way normals are loaded. They will now be loaded properly.
-     04/23/10 - TL - Added support to read the comments section of MS3D files.
-
-     16/10/08 - UweR - Compatibility fix for Delphi 2009: MaterialIndex is now Byte instead of Char
-     31/03/07 - DaStr - Added $I GLScene.inc
-     24/03/07 - DaStr - Added explicit pointer dereferencing
-                           (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-     19/12/04 - PhP - Added capabilities function
-     28/10/03 - SG - Partly implemented skeletal animation,
-                        asynchronous animations will fail however.
-     31/08/03 - DanB  - Some code standardisation (by Philipp)
-     03/06/03 - EG - Added header, now self-registers
-
 }
 unit GLFileMS3D;
 
@@ -35,11 +11,18 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLCrossPlatform, GLVectorFileObjects, 
-  GLVectorTypes, GLMaterial, GLColor, GLTexture,
-  GLVectorGeometry, GLVectorLists, GLApplicationFileIO;
+  GLCrossPlatform, 
+  GLVectorFileObjects, 
+  GLVectorTypes, 
+  GLMaterial, 
+  GLColor, 
+  GLTexture,
+  GLVectorGeometry, 
+  GLVectorLists, 
+  GLApplicationFileIO;
   
 
 const

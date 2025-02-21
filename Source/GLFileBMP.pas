@@ -3,10 +3,6 @@
 //
 {
    Graphic engine friendly loading of BMP image.
-
-  History :  
-         04/04/11 - Yar - Creation
-    
 }
 
 unit GLFileBMP;

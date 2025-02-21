@@ -3,15 +3,6 @@
 //
 {
   Main purpose is as a fallback in cases where there is no other way to process images.
-
-  History :  
-   07/09/11 - Yar - Bugfixed memory overrun in Build2DMipmap (thanks to benok1)
-   09/04/11 - Yar - Added AlphaGammaBrightCorrection
-   08/04/11 - Yar - Complete Build2DMipmap
-   07/11/10 - YP - Inline removed from local functions with external var access (Fixes error E2449)
-   04/11/10 - DaStr - Added $I GLScene.inc
-   22/10/10 - Yar - Created
-   
 }
 
 unit GLImageUtils;

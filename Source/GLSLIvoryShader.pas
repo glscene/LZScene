@@ -4,10 +4,6 @@
 {
    Ivory shader simulate Ivory material.
    At this time only one light source is supported
-
-    History :  
-     08/12/15 - J.Delauney - Creation
-
 }
 
 unit GLSLIvoryShader;
@@ -19,13 +15,23 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLVectorGeometry, GLCoordinates,
-  GLTextureFormat,GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLVectorGeometry, 
+  GLCoordinates,
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
-//TGLCustomGLSLIvoryShader
-//
 { Custom class for GLSLIvoryShader.
  A shader that simulate Ivory Material }
 type

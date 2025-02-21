@@ -3,14 +3,6 @@
 //
 {
   3ds-specific scene objects.
-
-   History : 
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       17/05/08 - DaStr - Added vGLFile3DSSceneObjects_RenderCameraAndLights
-       06/04/08 - DaStr - Initial version (by Lexer)
-   
 }
 unit GLFile3DSSceneObjects;
 
@@ -19,14 +11,22 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
   Classes,
   SysUtils,
   Math,
 
-  GLVectorGeometry, OpenGLTokens, OpenGLAdapter, GLContext, GLScene,
-  GLVectorFileObjects, GLVectorTypes, GLPersistentClasses,
-  GLCrossPlatform, GLCoordinates, GLRenderContextInfo, GLState;
+  GLVectorGeometry, 
+  OpenGLTokens, 
+  OpenGLAdapter, 
+  GLContext, 
+  GLScene,
+  GLVectorFileObjects, 
+  GLVectorTypes, 
+  GLPersistentClasses,
+  GLCrossPlatform, 
+  GLCoordinates, 
+  GLRenderContextInfo, 
+  GLState;
 
 type
   TGLFile3DSLight = class(TGLLightSource)

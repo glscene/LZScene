@@ -7,70 +7,17 @@
     Note that you must manually add this unit to one of your project's uses
     to enable support for OBJ & OBJF at run-time.
 
-  History :  
-
-       17/09/13 - YP - Added support for self-illumination (using Texture2Name)
-       28/06/13 - YP - Added support for vector color
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-
-       26/06/12 - YP - Split groups in their own mesh instead of a new facegroup
-                          (see globale var vGLFileOBJ_SplitMesh, enabled by default)
-       20/06/12 - YP - Get TexturePaths from MaterialLibrary when loading materials
-
-       30/06/11 - DaStr - Added ability to assign meshes
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       04/03/10 - DanB - Now uses CharInSet
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       20/05/08 - mrqzzz - Added RegisterClass(TOBJFGVertexNormalTexIndexList)
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       11/07/05 - DaStr - Improved Cross-Platform compatibility (BugTracker ID = 1684432)
-       11/07/05 - Wet - Added multi meshobject support
-       09/09/03 - Jaj - Added TriangleStrip and TriangleFan support to save..
-       10/07/03 - Egg - Improved robustness of material loading
-       02/06/03 - Egg - Undone Jaj changes, they broke standard OBJ support
-       30/01/03 - Egg - Normals extraction
-       29/01/03 - Jaj - Fixed to allow load of simple triangle meshes... ('V','VN','VT')
-       23/01/03 - Egg - Can now export TFGIndexTexCoordList (untextured)
-       25/11/02 - Egg - Improved mtl import (d and illum commands)
-       22/11/02 - Egg - Supports OBJ files using #9 in place of #32,
-                           fixed leak, some code cleanup/rearrangements,
-                           support for mtllib and usemtl commands
-       18/08/01 - Egg - '$' now allowed as alternate comment,
-                           AddToTriangles override
-       03/10/00 - Egg - Fixed TGLOBJVectorFile.LoadFromStream.ReadFace
-       08/10/00 - Egg - Added standard header, basic htmlification of old header,
-                           removed specific trim funcs,
-                           renamed TMBAGLOBJVectorFile to TGLOBJVectorFile
-    
+   
 
    (c) 2000 Marian Aldenhövel 
        Hainstraße 8 
        53121 Bonn 
-       info@MBA-Software.de
 
   License: 
 
     Contributed to Eric Grange and GLScene,
     same licensing, batteries not included.
 
-  History:
-
-    26.9.2000:  - OBJF-Support (t- and q-lines) see
-                  http://www.cs.sunysb.edu/~stripe/ 
-    18.9.2000:  - Bugfixing.
-                - SaveTo-Methods. 
-    14.9.2000:  - Calculate normals where missing in the file.
-                - Collect Facegroups by Name and do not start a new
-            one for every 'g'-line in the file.
-                - Relative indexing in 'f'-lines. 
-    13.9.2000:  - Start of this project as an exercise to get familiar with 
-                    a) the OBJ-Format and 
-                    b) GLScene internals 
-                  Midterm-goal: Import what Poser 4 exports and display it
-                                correctly in an GLScene. 
 }
 unit GLFileOBJ;
 
@@ -84,9 +31,16 @@ uses
   SysUtils,
 
   GLApplicationFileIO,
-  GLCrossPlatform, GLPersistentClasses, GLVectorGeometry,
-  GLScene,  GLVectorFileObjects, GLVectorLists,  GLTexture,  GLColor,
-  GLRenderContextInfo, GLMaterial;
+  GLCrossPlatform, 
+  GLPersistentClasses, 
+  GLVectorGeometry,
+  GLScene,  
+  GLVectorFileObjects, 
+  GLVectorLists,  
+  GLTexture,  
+  GLColor,
+  GLRenderContextInfo, 
+  GLMaterial;
 
 const
   BufSize = 10240; { Load input data in chunks of BufSize Bytes. }

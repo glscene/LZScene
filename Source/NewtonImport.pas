@@ -1,3 +1,6 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 {                                                                            
  Newton Game Dynamics Header Translation (Delphi/FreePascal)                  
   Newton Version 3.14 

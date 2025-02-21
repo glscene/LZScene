@@ -10,16 +10,6 @@
     But it down color to RGBA8 because becomes to TGLBitmap
     Good for preview picture in OpenDialog,
     so you may include both DDSImage (preview) and GLFileDDS (loading)
-
-  History :  
-         23/10/10 - Yar - Removed PBuffer
-         23/08/10 - Yar - Changes after PBuffer upgrade
-         20/05/10 - Yar - Fixes for Linux x64
-         21/03/10 - Yar - Added Linux support
-                             (thanks to Rustam Asmandiarov aka Predator)
-         24/01/10 - Yar - Improved FPC compatibility
-         21/01/10 - Yar - Creation
-    
 }
 
 unit DDSImage;

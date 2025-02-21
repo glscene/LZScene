@@ -2,10 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-       04/06/10 - Yar - Added to GLScene
-                           (Created by Rustam Asmandiarov aka Predator)
-   
+ The PAK file format
 }
 
 unit GLFilePAK;
@@ -15,7 +12,9 @@ unit GLFilePAK;
 interface
 
 uses
-  Classes, SysUtils, GLSArchiveManager;
+  Classes, 
+  SysUtils, 
+  GLSArchiveManager;
 
 const
    SIGN = 'PACK';
@@ -51,7 +50,6 @@ Type
       procedure Clear; override;
 
       function ContentExists(ContentName: string): boolean; override;
-
       function GetContent(Stream: TStream; index: integer): TStream;  override;
       function GetContent(index: integer): TStream;  override;
       function GetContent(ContentName: string): TStream;  override;

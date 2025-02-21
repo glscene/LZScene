@@ -24,11 +24,6 @@ Lookuptables
 Overall
  - Simple Data Structures to store Mesh. Vertices are calculated and stored twice
    or even more often.
-
-	 History :  
-      05/08/12 - PW - Adapted to use with GLScene v.1.2 and later
-	    12/06/04 - Wolf Blecher - Created, first implementation (Blechwolf@myrealbox.com)
-	 
 }
 
 unit GLIsosurface;
@@ -45,8 +40,6 @@ type
   TVertexArray = array of TVertex;
   TIntegerArray = array of Integer;
 
-// TIsoSurfaceExtractor
-//
 { 3D Isosurface extractor class.
    This class allows to calculate and extract isosurfaces from scalar field
    voxel models using a given isovalue.

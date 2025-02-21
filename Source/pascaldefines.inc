@@ -1,3 +1,6 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 {******************************************************************************}
 {                                                                              }
 {       Borland Delphi SDL - Simple DirectMedia Layer                          }

@@ -1,3 +1,6 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 {*******************************************************************************
 
   SDL2.pas        v1.0  29/07/2013 first version for DelphiXE

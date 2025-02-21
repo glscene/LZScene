@@ -4,10 +4,6 @@
 {
   Conversion of OpenCL header file: cl_platform.h to Delphi,
   from http://www.khronos.org/registry/cl/.
-
-   History :  
-   01/11/09 - DanB - Creation
-   
 }
 // *****************************************************************************
 // * Copyright (c) 2008-2009 The Khronos Group Inc.

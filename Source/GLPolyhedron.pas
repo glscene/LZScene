@@ -3,13 +3,6 @@
 //
 {
    Standard polyhedrons.
-
-  History :  
-       10/03/13 - PW - Added TGLTetrahedron and TGLOctahedron classes
-       23/08/10 - Yar - Added OpenGLTokens to uses
-       20/01/04 - SG - Added TGLIcosahedron
-       21/07/03 - EG - Creation from GLObjects split
-    
 }
 unit GLPolyhedron;
 
@@ -17,12 +10,11 @@ interface
 
 uses
   Classes,
-  GLScene, GLVectorGeometry, GLRenderContextInfo;
+  GLScene, 
+  GLVectorGeometry, 
+  GLRenderContextInfo;
 
 type
-
-  // TGLDodecahedron
-  //
   { A Dodecahedron.
      The dodecahedron has no texture coordinates defined, ie. without using
      a texture generation mode, no texture will be mapped. }
@@ -31,9 +23,6 @@ type
      
     procedure BuildList(var rci: TGLRenderContextInfo); override;
   end;
-
-  // TGLIcosahedron
-  //
   { A Icosahedron.
      The icosahedron has no texture coordinates defined, ie. without using
      a texture generation mode, no texture will be mapped. }

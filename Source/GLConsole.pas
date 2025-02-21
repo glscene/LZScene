@@ -4,17 +4,6 @@
 {
    The console is a popdown window that appears on a game for text output/input.
 
-    History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       02/04/07 - DaStr - All cross-version stuff abstracted into GLCrossPlatform
-       30/03/07 - DaStr - Replaced GLWin32Viewer with GLViewer
-       25/02/07 - DaStr - Made some fixes for Delphi5 compatibility
-       23/02/07 - DaStr - Cosmetic changes, replaced some strings with
-                              resource strings from GLStrings.pas
-       15/02/07 - DaStr - Some properties are not stored now, because they are
-                              read directly from HUDSprite and HUDText
-       07/02/07 - DaStr - Initial version (donated to GLScene)
-
    What is different compared to the original component?
      1) Can be aded to any object, not just the root one
      2) Has a *wide* range of built-in commands

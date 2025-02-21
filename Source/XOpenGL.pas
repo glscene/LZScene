@@ -10,30 +10,6 @@
    Before using any of the xglTexCoordXxxx fonctions, call one of the
    xglMapTexCoordToXxxx functions to establish the redirectors.
 
-   This unit is Open-Source under MPL 
-   Copyright 2001 - Eric Grange (egrange@glscene.org) 
-   http://glscene.org
-
-    History :  
-       25/11/10 - Yar - Wrapped multitexturing in TGLMultitextureCoordinator class
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       29/03/10 - Yar - Replaced MULTITHREADOPENGL to GLS_MULTITHREAD (thanks Controler)
-       16/03/07 - DaStr - Dropped Kylix support in favor of FPC
-                             (thanks Burkhard Carstens) (BugTracekrID=1681585)
-       08/07/04 - LR - Removed ../ from the GLScene.inc
-       23/05/03 - EG - Support for arbitrary (complex) mappings
-       01/02/03 - EG - Added State stack
-       01/07/02 - EG - Added mtcmUndefined, fixed initial state
-       03/01/02 - EG - Added xglDisableClientState
-       26/01/02 - EG - Added xglBegin/EndUpdate mechanism
-       21/12/01 - EG - Fixed xglTexCoordPointer and xglEnableClientState
-       18/12/01 - EG - Added xglEnableClientState
-       24/08/01 - EG - Now supports MULTITHREADOPENGL (same as OpenGL1x)
-       17/08/01 - EG - Made declarations Kylix compatible (cdecl vs stdcall)
-       16/08/01 - EG - Renamed xglMapTextCoordMode to xglMapTexCoordMode
-       14/08/01 - EG - Added xglMapTexCoordToSecond
-       21/02/01 - EG - Added TexGen and vertex arrays mappings
-    
 }
 unit XOpenGL;
 

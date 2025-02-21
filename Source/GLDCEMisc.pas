@@ -3,14 +3,6 @@
 //
 {
   Miscelaneous functions used by DCE (Dynamic Collision Engine).
-
-   History :  
-     10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-     30/03/07 - DaStr - Added $I GLScene.inc
-     23/01/05 - LucasG - Code reorganized, many fixes and some new features
-     03/09/04 - LucasG - First release
-     29/07/04 - LucasG - Creation
-   
 }
 unit GLDCEMisc;
 
@@ -19,8 +11,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  GLVectorFileObjects, GLEllipseCollision, GLVectorGeometry, GLVectorLists,
-  GLScene, GLTerrainRenderer,GLProxyObjects, GLMultiProxy
+  GLVectorFileObjects, 
+  GLEllipseCollision, 
+  GLVectorGeometry, 
+  GLVectorLists,
+  GLScene, 
+  GLTerrainRenderer,
+  GLProxyObjects, 
+  GLMultiProxy
   , GLVectorTypes;
 
 //Calculate and set the collision range

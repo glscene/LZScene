@@ -4,55 +4,34 @@
 {
    Handles all the material + material library stuff.
 
-  History :  
-       10/11/12 - PW - Added CPPB compatibility: used dummy instead abstract methods
-                          in TGLShader and TGLAbstractLibMaterial for GLS_CPPB
-       11/03/11 - Yar - Extracted abstract classes from TGLLibMaterial, TGLLibMaterials, TGLMaterialLibrary
-       20/02/11 - Yar - Fixed TGLShader's virtual handle behavior with multicontext situation
-       07/01/11 - Yar - Added separate blending function factors for alpha in TGLBlendingParameters
-       20/10/10 - Yar - Added property TextureRotate to TGLLibMaterial, make TextureMatrix writable
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       07/05/10 - Yar - Fixed TGLMaterial.Assign (BugTracker ID = 2998153)
-       22/04/10 - Yar - Fixes after GLState revision
-       06/03/10 - Yar - Added to TGLDepthProperties DepthClamp property
-       05/03/10 - DanB - More state added to TGLStateCache
-       21/02/10 - Yar - Added TGLDepthProperties,
-                           optimization of switching states
-       22/01/10 - Yar - Remove Texture.Border and
-                           added MappingRCoordinates, MappingQCoordinates
-                           to WriteToFiler, ReadFromFiler
-       07/01/10 - DaStr - TexturePaths are now cross-platform (thanks Predator)
-       22/12/09 - DaStr - Updated TGLMaterialLibrary.WriteToFiler(),
-                              ReadFromFiler() (thanks dAlex)
-                             Small update for blending constants
-       13/12/09 - DaStr - Added a temporary work-around for multithread
-                              mode (thanks Controller)
-                             Added TGLBlendingParameters and bmCustom blending
-                              mode(thanks DungeonLords, Fantom)
-                             Fixed code formating in some places
-       24/08/09 - DaStr - Updated TGLLibMaterial.DoOnTextureNeeded:
-                              Replaced IncludeTrailingBackslash() with
-                              IncludeTrailingPathDelimiter()
-       28/07/09 - DaStr - Updated TGLShader.GetStardardNotSupportedMessage()
-                              to use component name instead class name
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)
-       14/07/09 - DaStr - Added $I GLScene.inc
-       08/10/08 - DanB - Created from split from GLTexture.pas,
-                            Textures + materials are no longer so tightly bound
-    
 }
 unit GLMaterial;
 
 interface
 
 uses
-  Classes, SysUtils, Types,
+  Classes, 
+  SysUtils, 
+  Types,
    
-  GLRenderContextInfo, GLBaseClasses, OpenGLTokens, GLContext,
-  GLTexture, GLColor, GLCoordinates, GLVectorGeometry, GLPersistentClasses,
-  GLCrossPlatform, GLState, GLTextureFormat, GLStrings, XOpenGL,
-  GLApplicationFileIO, GLGraphics, GLUtils, GLSLog;
+  GLRenderContextInfo, 
+  GLBaseClasses, 
+  OpenGLTokens, 
+  GLContext,
+  GLTexture, 
+  GLColor, 
+  GLCoordinates, 
+  GLVectorGeometry, 
+  GLPersistentClasses,
+  GLCrossPlatform, 
+  GLState, 
+  GLTextureFormat, 
+  GLStrings, 
+  XOpenGL,
+  GLApplicationFileIO, 
+  GLGraphics, 
+  GLUtils, 
+  GLSLog;
 
 {$I GLScene.inc}
 {$UNDEF GLS_MULTITHREAD}
@@ -71,8 +50,6 @@ type
   TGLAbstractLibMaterial = class;
   TGLLibMaterial = class;
 
-  // TGLShaderStyle
-  //
   { Define GLShader style application relatively to a material. 
       ssHighLevel: shader is applied before material application, and unapplied
            after material unapplication
@@ -83,8 +60,6 @@ type
        }
   TGLShaderStyle = (ssHighLevel, ssLowLevel, ssReplace);
 
-  // TGLShaderFailedInitAction
-  //
   { Defines what to do if for some reason shader failed to initialize. 
       fiaSilentdisable:          just disable it
       fiaRaiseHandledException:  raise an exception, and handle it right away

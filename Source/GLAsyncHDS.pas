@@ -12,20 +12,6 @@
    being prepared.  Although this keeps the framerate up, it may cause holes in the
    terrain to show, if the HeightDataThreads cant keep up with the TerrainRenderer's
    requests for new tiles.
-   
-
-	 History :  
-       22/04/10 - Yar - Fixes after GLState revision
-       11/10/07 - DaStr - Added $I GLScene.inc, removed unused dependancy
-       25/03/07 - DaStr - Replaced Dialogs with GLCrossPlatform for Delphi5 compatibility
-       22/03/07 - LIN - Added UseDirtyTiles property - Specifies how dirty tiles are replaced.
-       22/03/07 - LIN - Data is now prepared in 3 stages:
-                            BeforePreparingData : (Main Thread)
-                            PreparingData       : (Sub-Thread)   (Main Thread if MaxThreads=0)
-                            AfterPreparingData  : (Main Thread)
-       05/03/07 - LIN - Added ThreadCount and WaitFor
-       12/02/07 - LIN - Creation
-	 
 }
 
 unit GLAsyncHDS;

@@ -4,44 +4,6 @@
 { 
   GLScene's brute-force terrain renderer.
 
-   History :  
-   10/01/13 - PW - Added CPP compatibility: considered sensitivity to upper case characters in identifiers
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   15/08/10 - Yar - Return missing part of code in BuildList
-   20/05/10 - Yar - Fixes for Linux x64
-   20/07/07 - LC - Fixed a problem when camera is far away from the terrain bounds.
-  (Bugtracker ID = 1757733)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   28/03/07 - DaStr - Cosmetic fixes for FPC compatibility
-   27/03/07 - Lin- Added TileManagement flags. - Helps prevent tile cache fushes.
-   19/03/07 - Lin- Added IgnoredByRenderer flag to TGLHeightData.
-  Helps manage duplicate tiles, when a dirty tile is being replaced.
-   16/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   08/02/07 - Lin- Ignore tiles that are not hdsReady (Prevents crashes when threading)
-   30/01/07 - Lin- Added HashedTileCount - Counts the tiles in the buffer
-   19/10/06 - LC - Changed the behaviour of OnMaxCLODTrianglesReached
-   09/10/06 - Lin- Added OnMaxCLODTrianglesReached event.(Rene Lindsay)
-   01/09/04 - SG - Fix for RayCastIntersect (Alan Rose)
-   02/08/04 - LR, YHC - BCB corrections: use record instead array
-   25/04/04 - EG - Occlusion testing support
-   13/01/04 - EG - Leak fix (Phil Scadden)
-   05/11/03 - SG - Fixed minuscule bug in RayCastIntersect (thanks Michael)
-   06/02/03 - EG - Fixed speculative range computation, better hashkey
-   14/01/03 - EG - RayCastIntersect normals fix (Stuart Gooding)
-   24/09/02 - EG - Added RayCastIntersect (Stuart Gooding)
-   28/08/02 - EG - Now longer wrongly requests hdtByte (Phil Scadden),
-  Terrain bounds limiting event (Erazem Polutnik)
-   10/07/02 - EG - Added support for "holes" in the elevation data
-   16/06/02 - EG - Added support for multi-material terrains
-   24/02/02 - EG - Hybrid ROAM-stripifier engine
-   18/12/01 - EG - Vertex-cache aware stripifier (+10% on GeForce)
-   12/08/01 - EG - Completely rewritten handles management
-   21/07/01 - EG - Added Notication registration in SeTGLHeightDataSource
-   04/03/01 - EG - Completed for first release
-   12/02/01 - EG - Creation
-   
-
   NOTA : multi-materials terrain support is not yet optimized to minimize
   texture switches (in case of resued tile textures).
 }
@@ -52,10 +14,20 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLScene, GLHeightData, GLMaterial, GLVectorGeometry, GLContext, GLROAMPatch,
-  GLVectorLists, GLRenderContextInfo, OpenGLTokens, XOpenGL, GLUtils
+  GLScene, 
+  GLHeightData, 
+  GLMaterial, 
+  GLVectorGeometry, 
+  GLContext, 
+  GLROAMPatch,
+  GLVectorLists, 
+  GLRenderContextInfo, 
+  OpenGLTokens, 
+  XOpenGL, 
+  GLUtils
 , GLVectorTypes;
 
 const

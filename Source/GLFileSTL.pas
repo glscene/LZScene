@@ -5,13 +5,6 @@
     Support-code to load STL Files into TGLFreeForm-Components in GLScene.
     Note that you must manually add this unit to one of your project's uses
     to enable support for STL files at run-time.
-
-	History : 
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       22/11/02 - EG - Write capability now properly declared
-       17/10/02 - EG - Created from split of GLVectorFileObjects,
-                          ASCII STL support (Adem)
-
 }
 unit GLFileSTL;
 
@@ -21,9 +14,12 @@ uses
   Classes,
   SysUtils,
    
-   GLVectorGeometry, GLVectorLists,  
-   GLVectorFileObjects, GLApplicationFileIO, 
-   GLUtils, GLCrossPlatform;
+  GLVectorGeometry, 
+  GLVectorLists,  
+  GLVectorFileObjects, 
+  GLApplicationFileIO, 
+  GLUtils, 
+  GLCrossPlatform;
 
 type
   TSTLHeader = packed record

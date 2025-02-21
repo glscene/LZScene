@@ -2,11 +2,6 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {   TIN (Triangular Irregular Network) vector file format implementation.
-   History : 
-       08/04/13 - PW - Fixed a bug in VertArr: decremented element numbers by one
-       17/11/05 - PW - Added support for ascii TIN files with materials
-       05/06/03 - SG - Separated from GLVectorFileObjects.pas
-	 
 }
 unit GLFileTIN;
 
@@ -15,29 +10,25 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLVectorFileObjects, GLApplicationFileIO;
+  Classes, 
+  SysUtils,
+
+  GLVectorFileObjects, 
+  GLApplicationFileIO;
 
 type
-   // TGLTINVectorFile
-   //
    { The TIN vector file (triangle irregular network).
       It is a simple text format, with one triangle record per line, no materials,
       no texturing (there may be more, but I never saw anything in this files).
       This format is encountered in the DEM/DTED world and used in place of grids. }
    TGLTINVectorFile = class(TGLVectorFile)
       public
-          
          class function Capabilities : TGLDataFileCapabilities; override;
          procedure LoadFromStream(aStream : TStream); override;
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 uses

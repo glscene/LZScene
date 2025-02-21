@@ -3,12 +3,6 @@
 //
 {
    GTS (GNU Triangulated Surface) vector file format implementation.
-
-	 History : 
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       31/03/07 - DaStr - Added $I GLScene.inc
-       05/06/03 - SG - Separated from GLVectorFileObjects.pas
-	 
 }
 unit GLFileGTS;
 
@@ -17,7 +11,9 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLVectorFileObjects, GLApplicationFileIO;
+  Classes, 
+  GLVectorFileObjects, 
+  GLApplicationFileIO;
 
 type
    // TGLGTSVectorFile

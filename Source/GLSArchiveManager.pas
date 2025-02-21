@@ -3,11 +3,6 @@
 // 
 {
   Archive Manager
- 
-   History :  
-    04/06/10 - Yar - Added to GLScene
-                        (Created by Rustam Asmandiarov aka Predator)
-   
 }
 
 unit GLSArchiveManager;
@@ -17,9 +12,11 @@ unit GLSArchiveManager;
 interface
 
 uses
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
    
-  GLPersistentClasses, GLApplicationFileIO;
+  GLPersistentClasses, 
+  GLApplicationFileIO;
 
 Type
 
@@ -40,8 +37,6 @@ Type
   );
 
   //****************************************************************************
-
-  //Базовый класс для архиваторов
 
   { TGLBaseArchive }
 

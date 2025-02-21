@@ -3,11 +3,6 @@
 //
 {
   Design time registration code for the Newton Manager.
-
-   History :  
-   04/01/11 - FP - Removed Joint
-   15/07/10 - FP - Creation by Franck Papouin
-   
 }
 
 unit GLPhysicNewtonRegister;
@@ -15,7 +10,8 @@ unit GLPhysicNewtonRegister;
 interface
 
 uses
-  Classes, GLNGDManager;
+  Classes, 
+  GLNGDManager;
 
 procedure register;
 

@@ -4,18 +4,6 @@
 {
   Creates a trail-like mesh.
   Based on Jason Lanford's demo. 
-
-	 History :  
-         23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-         03/04/07 - DaStr - Added default values to some properties
-                               Added TGLTrail.AntiZFightOffset
-                               Subscribed for Notification in TGLTrail.SetTrailObject
-         28/03/07 - DaStr - Renamed parameters in some methods
-                              (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-         19/12/06 - DaS - msRight (TMarkStyle) support added
-         09/12/04 - LR  - Suppress windows uses
-         12/10/04 - Mrqzzz - Creation (Based on Jason Lanford's demo - june 2003)
-    
 }
 
 unit GLTrail;

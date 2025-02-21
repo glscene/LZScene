@@ -2,15 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-  History :  
-         10/05/12 - Yar - Fixed extension checking for float texture (thnaks Nelson Chu)
-         03/08/10 - Yar - Added SNORM texture format
-         15/06/10 - Yar - Replace OpenGL1x extensions to OpenGLAdapter
-         22/04/10 - Yar - Moved TGLTextureTarget
-         23/01/10 - Yar - Separated GLTextureFormat and GLInternalFormat
-                             GLTextureFormat moved to GLTexture
-         21/01/10 - Yar - Creation
-    
+  Float texture format (Nelson Chu)
 }
 unit GLTextureFormat;
 

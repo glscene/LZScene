@@ -8,7 +8,7 @@ unit Const3DS;
 //
 // Last Change - 03. October 1999
 //
-// (c) Copyright 1999, Dipl. Ing. Mike Lischke (public@lischke-online.de)
+// (c) Copyright 1999, Dipl. Ing. Mike Lischke 
 
 interface
 

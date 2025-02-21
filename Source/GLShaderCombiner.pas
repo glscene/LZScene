@@ -8,14 +8,6 @@
     disregard to what existed before it. But in some cases, especially with
     multipass shaders, this unit does magic and allows to reuse and upgrade
     previously written shaders.
-
-
-	 History :  
-       23/02/07 - DaStr - Initial version (contributed to GLScene)
-
-
-    Previous version history:
-      v1.0  02 November    '2006  Creation
 }
 unit GLShaderCombiner;
 
@@ -24,11 +16,13 @@ interface
 {$I GLScene.inc}
 
 uses
-  //VCL
   Classes,
 
-  //GLScene
-  GLMaterial, GLScene, GLVectorGeometry, GLStrings, GLRenderContextInfo;
+  GLMaterial, 
+  GLScene, 
+  GLVectorGeometry, 
+  GLStrings, 
+  GLRenderContextInfo;
 
 type
   { MP - multipass, SP-singlepass, AP - anypass (single or multi)

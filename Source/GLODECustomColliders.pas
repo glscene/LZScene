@@ -4,45 +4,9 @@
 {
   Custom ODE collider implementations.
 
-   Credits :  
-      Heightfield collider code originally adapted from Mattias Fagerlund's
+  Credits :  
+    Heightfield collider code originally adapted from Mattias Fagerlund's
          DelphiODE terrain collision demo.
-         Website: http://www.cambrianlabs.com/Mattias/DelphiODE
-   
-
-   History :  
-     19/06/14 - PW - Changed some types from Single to TdReal to permit ODE be double based in ODEImport.pas
-     10/11/12 - PW - Added CPP compatibility: restored records with arrays instead of vector arrays
-     23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-     22/04/10 - Yar - Fixes after GLState revision
-     05/03/10 - DanB - More state added to TGLStateCache
-     17/11/09 - DaStr - Improved Unix compatibility
-                           (thanks Predator) (BugtrackerID = 2893580)
-     08/11/09 - DaStr - Improved FPC compatibility
-                            (thanks Predator) (BugtrackerID = 2893580)
-     12/04/08 - DaStr - Cleaned up uses section
-                            (thanks Sandor Domokos) (BugtrackerID = 1808373)
-     06/02/08 - Mrqzzz - Upgrade to ODE 0.9 (by Paul Robello)
-                            Fixed reference to odeimport
-     25/12/07 - DaStr  - Fixed memory leak in TGLODECustomCollider.Destroy()
-                             (thanks Sandor Domokos) (BugtrackerID = 1808373)
-     10/10/07 - Mrqzzz - Fixed reference ODEGL.ODERToGLSceneMatrix
-     07/10/07 - Mrqzzz - Added reference to ODEGL
-     11/09/07 - Mrqzzz - Added reference to ODEImport
-     07/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-                           Added $I GLScene.inc
-     08/12/04 - SG - Added contact point rendering to TGLODECustomCollider.
-     07/12/04 - SG - Added new TGLODECustomCollider class,
-                        Geom collide code now uses Resolution to determine the
-                        number of contact points to generate.
-     19/11/04 - SG - Changed TGLODETerrainCollider to TGLODEHeightField
-                        which now inherits from TGLODEBehaviour and works for
-                        both TGLTerrainRenderer and TGLHeightField objects.
-                        Added Capsule, Cylinder and Cone collider code for
-                        the heightfield collider.
-     23/04/04 - SG - Removed freeform static collider
-     29/10/03 - SG - Fix for GLODETerrainCollider (Matheus Degiovani)
-     30/07/03 - SG - Creation.
    
 }
 unit GLODECustomColliders;
@@ -79,8 +43,6 @@ type
     Depth: Single;
   end;
 
-  // TGLODECustomCollider
-  //
   { The custom collider is designed for generic contact handling. There is a
      contact point generator for sphere, box, capped cylinder, cylinder and
      cone geoms.
@@ -159,8 +121,6 @@ type
 
   end;
 
-  // TGLODEHeightField
-  //
   { Add this behaviour to a TGLHeightField or TGLTerrainRenderer to enable
      height based collisions for spheres, boxes, capped cylinders, cylinders
      and cones. }
@@ -193,24 +153,15 @@ var
   vCustomColliderClass: TdGeomClass;
   vCustomColliderClassNum: Integer;
 
-  // GetODEHeightField
-  //
-
 function GetODEHeightField(obj: TGLBaseSceneObject): TGLODEHeightField;
 begin
   result := TGLODEHeightField(obj.Behaviours.GetByClass(TGLODEHeightField));
 end;
 
-// GetOrCreateODEHeightField
-//
-
 function GetOrCreateODEHeightField(obj: TGLBaseSceneObject): TGLODEHeightField;
 begin
   result := TGLODEHeightField(obj.GetOrCreateBehaviour(TGLODEHeightField));
 end;
-
-// GetColliderFromGeom
-//
 
 function GetColliderFromGeom(aGeom: PdxGeom): TGLODECustomCollider;
 var
@@ -239,9 +190,6 @@ begin
   else
     result := 1;
 end;
-
-// CollideSphere
-//
 
 function CollideSphere(o1, o2: PdxGeom; flags: Integer;
   contact: PdContactGeom; skip: Integer): Integer; cdecl;
@@ -288,9 +236,6 @@ begin
   Result := Collider.ApplyContacts(o1, o2, flags, contact, skip);
   Collider.SetTransform(IdentityHMGMatrix);
 end;
-
-// CollideBox
-//
 
 function CollideBox(o1, o2: PdxGeom; flags: Integer;
   contact: PdContactGeom; skip: Integer): Integer; cdecl;
@@ -377,9 +322,6 @@ begin
   Collider.SetTransform(IdentityHMGMatrix);
 end;
 
-// CollideCapsule
-//
-
 function CollideCapsule(o1, o2: PdxGeom; flags: Integer;
   contact: PdContactGeom; skip: Integer): Integer; cdecl;
 var
@@ -435,9 +377,6 @@ begin
   Collider.SetTransform(IdentityHMGMatrix);
 end;
 
-// CollideCylinder
-//
-
 function CollideCylinder(o1, o2: PdxGeom; flags: Integer;
   contact: PdContactGeom; skip: Integer): Integer; cdecl;
 var
@@ -492,9 +431,6 @@ begin
   Collider.SetTransform(IdentityHMGMatrix);
 end;
 
-// GetCustomColliderFn
-//
-
 function GetCustomColliderFn(num: Integer): TdColliderFn; cdecl;
 begin
   if num = dSphereClass then
@@ -513,9 +449,6 @@ end;
 // --------------- TGLODECustomCollider --------------
 // ---------------
 
-// Create
-//
-
 constructor TGLODECustomCollider.Create(AOwner: TGLXCollection);
 begin
   inherited;
@@ -531,9 +464,6 @@ begin
   FPointSize := 3;
 end;
 
-// Destroy
-//
-
 destructor TGLODECustomCollider.Destroy;
 var
   i: integer;
@@ -546,9 +476,6 @@ begin
   FContactColor.Free;
   inherited;
 end;
-
-// Initialize
-//
 
 procedure TGLODECustomCollider.Initialize;
 begin
@@ -574,9 +501,6 @@ begin
   inherited;
 end;
 
-// Finalize
-//
-
 procedure TGLODECustomCollider.Finalize;
 begin
   if not Initialized then
@@ -588,9 +512,6 @@ begin
   end;
   inherited;
 end;
-
-// WriteToFiler
-//
 
 procedure TGLODECustomCollider.WriteToFiler(writer: TWriter);
 begin
@@ -604,9 +525,6 @@ begin
     Write(PByte(FContactColor.AsAddress)^, 4);
   end;
 end;
-
-// ReadFromFiler
-//
 
 procedure TGLODECustomCollider.ReadFromFiler(reader: TReader);
 var
@@ -623,9 +541,6 @@ begin
     Read(PByte(FContactColor.AsAddress)^, 4);
   end;
 end;
-
-// ClearContacts
-//
 
 procedure TGLODECustomCollider.ClearContacts;
 begin

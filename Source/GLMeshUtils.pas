@@ -3,25 +3,6 @@
 //
 {
    General utilities for mesh manipulations.
-
-	 History :  
-       10/12/14 - PW - Renamed MeshUtils unit to GLMeshUtils
-       20/05/10 - Yar - Fixes for Linux x64
-       26/02/10 - Yar - Added functions to work with adjacent triangles
-       30/03/07 - DaStr - Added $I GLScene.inc
-       29/07/03 - PVD - Fixed bug in RemapReferences limiting lists to 32768 items   
-       29/07/03 - SG - Fixed small bug in ConvertStripToList (indexed vectors variant)
-       05/03/03 - EG - Added RemapIndicesToIndicesMap
-       20/01/03 - EG - Added UnifyTrianglesWinding
-       15/01/03 - EG - Added ConvertStripToList, ConvertIndexedListToList
-       13/01/03 - EG - Added InvertTrianglesWinding, BuildNonOrientedEdgesList,
-                          SubdivideTriangles 
-       10/03/02 - EG - Added WeldVertices, RemapTrianglesIndices and IncreaseCoherency
-       04/11/01 - EG - Optimized RemapAndCleanupReferences and BuildNormals
-       02/11/01 - EG - BuildVectorCountOptimizedIndices three times faster,
-                          StripifyMesh slightly faster
-	    18/08/01 - EG - Creation
-	 
 }
 unit GLMeshUtils;
 
@@ -30,7 +11,12 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLPersistentClasses, GLVectorLists, GLVectorGeometry, GLVectorTypes;
+  Classes, 
+  
+  GLPersistentClasses, 
+  GLVectorLists, 
+  GLVectorGeometry, 
+  GLVectorTypes;
 
 { Converts a triangle strips into a triangle list.
    Vertices are added to list, based on the content of strip. Both non-indexed

@@ -6,19 +6,6 @@
 
    Original author of the unit is Riz.
    Modified by C4 and YarUnderoaker (hope, I didn't miss anybody).
-
-    History :  
-       16/10/11 - Yar - Fixes for depth-stencil texture
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       16/05/10 - Yar - Added multisampling support (thanks C4)
-       22/04/10 - Yar - Fixes after GLState revision
-       15/04/10 - Yar   - Bugfix missing FBO state changing (thanks C4)
-       23/01/10 - Yar   - Replaced TextureFormat to TextureFormatEx
-       22/01/10 - Yar   - Adapted to Handles of GLContext,
-                             texture target unification, level and layer control
-       11/11/09 - DaStr - Added $I GLScene.inc
-       09/11/09 - DaStr - Initial version (contributed to GLScene)
-    
 }
 unit GLFBO;
 

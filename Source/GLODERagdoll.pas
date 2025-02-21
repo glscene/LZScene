@@ -3,21 +3,6 @@
 //
 {
    TGLRagdoll extended using Open Dynamics Engine (ODE). 
-
-	 History : 
-     10/11/12 - PW - Added CPP compatibility: used records with arrays instead of vector arrays
-     13/07/08 - Mrqzzz - replaced constants "cDensity" and "cMass" with
-                            global vars "vGLODERagdoll_cDensity" and "vGLODERagdoll_cMass"
-     11/05/08 - Mrqzzz - replaced TGLCube with TODERagdollCube
-                            (contains reference to Bone and Ragdoll, useful in collision events)
-     28/02/08 - Mrqzzz - prevent ODE 0.9 "bNormalizationResult failed" error
-                            in TODERagdollBone.Start.
-                            Fixed a memory leak in TODERagdollBone.Stop
-     05/02/08 - Mrqzzz - upgrade to ODE 0.9 (by paul Robello)
-     09/11/05 - LucasG - Fixed joints to be relative to the body
-     07/11/05 - LucasG - Alignment (Using Stuart's AlignToMatrix function)
-     02/11/05 - LucasG - First version created.
-   
 }
 
 unit GLODERagdoll;
@@ -25,12 +10,17 @@ unit GLODERagdoll;
 interface
 
 uses
-  GLRagdoll, ODEImport, GLScene, GLObjects, GLVectorGeometry, ODEGL, GLTexture,
+  GLRagdoll, 
+  ODEImport, 
+  GLScene, 
+  GLObjects, 
+  GLVectorGeometry, 
+  ODEGL, 
+  GLTexture,
   GLVectorFileObjects;
 
 const
      cMaxContacts = 4;
-
 
 type
 

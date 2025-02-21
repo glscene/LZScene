@@ -18,17 +18,6 @@
   удалите код лазаруса оставив тот который дл€ делфи.
   ћодуль еще не закончен! ¬ линуксе есть проблемы перехвата мыши
   и проблемы с DoActivate DoDeactivate.
-
-   History :  
-   22/08/10 - DaStr - Restored backward-compatibility after previous changes
-   11/06/10 - Yar - Fixed uses section after lazarus-0.9.29.26033 release
-   28/04/10 - Yar - Merged GLFullScreenViewer and GLWin32FullScreenViewer into one unit
-  (by Rustam Asmandiarov aka Predator)
-   08/04/10 - Yar - Added more UNIX compatibility (thanks Rustam Asmandiarov aka Predator)
-   07/01/10 - DaStr - Added UNIX compatibility (thanks Predator)
-   07/11/09 - DaStr - Added to main GLScene CVS repository (from GLScene-Lazarus)
-   24/07/03 - EG - Creation from GLWin32Viewer split
-   
 }
 unit GLFullScreenViewer;
 
@@ -37,21 +26,25 @@ interface
 {$I GLScene.inc}
 
 uses
-  Forms, Controls, Menus,
-  Classes, Messages, GLViewer, GLScene, GLContext,LcLtype, LCLIntf
+  Forms, 
+  Controls, 
+  Menus,
+  Classes, 
+  Messages, 
+
+  GLViewer, 
+  GLScene, 
+  GLContext,
+  LcLtype, 
+  LCLIntf
 {$IFDEF MSWindows}
     , Windows
 {$ENDIF}
     ;
 
 type
-
-  // TGLScreenDepth
-  //
   TGLScreenDepth = (sd8bits, sd16bits, sd24bits, sd32bits);
 
-  // TGLFullScreenViewer
-  //
   { : A FullScreen viewer.
     This non visual viewer will, when activated, use the full screen as rendering
     surface. It will also switch/restore videomode depending on the required
@@ -64,7 +57,6 @@ type
     the original resolution isn't restored. }
   TGLFullScreenViewer = class(TGLNonVisualViewer)
   private
-     
     FFormIsOwned: Boolean;
     FForm: TForm;
     FOwnDC: HWND;

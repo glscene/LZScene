@@ -11,12 +11,6 @@
    - direct state access can be used for uniforms setting.
    - economy mode for texture bindig to active units,
      i.e. if textures less than maximum units may be not one binding occur per frame.
-
-  History :  
-       13/04/11 - Yar - Added TGLASMVertexProgram, fixed multitexturing
-       11/04/11 - Yar - Added texture internal storing and streaming (yet only 2D images)
-       11/03/11 - Yar - Created
-    
 }
 
 unit GLMaterialEx;
@@ -27,8 +21,15 @@ interface
 
 uses
   Classes, SysUtils,
-  GLRenderContextInfo, GLBaseClasses, GLContext, GLVectorTypes,
-  GLMaterial, GLTexture, GLColor, GLCoordinates, GLVectorGeometry, GLGraphics,
+
+  GLRenderContextInfo, 
+  GLBaseClasses, 
+  GLContext, 
+  GLVectorTypes,
+  GLMaterial, 
+  GLTexture, 
+  GLColor, 
+  GLCoordinates, GLVectorGeometry, GLGraphics,
   GLPersistentClasses, GLCrossPlatform, GLState, GLTextureFormat, GLXCollection,
   GLTextureCombiners, OpenGLTokens, GLSLParameter,
   GLApplicationFileIO, GLStrings, GLImageUtils, GLUtils, XOpenGL,

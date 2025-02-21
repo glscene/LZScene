@@ -2,23 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 { 
-   History :  
-   24/10/13 - Yar - Added OpenGL 4.3, 4.4
-   08/09/11 - Yar - Added WGL_NV_DX_interop
-   21/08/11 - Yar - Added OpenGL ES
-   31/07/11 - Yar - Added GL_NV_Path_rendering
-   18/07/11 - Yar - Added WGL_EXT_create_context_es2_profile
-   06/06/11 - Yar - Added GL_NV_vertex_buffer_unified_memory, GL_NV_shader_buffer_load
-   11/03/11 - Yar - Added GL_EXT_texture_sRGB_decode, GL_ARB_separate_shader_objects, EXT_direct_state_access
-   19/02/11 - PREDATOR - Added Apple Extentions, Loading Apple functions
-   16/02/11 - PREDATOR - Added support for Mac OS X. Tested on Mac OS X 10.6.5.
-   18/01/11 - Yar - Added entry points for AGL
-   23/10/10 - Yar - Added GL_NV_vdpau_interop
-   25/09/10 - Yar - Added GL_get_program_binary
-   10/09/10 - Yar - Added GL_ATI_Meminfo, GL_NVX_gpu_memory_info
-   04/08/10 - Yar - Added GL_AMDX_debug_output, GL_ARB_debug_output extension. Added WGL and GLX
-   21/05/10 - Yar - Creation
-   
+  Adapter
 }
 
 unit OpenGLAdapter;

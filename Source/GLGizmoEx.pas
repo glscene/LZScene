@@ -10,21 +10,6 @@
 
    Rustam Asmandiarov (aka Predator) re-wrote TGLGizmo from scratch and 
    contributed to GLScene. This is how TGLGizmoEx was born.
-
-    History :  
-       28/01/13 - PW - Added CPP compatibility, moved function
-                          IsPointInPolygon to GLVectorgeometry unit;
-       24/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       31/05/10 - Yar - Fixed warnings
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       17/13/2009 - DaStr - Small bugfixes (by Predator)   
-       11/13/2009 - DaStr - Initial version (contributed by Predator)
-    
-
-   
-   Note: A very nice manual for TGLGizmoEx is inclued in this download:
-         http://glscene.ru/request.php?490 (in Russian language only)
 }
 //
 //
@@ -36,8 +21,6 @@
 // Original Author : ???????  (GLGizmoEx In an ODEEditor)
 //------------------------------------------------------------------------------
 // Modified by     : J.Delauney
-// Web Site        : http://KheopsInteractive.cjb.net
-// EMail           : wmkheops@free.fr
 // Date            : 08/05/2005
 //------------------------------------------------------------------------------
 // Modified by     : Marcus Oblak (8/3/2007)
@@ -71,13 +54,29 @@ interface
 {$I GLScene.inc}
 
 uses
-  // Standard
   {$IFDEF MSWINDOWS}Windows,{$ENDIF} Classes, SysUtils,
 
-  OpenGL1x, GLScene, GLColor, GLObjects, GLVectorGeometry, GLMaterial, GLStrings,
-  GLGeomObjects, GLBitmapFont, GLViewer, GLVectorFileObjects, GLCrossPlatform,
-  GLCoordinates, GLRenderContextInfo, GLGeometryBB, GLVectorTypes, GLCanvas,
-  GLPersistentClasses, GLScreen, GLState, GLSelection;
+  OpenGL1x, 
+  GLScene, 
+  GLColor, 
+  GLObjects, 
+  GLVectorGeometry, 
+  GLMaterial, 
+  GLStrings,
+  GLGeomObjects, 
+  GLBitmapFont, 
+  GLViewer, 
+  GLVectorFileObjects, 
+  GLCrossPlatform,
+  GLCoordinates, 
+  GLRenderContextInfo, 
+  GLGeometryBB, 
+  GLVectorTypes, 
+  GLCanvas,
+  GLPersistentClasses, 
+  GLScreen, 
+  GLState, 
+  GLSelection;
 
 type
   TGLGizmoExObjectCollection = class;

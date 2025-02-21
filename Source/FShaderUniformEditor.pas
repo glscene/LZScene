@@ -3,8 +3,6 @@
 //
 {
    Shader Uniform Editor
-   History :  
-     23/03/11 - Yar - Creation
 }
 
 unit FShaderUniformEditor;

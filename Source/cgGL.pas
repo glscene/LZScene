@@ -92,25 +92,6 @@
  *
  *)
 
-//////////////////////////////////////////////////////////////////////////////
-// HISTORY:
-// 19-Dec-2012 - PW: Restored CPPB compatibility, 
-//                 suppressed some unnecessary directives 
-// 23-Aug-2010 - YarUnderoaker
-//   - Replaced OpenGL1x to OpenGLTokens
-// 17-Nov-09 - Da Stranger
-//   - Improved Unix compatibility (thanks Predator) (BugtrackerID = 2893580)
-// XX-XX-04 - LR, YHC - BCB corrections:
-//   - suppress the $NODEFINE, $HPPEMIT and $EXTERNALSYM directives
-// 23-Apr-04 - Nelson Chu:
-//   - Adopted to use with GLScene (jedi.inc -> GLScene.inc)
-// 04-Mar-04 - Alexey Barkovoy:
-//   - Updated to Release 1.2 of Cg toolkit (published 25-Feb-2004)
-// 21-Mar-03 - Alexey Barkovoy:
-//   - Updated to Release 1.1 of Cg toolkit (published 04-Mar-2003)
-// 11-Jan-03 - Alexey Barkovoy:
-//   - Updated to Release 1.0 of Cg toolkit (published 20-Dec-2002)
-
 unit cgGL;
 
 {$Include GLScene.inc}

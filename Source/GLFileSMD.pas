@@ -3,29 +3,23 @@
 //
 {
    SMD vector file format implementation.
-
-	 History : 
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       28/01/07 - DaStr - Optimized bone weights loading a bit
-       14/01/07 - DaStr - Fixed bone weights for HL2 models (thanks DIVON)
-       24/01/05 - SG - Fix for comma decimal separator in save function (dikoe Kenguru)
-       30/03/04 - EG - Basic Half-Life2/XSI support
-       05/06/03 - SG - Separated from GLVectorFileObjects.pas
-	 
 }
 unit GLFileSMD;
 
 interface
 
 uses
-  Classes, SysUtils,
-  GLVectorFileObjects, GLTexture, GLApplicationFileIO,
-  GLVectorTypes, GLVectorGeometry, GLMaterial;
+  Classes, 
+  SysUtils,
+
+  GLVectorFileObjects, 
+  GLTexture, 
+  GLApplicationFileIO,
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLMaterial;
 
 type
-   // TGLSMDVectorFile
-   //
    { The SMD vector file is Half-life's skeleton format.
       The SMD is a text-based file format. They come in two flavors: one that
       old Skeleton and triangle (mesh) data, and animation files that store
@@ -42,11 +36,7 @@ type
    end;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 uses GLUtils;
@@ -55,15 +45,11 @@ uses GLUtils;
 // ------------------ TGLSMDVectorFile ------------------
 // ------------------
 
-// Capabilities
-//
 class function TGLSMDVectorFile.Capabilities : TGLDataFileCapabilities;
 begin
    Result:=[dfcRead, dfcWrite];
 end;
 
-// LoadFromStream
-//
 procedure TGLSMDVectorFile.LoadFromStream(aStream : TStream);
 
    procedure AllocateMaterial(const name : String);

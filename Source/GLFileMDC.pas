@@ -9,16 +9,7 @@
   of MD3 files. It has got all MD3 features (such as Tag frames)
   plus very small data!
 
-  Original code by Osman Turan (osmanturancom@yahoo.com)
-
-   History :
-   06/06/10 - Yar - Fixes for Linux x64
-   08/11/09 - DaStr - Compatibility fix for FPC
-  (thanks Predator) (BugtrackerID = 2893580)
-   16/10/08 - UweR - Compatibility fix for Delphi 2009
-   31/03/07 - DaStr - Added $I GLScene.inc
-   11/05/04 - SG - Added to CVS
-   07/02/04 - OT - Creation (Osman Turan)
+  Original code by Osman Turan
 
 }
 unit GLFileMDC;

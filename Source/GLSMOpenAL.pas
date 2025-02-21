@@ -14,16 +14,6 @@
        CPUUsagePercent
        No system in place to limit number of sources playing simultaneously,
           can crash if too playing at once.
-       ???
-    
-
-	 History :  
-       11/11/09 - DaStr - Added $I GLScene.inc
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       25/03/08 - DanB - Added design-time support, linked to new OpenAL headers
-                            (see OpenAL.pas).
-       ??/??/03 - Mrqzz - Creation
-	 
 }
 unit GLSMOpenAL;
 
@@ -32,12 +22,14 @@ interface
 {$I GLScene.inc}
 
 uses
-   Classes, GLSound, GLScene, SysUtils, GLSoundFileObjects;
+   SysUtils,
+   Classes, 
+   
+   GLSound, 
+   GLScene, 
+   GLSoundFileObjects;
 
 type
-
-	// TGLSMOpenAL
-	//
 	TGLSMOpenAL = class (TGLSoundManager)
       private
          FActivated : Boolean;      

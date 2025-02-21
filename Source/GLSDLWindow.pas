@@ -3,26 +3,12 @@
 //
 {
   Non visual wrapper around basic SDL window features.
-
-  <u>Notes to Self:</u> 
   Unit must ultimately *NOT* make use of any platform specific stuff,
   *EVEN* through the use of conditionnals. 
   SDL-specifics should also be avoided in the "interface" section.
 
-  Written and maintained by Eric Grange (http://glscene.org),
-  this component uses JEDI-SDL conversion (http://delphi-jedi.org),
+  This component uses JEDI-SDL conversion (http://delphi-jedi.org),
   which is a Delphi header conversion for SDL (http://libsdl.org)
-
-   History :  
-   17/11/09 - DaStr - Improved Unix compatibility
-  (thanks Predator) (BugtrackerID = 2893580)
-   16/10/08 - UweR - Compatibility fix for Delphi 2009
-   07/06/07 - DaStr - Added $I GLScene.inc
-   17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-   16/12/01 - Egg - Resize no longer recreates SDL surface in OpenGL mode
-   12/12/01 - Egg - Fixes & additions (code from Dominique Louis),
-  Added doc tags, Stencil buffer and others.
-   11/12/01 - Egg - Creation
 }
 unit GLSDLWindow;
 
@@ -31,13 +17,13 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, SyncObjs,
+  Classes, 
+  SysUtils, 
+  SyncObjs,
    
   SDL;
 
 type
-  // TSDLWindowPixelDepth
-  //
   { Pixel Depth options.
      
      vpd16bits: 16bpp graphics (565) (and 16 bits depth buffer for OpenGL)

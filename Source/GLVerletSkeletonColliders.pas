@@ -4,11 +4,6 @@
 {
    Skeleton colliders for defining and controlling verlet
    constraints.
-
-    History : 
-      11/12/03 - SG - Now uses AddToVerletWorld to build the constraints.
-      08/10/03 - SG - Creation.
-    
 }
 unit GLVerletSkeletonColliders;
 
@@ -17,13 +12,13 @@ interface
 uses
   Classes,
    
-  GLPersistentClasses, GLVectorGeometry, GLVectorFileObjects, GLVerletTypes,
+  GLPersistentClasses, 
+  GLVectorGeometry, 
+  GLVectorFileObjects, 
+  GLVerletTypes,
   GLVectorTypes;
 
 type
-  
-  // TSCVerletBase
-  //
   { Base verlet skeleton collider class. }
   TSCVerletBase = class(TGLSkeletonCollider)
     private
@@ -59,8 +54,6 @@ type
       property Radius : Single read FRadius write SetRadius;
   end;
 
-  // TSCVerletCapsule
-  //
   { Capsule shaped verlet constraint in a skeleton collider. }
   TSCVerletCapsule = class(TSCVerletBase)
     private
@@ -88,18 +81,13 @@ procedure AddSCVerletConstriantsToVerletWorld(
   colliders : TGLSkeletonColliderList; world : TGLVerletWorld);
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
+
 // ------------------
 // ------------------ Global methods ------------------
 // ------------------
 
-// AddSCVerletConstriantsToVerletWorld
-//
 procedure AddSCVerletConstriantsToVerletWorld(
   colliders : TGLSkeletonColliderList; world : TGLVerletWorld);
 var

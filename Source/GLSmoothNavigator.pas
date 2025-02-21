@@ -12,36 +12,10 @@
    If someone knows a better way to solve this issue, please contact me via
    glscene newsgroups.
 
-
-    History :  
-       30/06/11 - DaStr - Converted many procedures to functions
-                             Bugfixed Assign() in some places
-                             Added "Cutoff" property instead of fixed EPS values
-       02/06/11 - DaStr - DeltaTime is now Double, like in Cadencer
-                             Added CustomAnimatedItems
-       28/05/11 - DaStr - Added the AdjustDistanceTo[..]Ex procedures
-       25/02/07 - DaStr - Added the AdjustDistanceTo[..] procedures
-       23/02/07 - DaStr - Initial version (contributed to GLScene)
-
-
     TODO:
       1) Scale "Old values" too, when callin the Scale parameter procedure to
          avoid the temporary "freeze" of controls.
       2) AddImpulse procedures.
-
-
-
-    Previous version history:
-        v1.0    10 December  '2005  Creation
-        v1.0.2  11 December  '2005  TurnMaxAngle added
-        v1.1    04 March     '2006  Inertia became FPS-independant
-                                    TGLSmoothNavigatorParameters added
-        v1.1.6  18 February  '2007  Merged with GLInertedUserInterface.pas
-                                    All parameters moved into separate classes
-                                    Added MoveAroudTargetWithInertia
-        v1.2    23 February  '2007  Finally made it trully FPS-independant
-                                    Added default values to every property
-                                    Contributed to GLScene
 }
 
 unit GLSmoothNavigator;
@@ -51,11 +25,15 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
   Classes,
 
-  GLNavigator, GLVectorGeometry, GLScene, GLCrossPlatform, GLCoordinates,
-  GLScreen, GLXCollection;
+  GLNavigator, 
+  GLVectorGeometry, 
+  GLScene, 
+  GLCrossPlatform, 
+  GLCoordinates,
+  GLScreen, 
+  GLXCollection;
 
 type
 

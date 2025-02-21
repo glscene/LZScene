@@ -6,10 +6,6 @@
   This unit provides the base methods for compiling and executing scripts as
   well as calling scripted functions. No scripting APIs are implemented here,
   only abstracted functions.
-
-  History :
-  04/11/2004 - SG - Creation
-
 }
 unit GLScriptBase;
 

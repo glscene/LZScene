@@ -2,38 +2,10 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   Object with support for complex polygons.
-
-  History :  
-       14/07/11 - DaStr - Bugfixed a rare case in TMultiPolygonBase.Destroy
-       04/09/10 - Yar - Bugfixed RunError in TMultiPolygonBase.Destroy in Lazarus
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       31/07/07 - DanB - Implemented AxisAlignedDimensionsUnscaled for
-                            TMultiPolygonBase
-       30/03/07 - DaStr - Added $I GLScene.inc
-       14/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       18/11/04 - SG - Fixed TGLMultiPolygonBase.Destroy memory leak (Neil)
-       05/09/03 - EG - TNotifyCollection moved to GLMisc
-       14/07/02 - EG - Code cleanups, dropped 'absolutes', fixed mem leaks
-       28/12/01 - EG - Added registration (Philipp Pammler)
-       19/12/01 - EG - Removed dependency to contnrs (D4 compatibility,
-                           TObjectList replaced with TPersistentObjectList)
-       29/03/01 - Uwe - Fixes and improvements to TGLMultiPolygon
-       21/02/01 - EG - Now XOpenGL based (multitexture)
-       08/01/01 - EG - Compatibility fix (TGLLineNodes change),
-                           Delphi 4 compatibility (removed TVectorPool) and
-                           added/renamed some properties, various fixes
-       08/10/00 - EG - Added header, code contributed by Uwe Raabe
-    
+   The Object with support for complex polygons.
 }
 { TODO
-
-  ur:
-
-  And I reactivated the TVectorPool object. The GLVectorLists are not suitable for this job.
+  Reactivated the TVectorPool object. The GLVectorLists are not suitable for this job.
   When the tesselator finds an intersection of edges it wants us to give him some storage
   for this new vertex, and he wants a pointer (see tessCombine). The pointers taken from
   TAffineVectorList become invalid after enlarging the capacity (makes a ReAllocMem), which

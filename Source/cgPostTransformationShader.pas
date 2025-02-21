@@ -5,12 +5,6 @@
    A shader that uses a texture to distort the view by adjusting texture
    coordinates.
    Does not have any practical use, but is fun to play around with.
-
-	 History :  
-       22/04/10 - Yar - Fixes after GLState revision
-       05/04/07 - DaStr - Contributed to GLScene
-       04/11/06 - DaStr - Creation (based on demo by Rick)
-
 }
 unit cgPostTransformationShader;
 

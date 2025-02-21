@@ -1,18 +1,6 @@
 //
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
-{
-   History:
-     DaStr - 07/11/09 - Added $I GLScene.inc for Delhi 5 compatibility
-                        Improved FPC compatibility (thanks Predator) (BugtrackerID = 2893580)
-     DaStr - 15/03/08 - Updated to Fmod v3.7.4 (thanks Chen, Pei)
-                        Un-merged FModTypes, FModPresets, fmoderrors.  
-     DaStr - 17/03/07 - Dropped Kylix support in favor of FPC
-                         (thanks Burkhard Carstens) (BugTracekrID=1681585)
-     EG    - 18/10/03 - Renamed from FModDyn
-                        Merged FModTypes and FModPresets content in
-                        8087 stuff commented out
-}
 { =============================================================================================== }
 { FMOD Main header file. Copyright (c), Firelight Technologies Pty, Ltd. 1999-2004.               }
 { =============================================================================================== }

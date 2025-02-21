@@ -7,27 +7,6 @@
    This code was adapted from the nVidia Tree Demo:
    http://developer.nvidia.com/object/Procedural_Tree.html
 
-   History: 
-      10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-      23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-      30/03/07 - DaStr - Added $I GLScene.inc
-      28/03/07 - DaStr - Renamed parameters in some methods
-                            (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-      13/01/07 - DaStr - Added changes proposed by Tim "Sivael" Kapuœciñski [sivael@gensys.pl]
-                         Modified the code to create much more realistic trees -
-                          added third branch for every node and modified constants
-                          to make the tree look more "alive".
-                         Also removed the "fractal effect" that ocurred, when
-                          rendering with the older engine - the leaves and
-                          branches were much more "in order".
-                         Added Center* declarations, CenterBranchConstant,
-                         Added AutoRebuild flag.
-      02/08/04 - LR, YHC - BCB corrections: use record instead array
-      14/04/04 - SG - Added AutoCenter property.
-      03/03/04 - SG - Added GetExtents and AxisAlignedDimensionsUnscaled.
-      24/11/03 - SG - Creation.
-    
-
    Some info:
    CenterBranchConstant  -
     Defines, how big the central branch is. When around 50%
@@ -46,19 +25,26 @@ interface
 {$I GLScene.inc}
 
 uses
-   Classes, SysUtils,
+   Classes, 
+   SysUtils,
     
-   GLScene, GLMaterial, GLVectorGeometry, GLVectorLists,
-   OpenGLTokens, GLVectorFileObjects, GLApplicationFileIO, GLRenderContextInfo,
-   XOpenGL, GLContext , GLVectorTypes;
+   GLScene, 
+   GLMaterial, 
+   GLVectorGeometry, 
+   GLVectorLists,
+   OpenGLTokens, 
+   GLVectorFileObjects, 
+   GLApplicationFileIO, 
+   GLRenderContextInfo,
+   XOpenGL, 
+   GLContext, 
+   GLVectorTypes;
 
 type
    TGLTree = class;
    TGLTreeBranches = class;
    TGLTreeBranchNoise = class;
 
-   // TGLTreeLeaves
-   //
    TGLTreeLeaves = class
       private
           

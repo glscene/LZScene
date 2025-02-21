@@ -6,28 +6,14 @@
 
    Direct solving is supported for polynoms up to the 4th degree.
 
-   Polynom solving code based on Jochen Schwarze (schwarze@isa.de) solver
+   Polynom solving code based on Jochen Schwarze solver
    published in Graphics Gem (1990).
 
-   Adapted to pascal by Eric Grange (egrange@glscene.org), if you find
+   Adapted to pascal by Eric Grange, if you find
    errors, they are probably mine. Note that contrary to the original code,
    the functions accept 'zero' values for any of the parameters. 
    I also made some changes for certain limit cases that (seemingly) weren't
    properly handled, these are marked by comments in the code.
-
-	 History :  
-       10/12/14 - PW - Renamed Polynomials to GLPolynomials
-       30/03/07 - DaStr - Added $I GLScene.inc
-       24/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       21/07/02 - EG - Added MinPositiveCoef
-       14/01/02 - EG - Switched to Jochen Schwarze's solver,
-                          droped complex stuff,
-                          added utility funcs 
-       22/08/01 - EG - Some fixes, qtcrt still no up to what I expected
-	    21/08/01 - EG - Creation
-	 
-   In progress.	
 }
 unit GLPolynomials;
 

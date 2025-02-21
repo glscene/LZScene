@@ -1,3 +1,6 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 unit GLPhysics;
 
 interface

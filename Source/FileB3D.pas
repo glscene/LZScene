@@ -3,12 +3,6 @@
 //
 {
    File streaming class for the B3D loader
-
-    History : 
-       24/07/09 - DaStr - Got rid of compiler hints
-       29/05/08 - DaStr - Added $I GLScene.inc
-       22/12/05 - Mathx - Added to the GLScene Project.
-	 
 }
 unit FileB3D;
 

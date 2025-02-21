@@ -3,19 +3,6 @@
 //
 {
    Post shaders that simulate shader visions for a mask or the entire scene.
-
-    History :  
-     04/11/15 - PW - Combined all post shaders into GLSLPostShaders unit
-     01/11/15 - J.Delauney - Initial versions for
-                                GLSLPostThermalVisionShader
-                                GLSLPostDreamVisionShader
-                                GLSLPostNightVisionShader
-                                GLSLPostPixelateShader
-                                GLSLPostPosterizeShader
-                                GLSLPostFrostShader
-                                GLSLPostTroubleShader
-     05/04/07 - DaStr - Initial version for GLSLPostBlurShader
-                           based on RenderMonkey demo
 }
 unit GLSLPostShaders;
 
@@ -26,12 +13,17 @@ interface
 uses
   Classes,
    
-  GLTexture, GLScene, GLVectorGeometry, GLContext, GLMaterial,
-  GLSLShader, GLCustomShader, GLRenderContextInfo, GLTextureFormat,
+  GLTexture, 
+  GLScene, 
+  GLVectorGeometry, 
+  GLContext, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader, 
+  GLRenderContextInfo, 
+  GLTextureFormat,
   GLVectorTypes;
 
-  //TGLCustomGLSLPostBlurShader
-  //
   { Custom class for GLSLPostBlurShader.
    A shader that blurs the entire scene }
 type
@@ -59,8 +51,6 @@ type
   end;
 
 
-  //TGLCustomGLSLPostThermalVisionShader
-  //
   { Custom class for GLSLPostThermalVisionShader.
    A Shader that simulate a thermal vision of the entire scene }
 
@@ -96,8 +86,6 @@ type
   end;
 
 
-  //TGLCustomGLSLPostDreamVisionShader
-  //
   { Custom class for GLSLPostDreamVisionShader.
    A shader that simulate a grayscale threshold vision (aka dream) of the entire scene}
 type
@@ -127,8 +115,6 @@ type
   end;
 
 
-  //TGLCustomGLSLPostNightVisionShader
-  //
   { Custom class for GLSLPostNightVisionShader.
    A shader that simulate a Night Vision of the scene throw a mask if enabled,
    or of the entire scene}
@@ -197,8 +183,6 @@ type
     property UseMask;
   end;
 
-  //TGLCustomGLSLPostPixelateShader
-  //
   { Custom class for GLSLPostPixelateShader.
    A shader that pixelate of the entire scene}
 type
@@ -231,8 +215,6 @@ type
     property PixelHeight;
   end;
 
-  //TGLCustomGLSLPostPosterizeShader
-  //
   { Custom class for GLSLPostPosterizeShader.
    A shader that posterize of the entire scene}
 type
@@ -265,8 +247,6 @@ type
     property NumColors;
   end;
 
-  //TGLCustomGLSLPostFrostShader
-  //
   { Custom class for GLSLPostFrostShader.
    A shader that frost of the entire scene}
 type
@@ -299,8 +279,6 @@ type
     property RandFactor;
   end;
 
-  //TGLCustomGLSLPostTroubleShader
-  //
   { Custom class for GLSLPostTroubleShader.
    A shader that trouble of the entire scene. v2 
    This Shader is experimental it can do smooth the scene or double the scene and it's
@@ -362,11 +340,7 @@ type
   end;
 
 //----------------------------------------------------------------------
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
 implementation
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
 //----------------------------------------------------------------------
 
 { TGLCustomGLSLPostBlurShader }

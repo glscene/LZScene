@@ -3,20 +3,7 @@
 //
 {
    Component for making screen-savers an easy task
-
-	 History :  
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-       09/07/01 - Egg - Fix in PreviewSaver (from Marco Dissel)
-       12/04/00 - Egg - Added ssoEnhancedMouseMoveDetection
-       11/04/00 - Egg - Creation
-	 
-
 	Parts of this code are based on DeskSpin sample by	Tom Nuydens
-		(http://www.gamedeveloper.org/delphi3d/).
-
-	NB : The password stuff does NOT work under NT, dll references I found in
-			Tom's sample simply did not exist under my NT4...
 }
 unit GLScreenSaver;
 
@@ -26,13 +13,14 @@ interface
 {$IFDEF UNIX}{$Message Error 'Unit not supported'}{$ENDIF}
 
 uses
-  Windows, Classes,
-  Controls, Forms, Extctrls;
+  Windows, 
+  Classes,
+  Controls, 
+  Forms, 
+  ExtCtrls;
 
 type
 
-   // TScreenSaverOptions
-   //
    { Options d'automatisation du screen-saver.
        
        ssoAutoAdjustFormProperties : all relevant properties of main form

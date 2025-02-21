@@ -6,28 +6,6 @@
   Notes:     For the Lightwave Object File Format documentation please refer to
              http://www.lightwave3d.com/developer.
              Lightwave3D is a registered trademark of Newtek Incorporated.
-
-  History:
-  05/04/13 - Yar - Fixes TLWChunkList.Create for FPC (thanks to VIT)
-  20/05/10 - Yar - Fixes for Linux x64
-  16/10/08 - UweR - Compatibility fix for Delphi 2009
-  30/03/07 - DaStr - Moved all UNSAFE_TYPE, UNSAFE_CODE checks to GLSCene.inc
-  29/03/07 - DaStr - Renamed parameters in some methods
-                     Added more explicit pointer dereferencing
-                     Initialized local string variables in two places
-                     (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-  25/03/07 - DaStr - Turned off UNSAFE_TYPE, UNSAFE_CODE warnings
-  24/03/07 - DaStr - Added explicit pointer dereferencing
-                     (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
- 08/03/06 - ur - Fixed warnings for Delphi 2006
- 14/11/02 - EG - Fixed warnings
- 16/11/02 - BJ - Replaced TLWChunkList.FindChunk search mechanism
-          - BJ - Added v. method  TLWChunk.Loaded. Called on Loading complete.
-          - BJ - Added surface smooth normal generation
- 18/11/02 - BJ - Added surface param inheritance
-          - BJ - Added Get and SetContentDir to unit
- 20/11/02 - BJ - Moved ParamAddr from TLWSurf to TLWParentChunk as v. method
- Initial aithor:  Brian Johns brianjohns1@hotmail.com
 }
 unit LWObjects;
 
@@ -36,7 +14,8 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLVectorGeometry;
+  Classes, 
+  GLVectorGeometry;
 
 type
   TID4 = array[0..3] of AnsiChar;

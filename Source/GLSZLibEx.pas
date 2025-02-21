@@ -2,11 +2,6 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-  History :  
-       07/05/10 - Yar - Fixed for Linux x64
-       06/05/10 - Yar - Added to GLScene (contributed by oleg matrozov)
-   
-
 {*****************************************************************************
 *                                                                            *
 *  copyright (c) 2000-2010 base2 technologies                                *
@@ -104,7 +99,10 @@ interface
 {$I GLScene.inc}
 
 uses
-  SysUtils, Classes, GLCrossPlatform, GLSZLibExApi;
+  SysUtils, 
+  Classes, 
+  GLCrossPlatform, 
+  GLSZLibExApi;
 
 type
 

@@ -3,45 +3,6 @@
 //
 {
    OpenGL windows management classes and structures
-
-  History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records,
-                          renamed lowercase sender and accept to uppercase Sender and Accept
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       11/06/10 - YP - Link GUI elements to their parent
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       17/10/08 - DanB - reversed order of vertices in TGLCustomControl.InternalRender,
-                            which fixes the GUIPaint demo
-       27/04/08 - DaStr - Fixed bug in TGLButton.InternalRender()
-                             (thanks Nicoara Adrian) (BugtrackerID = 1952711)
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       20/12/06 - DaStr - Added: TGLEdit.ReadOnly, TGLScrollbar.Locked,
-                                    TGLStringGrid.ColSelect
-       10/11/05 - Mathx - Fixed TGLPopupMenu stack overflow on method internalRender.
-                             Related to bug 1193909.
-       24/05/02 - JAJ - Base Unit built on basis of Jan Horn's demo at
-                            (http://www.sulaco.co.za/opengl/windows.zip)
-       01/06/02 - JAJ - After not having received Jan Horn's blessing, the
-                            system have been revised all parts have been rewritten.
-       01/01/03 - JAJ - Updated so that focused controls pass focus on hide...
-       05/01/03 - JAJ - Cleaned up the DesignTime AccessViolations...
-       07/01/03 - JAJ - Jeremy Darling modified the TGLEdit's Render, more
-                            updates on TGLEdit expected...
-       18/01/03 - JAJ - Added TGLStringList, TGLScrollbar, TGLPopupMenu...
-       08/08/03 - PS  - Added Horizontal to GLScrollbar...
-       14/08/03 - SG  - Fixed TGLBaseComponent.SetGuiLayout (Joen Joensen)
-       08/08/03 - JAJ - Merged PS's and SG's update... Added TitleOffset...
-       03/07/04 - LR - Added constant for Keyboard (glKey_TAB, ...)
-                          Added function GLOKMessageBox to avoid the uses of Forms
-                          Replace TColor, TBitmap, TMouseEvent, TKeyEvent, ...
-                          by TGLColor, TGLBitmap, TGLMouseEvent, TGLKeyEvent, ...
-       25/01/05 - AX - Corrected AlphaChannel default value, must be 1
-                          TGLButton, TGLForm - AlphaChannel behaviour text.
-                          Added events OnMouseEnter/OnMouseLeave for all controls
-       05/02/05 - AX - TGLLabel correct layout depending on Aligment and TextLayout.
-  
 }
 
 unit GLWindows;
@@ -51,10 +12,21 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene, GLHUDObjects, GLMaterial, OpenGLTokens, GLContext,
-  GLBitmapFont, GLWindowsFont, GLVectorGeometry, GLGui,
-  GLCrossPlatform, GLColor, GLRenderContextInfo, GLBaseClasses;
+  Classes, 
+  SysUtils,
+  GLScene, 
+  GLHUDObjects, 
+  GLMaterial, 
+  OpenGLTokens, 
+  GLContext,
+  GLBitmapFont, 
+  GLWindowsFont, 
+  GLVectorGeometry, 
+  GLGui,
+  GLCrossPlatform, 
+  GLColor, 
+  GLRenderContextInfo, 
+  GLBaseClasses;
 
 type
 

@@ -13,17 +13,8 @@
   which must stay valid either during the entire lifetime of TFile3DS or at least
   'til all chunks have been read (by accessing them all once).
 
-   History : 
-   01/11/07 - DaStr - Fixed memory leaks when using the TKeyFramer class
-  (BugTracker ID = 1823781)
-  Added a standard GLScene header
-   30/03/07 - DaStr - Added $I GLScene.inc
-   08/06/00 -  Egg  - LoadFromStream no longer free the stream it was passed,
-                   further fixing of the streaming mechanism is needed
-
   (c) Copyright 1999, 2000
-  Dipl. Ing. Mike Lischke (public@lischke-online.de)
-  Igor T. (GWin), (georgwin@chat.ru)
+  Dipl. Ing. Mike Lischke
 }
 unit File3DS;
 
@@ -34,7 +25,10 @@ interface
 {$MINENUMSIZE 4}
 {$RANGECHECKS OFF}
 
-uses Classes, Types3DS, GLCrossPlatform;
+uses 
+  Classes, 
+  Types3DS, 
+  GLCrossPlatform;
 
 type
   TFile3DS = class;

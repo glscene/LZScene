@@ -6,12 +6,6 @@
 
    The portal structures are subclasses of the Mesh structures, with a "sector"
    being assimilated to a "MeshObject" and sector polygons to facegroups.
-
-	History :  
-       30/03/07 - DaStr - Added $I GLScene.inc
-       30/01/03 - Egg - Completed class registration
-       13/08/00 - Egg - Creation
-	 
 }
 unit GLPortal;
 
@@ -20,33 +14,25 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLVectorFileObjects, GLScene, GLMaterial, GLVectorGeometry,
+  Classes, 
+  GLVectorFileObjects, 
+  GLScene, 
+  GLMaterial, 
+  GLVectorGeometry,
   GLRenderContextInfo;
 
 type
-
-   // TPortalMeshObjectList
-   //
    { A mesh object list that handles portal rendering.
       The items are treated as being sectors. } 
    TPortalMeshObjectList = class (TGLMeshObjectList)
       private
-          
-
       protected
-          
-
       public
-          
          constructor CreateOwned(AOwner : TGLBaseMesh);
          destructor Destroy; override;
-
          procedure BuildList(var mrci : TGLRenderContextInfo); override;
    end;
 
-
-   // TSectorMeshObject
-   //
    { A portal renderer sector. }
    TSectorMeshObject = class (TMorphableMeshObject)
       private

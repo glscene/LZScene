@@ -3,10 +3,6 @@
 //
 {
   All color types, constants and utilities should go here
-
-  History :
-  06/06/07 - DaStr - separated from GLTexture.pas and GLCrossPlatform.pas
-  The whole history is logged in previous version of the unit
 }
 unit GLColor;
 

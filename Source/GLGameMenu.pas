@@ -3,27 +3,6 @@
 //
 {
    Manages a basic game menu UI
-
-  History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       31/05/10 - Yar - Fixed for Linux x64
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       04/09/07 - DaStr - Fixed memory leak in TGLGameMenu
-                              (BugtrackerID = 1787617) (thanks Pierre Lemerle)
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       26/03/07 - DaveK - back to TGLSceneObject for Material support
-       16/02/07 - DaStr & DaveK - TGLGameMenu.MouseMenuSelect bugfixed (again)
-                             Component made descendant of TGLBaseSceneObject
-                             IGLMaterialLibrarySupported added
-       20/12/06 - DaStr - TGLGameMenu.MouseMenuSelect bugfixed (thanks to Predator)
-       03/27/06 - DaveK - added mouse selection support
-       03/03/05 - EG - Creation
-    
 }
 unit GLGameMenu;
 
@@ -31,17 +10,19 @@ interface
 
 {$I GLScene.inc}
 
-uses Classes, GLScene, GLMaterial, GLBitmapFont, GLCrossPlatform, GLColor,
+uses 
+  Classes, 
+  
+  GLScene, 
+  GLMaterial, 
+  GLBitmapFont, 
+  GLCrossPlatform, 
+  GLColor,
   GLRenderContextInfo;
 
 type
-
-  // TGLGameMenuScale
-  //
   TGLGameMenuScale = (gmsNormal, gms1024x768);
 
-  // TGLGameMenu
-  //
   { Classic game menu interface made of several lines. }
   TGLGameMenu = class(TGLSceneObject, IGLMaterialLibrarySupported)
   private

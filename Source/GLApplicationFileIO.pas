@@ -4,19 +4,6 @@
 {
    Components and fonction that abstract file I/O access for an application. 
    Allows re-routing file reads to reads from a single archive file f.i.
-
-  History :  
-       10/11/12 - PW - Added CPPB compatibility: used TAFIOFileStreamEvent as procedure
-                     instead of function for GLS_CPPB
-       25/08/10 - DaStr - Fixed compiler warnings
-       25/07/10 - Yar - Added TGLSResourceStream class and CreateResourceStream string
-       23/01/10 - Yar - Change LoadFromStream to dynamic
-       29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-       02/08/04 - LR, YHC - BCB corrections: fixed BCB Compiler error "E2370 Simple type name expected"
-       05/06/03 - EG - TGLDataFile moved in from GLMisc
-       31/01/03 - EG - Added FileExists mechanism
-       21/11/02 - EG - Creation
-  
 }
 unit GLApplicationFileIO;
 

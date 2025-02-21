@@ -3,16 +3,6 @@
 //
 {
    A shader that allows texture combiner setup.
-
-    History :  
-       05/03/11 - Yar - Added combiner's commands cache
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)
-       03/04/07 - DaStr - Added $I GLScene.inc
-       25/02/07 - DaStr - Moved registration to GLSceneRegister.pas
-       23/05/03 - EG - Added support for binding two extra texture units
-       16/05/03 - EG - Creation
 }
 unit GLTexCombineShader;
 
@@ -28,9 +18,6 @@ uses
   GLTextureCombiners;
 
 type
-
-  // TGLTexCombineShader
-  //
   { A shader that can setup the texture combiner. }
   TGLTexCombineShader = class(TGLShader)
   private

@@ -3,14 +3,6 @@
 //
 {
   Coordinate related classes.
-
-   History :  
-   20/11/12 - PW - Added CPP compatibility: replaced direct access to some properties by a get.. and a set.. methods
-   30/06/11 - DaStr - Added TGLCustomCoordinates.Coordinate default property
-   05/09/10 - Yar - Fix notification in TGLCustomCoordinates.NotifyChange (thanks C4)
-   23/08/10 - Yar - Added OpenGLTokens to uses
-   05/10/08 - DanB - Created, from GLMisc.pas
-   
 }
 unit GLCoordinates;
 

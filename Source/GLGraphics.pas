@@ -13,72 +13,6 @@
    (http://www.g32.org), just make sure the GLS_Graphics32_SUPPORT conditionnal
    is active in GLScene.inc and recompile.
 
- History :  
-       25/11/11 - YP - Assertion removed from AssignFromBitmap32
-       10/05/11 - Yar - Now VerticalReverseOnAssignFromBitmap works for AssignToBitmap
-       04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility
-       18/07/10 - Yar - Raname TGLBitmap32 to TGLImage
-       20/06/10 - Yar - Added in TRasterFileFormatsList.FindFromStream JPG singnature
-       14/06/10 - YP  - PngImage support added (thanks to Sergio Alexandre Gianezini)
-       20/05/10 - Yar - Fixes for Linux x64
-                           Replace OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       28/03/10 - Yar - Added glGenerateMipmap when used forward context
-       08/03/10 - Yar - Added in TRasterFileFormatsList.FindFromStream PNG singnature
-                           Added forward context cheking to circumvent deprecations
-       01/03/10 - Yar - Bugfix when texture, which has lower mip-levels than the standard number is not rendered
-                           (thanks to Controller)
-       23/02/10 - Yar - Solved problem of TGLBitmap with width of which is not a multiple of four.
-                           Added in AssignFrom24BitsBitmap, AssignFrom32BitsBitmap using extension GL_EXT_bgra
-       22/02/10 - Yar - Added FindFromStream to TRasterFileFormatsList
-                           (thanks to mif)
-       10/02/10 - Yar   - Bugfix in RegisterAsOpenGLTexture with Cubemap mipmaping
-       27/01/10 - Yar   - Bugfix in BlockOffset with negative result
-                             Return to GL_SGIS_generate_mipmap
-       23/01/10 - Yar   - Added to AssignFromTexture CurrentFormat parameter
-       22/01/10 - Yar   - Added TRasterFileFormat, TGLBaseImage classes
-                             TGLBitmap32 now derived from TGLBaseImage
-                             and can contain all types of image
-                             (with mipmap level, texture array, volume texture)
-                             any kind of color and data formats of OpenGL
-                             remake RegisterAsOpenGLTexture
-       10/11/09 - DaStr - Updated TGLBitmap32.RegisterAsOpenGLTexture() - fixed
-                               TextureFormat and ColorFormat (thanks YarUnderoaker)
-                             Improved FPC compatibility
-                              (BugtrackerID = 2893580) (thanks Predator)
-       24/03/07 - DaStr - Moved TGLMinFilter and TGLMagFilter from GLUtils.pas
-                              to GLGraphics.pas (BugTracker ID = 1923844)
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       14/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       23/01/07 - LIN- Added TGLBitmap32.AssignToBitmap : Converts a TGLBitmap32 back into a TBitmap
-       12/09/06 - NC - Added TGLBitmap32.Blank
-       18/10/05 - NC - GL_ARB_texture_non_power_of_two, GL_TEXTURE_2D for float
-                          texture
-       06/10/04 - NC - Now uses GL_TEXTURE_RECTANGLE_NV for all float texture types
-       04/10/04 - NC - Added support for float texture
-       05/09/03 - EG - Added TGLBitmap32.DownSampleByFactor2
-       04/07/03 - EG - Added RGBA brightness/gamma correction support
-       13/05/03 - EG - Added GrayScaleToNormalMap
-       26/08/02 - EG - Fixed loading of 1D horiz textures from 24 bits bitmaps
-       16/06/02 - EG - AssignFrom32BitsBitmap fix for single-line bitmaps
-       29/01/02 - EG - Fixed ScanLine Index bug with empty bitmaps
-       20/01/02 - EG - Fixed BGR24/RGB24 last pixel transfer
-       17/01/02 - EG - Faster assignments from bitmaps (approx. x2),
-                          Added AssignFromBitmap24WithoutRGBSwap
-       28/12/01 - EG - Graphics32 support added
-       15/12/01 - EG - Texture target support
-       14/09/01 - EG - Use of vFileStreamClass
-       31/08/01 - EG - 24bits Bitmaps are now made opaque by default
-       12/08/01 - EG - Now detects and uses GL_SGIS_generate_mipmap
-       20/02/01 - EG - Fixed SetHeight & SetWidth (thx Nelson Chu)
-       14/02/01 - EG - Simplified RegisterAsOpenGLTexture
-       15/01/01 - EG - Fixed RegisterAsOpenGLTexture (clamping)
-       14/01/01 - EG - Fixed isEmpty (was invalid for rectangles)
-       08/10/00 - EG - Fixed RegisterAsOpenGLTexture and Assign(nil)
-       25/09/00 - EG - First operational code
-       19/08/00 - EG - Creation
-  
 }
 unit GLGraphics;
 
@@ -90,7 +24,11 @@ uses
 {$IFDEF MSWINDOWS}
   Windows,
 {$ENDIF}
-  Classes, SysUtils, SyncObjs, Graphics, Math,
+  Classes, 
+  SysUtils, 
+  SyncObjs, 
+  Graphics, 
+  Math,
 {$IFDEF GLS_Graphics32_SUPPORT}
   GR32,
 {$ENDIF}
@@ -115,16 +53,11 @@ uses
 
 
 type
-
-  // TGLPixel24
-  //
   TGLPixel24 = packed record
     r, g, b: Byte;
   end;
   PGLPixel24 = ^TGLPixel24;
 
-  // TGLPixel32
-  //
   TGLPixel32 = packed record
     r, g, b, a: Byte;
   end;
@@ -135,8 +68,6 @@ type
 
   TGLLODStreamingState = (ssKeeping, ssLoading, ssLoaded, ssTransfered);
 
-  // TGLImageLevelDesc
-  //
   TGLImageLevelDesc = record
     Width: Integer;
     Height: Integer;
@@ -153,8 +84,6 @@ type
 
   TGLImagePiramid = array[TGLImageLODRange] of TGLImageLevelDesc;
 
-  // TGLBaseImage
-  //
   TGLBaseImage = class(TGLDataFile)
   private
     FSourceStream: TStream;
@@ -272,8 +201,6 @@ type
 
   TGLBaseImageClass = class of TGLBaseImage;
 
-  // TGLImage
-  //
     { Contains and manipulates a 32 bits (24+8) bitmap.
        This is the base class for preparing and manipulating textures in GLScene,
        this function does not rely on a windows handle and should be used for
@@ -485,12 +412,9 @@ function GetImageLodNumber(w, h, d: integer; IsVolume: Boolean): Integer;
 
 var
   vVerticalFlipDDS: Boolean = true;
-  // ------------------------------------------------------------------
-  // ------------------------------------------------------------------
-  // ------------------------------------------------------------------
+
+// ------------------------------------------------------------------
 implementation
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 resourcestring
@@ -500,9 +424,6 @@ var
   vRasterFileFormats: TRasterFileFormatsList;
 
 {$IFDEF GLS_REGIONS}{%REGION  'Raster File Registries'}{$ENDIF}
-
-  // GetRasterFileFormats
-  //
 
 function GetRasterFileFormats: TRasterFileFormatsList;
 begin

@@ -3,14 +3,6 @@
 //
 {
    Register TGLXCollection property editor
-
-	 History :  
-       20/05/10 - Yar - Fixes for Linux x64
-       11/11/09 - DaStr - Improved FPC compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       03/07/04 - LR - Removed ..\ from the GLScene.inc
-       16/04/00 - Egg - Creation
-	 
 }
 unit RegisterXCollection;
 
@@ -19,13 +11,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLXCollection,
-     componenteditors, propedits;
+  Classes, 
+  
+  GLXCollection,
+  componenteditors, 
+  propedits;
 
 type
 
-	// TGLXCollectionProperty
-	//
 	TGLXCollectionProperty = class(TClassProperty)
 		public
 			 
@@ -36,13 +29,11 @@ type
 procedure Register;
 
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 implementation
 // ------------------------------------------------------------------
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
-uses FXCollectionEditor;
+
+uses 
+  FXCollectionEditor;
 
 
 procedure Register;

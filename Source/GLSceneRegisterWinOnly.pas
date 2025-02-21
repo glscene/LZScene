@@ -5,13 +5,6 @@
    Contains registration for Design-Time Lazarus Windows-Only units.
    Because of Lazarus'es limitations, these need to be separated from the main
    GLSceneRegister.pas
-
-   History : 
-       07/01/10 - DaStr - Removed GLLCLFullScreenViewer because it became
-                              cross-platform (thanks Predator)
-       24/11/09 - DanB - Added some more windows only units
-       22/11/09 - DaStr - Initial version (by Predator)
-    
 }
 
 unit GLSceneRegisterWinOnly;

@@ -4,24 +4,6 @@
 {
    A TGLImmaterialSceneObject drawing 6 quads (plus another quad as "Cloud" plane)
    for use as a skybox always centered on the camera.
-
-  History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       26/03/09 - DanB - Skybox is now a TGLCameraInvariantObject
-       10/10/08 - DanB - changed Skybox DoRender to use rci instead
-                            of Scene.CurrentGLCamera
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       21/01/07 - DaStr - Added IGLMaterialLibrarySupported support
-       12/04/04 - EG - Added Style property, multipass support
-       27/11/03 - EG - Cleanup and fixes
-       09/11/03 - MRQZZZ - mandatory changes suggested by Eric.
-       02/09/03 - MRQZZZ - Creation
-    
 }
 unit GLSkyBox;
 

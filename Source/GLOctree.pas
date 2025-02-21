@@ -6,26 +6,6 @@
 
   TODO: move the many public vars/fields to private/protected
 
-   History :  
-   10/11/14 - PW - Renamed from "Octree.pas" to "GLOctree.pas" and added ListHandle in TOctreeNode
-   10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-   30/03/07 - DaStr - Added $I GLScene.inc
-   28/03/07 - DaStr - Renamed parameters in some methods
-                        (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-   24/03/07 - DaStr - Added explicit pointer dereferencing
-                        (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   02/08/04 - LR, YHC - BCB corrections: use record instead array
-   19/06/04 - LucasG - Moved triangleFiler and WalkSphereToLeaf to public
-   31/01/04 - Mathx - Bugfix on DisposeTree (thanks dikoe Kanguru)
-   20/07/03 - DanB - Modified SphereSweepIntersect to deal with embedded spheres better
-   08/05/03 - DanB - name changes + added ClosestPointOnTriangle + fixes
-   08/05/03 - DanB - added AABBIntersect (Matheus Degiovani)
-   22/01/03 - EG - GetTrianglesInCube moved in (Bernd Klaiber)
-   29/11/02 - EG - Added triangleInfo
-   14/07/02 - EG - Dropped GLvectorFileObjects dependency
-   17/03/02 - EG - Added SphereIntersectAABB from Robert Hayes
-   13/03/02 - EG - Made in a standalone unit, based on Robert Hayes code
-   
 }
 unit GLOctree;
 
@@ -35,15 +15,17 @@ interface
 
 uses
   Classes,
-  GLVectorTypes, GLVectorGeometry, GLVectorLists, GLGeometryBB, GLContext;
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLVectorLists, 
+  GLGeometryBB, 
+  GLContext;
 
 type
 
   TProcInt = procedure(I: Integer) of object;
   TProcAffineAffineAffine = procedure(V1, V2, V3: TAffineFLTVector) of object;
 
-  // TOctreeTriangleInfo
-  //
   { : Stores information about an intersected triangle. }
   TOctreeTriangleInfo = record
     Index: Integer;
@@ -69,8 +51,6 @@ type
     ChildArray: array [0 .. 7] of POctreeNode; // Octree's 8 children
   end;
 
-  // TOctree
-  //
   { : Manages an Octree containing references to triangles. }
   TOctree = class(TObject)
   private
@@ -166,13 +146,8 @@ type
     // function SphereIntersect(position:TAffineVector; radius:single);
   end;
 
-  // ------------------------------------------------------------------
-  // ------------------------------------------------------------------
-  // ------------------------------------------------------------------
+// ------------------------------------------------------------------
 implementation
-
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 // ----------------------------------------------------------------------

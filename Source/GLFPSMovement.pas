@@ -3,22 +3,6 @@
 //
 {
    FPS-like movement behaviour and manager.
-
-   History :  
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   03/04/07 - DaStr - Added "public" to TCollisionState for FPC compatibility
-   30/03/07 - DaStr - Added $I GLScene.inc
-   29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-   08/03/06 - ur - Fixed warnigs for Delphi 2006
-   02/12/04 - DB - Fixed memory leak, spotted by dikoe Kenguru
-   03/07/04 - LR - Corrections for Linux compatibility
-  Replace GetTickCount by GLGetTickCount
-   19/06/2004 -Mrqzzz - fixed SphereSweepAndSlide to work for scaled freeforms (SphereRadiusRel)
-   14/06/04 - Mathx - Preventing repeated maps when adding through maps.addMap
-   09/06/04 - Mathx - Creation
-   
 }
 unit GLFPSMovement;
 
@@ -31,10 +15,20 @@ uses
   SysUtils, 
   Graphics,
    
-  OpenGLTokens, GLContext, GLCrossPlatform,
-  GLVectorGeometry, GLScene, GLVectorFileObjects,
-  GLVectorLists, GLXCollection, GLGeomObjects,
-  GLNavigator, GLRenderContextInfo, GLBaseClasses, GLManager, GLState;
+  OpenGLTokens, 
+  GLContext, 
+  GLCrossPlatform,
+  GLVectorGeometry, 
+  GLScene, 
+  GLVectorFileObjects,
+  GLVectorLists, 
+  GLXCollection, 
+  GLGeomObjects,
+  GLNavigator, 
+  GLRenderContextInfo, 
+  GLBaseClasses, 
+  GLManager, 
+  GLState;
 
 type
   TContactPoint = record

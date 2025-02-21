@@ -3,10 +3,6 @@
 //
 {
   Added GLScene's toolbar to Delphi IDE.
-
-   History :  
-   21/11/10 - Yar - Creation
-   
 }
 
 unit GLSceneToolbar;

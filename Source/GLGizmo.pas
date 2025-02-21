@@ -4,18 +4,8 @@
 {
   Invisible component for helping to Move, Rotate and Scale an Object
   under GLScene (usefull for an Editor).
-
-   History :  
-   10/11/12 - PW - Added CPP compatibility by changing arrays to records for vectors;
-                 replaced uppercase characters in prefixes for enum types to lower case
-   22/04/10 - Yar - Fixes after GLState revision
-   14/07/09 - DaStr - Bugfixed object selection from code (thanks Predator)
-   20/01/08 - DaStr - Cleaned up uses section for proper FPC support
-                (thanks Lukasz Sokol)
-   18/09/07 - DaStr - Initial version (based on GLGizmo.pas by Adirex,
-                 J.Delauney, Degiovani, Marcus Oblak and a bit myself)
-   
 }
+
 //
 // Original Header:
 //
@@ -25,8 +15,6 @@
 // Original Author : ???????  (glGizmo In an ODEEditor)
 // ------------------------------------------------------------------------------
 // Modified by     : J.Delauney
-// Web Site        : http://KheopsInteractive.cjb.net
-// EMail           : wmkheops@free.fr
 // Date            : 08/05/2005
 //
 // Modified by     : Marcus Oblak (8/3/2007)
@@ -48,7 +36,6 @@
 // - Add Interactive Camera Movements
 // - Adding Extended Controls with Keys
 // - Maybe An Undo Function
-// - Others Ideas ???
 // ------------------------------------------------------------------------------
 // Bugs Known :
 // - When you change the BoundingBoxColor and LabelInfosColor

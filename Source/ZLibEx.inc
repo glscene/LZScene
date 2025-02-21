@@ -1,19 +1,9 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 {*****************************************************************************
 *  ZLibEx.inc                                                                *
 *  copyright (c) 2006-2010 base2 technologies                                *
-*                                                                            *
-*  version information for delphi/c++ builder                                *
-*                                                                            *
-*  revision history                                                          *
-*    2010.01.27  updated for delphi 2010                                     *
-*    2009.04.11  updated to use CONDITIONALEXPRESSIONS and CompilerVersion   *
-*    2009.01.28  updated for delphi 2009                                     *
-*    2007.10.01  updated for delphi 2007                                     *
-*    2005.11.29  created                                                     *
-*                                                                            *
-*  acknowledgments                                                           *
-*    iztok kacin                                                             *
-*      2009.04.11  CONDITIONALEXPRESSIONS and CompilerVersion changes        *
 *****************************************************************************}
 {$ifndef FPC}
 {$ifndef CONDITIONALEXPRESSIONS}

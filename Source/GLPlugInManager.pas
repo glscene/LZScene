@@ -2,12 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-  An old PlugIn Manager unit. Don't know if if ever wa used...
-
-  History :  
-   31/03/07 - DaStr - Added $I GLScene.inc
-   28/07/01 -  EG   - Initial version
-   
+  An old PlugIn Manager unit. Don't know if it ever used...
 }
 unit GLPlugInManager;
 
@@ -16,7 +11,11 @@ interface
 {$I GLScene.inc}
 
 uses
-  Windows, Classes, SysUtils, Dialogs, Forms,
+  Windows, 
+  Classes, 
+  SysUtils, 
+  Dialogs, 
+  Forms,
   GLPlugInIntf;
 
 

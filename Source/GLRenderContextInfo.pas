@@ -3,16 +3,6 @@
 //
 {
    Stores contextual info useful during rendering methods.
-
-  History :  
-       23/08/10 - Yar - Removed modelViewMatrix, lightDisableCounter. Added PipelineTransformation.
-       22/02/10 - Yar - Added bufferLighting, bufferFog, bufferDepthTest to TGLRenderContextInfo
-       14/03/09 - DanB - Removed IsVolumeClipped functions, instead replaced with
-                            IsVolumeClipped functions in GLVectorGeometry.pas that use TFrustrum
-       09/10/08 - DanB - Added TRenderContextClippingInfo + IsVolumeClipped
-                            functions from GLVectorGeometry.pas, added nearClippingDistance
-       05/10/08 - DanB - Created from GLTexture.pas split
-    
 }
 unit GLRenderContextInfo;
 
@@ -21,8 +11,11 @@ interface
 {$I GLScene.inc}
 
 uses
-  GLPersistentClasses, GLVectorGeometry, GLState,
-  GLPipelineTransformation, GLColor;
+  GLPersistentClasses, 
+  GLVectorGeometry, 
+  GLState,
+  GLPipelineTransformation, 
+  GLColor;
 
 type
 
@@ -33,8 +26,6 @@ type
     cy: Longint;
   end;
 
-  // TGLObjectsSorting
-  //
   { Determines if objects are sorted, and how.
      Sorting is done level by level (and not for all entities), values are : 
       osInherited : use inherited sorting mode, defaults to osRenderFarthestFirst

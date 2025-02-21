@@ -4,10 +4,6 @@
 {
    Fur shader that simulate Fur / Hair / Grass.
    At this time only one light source is supported
-
-    History :  
-     08/12/15 - J.Delauney - Initial
-
 }
 unit GLSLFurShader;
 
@@ -18,10 +14,23 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLCoordinates, GLVectorGeometry, GLVectorTypes,
-  GLTextureFormat,GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLCoordinates, 
+  GLVectorGeometry, 
+  GLVectorTypes,
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
 type
   TGLCustomGLSLFurShader = class(TGLCustomGLSLShader)

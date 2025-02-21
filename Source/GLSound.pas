@@ -3,37 +3,31 @@
 //
 {
    Base classes and interface for GLScene Sound System
-
-  History :  
-       24/04/11 - Yar - Bugfixed TGLSoundSample.Assign (thanks to Anonymous)
-       06/06/10 - Yar - Fixed warnings
-       06/05/09 - DanB - Split TGLSMWaveOut to GLSMWaveOut.pas, to remove windows dependancy
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       22/07/02 - EG - SetMute/SetPause fix (Sternas Stefanos)
-       02/07/02 - EG - Persistence fix (MP3 / Sternas Stefanos)
-       05/03/02 - EG - TGLBSoundEmitter.Loaded
-       27/02/02 - EG - Added 3D Factors, special listener-is-camera support
-       13/01/01 - EG - Added CPUUsagePercent
-       09/06/00 - EG - Various enhancements
-     04/06/00 - EG - Creation
-  
 }
 unit GLSound;
 
 interface
 
 uses
-  Classes, SysUtils, Types, LCLIntf,
-  GLSoundFileObjects, GLScene, GLXCollection, GLVectorGeometry,
-  GLCadencer, GLBaseClasses, GLCrossPlatform, GLUtils;
+  Classes, 
+  SysUtils, 
+  
+  Types, 
+  LCLIntf,
+  GLSoundFileObjects, 
+  GLScene, 
+  GLXCollection, 
+  GLVectorGeometry,
+  GLCadencer, 
+  GLBaseClasses, 
+  GLCrossPlatform, 
+  GLUtils;
 
 {$I GLScene.inc}
 
 type
 
-  // TGLSoundSample
-  //
-    { Stores a single PCM coded sound sample. }
+  { Stores a single PCM coded sound sample. }
   TGLSoundSample = class(TCollectionItem)
   private
      

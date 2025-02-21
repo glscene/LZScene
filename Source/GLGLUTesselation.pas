@@ -3,20 +3,6 @@
 //
 {
     Code to generate triangle strips and fans for polygons.
-
-  History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       06/06/10 - Yar - Fixed warnings
-       26/11/09 - DaStr - Improved Lazarus compatibility (BugtrackerID = 2893580)
-       10/03/09 - DanB - DoTesselate now accepts TGLBaseMesh instead of
-                            TGLFreeform, so can now use TGLActor with it too
-       29/05/08 - DaStr - Added $I GLScene.inc
-       08/09/03 - Jaj - Added single outline polygon support
-
-    
-
-  License: 
-
     Contributed to GLScene.
 }
 unit GLGLUTesselation;

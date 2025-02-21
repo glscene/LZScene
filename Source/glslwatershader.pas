@@ -9,11 +9,7 @@
    It doesn't work that well on a cube, for instance. And does absolutely nothing on a sphere:
    SEM on a sphere is exactly the same as a planar projection of the matCap texture.
 
-   At this time only one light source is supported
-
-    History :  
-     11/12/15 - J.Delauney - Creation
-
+   At this time only one light source is supported - J.Delauney
 }
 
 
@@ -26,10 +22,19 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLVectorGeometry, GLCoordinates,
-  GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLVectorGeometry, 
+  GLCoordinates,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
 //TGLCustomGLSLSimpleWaterShader
 //

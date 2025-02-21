@@ -3,10 +3,6 @@
 //
 {
    Graphic engine friendly loading of TGA image.
-
-  History :  
-         04/04/11 - Yar - Creation
-    
 }
 
 unit GLFileTGA;

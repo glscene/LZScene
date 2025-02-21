@@ -2,12 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-       23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-       29/06/10 - Yar - Improved FPC compatibility
-       29/04/10 - Yar - Bugfixed loading of fliped image (thanks mif)
-       27/02/10 - Yar - Creation
-   
+  Improved FPC compatibility for JPEG images
 }
 unit GLFileJPEG;
 
@@ -16,9 +11,15 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLCrossPlatform, OpenGLTokens, GLContext, GLGraphics, GLTextureFormat,
-  GLApplicationFileIO, GLSLog;
+  Classes, 
+  SysUtils,
+  GLCrossPlatform, 
+  OpenGLTokens, 
+  GLContext, 
+  GLGraphics, 
+  GLTextureFormat,
+  GLApplicationFileIO, 
+  GLSLog;
 
 type
 

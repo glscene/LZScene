@@ -5,10 +5,6 @@
    Erosion shader Erode surface object and render with Anisotropic Specular Reflection
 
    At this time one light source is supported
-
-    History :  
-     08/12/15 - J.Delauney - Improved and Made compatible with the latest SVN version of GLScene
-     02/11/06 - Da Stranger - Creation
 }
 unit GLSLErosionShader;
 
@@ -19,13 +15,24 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLCoordinates, GLVectorGeometry, GLVectorTypes,
-  GLTextureFormat,GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLCoordinates, 
+  GLVectorGeometry, 
+  GLVectorTypes,
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
-//TGLCustomGLSLSimpleErosionShader
-//
 { Custom class for GLSLSimpleErosionShader.
  A shader that Erode surface object }
 Type

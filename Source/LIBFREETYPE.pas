@@ -2,9 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-       21/01/11 - Yar - Creation
-   
+ Lib Free Type
 }
 
 unit LIBFREETYPE;

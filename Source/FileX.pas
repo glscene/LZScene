@@ -11,11 +11,13 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
   Classes, SysUtils,
 
-
-  GLVectorTypes, GLVectorGeometry, GLVectorLists, GLPersistentClasses, GLUtils;
+  GLVectorTypes, 
+  GLVectorGeometry, 
+  GLVectorLists, 
+  GLPersistentClasses, 
+  GLUtils;
 
 type
   TDXNode = class;

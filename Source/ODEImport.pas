@@ -1,3 +1,6 @@
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
 UNIT ODEImport;
 {*************************************************************************
  *                                                                       *
@@ -62,69 +65,6 @@ UNIT ODEImport;
 
   ***********************************************************************
 
-  Change history
-  2010.06.14 - YP - Updated DLLs
-  2009.11.22 - DaStr - Improved Unix compatibility
-                         (thanks Predator) (BugtrackerID = 2893580)
-  2008.12.04 - PR - Updated to work with latest ODE from svn Rev(1606) (massive bug fixes and cleanup)
-                    Breakable joints are no longer availed until patch is updated
-                    ODE no longer allows multiple init's this is now checked for
-                    ODE no longer allows zero mass objects
-                    joint parms now have a 1 appended to them for first parm
-                       example dParamLoStop is now dParamLoStop1 (old joint names remain for compatablity but should be updated
-
-  2008.10.16 - UweR - Compatibility fix for Delphi 2009
-  2008.02.06 - Mrqzzz - Upgrade to ODE 0.9 (upgrade by Paul Robello; "InitOde" and "CloseODE" in public interface declaration)
-  2008.02.05 - PR - Fixes to breakable joints and class id's
-  2008.01.23 - PR - Massive update for ode 0.9x
-
-  2004.05.19 - CH - New single and double dll. Added support for the new QuickStep solver
-  2004.04.25 - CH - New single and double dll. Trimesh now works in both mode.
-  2004.04.22 - MF - Fixes to make DelphiODE behave better when used as dynamic
-  2004.04.21 - CH - New single and double dll. Now handles Capped Cylinder vs Trimesh collision
-                    Added dJointGetUniversalAngle and dJointGetUniversalAngleRate, ...
-  2004.04.08 - DL - Changed calling convention of dJointCreateContact and
-                    dBodySetMass to require pointers. Again for compatability reasons.
-  2004.04.08 - DL - Minor compatibilit fixes (performed by MF)
-  2004.04.05 - CH - New single and double dll. Now handles trimesh/trimesh collision
-  2004.03.30 - DL - better crossplatform Module loading support using moduleloader.pas
-  2004.03.11 - CH - New single and double dll. Now handles auto-disable and new terrain geom
-  2004.03.08 - DL - Support for Delphi, Kylix, FreePascal, TMT Pascal and GnuPascal compilers
-  2004.02.25 - CH - New single and double dll. Now handles breakable joints
-  2004.02.18 - CH - New single and double dll
-  2003.09.08 - CH - New single and double dll. Now handles cones and terrain
-  2003.09.01 - EG - TriCollider bindings now dynamic to allow use of unit in Delphi5
-                    (compatibility with other platforms unknow)
-  2003.07.23 - CH - New single dll, now handles Plane2D
-  2003.07.18 - CH - Added set and get UniversalParam, new dll deployed
-  2003.07.07 - MF - DelphiODE now defaults to Single precision, because TriMesh
-                    only works with Single precision. We're hoping this will be corrected in the
-                    future
-  2003.07.05 - CH - updated file to support new tri-collider code
-  2003.06.13 - CH - Created new DLL, adding dWorldStepFast and dJointTypePlane2D
-  2003.06.12 - MF - fixed Single support, which was slightly broken
-  2003.06.10 - MF - Removed GeomTransformGroup as they're not in the DLL.
-  2003.02.11 - JV - added syntax enforcement on some enumerated types
-  2003.02.01 - CH - removed dGeomGroup and all it's procedures / functions due to deprecation
-  2003.02.01 - MF - added a few new functions
-  2003.01.20 - CH - compiled a new DLL and added the new functions.
-  2002.10.31 - CH - compiled a new dll version, with some minor updates to friction among other things
-  2002.10.10 - MF - added the functions needed to support cylinder and GeomTransformGroup.
-  2002.10.10 - CH - compiled a new DLL with the new cylinder geom and the new GeomTransformGroup.
-  2002.09.25 - MF - I'm having issues with the single precision DLL, it seems less stable.
-                    DelphiODE will still default to double precision. The goal is single
-                    precision though, so the Tri-Collider can be used.
-  2002.09.24 - CH - New Single and Double precision DLLs created
-  2002.09.22 - DL - Preliminary Linux support
-  2002.09.16 - MF & CH - Conversion started
-
-  MF = Mattias Fagerlund
-  CH = Christophe Hosten (Chroma)
-  JV = John Villar
-  DL = Dominique Louis
-  EG = Eric Grange
-  PR = Paul Robello
-  MO = Marcus Oblak (mrqzzz)
  }
 
 {$I delphiode.inc}

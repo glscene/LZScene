@@ -4,17 +4,9 @@
 {
    Classes and function for generation of PerlinNoise.
 
-    History :  
-       17/11/14 - PW - Refactored TPerlin3DNoise to TGLPerlin3DNoise, renamed unit
-       31/08/10 - Bugfixed range error in TPerlin3DNoise.Initialize
-       30/03/07 - DaStr - Added $I GLScene.inc
-       14/04/04 - EG - Creation
-    
-
-   Loosely based on Tom Nuydens's (www.delphi3d.com) Noise.pas unit, itself based on
-   http://students.vassar.edu/mazucker/code/perlin-noise-math-faq.html
-   Darwin Peachey's chapter in "Texturing & Modeling: A Procedural Approach"
-   Further bugs are mine :)
+   Loosely based on Tom Nuydens's (www.delphi3d.com) 
+   Noise.pas unit, 
+   itself based on Darwin Peachey's chapter in "Texturing & Modeling: A Procedural Approach"
 }
 unit GLPerlinNoise3D;
 
@@ -29,9 +21,6 @@ const
    cPERLIN_TABLE_SIZE = 256; // must be a power of two
 
 type
-
-   // TGLPerlin3DNoise
-   //
    { Generates Perlin Noise in the [-1; 1] range.
       2D noise requests are taken in the Z=0 slice }
    TGLPerlin3DNoise = class (TObject)

@@ -2,9 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-  History :  
-       27/02/10 - Yar - Added to GLScene from Mike Lischke GraphicEx package
-   
+  Added to GLScene from Mike Lischke GraphicEx package
 }
 
 unit GLSJPG;

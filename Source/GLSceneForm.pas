@@ -2,11 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-   05/04/11 - Yar - Added property FullScreenVideoMode (thanks to ltyrosine)
-   08/12/10 - Yar - Added code for Lazarus (thanks Rustam Asmandiarov aka Predator)
-   23/08/10 - Yar - Creation
-   
+  The Scene form for Lazarus (Rustam Asmandiarov aka Predator)
 }
 
 unit GLSceneForm;
@@ -26,8 +22,12 @@ uses
   LCLVersion,
 {$IF DEFINED(LCLwin32) or DEFINED(LCLwin64)}
   Windows, // need
-  WSLCLClasses, Win32Int, Win32WSForms,
-  Win32Proc, LCLMessageGlue, Win32WSControls,
+  WSLCLClasses, 
+  Win32Int, 
+  Win32WSForms,
+  Win32Proc, 
+  LCLMessageGlue, 
+  Win32WSControls,
 {$IFEND}
 {$ENDIF}
   Classes,

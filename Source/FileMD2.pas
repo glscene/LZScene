@@ -3,19 +3,6 @@
 //
 {
    MD2 file loader
-
-    History :
-       28/08/10 - Yar - Bugfix for FPC 2.5.1 (Thanks Predator)
-       04/03/10 - DanB - TFileMD2.LoadFromStream now uses CharInSet
-       31/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       25/08/03 - Php - Added FreeLists & degibbered LoadFromStream
-       21/07/00 - Egg - Added frame names (Roger Cao/Carlos A. Rivero)
-       07/06/00 - Egg - Added Header, reduced dependencies,
-                           LoadFromFile replaced with LoadFromStream,
-                           some cleanup & optimizations
-
 }
 unit FileMD2;
 

@@ -9,19 +9,6 @@
   Copy BASS.PAS to the \LIB subdirectory of your Delphi path or your project dir
 
   NOTE: Delphi users should use the BASS_UNICODE flag where possible
-
-	 History :  
-       15/01/14 - PW - Attained C++Builder compatibility with MMSYSTEM.H in XE or UP
-       14/01/14 - PW - Updated to BASS 2.4 with thanks to Ian Luck
-       21/03/08 - DanB - Updated to BASS 2.3
-       06/06/07 - DaStr - Added $I GLScene.inc
-       06/07/04 - Mrqzzz- Updated to Bass 2.0 (Graham Kennedy)
-       27/08/02 -  EG   - Updated to Bass 1.6a
-       16/06/02 -  EG   - BASS 1.6
-       27/02/07 -  EG   - Misc.
-       05/02/02 -  EG   - BASS 1.4 support
-       28/07/01 -  EG   - Initial version based on Ian Luck BASS 1.2
-    
 }
 unit Bass;
 

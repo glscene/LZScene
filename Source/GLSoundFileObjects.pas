@@ -4,21 +4,6 @@
 {
    Support classes for loading various fileformats.
    These classes work together like vector file formats or Delphi's TGraphic classes.
-
-  History :
-       17/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       13/07/09 - DanB - replaced sAllFilter with glsAllFilter (for FPC)
-       30/05/09 - DanB - TGLSoundSampling.WaveFormat now returns correct nBlockAlign, cbSize.
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       07/06/07 - DaStr - Added $I GLScene.inc
-       26/01/05 - JAJ - Removed leak formed by never freeing vSoundFileFormats.
-                            Reported by Dikoe Kenguru.
-       16/03/01 - Egg - TGLWAVFile.Capabilities
-       16/07/00 - Egg - Made use of new TGLDataFile class
-       09/06/00 - Egg - Added WAVDataSize
-       04/06/00 - Egg - Creation
-
 }
 unit GLSoundFileObjects;
 
@@ -27,8 +12,10 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,{$IFDEF MSWINDOWS}MMSystem,{$ENDIF}
-  GLApplicationFileIO, GLCrossPlatform;
+  Classes, 
+  SysUtils,{$IFDEF MSWINDOWS}MMSystem,{$ENDIF}
+  GLApplicationFileIO, 
+  GLCrossPlatform;
 
 type
   EGLSoundException = class(Exception);

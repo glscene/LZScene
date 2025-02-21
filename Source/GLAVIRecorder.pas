@@ -3,25 +3,6 @@
 //
 {
   Component to make it easy to record GLScene frames into an AVI file
-
-   History :  
-   17/11/14 - PW - Refactored TAVIRecorder to TGLAVIRecorder
-   12/07/07 - DaStr - Improved Cross-Platform compatibility
-  (Bugtracker ID = 1684432)
-   17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-   29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-   01/06/05 - NelC - Replaced property GLFullScreenViewer with GLNonVisualViewer
-   26/01/05 - JAJ - Can now operate with a GLFullScreenViewer
-   22/10/04 - EG - Can now operate without a SceneViewer
-   13/05/04 - EG - Added irmBitBlt mode (now the default mode)
-   05/01/04 - EG - Added Recording function and ability to record arbitrary bitmap,
-  Added OnPostProcessEvent
-   08/07/03 - NelC - Fixed access violation on exit (thx Solerman Kaplon)
-  and minor updates
-   11/12/01 - EG - Minor changes for compatibility with JEDI VfW.pas
-  <li<02/03/01 - EG - Added TAVIImageRetrievalMode
-   24/02/01 - NelC - Creation and initial code
-   
 }
 unit GLAVIRecorder;
 

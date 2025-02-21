@@ -3,12 +3,6 @@
 //
 {
    Loader for FSRad OCT files.
-
-	 History :  
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       02/04/07 - DaStr - Added $I GLScene.inc
-       30/01/03 - Egg - Creation
-	 
 }
 unit FileOCT;
 
@@ -16,7 +10,10 @@ interface
 
 {$I GLScene.inc}
 
-uses Classes, GLVectorGeometry, GLVectorLists;
+uses 
+  Classes, 
+  GLVectorGeometry, 
+  GLVectorLists;
 
 type
 

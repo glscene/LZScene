@@ -2,26 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-   History :  
-   10/11/12 - PW - Added CPP compatibility: changed vector arrays to records in Render
-   21/01/11 - DanB - Added "inherited" call to TGLBThorFX.WriteToFiler
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   14/06/10 - Yar - Bugfixed in TGLBThorFX.ReadFromFiler when assertion off (thanks olkondr)
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   16/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   13/02/07 - aidave - Updated Target.Style to csPoint
-   23/12/04 - PhP - GLScenestyled Header
-   02/08/04 - LR, YHC - BCB corrections: use record instead array
-   06/04/04 - PhP - Removed property Paused use of property Disabled instead
-   04/15/03 - Added initialization to CalcThor, to fix an error
-  Thanks to Martin Kirsch for this solution
-   12/08/01 - EG - Dropped unused Handle allocation (leftover from FirexFX)
-  Fixed leaks (colors)
-   09/03/01 - René Lindsay - unit created
+  The ThorFX by René Lindsay
    
 }
 unit GLThorFX;
@@ -31,11 +12,23 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene, GLXCollection, GLVectorGeometry,
-  OpenGLTokens, GLContext, GLVectorLists, GLVectorTypes,
-  GLCadencer, GLColor, GLBaseClasses, GLCoordinates, GLRenderContextInfo,
-  GLManager, GLState, GLTextureFormat;
+  Classes, 
+  SysUtils,
+  GLScene, 
+  GLXCollection, 
+  GLVectorGeometry,
+  OpenGLTokens, 
+  GLContext, 
+  GLVectorLists, 
+  GLVectorTypes,
+  GLCadencer, 
+  GLColor, 
+  GLBaseClasses, 
+  GLCoordinates, 
+  GLRenderContextInfo,
+  GLManager, 
+  GLState, 
+  GLTextureFormat;
 
 type
   PThorpoint = ^TThorpoint;

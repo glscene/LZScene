@@ -11,135 +11,6 @@
   units where they can grow and prosper untammed. "Generic" geometrical
   objects can be found GLGeomObjects.
 
-   History :  
-   12/03/13 - Yar - Added TGLSuperellipsoid (contributed by Eric Hardinge)
-   10/03/13 - PW - Added OctahedronBuildList and TetrahedronBuildList
-   20/11/12 - PW - CPP compatibility: replaced direct access to some properties with
-                 getter and a setter methods
-   23/03/11 - Yar - Bugfixed TGLPlane.Assign (thanks ltyrosine)
-                       Replaced plane primitives to triangles, added tangent and binormal attributes
-   29/11/10 - Yar - Bugfixed client color array enabling in TGLPoints.BuildList when it not used (thanks rbenetis)
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   29/06/10 - Yar - Added loColorLogicXor to TGLLines.Options
-   22/04/10 - Yar - Fixes after GLState revision
-   11/04/10 - Yar - Replaced glNewList to GLState.NewList in TGLDummyCube.DoRender
-   05/03/10 - DanB - More state added to TGLStateCache
-   22/02/10 - Yar - Removed NoZWrite in TGLPlane, TGLSprite
-                 Now use Material.DepthProperties
-   28/12/09 - DanB - Modifying TGLLineBase.LineColor now calls StructureChanged
-   13/03/09 - DanB - ScreenRect now accepts a buffer parameter, rather than using CurrentBuffer
-   05/10/08 - DaStr - Added lsmLoop support to TGLLines
-                (thanks Alejandro Leon Escalera) (BugtrackerID = 2084250)
-   22/01/08 - DaStr - Fixed rendering of TGLPoints
-                (thanks Kapitan) (BugtrackerID = 1876920)
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   14/03/07 - DaStr - Added explicit pointer dereferencing
-                 (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   15/02/07 - DaStr - Global $R- removed, added default values to
-                 TGLSprite.NoZWrite, MirrorU, MirrorV
-   14/01/07 - DaStr - Fixed TGLCube.BuildList. Bugtracker ID=1623743 (Thanks Pete Jones)
-   19/10/06 - LC - Fixed IcosahedronBuildList. Bugtracker ID=1490784 (thanks EPA_Couzijn)
-   19/10/06 - LC - Fixed TGLLineBase.Assign problem. Bugtracker ID=1549354 (thanks Zapology)
-   08/10/05 - Mathx - Fixed TGLLines.nodes.assign problem (thanks to  Yong Yoon Kit);
-                 Also fixed a TGLLineBase.assign problem (object being assigned to
-                 was refering the base lists, not copying them).
-                 Bugtracker ID=830846
-   17/01/05 - SG - Added color support for bezier style TGLLines
-   03/12/04 - MF - Added TGLSprite.AxisAlignedDimensionsUnscaled override
-   06/07/04 - SG - TGLCube.RayCastIntersect fix (Eric Pascual)
-   20/01/04 - SG - Added IcosahedronBuildList
-   30/11/03 - MF - Added TGLSphere.GenerateSilhouette - it now takes the
-                      stacks/slices of the sphere into account
-   10/09/03 - EG - Introduced TGLNodedLines
-   18/08/03 - SG - Added MirrorU and MirrorV to TGLSprite for mirroring textures
-   21/07/03 - EG - TGLTeapot moved to new GLTeapot unit,
-                      TGLDodecahedron moved to new GLPolyhedron unit,
-                      TGLCylinder, TGLCone, TGLTorus, TGLDisk, TGLArrowLine,
-                      TGLAnnulus, TGLFrustrum and TGLPolygon moved to new
-                      GLGeomObjects unit
-   16/07/03 - EG - Style changes and cleanups
-   19/06/03 - MF - Added GenerateSilhouette to TGLCube and TGLPlane.
-   13/06/03 - EG - Fixed TGLAnnulus.RayCastIntersect (Alexandre Hirzel)
-   03/06/03 - EG - Added TGLAnnulus.RayCastIntersect (Alexandre Hirzel)
-   01/05/03 - SG - Added NURBS Curve to TGLLines (color not supported yet)
-   14/04/03 - SG - Added a Simple Bezier Spline to TGLLines (color not supported yet)
-   02/04/03 - EG - TGLPlane.RayCastIntersect fix (Erick Schuitema)
-   13/02/03 - DanB - added AxisAlignedDimensionsUnscaled functions
-   22/01/03 - EG - TGLCube.RayCastIntersect fixes (Dan Bartlett)
-   10/01/03 - EG - TGLCube.RayCastIntersect (Stuart Gooding)
-   08/01/03 - RC - Added TGLPlane.XScope and YScope, to use just a part of the texture
-   27/09/02 - EG - Added TGLPointParameters
-   24/07/02 - EG - Added TGLCylinder.Alignment
-   23/07/02 - EG - Added TGLPoints (experimental)
-   20/07/02 - EG - TGLCylinder.RayCastIntersect and TGLPlane.RayCastIntersect
-   18/07/02 - EG - Added TGLCylinder.Align methods
-   07/07/02 - EG - Added TGLPlane.Style
-   03/07/02 - EG - TGLPolygon now properly setups normals (filippo)
-   17/03/02 - EG - Support for transparent lines
-   02/02/02 - EG - Fixed TGLSprite change notification
-   26/01/02 - EG - TGLPlane & TGLCube now osDirectDraw
-   20/01/02 - EG - TGLSpaceText moved to GLSpaceText
-   22/08/01 - EG - TGLTorus.RayCastIntersect fixes
-   30/07/01 - EG - Updated AxisAlignedDimensions implems
-   16/03/01 - EG - TGLCylinderBase, changed default Stacks from 8 to 4
-   27/02/01 - EG - Fix in TGLCube texcoords, added TGLFrustrum (thx Robin Gerrets)
-   22/02/01 - EG - Added AxisAlignedDimensions overrides by Uwe Raabe
-   05/02/01 - EG - Minor changes to TGLCube.BuildList
-   21/01/01 - EG - BaseProjectionMatrix fix for TGLHUDSprite (picking issue),
-  TGLHUDSprite moved to GLHUDObjects
-   14/01/01 - EG - Fixed TGLSphere texture coordinates
-   13/01/01 - EG - TGLSprite matrix compatibility update
-   09/01/01 - EG - TGLSpaceText now handles its TFont.OnFontChange
-   08/01/01 - EG - Added TGLLinesNode (color support) and Node size control
-   22/12/00 - EG - Sprites are no longer texture enabled by default,
-                      updated TGLSprite.BuildList to work with new matrices
-   14/11/00 - EG - Added TGLDummyCube.Destroy (thx Airatz)
-   08/10/00 - EG - Fixed call to wglUseFontOutlines
-   06/08/00 - EG - TRotationSolid renamed to TGLRevolutionSolid & moved to GLExtrusion
-   04/08/00 - EG - Fixed sphere main body texture coords + slight speedup
-   02/08/00 - EG - Added TGLPolygonBase
-   19/07/00 - EG - Added TGLHUDSprite
-   18/07/00 - EG - Added TGLRevolutionSolid
-   15/07/00 - EG - Code reduction and minor speedup for all quadric objects,
-                      Added TGLLineBase (split of TGLLines),
-                      TGLDummyCube now uses osDirectDraw instead of special behaviour
-   13/07/00 - EG - Added TGLArrowLine (code by Aaron Hochwimmer)
-   28/06/00 - EG - Support for "ObjectStyle"
-   23/06/00 - EG - Reduced default Loop count for TGLDisk
-   18/06/00 - EG - TGLMesh and accompanying stuff moved to GLMesh
-   14/06/00 - EG - Added Capacity to TGLVertexList
-   09/06/00 - EG - First row of Geometry-related upgrades
-   08/06/00 - EG - Added ReleaseFontManager, fixed TGLSpaceText DestroyList,
-   01/06/00 - EG - Added TGLAnnulus (code by Aaron Hochwimmer)
-   29/05/00 - EG - TGLLines now uses TGLNode/TGLNodes
-   28/05/00 - EG - Added persistence ability to TGLLines,
-                      Added defaults for all TGLLines properties
-   27/05/00 - EG - Moved in RogerCao's TGLLines object, added a TLineNode
-                      class (currently private) and various enhancements + fixes,
-                      DodecahedronBuildList now available as a procedure,
-                      CubeWireframeBuildList now available as a procedure
-   26/05/00 - RoC - Added division property to TGLLines, and Spline supported
-   26/05/00 - EG - Moved vectorfile remnants to GLVectorFiles
-   14/05/00 - EG - Removed Top/Bottom checks for TGLSphere,
-  Added mmTriangleStrip support in CalcNormals
-   08/05/00 - EG - Uncommented DisableAutoTexture in TGLSpaceText.BuildList
-   07/05/00 - RoC - TGLLines added, to show a list of vertex
-   26/04/00 - EG - Reactivated stuff in SetupQuadricParams (thanks Nelson Chu)
-   18/04/00 - EG - Overriden TGLDummyCube.Render
-   16/04/00 - EG - FontManager now published and auto-creating
-   12/04/00 - EG - Added TGLCylinderBase.Loops (fixes a bug, thanks Uwe)
-   24/03/00 - EG - Added Rotation to TGLSprite, fixed sprite size
-   20/03/00 - EG - Enhanced FontManager
-   17/03/00 - EG - Fixed SpaceText glBaseList bug,
-  TGLSprite now uses a transposition of the globalmatrix
-   16/03/00 - EG - Enhanced TFontManager to allow lower quality
-   14/03/00 - EG - Added subobjects Barycenter support for TGLDummyCube
-   09/02/00 - EG - ObjectManager stuff moved to GLSceneRegister,
-  FreeForm and vector file stuff moved to new GLVectorFileObjects
-   08/02/00 - EG - Added TGLDummyCube
-   05/02/00 - EG - Javadocisation, fixes and enhancements :
-                      TGLVertexList.AddVertex, "default"s to properties
-   
 }
 unit GLObjects;
 
@@ -148,15 +19,25 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLVectorGeometry, GLVectorTypes, GLScene, OpenGLAdapter,
-  OpenGLTokens, GLVectorLists, GLCrossPlatform, GLContext, GLSilhouette,
-  GLColor, GLRenderContextInfo, GLBaseClasses, GLNodes, GLCoordinates;
+  Classes, 
+  SysUtils,
+ 
+  GLVectorGeometry, 
+  GLVectorTypes, 
+  GLScene, 
+  OpenGLAdapter,
+  OpenGLTokens, 
+  GLVectorLists, 
+  GLCrossPlatform, 
+  GLContext, 
+  GLSilhouette,
+  GLColor, 
+  GLRenderContextInfo, 
+  GLBaseClasses, 
+  GLNodes, 
+  GLCoordinates;
 
 type
-
-  // TGLVisibilityDeterminationEvent
-  //
   TGLVisibilityDeterminationEvent = function(Sender: TObject;
     var rci: TGLRenderContextInfo): Boolean of object;
 
@@ -169,8 +50,6 @@ type
     TexCoord: TVector2f;
   end;
 
-  // TGLDummyCube
-  //
   { : A simple cube, invisible at run-time.
     This is a usually non-visible object -except at design-time- used for
     building hierarchies or groups, when some kind of joint or movement
@@ -245,13 +124,9 @@ type
       read FOnVisibilityDetermination write FOnVisibilityDetermination;
   end;
 
-  // TPlaneStyle
-  //
   TPlaneStyle = (psSingleQuad, psTileTexture);
   TPlaneStyles = set of TPlaneStyle;
 
-  // Plane
-  //
   { : A simple plane object.
     Note that a plane is always made of a single quad (two triangles) and the
     tiling is only applied to texture coordinates. }
@@ -314,8 +189,6 @@ type
       default [psSingleQuad, psTileTexture];
   end;
 
-  // TGLSprite
-  //
   { : A rectangular area, perspective projected, but always facing the camera.
     A TGLSprite is perspective projected and as such is scaled with distance,
     if you want a 2D sprite that does not get scaled, see TGLHUDSprite. }
@@ -369,13 +242,9 @@ type
     property MirrorV: Boolean read FMirrorV write SetMirrorV default False;
   end;
 
-  // TGLPointStyle
-  //
   TGLPointStyle = (psSquare, psRound, psSmooth, psSmoothAdditive,
     psSquareAdditive);
 
-  // TGLPointParameters
-  //
   { : Point parameters as in ARB_point_parameters.
     Make sure to read the ARB_point_parameters spec if you want to understand
     what each parameter does. }
@@ -421,8 +290,6 @@ type
       write SetDistanceAttenuation;
   end;
 
-  // TGLPoints
-  //
   { : Renders a set of non-transparent colored points.
     The points positions and their color are defined through the Positions
     and Colors properties. }
@@ -493,14 +360,10 @@ type
   { : Possible aspects for the nodes of a TLine. }
   TLineNodesAspect = (lnaInvisible, lnaAxes, lnaCube, lnaDodecahedron);
 
-  // TGLLineSplineMode
-  //
   { : Available spline modes for a TLine. }
   TGLLineSplineMode = (lsmLines, lsmCubicSpline, lsmBezierSpline, lsmNURBSCurve,
     lsmSegments, lsmLoop);
 
-  // TGLLinesNode
-  //
   { : Specialized Node for use in a TGLLines objects.
     Adds a Color property (TGLColor). }
   TGLLinesNode = class(TGLNode)
@@ -541,8 +404,6 @@ type
     procedure NotifyChange; override;
   end;
 
-  // TGLLineBase
-  //
   { : Base class for line objects.
     Introduces line style properties (width, color...). }
   TGLLineBase = class(TGLImmaterialSceneObject)
@@ -593,8 +454,6 @@ type
     property Visible;
   end;
 
-  // TGLNodedLines
-  //
   { : Class that defines lines via a series of nodes.
     Base class, does not render anything. }
   TGLNodedLines = class(TGLLineBase)
@@ -648,13 +507,9 @@ type
       stored StoreNodeSize;
   end;
 
-  // TLinesOptions
-  //
   TLinesOption = (loUseNodeColorForLines, loColorLogicXor);
   TLinesOptions = set of TLinesOption;
 
-  // TGLLines
-  //
   { : Set of 3D line segments.
     You define a 3D Line by adding its nodes in the "Nodes" property. The line
     may be rendered as a set of segment or as a curve (nodes then act as spline
@@ -715,8 +570,6 @@ type
   TCubePart = (cpTop, cpBottom, cpFront, cpBack, cpLeft, cpRight);
   TCubeParts = set of TCubePart;
 
-  // TGLCube
-  //
   { : A simple cube object.
     This cube use the same material for each of its faces, ie. all faces look
     the same. If you want a multi-material cube, use a mesh in conjunction
@@ -765,16 +618,12 @@ type
       default [cpTop, cpBottom, cpFront, cpBack, cpLeft, cpRight];
   end;
 
-  // TNormalSmoothing
-  //
   { : Determines how and if normals are smoothed.
     - nsFlat : facetted look 
     - nsSmooth : smooth look 
     - nsNone : unlighted rendering, usefull for decla texturing }
   TNormalSmoothing = (nsFlat, nsSmooth, nsNone);
 
-  // TGLQuadricObject
-  //
   { : Base class for quadric objects.
     Introduces some basic Quadric interaction functions (the actual quadric
     math is part of the GLU library). }
@@ -809,8 +658,6 @@ type
   TAngleLimit2 = 0 .. 360;
   TCapType = (ctNone, ctCenter, ctFlat);
 
-  // TGLSphere
-  //
   { : A sphere object.
     The sphere can have to and bottom caps, as well as being just a slice
     of sphere. }
@@ -861,8 +708,6 @@ type
     property TopCap: TCapType read FTopCap write SetTopCap default ctNone;
   end;
 
-  // TGLPolygonBase
-  //
   { : Base class for objects based on a polygon. }
   TGLPolygonBase = class(TGLSceneObject)
   private
@@ -904,8 +749,6 @@ type
 
   end;
 
-  // TGLSuperellipsoid
-  //
   { : A Superellipsoid object.
     The Superellipsoid can have top and bottom caps,
     as well as being just a slice of Superellipsoid. }

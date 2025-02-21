@@ -6,36 +6,6 @@
    This class can be used for generic OpenGL applications and has no dependencies
    to the GLScene core units (only to base units).
 
-  History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records,
-                          Replaced direct access to PenAlpha property with GetPenAlpha method
-       05/02/11 - Yar - Now PenColor setter always direct set color
-       03/10/10 - Yar - Added RoundRect (thanks eric129)
-       21/09/10 - Yar - Added Arc, ArcTo (thanks µAlexx)
-       03/09/10 - Yar - Added FillRectGradient, FillEllipseGradient (thanks µAlexx)
-       23/08/10 - Yar - Replaced OpenGL1x functions to OpenGLAdapter
-       04/04/10 - Yar - Fixes after GLState revision
-       07/11/09 - DaStr - Some cosmetic fixes. Overloaded TGLCanvas.EllipseBB(),
-                             TGLCanvas.Ellipse(), TGLCanvas.FillEllipse()
-       31/07/07 - DaStr - Added missing StopPrimitive call to TGLCanvas.FillRect
-                             (Bugtracker ID = 1775528)
-       06/06/07 - DaStr - Removed ConvertColorVector and ConvertWinColor (now in GLColor.pas)
-                             Added GLColor to uses (BugtrackerID = 1732211)
-                             Removed TColor declaration (now in GLCrossPlatform.pas)
-       02/08/04 - LR, YHC - BCB corrections: used record instead array
-                               Replaced direct access of some properties by a getter and a setter
-       08/07/04 - LR - Replace Graphics and TPoint by GLCrossPlatform for Linux
-       13/01/04 - EG - Polyline/Polygon fix
-       07/05/03 - EG - SetPenWidth now correctly stops the primitive
-       08/01/03 - EG - StopPrimitive now public
-       09/12/02 - EG - Now properly disables fog
-       20/11/02 - EG - Now uses Types/Windows TPoint (D5 & D6 tested only)
-       01/10/02 - EG - Added Polygon & Polyline
-       04/03/02 - EG - Added FrameRect and FillRect
-       31/01/02 - EG - Texture3D/CubeMap only disabled if supported
-       24/01/02 - EG - Added PenAlpha
-       19/01/02 - EG - Creation
-  
 }
 unit GLCanvas;
 

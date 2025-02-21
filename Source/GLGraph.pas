@@ -3,33 +3,6 @@
 //
 {
   Graph plotting objects for GLScene
-
-   History :  
-   25/01/13 - PW - Added compatibility with Cppb, changed 
-                      properties with characters in lowercase to uppercase
-   07/01/10 - Yar - Fixed TGLHeightField.Assign (thanks mobilus)
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   14/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   12/09/03 - EG - DefaultHeightField now defines color
-   16/07/02 - EG - Fixed TGLHeightField backface polygon mode
-   29/01/02 - EG - Fixed TGLHeightField.BuildList when field is empty
-   10/01/02 - EG - Added OnGetHeight2
-   30/11/01 - EG - Color fix in TGLHeightField.BuildList (thx Marc Hull)
-   19/07/01 - EG - TGLHeightField no longer calls OnGetHeight in design mode
-   06/03/01 - EG - Fix in TGLHeightField.BuildList (thx Rene Lindsay)
-   25/02/01 - EG - Minor T&L improvement for TGLHeightField
-   21/02/01 - EG - Now XOpenGL based (multitexture)
-   29/01/01 - EG - Changed SamplingScale "Min" and "Max" default value
-                 to workaround the float property default value bug.
-   05/11/00 - EG - Fixed "property ZSamplingScale" (thx Davide Prade)
-   15/07/00 - EG - Added TXYGrid
-   06/07/00 - EG - Creation (TGLSamplingScale & TGLHeightField)
-   
 }
 unit GLGraph;
 
@@ -38,15 +11,24 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene,  OpenGLTokens, GLContext,  XOpenGL, GLVectorGeometry,
-  GLMaterial,  GLObjects,  GLVectorLists, GLColor, GLBaseClasses,
-  GLRenderContextInfo, GLState, GLVectorTypes;
+  Classes, 
+  SysUtils,
+
+  GLScene,  
+  OpenGLTokens, 
+  GLContext,  
+  XOpenGL, 
+  GLVectorGeometry,
+  GLMaterial,  
+  GLObjects,  
+  GLVectorLists, 
+  GLColor, 
+  GLBaseClasses,
+  GLRenderContextInfo, 
+  GLState, 
+  GLVectorTypes;
 
 type
-
-  // TGLSamplingScale
-  //
   TGLSamplingScale = class(TGLUpdateAbleObject)
   private
      

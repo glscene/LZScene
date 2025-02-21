@@ -4,60 +4,9 @@
 {
    This unit contains classes that imitate an atmosphere around a planet.
 
-    History :  
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       19/03/11 - Yar - Added setters for Low and High atmosphere colors
-       04/11/10 - DaStr - Restored Delphi5 and Delphi6 compatibility
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       03/04/07 - DaStr - Optimized TGLCustomAtmosphere.DoRender
-                             Fixed SetPlanetRadius and SetAtmosphereRadius
-       21/03/07 - DaStr - Cleaned up "uses" section
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1684432)
-       01/03/07 - DaStr - Fixed TGLAtmosphereBlendingMode
-                                             (old version did not generate RTTI)
-                             Added default values to all properties
-       15/02/07 - DaStr - Added TGLCustomAtmosphere.AxisAlignedDimensionsUnscaled
-       07/02/07 - DaStr - Initial version (donated to GLScene)
-
-
    Comments:
       1) Eats a lot of CPU (reduces FPS from 1240 to 520 on my PC with cSlices=100)
       2) Alpha in LowAtmColor, HighAtmColor is ignored.
-
-
-   Previous version history:
-          v1.0     06 February '2005  Creation (based on demo "Earth" by Eric Grange)
-          v1.1     28 February '2005  Don't remmember what...
-          v1.2     16 March    '2005  Small improvements, including ability to
-                                        load files using short (not full) paths
-          v1.3     21 March    '2005  Positioning bugfix!!!
-          v1.4     3 October   '2005  Camera parameter no longer needed
-                                      "Enabled" is now a property
-                                      LoadFromMemory added
-                                      SaveToFile, SaveToMemory added
-                                      Normal error message
-          v1.5     4 November  '2005  BlendingMode1,2 added
-                                      TogleBlengindMode added
-                                      LoadFromMemory bugfix
-          v1.6     28 February '2006  Became a standard GLScene object, child of TglBaseSceneObject
-                                      Range bug fixed, along with a bug, the caused
-                                        Atmosphere to draw itseft incorrectly on
-                                        some occasions
-                                      Demo inhanced
-                                      New Load/Save code
-          v1.6.2   05 June     '2006  Assign() added
-                                      Alpha in LowAtmColor, HighAtmColor was
-                                        removed from Loading/saving code
-          v1.6.4   07 July     '2006  All variables in the class converted into properties
-                                      TStrangeCustomAtmosphere added
-          v1.6.6  08 October   '2006  Made compatible with the new persistance mechanism
-          v1.7    22 October   '2006  Notification() and SetSun() added
-          v1.8    08 February  '2007  TStrangeCustomAtmosphere.Assign fixed
-                                      Blending mode Integer ---> Enumeration
-                                      Donated to GLScene
 }
 
 unit GLAtmosphere;
@@ -67,11 +16,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  // VCL
   SysUtils, Classes,
 
-  GLScene, GLObjects, GLCadencer, OpenGLTokens, GLVectorGeometry,
-  GLContext, GLStrings, GLColor, GLRenderContextInfo, GLState, GLCrossPlatform,
+  GLScene, 
+  GLObjects, 
+  GLCadencer, 
+  OpenGLTokens, 
+  GLVectorGeometry,
+  GLContext, 
+  GLStrings, 
+  GLColor, 
+  GLRenderContextInfo, 
+  GLState, 
+  GLCrossPlatform,
   GLVectorTypes;
 
 type

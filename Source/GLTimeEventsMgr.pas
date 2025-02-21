@@ -4,17 +4,6 @@
 {
    Time based events mannager using the Cadencer
    can be useful to make animations with GlScene
-
-	 History :  
-       07/01/10 - DaStr - Added TGLTimeEventsMGR.Reset()
-                             Fixed code formating
-       25/11/09 - DanB - Changed TTimeEvent.Name from ShortString to String
-       11/10/07 - DaStr - TTimeEvent.SetEnabled now updates StartTime to
-                             Cadencers's current time.
-                             (Thanks Lukasz Sokol) (BugTracker ID = 1811141)
-       28/03/07 - DaStr - Cosmetic fix for FPC compatibility
-       29/01/07 - DaStr - Moved registration to GLSceneRegister.pas
-       07/02/02 - EG - Added Notification, DoEvent, ElapsedTime and changed Event type
 }
 
 unit GLTimeEventsMgr;
@@ -22,16 +11,16 @@ unit GLTimeEventsMgr;
 interface
 
 uses
-  Classes, SysUtils,
-  GLCadencer,  GLBaseClasses;
+  Classes, 
+  SysUtils,
+  GLCadencer,  
+  GLBaseClasses;
 
 type
 
     TTimeEvent = class;
     TTimeEvents = class;
 
-	// TGLTimeEventsMGR
-	//
    TGLTimeEventsMGR = class(TGLUpdateAbleComponent)
    private
        

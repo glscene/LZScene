@@ -2,15 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-
-  History :  
-         23/08/10 - Yar - Replaced OpenGL1x to OpenGLTokens
-         31/05/10 - Yar - Fixes for Linux x64
-         08/05/10 - Yar - Removed check for residency in AssignFromTexture
-         22/04/10 - Yar - Fixes after GLState revision
-         16/03/10 - Yar - Improved FPC compatibility
-         05/03/10 - Yar - Creation
-    
+  The PNG image format
 }
 unit GLFilePNG;
 
@@ -19,9 +11,15 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLCrossPlatform, OpenGLTokens, GLContext, GLGraphics,
-  GLTextureFormat, GLApplicationFileIO;
+  Classes, 
+  SysUtils,
+
+  GLCrossPlatform, 
+  OpenGLTokens, 
+  GLContext, 
+  GLGraphics,
+  GLTextureFormat, 
+  GLApplicationFileIO;
 
 type
 
@@ -54,9 +52,6 @@ resourcestring
 // ------------------
 // ------------------ TGLPNGImage ------------------
 // ------------------
-
- 
-//
 
 procedure TGLPNGImage.LoadFromFile(const filename: string);
 var

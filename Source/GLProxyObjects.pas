@@ -3,49 +3,6 @@
 //
 {
    Implements specific proxying classes.
-
-  History :  
-       16/03/11 - Yar - Fixes after emergence of GLMaterialEx
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       25/12/09 - DaStr - Bugfixed TGLActorProxy.RayCastIntersect()
-                               in aarMorph mode (thanks Vovik)
-       22/12/09 - DaStr - Added TGLActorProxy.AnimationMode (thanks Vovik)
-                             Removed TGLActorProxy.Interval (was not used)
-       18/06/08 - mrqzzz - Don't raise error when setting animation to an
-                               ActorProxy and no MasterObject is defined
-       15/03/08 - DaStr - Fixup after previous update: removed all hints and
-                              warnings, TGLActorProxy now has two versions of
-                              RayCastIntersect()
-       06/02/08 - mrqzzz - Added a "RayCastIntersect" overload for Actorproxy
-       07/11/07 - mrqzzz - Added "OnBeforeRender" event to Actorproxy
-                              allowing to apply extra transformations (f.ex: bone rotations)
-                              to the referenced Actor in order to have the proxy render these changes.
-       07/11/07 - mrqzzz - Added "StoredBoneNames" property
-       07/11/07 - mrqzzz - Added "BoneMatrix(Boneidndex|boneName)" function and
-                               StoreBonesMatrix property for TGLActorProxy
-                              (To read each ActorProxy's individual Bone matrices,
-                              f.ex to align a weapon in it's hand)
-       06/11/07 - mrqzzz - Added MaterialLibrary and LibMaterialName for TGLActorProxy
-                              (allows different materials on proxy actors sharing same master)
-       06/11/07 - mrqzzz - Added public readonly properties for TGLActorProxy
-                              (CurrentFrame,StartFrame,Endframe,etc..)
-       05/10/07 - DaStr - Bugfixed TGLMaterialProxy.DoRender
-                              (Bugtracker ID = 1808666)
-       04/09/07 - DaStr - Added TGLMaterialProxy
-                             Cleaned up this unit a bit
-       10/05/07 - DaStr - Bugfixed TGLColorProxy.DoRender
-                              (thanks Paul Robello) (Bugtracker ID = 1716692)
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       25/02/07 - Made TGLActorProxy.SetAnimation a bit safer
-       20/02/07 - DaStr - Redeclared MasterObject of TGLColorProxy and TGLFreeFormProxy
-                             Added TGLActorProxy (based on a demo published
-                             on the newsgroup by don't know who...)
-       18/12/03 - Dave - Dropped "Object" from "ProxyObject" class names
-       17/12/03 - Dave - Changed class check in Octree code to Assert
-       17/12/03 - Dave+Dan - Added OctreeSphereSweep
-       06/12/03 - EG - Creation from GLScene.pas split
-    
 }
 unit GLProxyObjects;
 
@@ -54,16 +11,24 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene,  GLVectorGeometry,  GLTexture,  GLVectorFileObjects,
-  GLStrings,  GLRenderContextInfo,  GLBaseClasses, GLMaterial,
-  OpenGLTokens,  GLContext,  GLVectorTypes;
+  Classes, 
+  SysUtils,
+  
+  GLScene,  
+  GLVectorGeometry,  
+  GLTexture,  
+  GLVectorFileObjects,
+  GLStrings,  
+  GLRenderContextInfo,  
+  GLBaseClasses, 
+  GLMaterial,
+  OpenGLTokens,  
+  GLContext,  
+  GLVectorTypes;
 
 type
   EGLProxyException = class(Exception);
 
-  // TGLColorProxy
-  //
   { A proxy object with its own color.
      This proxy object can have a unique color. Note that multi-material
      objects (Freeforms linked to a material library f.i.) won't honour

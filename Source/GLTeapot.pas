@@ -3,14 +3,6 @@
 //
 {
    Implements the standard Teapot, build from evaluators.
-
-  History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       30/03/07 - DaStr - Added $I GLScene.inc
-       21/07/03 - EG - Creation from GLObjects split
-    
 }
 unit GLTeapot;
 
@@ -21,13 +13,14 @@ interface
 uses
   Classes,
    
-  GLScene, GLVectorGeometry, OpenGLTokens, GLContext,
-  GLRenderContextInfo, GLVectorTypes;
+  GLScene, 
+  GLVectorGeometry, 
+  OpenGLTokens, 
+  GLContext,
+  GLRenderContextInfo, 
+  GLVectorTypes;
 
 type
-
-  // TGLTeapot
-  //
   { The classic teapot.
      The only use of this object is as placeholder for testing... }
   TGLTeapot = class(TGLSceneObject)

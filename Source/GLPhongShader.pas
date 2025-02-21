@@ -3,18 +3,6 @@
 //
 {
    An ARBvp1.0 + ARBfp1.0 shader that implements phong shading.
-
-    History :  
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       28/07/09 - DaStr - Small changes and simplifications  
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)   
-       20/03/07 - DaStr - Moved some of the stuff from TGLCustomAsmShader back here
-       25/02/07 - DaStr - Completely replaced with a descendant of TGLCustomAsmShader.
-       11/10/04 - SG - Creation.
-    
 }
 unit GLPhongShader;
 
@@ -23,11 +11,18 @@ interface
 {$I GLScene.inc }
 
 uses
-  // VCL
-  Classes, SysUtils,
+  Classes, 
+  SysUtils,
 
-  GLTexture, GLVectorGeometry, GLVectorLists, OpenGLTokens, GLContext,
-  GLAsmShader, GLRenderContextInfo, GLCustomShader, GLState;
+  GLTexture, 
+  GLVectorGeometry, 
+  GLVectorLists, 
+  OpenGLTokens, 
+  GLContext,
+  GLAsmShader, 
+  GLRenderContextInfo, 
+  GLCustomShader, 
+  GLState;
 
 type
   TGLPhongShader = class(TGLCustomAsmShader)

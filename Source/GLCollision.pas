@@ -3,23 +3,6 @@
 //
 {
    Collision-detection management for GLScene
-
-	History :  
-       17/11/14 - PW - Refactored TCollisionManager to TGLCollisionManager
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       21/01/11 - DanB - Added "inherited" call to TGLBCollision.WriteToFiler
-       03/04/07 - DaStr - Added "public" to TCollisionNode for FPC compatibility
-       30/03/07 - DaStr - Added $I GLScene.inc
-       19/10/06 - LC - Fixed memory leak in TCollisionManager.CheckCollisions. Bugtracker ID=1548618
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-       09/05/03 - DanB - fixed for collisions with bounding-box unproperly defined (min>max)
-       09/05/03 - DanB - Added FastCheckCubeVsFace (Matheus Degiovani)
-       13/02/03 - DanB - New collision code, and support for scaled objects
-       22/02/01 - Egg - Included new collision code by Uwe Raabe
-       08/08/00 - Egg - Fixed TGLBCollision.Assign
-       16/07/00 - Egg - Added support for all bounding modes (most are un-tested)
-	     23/05/00 - Egg - Creation
-	 
 }
 unit GLCollision;
 

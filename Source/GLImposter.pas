@@ -3,27 +3,6 @@
 //
 {
    Imposter building and rendering implementation for GLScene.
-
-    History :  
-       10/11/12 - PW - Added CPP compatibility: used direct HPPEMIT for
-                          TLoadingImposterEvent as procedure instead of function in Delphi
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       22/04/10 - Yar - Fixes after GLState revision
-       05/03/10 - DanB - More state added to TGLStateCache
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Renamed parameters in some methods
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-       23/02/07 - DaStr - Fixed TGLFireFXManager.Create (TGLCoordinatesStyle stuff)
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-                               fixed BCB Compiler error "E2370 Simple type name expected"
-       07/05/04 - EG - Perspective distortion properly applied
-       06/05/04 - EG - Fixes, improvements, clean ups
-       04/05/04 - EG - Reworked architecture
-       14/04/04 - SG - Fixed texture clamping for old cards and
-                          switched to GL_NEAREST texture sampling.
-       24/03/04 - SG - Initial.
-    
 }
 unit GLImposter;
 
@@ -32,15 +11,26 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLScene, GLContext, GLVectorTypes, GLVectorGeometry,
-  GLPersistentClasses, GLCrossPlatform, GLGraphics, GLColor,
-  GLRenderContextInfo, GLCoordinates, GLBaseClasses, GLState, GLTextureFormat,
-  OpenGLTokens, GLUtils;
+  Classes, 
+  SysUtils,
+  
+  GLScene, 
+  GLContext, 
+  GLVectorTypes, 
+  GLVectorGeometry,
+  GLPersistentClasses, 
+  GLCrossPlatform, 
+  GLGraphics, 
+  GLColor,
+  GLRenderContextInfo, 
+  GLCoordinates, 
+  GLBaseClasses, 
+  GLState, 
+  GLTextureFormat,
+  OpenGLTokens, 
+  GLUtils;
 
 type
-  // TImposterOptions
-  //
   { Imposter rendering options.
      Following options are supported: 
       impoBlended : the imposters are transparently blended during renders,
@@ -66,8 +56,6 @@ const
 type
   TGLImposterBuilder = class;
 
-  // TImposter
-  //
   { Base class for imposters manipulation and handling. 
      Rendering imposters is performed by three methods, BeginRender must
      be invoked first, then Render for each of the impostr

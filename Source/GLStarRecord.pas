@@ -3,10 +3,6 @@
 //
 {
    Unit to interface with simple star records aimed for background skies.
-
-	 History :  
-	    05/07/03 - EG - Creation
-	 
 }
 unit GLStarRecord;
 
@@ -31,8 +27,6 @@ function StarRecordPositionYUp(const starRecord : TGLStarRecord) : TAffineVector
 { Computes star color from BV index (RGB) and magnitude (alpha). }
 function StarRecordColor(const starRecord : TGLStarRecord; bias : Single) : TVector;
 
-// ------------------------------------------------------------------
-// ------------------------------------------------------------------
 // ------------------------------------------------------------------
 implementation
 

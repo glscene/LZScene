@@ -3,33 +3,6 @@
 //
 {
   Geometric objects.
-
-   History :  
-   10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-   13/05/11 - Vince - Add ArrowArc object
-   13/05/11 - Vince - Add StartAngle ,StopAngle and Parts attributes
-                 to display a slice of TGLTorus between start and stop angles
-   24/03/11 - Yar - Replaced TGLTorus primitives to triangles, added tangent and binormal attributes
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   15/03/08 - DaStr - Deleted TGLFrustrum.AxisAlignedBoundingBox(),
-                 now this function references the inherited function
-   20/01/08 - DaStr - Corrected object centering in TGLFrustrum.BuildList()
-                 (thanks Sandor Domokos) (BugTrackerID = 1864314)
-  Added a TGLCapsule object (thanks Dave Gravel)
-   18/11/07 - DaStr - Got rid of compiler warning in TGLCone.RayCastIntersect
-   07/05/07 - DanB - Added TGLCone.RayCastIntersect
-  Improved TGLDisk.RayCastIntersect
-   30/03/07 - DaStr - Added $I GLScene.inc
-   25/09/04 - Eric Pascual - Added AxisAlignedBoundingBox,
-                 AxisAlignedBoundingBoxUnscaled,
-                 AxisAlignedDimensionsUnscaled
-   02/08/04 - LR, YHC - BCB corrections: use record instead array
-   29/11/03 - MF - Added shadow silhouette code for TGLCylinderBase et al.
-  Added GetTopRadius to facilitate silhouette.
-   24/10/03 - NelC - Fixed TGLTorus texture coord. bug
-   21/07/03 - EG - Creation from GLObjects split
-   
 }
 unit GLGeomObjects;
 
@@ -51,10 +24,7 @@ uses
   GLRenderContextInfo;
 
 type
-
-  // TGLDisk
-  //
-  { : A Disk object.
+  { A Disk object.
     The disk may not be complete, it can have a hole (controled by the
     InnerRadius property) and can only be a slice (controled by the StartAngle
     and SweepAngle properties). }

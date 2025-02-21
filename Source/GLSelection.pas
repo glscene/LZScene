@@ -3,11 +3,6 @@
 //
 {
   Geometric objects.
-
-   History :  
-   03/02/13 - Yar - Object stack now dynamic array (thanks to  maverick)
-   02/09/10 - Yar - Creation
-   
 }
 unit GLSelection;
 
@@ -18,8 +13,12 @@ interface
 uses
   SysUtils, Classes,
    
-  OpenGLTokens, GLContext, GLVectorLists, GLVectorGeometry,
-  GLBaseClasses, GLPersistentClasses;
+  OpenGLTokens, 
+  GLContext, 
+  GLVectorLists, 
+  GLVectorGeometry,
+  GLBaseClasses, 
+  GLPersistentClasses;
 
  const
   MAX_OBJECT_STACK_DEPTH = 512;

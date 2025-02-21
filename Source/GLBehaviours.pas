@@ -3,21 +3,6 @@
 //
 {
   Standard TGLBehaviour subclasses for GLScene
-
-   History :  
-     08/05/08 - DaStr - Added a global GetInertia() function
-     19/12/06 - DaStr - TGLBAcceleration.Create - creates Inertia right away,
-                         thus displaying it in the XCollection Editor
-                         TGLBAcceleration.DoProgress - raises an exception
-                         when required Inertia component is deleted by user
-     24/09/02 - Egg - Support for negative rotation speeds (Marco Chong)
-     02/10/00 - Egg - Fixed TGLBInertia.DoProgress (DamplingEnabled bug)
-     09/10/00 - Egg - Fixed ApplyTranslationAcceleration & ApplyForce
-     11/08/00 - Egg - Fixed translation bug with root level objects & Inertia
-     10/04/00 - Egg - Improved persistence logic
-     06/04/00 - Egg - Added Damping stuff to inertia
-     05/04/00 - Egg - Creation
-   
 }
 unit GLBehaviours;
 

@@ -3,10 +3,6 @@
 //
 {
    Scene Editor, for adding + removing scene objects within the Delphi IDE.
-
-   History :  
-   05/02/00 - EG - Fixed DragDrop, added root nodes auto-expansion
-   
 }
 unit FGLSceneEdit;
 

@@ -2,8 +2,7 @@
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
 {
-    History :  
-     23/08/10 - Yar - Creation
+  The Form designer
 }
 
 unit GLSceneFormDesign;

@@ -3,28 +3,6 @@
 //
 {
    Miscellaneous support utilities & classes.
-
-  History :  
-       02/01/13 - Yar - Added SetGLSceneMediaDir
-       07/01/11 - Yar - Added SaveModelDialog, OpenModelDialog
-       04/03/10 - DanB - Now uses CharInSet
-       27/05/09 - DanB - re-added TryStrToFloat, since it ignores user's locale.
-       24/03/09 - DanB - removed TryStrToFloat (exists in SysUtils or GLCrossPlatform already)
-                            changed StrToFloatDef to accept only 1 param + now overloaded
-       24/03/09 - DanB - Moved Dialog utilities here from GLCrossPlatform, because
-                            they work on all platforms (with FPC)
-       16/10/08 - UweR - corrected typo in TryStringToColorAdvanced parameter
-       16/10/08 - DanB - renamed Save/LoadStringFromFile to Save/LoadAnsiStringFromFile
-       24/03/08 - DaStr - Removed OpenGL1x dependancy
-                             Moved TGLMinFilter and TGLMagFilter from GLUtils.pas
-                              to GLGraphics.pas (BugTracker ID = 1923844)
-       25/03/07 - DaStr - Replaced StrUtils with GLCrossPlatform
-       23/03/07 - DaStr - Removed compiler warnings caused by
-                               SaveComponentToFile and LoadComponentFromFile
-       22/03/07 - DaStr - Added SaveComponentToFile, LoadComponentFromFile
-       07/02/07 - DaStr - Added StringToColorAdvanced() functions
-       05/09/03 - EG - Creation from GLMisc split
-    
 }
 unit GLUtils;
 
@@ -33,11 +11,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, types,
-  Graphics, Controls, FileUtil, LazUTF8, 
-  LazFileUtils, Dialogs, ExtDlgs,
-  // GLScene
-  GLVectorGeometry, GLCrossPlatform;
+  Classes, 
+  SysUtils, 
+  Types,
+  Graphics, 
+  Controls, 
+  FileUtil, 
+  LazUTF8, 
+  LazFileUtils, 
+  Dialogs, 
+  ExtDlgs,
+
+  GLVectorGeometry, 
+  GLCrossPlatform;
 
 type
   EGLUtilsException = class(Exception);

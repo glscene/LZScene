@@ -4,15 +4,6 @@
 {
    Widget specific Context.
    GLWidgetContext replaces old GLLinGTKContext.
-
-    History :  
-       11/06/10 - Yar - Fixed uses section after lazarus-0.9.29.26033 release
-       02/05/10 - Yar - Fixes for Linux x64
-       21/04/10 - Yar - Fixed conditions
-                           (by Rustam Asmandiarov aka Predator)
-       06/04/10 - Yar - Added to GLScene
-                           (Created by Rustam Asmandiarov aka Predator)
-    
 }
 unit GLWidgetContext;
 
@@ -21,13 +12,19 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, LCLType,
-  GLCrossPlatform, GLContext,
+  Classes, 
+  SysUtils, 
+  LCLType,
+  GLCrossPlatform, 
+  GLContext,
   {$IFDEF GLS_LOGGING}GLSLog,{$ENDIF}
 
   // Operation System
 {$IFDEF MSWINDOWS}
-  Windows, GLWin32Context, LMessages, LCLVersion,
+  Windows, 
+  GLWin32Context, 
+  LMessages, 
+  LCLVersion,
 {$ENDIF}
 
 {$IFDEF UNIX}
@@ -56,8 +53,12 @@ uses
 
   //Widgets
 {$IF  DEFINED(LCLwin32) or DEFINED(LCLwin64)}
-  Controls, WSLCLClasses, Win32Int,
-  Win32WSControls, Win32Proc, LCLMessageGlue;
+  Controls, 
+  WSLCLClasses, 
+  Win32Int,
+  Win32WSControls, 
+  Win32Proc, 
+  LCLMessageGlue;
 {$ENDIF}
 
 {$IFDEF LCLGTK2}

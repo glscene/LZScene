@@ -3,11 +3,7 @@
 //
 {
    Classes and methods for 2D triangulation of scatter points. 
-  
-   History :  
-      17/05/15 - PW - Created, based on code from Paul Bourke (http://paulbourke.net/)
-         and conversion from VB to Delphi by Dr Steve Evans (steve@lociuk.com)
-	 
+   Based on code from Paul Bourke (http://paulbourke.net/)
 }
 
 unit GLTriangulation;

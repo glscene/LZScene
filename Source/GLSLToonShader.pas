@@ -4,10 +4,6 @@
 {
    Toon shader : Toon shading also called Cell Shading
    At this time only one light source is supported
-
-    History :  
-     13/12/15 - J.Delauney - Creation
-
 }
 unit GLSLToonShader;
 
@@ -18,12 +14,23 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLVectorGeometry, GLCoordinates, GLTextureFormat,GLColor, GLTexture, GLMaterial,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLVectorGeometry, 
+  GLCoordinates, 
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial,
+  GLSLShader, 
+  GLCustomShader;
 
-//TGLCustomGLSLToonShader
-//
 { Custom class for GLSLToonShader.}
 type
   TGLCustomGLSLToonShader = class(TGLCustomGLSLShader)

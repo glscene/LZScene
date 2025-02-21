@@ -3,195 +3,6 @@
 
 {
    Vector File related objects for GLScene
-
-  History : 
-
-       28/06/13 - YP - Added support for vector color
-       10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-       11/07/12 - YP - Added BarycenterPosition and BarycenterOffset
-                          New centering option macRestorePosition
-       02/07/11 - DaStr - Replaced TAABB.Revision with TGLMeshObject.FExtentCacheRevision
-       30/06/11 - DaStr - TGLBaseMesh.BarycenterAbsolutePosition() now uses caching
-       23/02/11 - Yar - Added extent caching to TGLMeshObject
-       03/12/10 - Yar - Added mesh visibility checking in
-                            TGLMeshObjectList.ExtractTriangles (thnaks to Sandor Domokos)
-       23/08/10 - Yar - Added OpenGLTokens to uses
-       23/07/10 - Yar - Bugfixed TGLSkeleton.WriteToFiler (thanks E-Cone)
-       11/06/10 - Yar - Bugfixed binary reading TGLMeshObject for FPC
-                           Replace OpenGL1x functions to OpenGLAdapter.
-                           Fixes for Linux x64
-       22/04/10 - Yar - Fixes after GLState revision
-       11/04/10 - Yar - Replaced function InsideList to GLState.InsideList
-       05/03/10 - DanB - More state added to TGLStateCache
-       25/12/09 - DaStr - Separated TGLActor.DoAnimate() from TGLActor.BuildList()
-       16/01/09 - DanB - re-disable VBOs in display list to prevent AV on ATI cards
-       27/11/08 - DanB - fix to TFGVertexIndexList.BuildList
-       05/10/08 - DaStr - Added GLSM format backward compatibility after
-                              MeshObject.LightMapTexCoords update
-                              (thanks Uwe Raabe) (Bugtracker ID = 2140994)
-       03/10/08 - DanB -  Added Delphi 2009 (Unicode) support
-       22/06/08 - DaStr - TGLMeshObject.LightMapTexCoords converted to TAffineVectorList
-                              (thanks Ast) (Bugtracker ID = 2000089)
-       07/06/08 - DaStr - Implemented TBaseMeshObject.Assign(), TGLMeshObject.Assign()
-       20/05/08 - Mrqzzz - Fixed memory leak in TGLSkeletonMeshObject.Destroy (thanks Dave Gravel)
-       17/05/08 - DaStr - Added TGLSkeleton.MorphInvisibleParts
-                             (thanks andron13 and Veon (BugtrackerID = 1966020)
-                             Added vGLVectorFileObjectsEnableVBOByDefault
-       01/05/08 - DaStr - Implemented TGLBaseMesh.BarycenterAbsolutePosition()
-                             Bugfixed TGLBaseMesh.AxisAlignedDimensionsUnscaled()
-       06/04/08 - DaStr - TGLMeshObjectList.MorphTo() and Lerp() are now virtual
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       16/05/07 - PvD - Applied fixes to skeletonmesh to fix problems with
-                            physics engines. (Bugtracker ID = 1719652)
-       15/05/07 - LC - Added workaround for ATI bug in TFGVertexIndexList. (Bugtracker ID = 1719611)
-       13/05/07 - LC - Fixed AV bug in TGLMeshObject.BufferArrays (Bugtracker ID = 1718033)
-       03/04/07 - LC - Added VBO support for TextureEx (Bugtracker ID = 1693378)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       28/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       25/03/07 - LC - Added VBO support to TFGVertexIndexList, depends
-                          on MeshObject owner's UseVBO status
-       25/03/07 - LC - Fixed VBO bug. Bugtracker ID=1687665
-       16/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       21/02/07 - DaStr - Added TGLMeshObjectList.BuildTangentSpace, UseVBO
-                             Added TGLActor.SetCurrentFrameDirect
-       19/02/07 - LC - Added some VBO support
-       19/10/06 - LC - Fixed bug in TGLActor.SetCurrentFrame. Bugtracker ID=1580511
-       04/10/06 - PhP - fixed TGLActor.SetCurrentFrame (thanks dikoe)
-       05/12/05 - PhP - fixed TFGIndexTexCoordList.BuildList (thanks fig)
-       10/11/05 - Mathx - Added LastLoadedFilename to TGLBaseMesh (RFE 955083).
-       09/11/05 - Mathx - Added isSwitchingAnimation to TGLActor.
-       05/09/05 - Mathx - Fixed TGLSkeletonMeshObject read/write filer (thanks to Zapology)
-       04/07/05 - Mathx - Protection against picking mode texture mapping errors
-       27/01/05 - Mathx - BuildOctree can now specify an (optional) TreeDepth.
-       11/01/05 - SG - Another fix for TGLBaseMesh.Assign (dikoe Kenguru)
-       11/01/05 - SG - Fix for TGLBaseMesh.Assign when assigning actors
-       26/11/04 - MRQZZZ - by Uwe Raabe : fixed TBaseMeshObject.BuildNormals
-       26/11/04 - MRQZZZ - Added "Rendered" property to TGLBaseMesh in order
-                              to prevent rendering of the GLBaseMesh but allowing
-                              the rendering of it's children
-       25/11/04 - SG - Fixed memory leak in TGLMeshObject (dikoe Kenguru)
-       24/11/04 - MF - Added OctreePointInMesh
-       03/10/04 - MRQZZZ - Fixed memory leak (FAutoScaling.Free) in TGLBaseMesh.Destroy; (thanks Jan Zizka)
-       24/09/04 - SG - Added GetTriangleData/SetTriangleData functions,
-                          Added TexCoordsEx, Binormals, Tangents,
-                          Added BuildTangentSpace function (experimental).
-       23/07/04 - SG - Added fgmmQuad case for TFGVertexIndexList.TraingleCount
-                          (Thanks fig).
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-                               moved TBlendedLerpInfo to top of declaration
-       18/07/04 - LR - Suppress Consts in uses
-       20/06/04 - MRQZZZ - Added AutoScaling property to GLBaseMesh to scale
-                              a mesh after loading (like Autocentering)
-       30/03/04 - EG - Added TGLSkeletonBoneList.BoneCount
-       23/03/04 - SG - External positions added to skeleton blended lerps.
-                          AutoUpdate flag added to skeleton collider list.
-       09/03/04 - SG - TFGIndexTexCoordList.BuildList can now use per vertex color
-       29/01/04 - SG - Fix for ApplyCurrentSkeletonFrame with multiple bones per vertex.
-                          Mesh reassembles correctly now (tested up to 4 bones per vertex).
-       03/12/03 - SG - Added TGLSkeletonCollider and TGLSkeletonColliderList
-                          Added Colliders (TGLSkeletonColliderList) to TGLSkeleton
-       24/10/03 - SG - Various fixes for multiple bones per vertex
-       21/09/03 - MRQZZZ - Added "aamLoopBackward" to AnimationMode property
-       19/09/03 - EG - "Lighmap" -&gt; "LightMap"
-       01/09/03 - SG - Added skeleton frame conversion methods to convert between
-                          Rotations and Quaternions.
-       27/08/03 - SG - Fixed AddWeightedBone for multiple bones per vertex
-       13/08/03 - SG - Added quaternion transforms for skeletal animation
-       12/08/03 - SG - Fixed a tiny bug in TGLSkeleton.MorphMesh
-       08/07/03 - EG - Fixed puny bug in skeletal normals transformation
-       05/06/03 - SG - Split SMD, MD2, 3DS, PLY, TIN and GTS code into separate units,
-                          FileFormats\GLFile???.pas
-       16/05/03 - SG - Fixed OpenGL error caused by glColorMaterial in TGLMeshObject.BuildList
-       08/05/03 - DanB - added OctreeAABBIntersect (Matheus Degiovani)
-       07/05/03 - SG - Added TGLSMDVectorFile.SaveToFile method and [read,write] capabilities
-       17/04/03 - SG - Added TGLMeshObjectList.FindMeshByName method
-       01/04/03 - SG - Fixed TGLBaseMesh.Assign
-       13/02/03 - DanB - added AxisAlignedDimensionsUnscaled
-       03/02/03 - EG - Faster PrepareBuildList logic
-       31/01/03 - EG - Added MaterialCache logic
-       30/01/03 - EG - Fixed color array enable/disable (Nelson Chu),
-                          Normals extraction and extraction standardization
-       27/01/03 - EG - Assign support, fixed MorphableMeshObjects persistence
-       16/01/03 - EG - Updated multiples Bones per vertex transformation code,
-                          now makes use of CVAs
-       14/01/03 - EG - Added DisableOpenGLArrays
-       09/01/03 - EG - Added Clear methods for MeshObjects
-       25/11/02 - EG - Colors and TexCoords lists now disabled if ignoreMaterials is true
-       23/10/02 - EG - Faster .GTS and .PLY imports (parsing)
-       22/10/02 - EG - Added actor options, fixed skeleton normals transform (thx Marcus)
-       21/10/02 - EG - Read support for .GTS (GNU Triangulated Surface library)
-       18/10/02 - EG - FindExtByIndex (Adem)
-       17/10/02 - EG - TGLSTLVectorFile moved to new GLFileSTL unit
-       04/09/02 - EG - Fixed TGLBaseMesh.AxisAlignedDimensions
-       23/08/02 - EG - Added TGLBaseMesh.Visible
-       23/07/02 - EG - TGLBaseMesh.LoadFromStream fix (D. Angilella)
-       13/07/02 - EG - AutoCenter on barycenter
-       22/03/02 - EG - TGLAnimationControler basics now functional
-       13/03/02 - EG - Octree support (experimental)
-       18/02/02 - EG - Fixed persistence of skeletal meshes
-       04/01/02 - EG - Added basic RayCastIntersect implementation
-       17/12/01 - EG - Upgraded TGLActor.Synchronize (smooth transitions support)
-       30/11/01 - EG - Added smooth transitions (based on Mrqzzz code)
-       14/09/01 - EG - Use of vFileStreamClass
-       18/08/01 - EG - Added TriangleCount methods, STL export, PLY import
-       15/08/01 - EG - FaceGroups can now be rendered by material group
-                          (activate with RenderingOption "moroGroupByMaterial")
-       14/08/01 - EG - Added TGLSkeletonBoneList and support for skeleton with
-                          multiple root bones, updated SMD loader
-       13/08/01 - EG - Improved/fixed SMD loader
-       12/08/01 - EG - Completely rewritten handles management,
-                          Fixed TActorAnimation.Assign,
-                          Fixed persistence
-       08/08/01 - EG - Added TGLBaseMesh.AxisAlignedDimensions
-       19/07/01 - EG - AutoCentering is now a property of TGLBaseMesh,
-                          3DS loader no longer auto-centers,
-                          Added ExtractTriangles and related methods
-       18/07/01 - EG - VisibilityCulling compatibility changes
-       19/06/01 - EG - StrToFloat outlawed and replaced by StrToFloatDef
-       25/03/01 - EG - Added TGLAnimationControler
-       18/03/01 - EG - Added basic Skeleton structures & SMD importer
-       16/03/01 - EG - Introduced new PersistentClasses
-       15/03/01 - EG - Fix in TActorAnimation.SetEndFrame (thx David Costa)
-       08/03/01 - EG - TGL3DSVectorFile now loads materials for TGLBaseMesh
-       26/02/01 - EG - Added TBaseMeshObject & BuildNormals, MD2 normals auto-builded
-       21/02/01 - EG - Now XOpenGL based (multitexture)
-       15/01/01 - EG - Added Translate methods
-       10/01/01 - EG - Fixed in TGLBaseMesh.DoRender for RenderChildren states
-       08/01/01 - EG - Fixed TGLBaseMesh.BuildList messup of attrib states
-       22/12/00 - EG - Fixed non-interpolated TGLActor animation (was freezing),
-                          Fixed TGLBaseMesh.DoRender messup of attrib states
-       18/12/00 - EG - TFGIndexTexCoordList now supports normals (automatically),
-                          NormalsOrientation code moved to TGLBaseMesh
-       11/12/00 - EG - Fix for NormalOrientation (3DS importer)
-       06/12/00 - EG - Added PrepareBuildList mechanism
-       08/10/00 - EG - Removed TGLOBJVectorFile, use GLFileOBJ instead
-       13/08/00 - EG - Enhancements for Portal Rendering support,
-                          Added utility methods & triangle fans
-       10/08/00 - EG - Added CurrentAnimation, fixed TGLMeshObject.GetExtents
-       21/07/00 - EG - Vastly improved memory use and mechanisms for MD2/TGLActor
-       19/07/00 - EG - Introduced enhanced mesh structure
-       16/07/00 - EG - Made use of new TGLDataFile class
-       15/07/00 - EG - FreeForm can now handle 3DS files with multiple textures,
-                          Added TGLBaseMesh.GetExtents
-       28/06/00 - EG - Support for "ObjectStyle"
-       23/06/00 - EG - Reversed "t" texture coord for MD2,
-                          TActorAnimations can now load/save
-       21/06/00 - EG - Added frame change events to TGLActor,
-                          Added TActorAnimations collection
-       19/06/00 - EG - Completed smooth movement interpolation for TGLActor
-       07/06/00 - EG - TGLVectorFile now longers assumes a TGLFreeForm as Owner,
-                          Added generic TGLVectorFile.LoadFromFile
-       26/05/00 - EG - Removed dependency to GLObjects,
-                          TGLFreeForm now may use InterleavedArrays instead of
-                          IndexedArrays (better BuildList compatibility)
-       22/04/00 - EG - Fixed Material handlings in TGLFreeForm, inverted CCW/CW
-                          convention for 3DS Release3
-       11/04/00 - EG - Removed unnecessary code in finalization (thanks Uwe)
-       09/02/00 - EG - Creation from split of GLObjects,
-                          fixed class registrations and formats unregistration
-  
 }
 unit GLVectorFileObjects;
 
@@ -200,11 +11,28 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, Types,
-  GLScene, OpenGLTokens, GLVectorGeometry, GLTexture,
-  GLMaterial, GLMesh, GLVectorLists, GLPersistentClasses, GLOctree, GLGeometryBB,
-  GLApplicationFileIO, GLSilhouette, GLContext, GLColor, GLRenderContextInfo,
-  GLCoordinates, GLBaseClasses, GLTextureFormat;
+  Classes, 
+  SysUtils, 
+  Types,
+
+  GLScene, 
+  OpenGLTokens, 
+  GLVectorGeometry, 
+  GLTexture,
+  GLMaterial, 
+  GLMesh, 
+  GLVectorLists, 
+  GLPersistentClasses, 
+  GLOctree, 
+  GLGeometryBB,
+  GLApplicationFileIO, 
+  GLSilhouette, 
+  GLContext, 
+  GLColor, 
+  GLRenderContextInfo,
+  GLCoordinates, 
+  GLBaseClasses, 
+  GLTextureFormat;
 
 type
 

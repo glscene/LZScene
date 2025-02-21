@@ -3,15 +3,6 @@
 //
 {
    Component for handling joystick messages
-
-	History :  
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-       29/01/02 - Egg - Added NoCaptureErrors
-       18/12/00 - Egg - Fix for supporting 2 joysticks simultaneously
-       14/04/00 - Egg - Various minor to major fixes, the component should
-                           now work properly for the 4 first buttons and XY axis
-	    20/03/00 - Egg - Creation from GLScene's TGLJoystick
-	 
 }
 unit GLJoystick;
 

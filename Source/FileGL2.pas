@@ -3,22 +3,16 @@
 //
 {
    Ghoul2 (GLM/GLA) file format loading structures
-
-   Note:
-	Also referred to as MDX (MDXM/MDXA) format in C source.
-
-	 History : 
-	    09/05/03 - SG - Fixed compressed bone pool
-	    01/04/03 - SG - Finished GLM/GLA loading procedures
-	    25/03/03 - SG - Creation
-	 
 }
 unit FileGL2;
 
 interface
 
 uses
-  Classes, GLVectorTypes, SysUtils, GLVectorGeometry;
+  Classes, 
+  GLVectorTypes, 
+  SysUtils, 
+  GLVectorGeometry;
 
 type
   TGLMHeader = record

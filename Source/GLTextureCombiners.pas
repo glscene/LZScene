@@ -3,17 +3,6 @@
 //
 {
    Texture combiners setup utility functions.
-
-    History :  
-       05/03/11 - Yar - Added combiner's commands cache   
-       23/08/10 - Yar - Added OpenGLTokens to uses
-       18/06/10 - Yar - Replaced OpenGL functions to OpenGLAdapter
-       02/04/07 - DaStr - Added $I GLScene.inc
-       17/12/03 - EG - Alpha and RGB channels separate combination now supported
-       23/05/03 - EG - All tex units now accepted as target
-       22/05/03 - EG - Fixed GL_ADD_SIGNED_ARB parsing, better error reporting
-       16/05/03 - EG - Creation
-    
 }
 unit GLTextureCombiners;
 
@@ -21,7 +10,9 @@ interface
 
 {$I GLScene.inc}
 
-uses SysUtils, Classes;
+uses 
+  SysUtils, 
+  Classes;
 
 type
 
@@ -33,8 +24,6 @@ type
 
   TCombinerCache = array of TCombinerCommand;
 
-  // ETextureCombinerError
-  //
   ETextureCombinerError = class(Exception)
     ;
 

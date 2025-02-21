@@ -3,31 +3,6 @@
 //
 {
     Fire special effect
-
- History :  
-       21/01/01 - DanB - Added "inherited" call to TGLBFireFX.WriteToFiler
-       23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-       14/06/10 - Yar - Bugfixed in TGLBFireFX.ReadFromFiler when assertion off (thanks olkondr)
-       22/04/10 - Yar - Fixes after GLState revision
-       11/04/10 - Yar -  Replaced glNewList to GLState.NewList in TGLBFireFX.Render
-       05/03/10 - DanB - More state added to TGLStateCache
-       06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-       30/03/07 - DaStr - Added $I GLScene.inc
-       14/03/07 - DaStr - Added explicit pointer dereferencing
-                             (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-       23/02/07 - DaStr - Fixed TGLFireFXManager.Create (TGLCoordinatesStyle stuff)
-       21/02/02 - EG - Added GetOrCreateFireFX helper functions
-       09/12/01 - EG - Added NoZWrite property
-       12/08/01 - EG - Fixed leak (color objects)
-       09/03/01 - EG - Fixed MaxParticles change, added RingExplosion
-       08/03/01 - EG - Revisited the effect and added new parameters,
-                          dropped/renamed some, started documentation (just started)
-       13/01/01 - EG - Another matrix compatibility update
-       22/12/00 - EG - Compatibility for new Matrix rules, and sometime
-                          ago, added in all new props from Danjel Grosar
-       11/08/00 - EG - A few speedups/enhancements
-     08/08/00 - EG - Creation, based on Roger Cao's "FireEffectUnit"
-  
 }
 unit GLFireFX;
 

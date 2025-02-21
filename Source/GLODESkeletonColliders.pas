@@ -3,30 +3,20 @@
 //
 {
    Skeleton colliders for defining and controlling ODE geoms.
-
-    History : 
-       10/11/12 - PW - Added CPP compatibility: restored records with arrays instead of vector arrays
-       17/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       12/04/08 - DaStr - Cleaned up uses section
-                            (thanks Sandor Domokos) (BugtrackerID = 1808373)
-       06/02/08 - Mrqzzz - Upgrade to ODE 0.9 (replaced references, and
-                             CCilinder (ode 0.8) with Capsule(ode 0.9))
-       02/08/04 - LR, YHC - BCB corrections: use record instead array
-       04/12/03 - SG - Creation.
-    
 }
 unit GLODESkeletonColliders;
 
 interface
 
 uses
-  Classes, GLPersistentClasses, GLVectorGeometry, GLVectorFileObjects, ODEImport;
+  Classes, 
+  
+  GLPersistentClasses, 
+  GLVectorGeometry, 
+  GLVectorFileObjects, 
+  ODEImport;
 
 type
-  
-  // TSCODEBase
-  //
   { Base ODE skeleton collider class. }
   TSCODEBase = class(TGLSkeletonCollider)
     private

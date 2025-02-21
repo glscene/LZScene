@@ -4,11 +4,6 @@
 {
    Creates a single strand of hair using verlet classes. Can be used to simulate
    ropes, fur or hair.
-
-	 History :  
-       29/05/08 - DaStr - Added $I GLScene.inc
-       06/03/04 - MF - Creation
-    
 }
 unit GLVerletHairClasses;
 
@@ -17,8 +12,12 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  GLVerletTypes, GLVectorTypes, GLVectorLists, GLVectorGeometry;
+  Classes, 
+  SysUtils,
+  GLVerletTypes, 
+  GLVectorTypes, 
+  GLVectorLists, 
+  GLVectorGeometry;
 
 type
   TVHStiffness = (vhsFull, vhsSkip1Node, vhsSkip2Node, vhsSkip3Node,

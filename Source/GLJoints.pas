@@ -1,5 +1,10 @@
-// this unit isn't used at all at the moment, just putting down some ideas
-// for serial-link manipulators
+//
+// The graphics engine GLXEngine. The unit of LZScene for Lazarus
+//
+{
+ this unit isn't used at all at the moment, just putting down some ideas
+ for serial-link manipulators
+}
 unit GLJoints;
 
 interface

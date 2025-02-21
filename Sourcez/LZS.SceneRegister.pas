@@ -5,7 +5,7 @@
    Registration unit for GLScene library components, property editors and
       IDE experts for Lazarus.
 }
-unit LCL.SceneRegister;
+unit LZS.SceneRegister;
 
 interface
 
@@ -39,7 +39,7 @@ procedure Register;
 // Auto-create for object manager
 function ObjectManager: TGLObjectManager;
 
-implementation
+implementation //--------------------------------------------------
 
 uses
   SysUtils, 

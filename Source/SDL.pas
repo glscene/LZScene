@@ -3,14 +3,6 @@
 //
 {
    Simple DirectMedia Layer
-    History :  
-       17/11/09 - DaStr - Improved Unix compatibility
-                             (thanks Predator) (BugtrackerID = 2893580)
-       16/10/08 - UweR - Compatibility fix for Delphi 2009
-       07/06/07 - DaStr - Added $I GLScene.inc
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC
-                                                         (BugTracekrID=1681585)
-	 
 }
 unit SDL;
 {******************************************************************************}
@@ -88,66 +80,6 @@ unit SDL;
 {   They are available from...                                                 }
 {   http://www.libsdl.org .                                                    }
 {                                                                              }
-{ Programming Notes                                                            }
-{ -----------------                                                            }
-{                                                                              }
-{                                                                              }
-{                                                                              }
-{                                                                              }
-{ Revision History                                                             }
-{ ----------------                                                             }
-{   May      08 2001 - DL : Added Keyboard  State Array ( See demos for how to }
-{                           use )                                              }
-{                           PKeyStateArr = ^TKeyStateArr;                      }
-{                           TKeyStateArr = array[0..65000] of UInt8;           }
-{                           As most games will need it.                        }
-{                                                                              }
-{   April    02 2001 - DL : Added SDL_getenv.h definitions and tested version  }
-{                           1.2.0 compatability.                               }
-{                                                                              }
-{   March    13 2001 - MT : Added Linux compatibility.                         }
-{                                                                              }
-{   March    10 2001 - MT : Added externalsyms for DEFINES                     }
-{                           Changed the license header                         }
-{                                                                              }
-{   March    09 2001 - MT : Added Kylix Ifdefs/Deleted the uses mmsystem       }
-{                                                                              }
-{   March    01 2001 - DL : Update conversion of version 1.1.8                 }
-{                                                                              }
-{   July     22 2001 - DL : Added TUInt8Array and PUIntArray after suggestions }
-{                           from Matthias Thoma and Eric Grange.               }
-{                                                                              }
-{   October  12 2001 - DL : Various changes as suggested by Matthias Thoma and }
-{                           David Acklam                                       }
-{                                                                              }
-{   October  24 2001 - DL : Added FreePascal support as per suggestions from   }
-{                           Dean Ellis.                                        }
-{                                                                              }
-{   October  27 2001 - DL : Added SDL_BUTTON macro                             }
-{                                                                              }
-{  November  08 2001 - DL : Bug fix as pointed out by Puthoon.                 }
-{                                                                              }
-{  November  29 2001 - DL : Bug fix of SDL_SetGammaRamp as pointed out by Simon}
-{                           Rushton.                                           }
-{                                                                              }
-{  November  30 2001 - DL : SDL_NOFRAME added as pointed out by Simon Rushton. }
-{                                                                              }
-{  December  11 2001 - DL : Added $WEAKPACKAGEUNIT ON to facilitate useage in  }
-{                           Components                                         }
-{                                                                              }
-{  January   05 2002 - DL : Added SDL_Swap32 function as suggested by Matthias }
-{                           Thoma and also made sure the _getenv from          }
-{                           MSVCRT.DLL uses the right calling convention       }
-{                                                                              }
-{  January   25 2002 - DL : Updated conversion of SDL_AddTimer &               }
-{                           SDL_RemoveTimer as per suggestions from Matthias   }
-{                           Thoma.                                             }
-{                                                                              }
-{  January   27 2002 - DL : Commented out exported function putenv and getenv  }
-{                           So that developers get used to using SDL_putenv    }
-{                           SDL_getenv, as they are more portable              }
-{                                                                              }
-{  March     05 2002 - DL : Added FreeAnNil procedure for Delphi 4 users.      }
 {                                                                              }
 {******************************************************************************}
 

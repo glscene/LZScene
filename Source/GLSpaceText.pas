@@ -9,36 +9,6 @@
   extents during / after its creation, you will get zeros.
 
   Also extents are valid only when SpaceText has one line. 
-
-   History :  
-   25/03/11 - Yar - Fixed issue with unsharable virtual handle of font entry
-   22/09/10 - Yar - Added unicode support (Delphi 2009 & up only)
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   25/12/07 - DaStr - Added MultiLine support (thanks Lexer)
-  Fixed Memory leak in TFontManager.Destroy
-  (Bugtracker ID = 1857814)
-   19/09/07 - DaStr - Added some comments
-  Optimized TGLSpaceText.BarycenterAbsolutePosition
-   12/09/07 - DaStr - Bugfixed TGLSpaceText.BarycenterAbsolutePosition
-  (Didn't consider rotations)
-   08/09/07 - DaStr - Implemented AxisAlignedDimensionsUnscaled and
-  BarycenterAbsolutePosition for TGLSpaceText
-   28/03/07 - DaStr - Renamed parameters in some methods
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678658)
-   17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTracekrID=1681585)
-   16/03/07 - DaStr - Added explicit pointer dereferencing
-  (thanks Burkhard Carstens) (Bugtracker ID = 1678644)
-   19/10/06 - LC - Added TGLSpaceText.Assign. Bugtracker ID=1576445 (thanks Zapology)
-   16/09/06 - NC - TGLVirtualHandle update (thx Lionel Reynaud)
-   03/06/02 - EG - VirtualHandle notification fix (Sören Mühlbauer)
-   07/03/02 - EG - GetFontBase fix (Sören Mühlbauer)
-   30/01/02 - EG - Text Alignment (Sören Mühlbauer),
-  TFontManager now GLContext compliant (RenderToBitmap ok!)
-   28/12/01 - EG - Event persistence change (GliGli / Dephi bug)
-   12/12/01 - EG - Creation (split from GLScene.pas)
-   
 }
 unit GLSpaceText;
 
@@ -56,23 +26,15 @@ uses
 
 type
 
-  // TSpaceTextCharRange
-  //
   TSpaceTextCharRange = (stcrDefault, stcrAlphaNum, stcrNumbers, stcrWide);
 
-  // TGLTextHorzAdjust
-  //
   // Note: haAligned, haCentrically, haFitIn have not been implemented!
   //
   TGLTextHorzAdjust = (haLeft, haCenter, haRight, haAligned,
     haCentrically, haFitIn);
 
-  // TGLTextVertAdjust
-  //
   TGLTextVertAdjust = (vaTop, vaCenter, vaBottom, vaBaseLine);
 
-  // TGLTextAdjust
-  //
   TGLTextAdjust = class(TPersistent)
   private
      

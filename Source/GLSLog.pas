@@ -6,29 +6,7 @@
   You may have only one instance of TGLSLogger
   To obtain it, call UserLog() function from any unit.
 
-  History :  
-   25/03/13 - DaStr - Added WriteInternalMessages and DisplayErrorDialogs options
-   30/01/13 - DaStr - Added "save-old-logs" option
-   09/01/13 - DaStr - Added Log buffering and auto-splitting options
-                         Other misc changes.
-   18/01/11 - Yar - Added message sending to IDE memo in design time
-   07/01/10 - Yar - Added formated string logging
-   29/11/10 - Yar - Added log raising in Linux
-   04/11/10 - DaStr - Added Delphi5 and Delphi6 compatibility
-                         Fixed unit description
-   07/09/10 - Yar - Added Enabled property to TGLLogSession
-   02/04/10 - Yar - Added properties TimeFormat, LogLevels to TGLSLogger
-                       Added function UserLog.
-                       GLS_LOGGING now only turn on inner GLScene logger
-   24/03/10 - Yar - Added TGLSLogger component,
-                       possibility to use a more than one of log,
-                       limit the number of error messages
-   06/03/10 - Yar - Added to GLScene
-   
-
-  (C) 2004-2007 George "Mirage" Bakhtadze.
-  <a href="http://www.casteng.com">www.casteng.com</a>  
-  The source code may be used under either MPL 1.1 or LGPL 2.1 license.
+  The source code may be used under either MPL 1.1, 2.0 or LGPL 2.1 license.
   See included license.txt file  
   Unit contains some text file related utilities and logging class
 }
@@ -45,7 +23,9 @@ uses
 {$ENDIF}
  Dialogs,
  Controls,
- StrUtils, Classes, SysUtils, GLCrossPlatform, SyncObjs
+ StrUtils, 
+ Classes, 
+ SysUtils, GLCrossPlatform, SyncObjs
 {$IFDEF MSWINDOWS} , ShellApi {$ENDIF}
 {$IFDEF LINUX} , Process {$ENDIF};
 

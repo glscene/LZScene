@@ -3,32 +3,6 @@
 //
 {
    Just a good looking shader. And my first one;) 
-
-    History : 
-       22/04/10 - Yar - Fixes after GLState revision
-       24/07/09 - DaStr - TGLShader.DoInitialize() now passes rci
-                              (BugTracker ID = 2826217)   
-       14/03/07 - DaStr - Bugfixed TGLCustomCGBombShader.DoInitialize
-                             (Shader is disabled if GradientTexture is not assigned)
-       14/03/07 - DaStr - Bugfixed TGLCustomCGBombShader.SetMaterialLibrary
-                             Alpha is not stored now
-                             Added design-time checks
-       22/02/07 - DaStr - Initial version (contributed to GLScene)
-
-
-
-    Previous version history:
-     v1.0   08 March     '2006  Creation (based on NVIdia's FXComposer demo shader)
-     v1.1   04 April     '2006  I found a way to use the Current Texture!
-                                  See the TextureSource property for details...
-     v1.2   14 August    '2006  TGLCgBombShader became child of
-                                  TGLCgShader to support IShaderSuppoted
-                                TShaderTextureSource added
-     v1.3   19 August    '2006  TGLCustomCGBombShader added
-                                GLS_OPTIMIZATIONS support added
-                                TGLCustomCGBombShader.Set[Main/Gradient]Texture() updated
-                                Cadencer stuff abstracted into TCadencableCustomCgShader
-
 }
 
 unit GLCgBombShader;

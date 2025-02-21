@@ -3,14 +3,6 @@
 //
 {
    Carbon specific Context.
-
-    History :  
-       19/02/11 - PREDATOR - Added Share Context, MemoryViewerContext. 
-                                Updated Chose Pixel Format
-       16/02/11 - PREDATOR - Added support for Mac OS X. Tested on Mac OS X 10.6.5.
-       10/06/09 - DanB - Added to main GLScene CVS repository (from GLScene-Lazarus).
-       14/11/08 - Creation
-    
 }
 unit GLCarbonContext;
 

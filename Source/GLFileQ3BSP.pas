@@ -5,15 +5,6 @@
     Support-code to load Q3BSP Files into TGLFreeForm-Components in GLScene.
     Note that you must manually add this unit to one of your project's uses
     to enable support for OBJ & OBJF at run-time.
-
-  History :  
-       19/06/11 - Yar - Fixed problem with image converting in Lazarus (thanks to Johannes Pretorius, Bugtracker ID = 3322324)
-       06/06/10 - Yar - Added GLVectorTypes to uses
-       22/01/10 - Yar - Added GLTextureFormat to uses
-       31/03/07 - DaStr - Added $I GLScene.inc
-       31/01/03 - EG - Materials support
-       30/01/03 - EG - Creation
-    
 }
 unit GLFileQ3BSP;
 
@@ -22,12 +13,24 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils,
-  //
-  GLVectorFileObjects, GLApplicationFileIO, GLVectorGeometry,
-  GLVectorTypes, GLVectorLists, Q3BSP, GLBSP, GLTexture,
-  GLGraphics, GLCrossPlatform, GLState, GLUtils,
-  GLMaterial, GLTextureFormat,IntfGraphics;
+  Classes, 
+  SysUtils,
+  
+  GLVectorFileObjects, 
+  GLApplicationFileIO, 
+  GLVectorGeometry,
+  GLVectorTypes, 
+  GLVectorLists, 
+  Q3BSP, 
+  GLBSP, 
+  GLTexture,
+  GLGraphics, 
+  GLCrossPlatform, 
+  GLState, 
+  GLUtils,
+  GLMaterial, 
+  GLTextureFormat,
+  IntfGraphics;
 
 type
 

@@ -13,24 +13,6 @@
   and this especially if you have lots of big objects (the more objects you have
   the less efficient the partitionning, due to the "magnifying glass" effect of
   the non-discriminating volume).</i>
-
-
-   History :  
-   10/12/14 - PW - Renamed SpatialPartitioning unit to GLSpacePartition
-   10/11/12 - PW - Added CPP compatibility: changed vector arrays to records
-   07/09/11 - Yar - Bugfixed memory leak in TSectoredSpacePartition (thanks to chenshunbin0624)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   09/12/04 - MF - Renamed TQuadSpacePartition to TQuadtreeSpacePartition
-   08/12/04 - MF - Fixed AV error reported by DanB
-   03/12/04 - MF - Added quadtree for typical 2d (landscape) scenes
-   02/12/04 - MF - Removed rcci, cleaned up so that only frustum is used
-                      streamlined frustum culling.
-   01/12/04 - HRLI - Added rcci/frustum culling
-   23/06/03 - MF - Separated functionality for Octrees and general
-  sectored space partitions so Quadtrees will be easy
-  to add.
-   20/06/03 - MF - Created
-   
 }
 
 unit GLSpacePartition;
@@ -40,9 +22,14 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, SysUtils, Math,
+  Classes, 
+  SysUtils, 
+  Math,
    
-  GLVectorTypes, GLVectorGeometry,  GLGeometryBB, GLPersistentClasses;
+  GLVectorTypes, 
+  GLVectorGeometry,  
+  GLGeometryBB, 
+  GLPersistentClasses;
 
 const
   COctree_LEAF_TRHESHOLD = 30;

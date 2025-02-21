@@ -9,20 +9,6 @@
    can use the functions/classes in this unit to check mouse buttons too. 
    See "Virtual-Key Codes" in the Win32 programmers réferences for a list of
    key code constants (VK_* constants are declared in the "Windows" unit).
-
-	History :  
-       07/11/09 - DaStr - Improved FPC compatibility and moved to the /Source/Platform/
-                             directory (BugtrackerID = 2893580) (thanks Predator)
-       28/03/07 - DaStr - Renamed from Keyboard.pas (BugTracker ID = 1678646)
-       17/03/07 - DaStr - Dropped Kylix support in favor of FPC (BugTrackerID=1681585)
-       19/12/06 - DaS - Added additional string constants and made all
-                             existing 'Mixed Case', not 'UPPERCASE'
-                           KeyNameToVirtualKeyCode optimized,
-                           Fixed comments to KeyNameToVirtualKeyCode() function
-       17/11/03 - Egg - Fixed IsKeyDown (VK) (A. P. Mohrenweiser)
-       09/10/00 - Egg - Fixed VirtualKeyCodeToKeyName
-       03/08/00 - Egg - Creation, partly based Silicon Commander code
-	 
 }
 unit GLKeyboard;
 

@@ -8,12 +8,7 @@
    It can be scaled, twisted, modulated, inverted...
    Converted from : https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js
 
-
    At this time only one light source is supported
-
-    History :  
-     11/12/15 - J.Delauney - Creation
-
 }
 
 
@@ -26,9 +21,22 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, 
-  GLContext, GLRenderContextInfo, GLVectorGeometry, GLCoordinates, GLTextureFormat,
-  GLColor, GLTexture, GLMaterial, GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo, 
+  GLVectorGeometry, 
+  GLCoordinates, 
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial, 
+  GLSLShader, 
+  GLCustomShader;
 
 //TGLCustomGLSLSimpleVertexDisplacementShader
 //
@@ -122,7 +130,8 @@ Type
     property TimeFactor;
 
   end;
-implementation
+
+implementation //----------------------------------------------------
 
 constructor TGLCustomGLSLVertexDisplacementShader.Create(AOwner: TComponent);
 begin

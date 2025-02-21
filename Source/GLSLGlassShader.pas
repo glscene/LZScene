@@ -4,12 +4,6 @@
    Glass shader : Environment mapping with an
    equirectangular 2D texture and refraction mapping
    with a background texture blended together using the Fresnel terms
-
-
-    History :  
-     08/12/15 - J.Delauney - Improved and Made compatible with the latest SVN version of GLScene
-     02/11/06 - Da Stranger - Creation
-
 }
 unit GLSLGlassShader;
 interface
@@ -19,14 +13,25 @@ interface
 uses
   Classes,
    
-  GLScene, GLCrossPlatform, GLBaseClasses, GLState, OpenGLTokens, OpenGL1x, GLContext, GLRenderContextInfo,
-  GLVectorGeometry, GLCoordinates, 
-  GLTextureFormat,GLColor, GLTexture, GLMaterial, GLPersistentClasses,GLGraphics,
-  GLSLShader, GLCustomShader;
+  GLScene, 
+  GLCrossPlatform, 
+  GLBaseClasses, 
+  GLState, 
+  OpenGLTokens, 
+  OpenGL1x, 
+  GLContext, 
+  GLRenderContextInfo,
+  GLVectorGeometry, 
+  GLCoordinates, 
+  GLTextureFormat,
+  GLColor, 
+  GLTexture, 
+  GLMaterial, 
+  GLPersistentClasses,GLGraphics,
+  GLSLShader, 
+  GLCustomShader;
 
 
-//TGLCustomGLSLSimpleGlassShader
-//
 { Custom class for GLSLGlassShader.
   Glass shader : Environment mapping and refraction mapping using the fresnel terms }
 Type

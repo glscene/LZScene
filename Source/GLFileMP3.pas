@@ -3,11 +3,6 @@
 //
 {
    Support for MP3 format.
-
-	 History :  
-       25/07/09 - DaStr - Added $I GLScene.inc  
-       06/05/09 - DanB - Creation from split from GLSoundFileObjects.pas
-	 
 }
 unit GLFileMP3;
 
@@ -16,33 +11,24 @@ interface
 {$I GLScene.inc}
 
 uses
-  Classes, GLApplicationFileIO, GLSoundFileObjects;
+  Classes, 
+  
+  GLApplicationFileIO, 
+  GLSoundFileObjects;
 
 type
-
-   // TGLMP3File
-   //
    { Support for MP3 format.
       *Partial* support only, access to PCMData is NOT supported. }
    TGLMP3File = class (TGLSoundFile)
       private
-          
          data : array of Byte; // used to store MP3 bitstream
-
       protected
-          
-
       public
-          
          function CreateCopy(AOwner: TPersistent) : TGLDataFile; override;
-
          class function Capabilities : TGLDataFileCapabilities; override;
-
          procedure LoadFromStream(Stream: TStream); override;
          procedure SaveToStream(Stream: TStream); override;
-
          procedure PlayOnWaveOut; override;
-
 	      function WAVData : Pointer; override;
          function WAVDataSize : Integer; override;
 	      function PCMData : Pointer; override;

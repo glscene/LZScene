@@ -1,10 +1,8 @@
 //
 // The graphics engine GLXEngine. The unit of LZScene for Lazarus
 //
-{ Python implementation for the GLScene scripting layer.
-
-   History:
-     11/11/2004 - SG - Creation
+{ 
+  Python implementation for the GLScene scripting layer.
 }
 unit GLScriptPython;
 

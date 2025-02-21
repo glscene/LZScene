@@ -3,36 +3,6 @@
 //
 {
   GLScene objects that get rendered in 2D coordinates
-
-   History :  
-   27/01/12 - Yar - Added texture coordinates mirroring for HUDSprite (thanks Tamahome)
-   15/11/10 - FP - Restore DepthTest at the end of RenderTextAtPosition
-   23/08/10 - Yar - Added OpenGLTokens to uses, replaced OpenGL1x functions to OpenGLAdapter
-  Fixed light state changing
-   22/04/10 - Yar - Fixes after GLState revision
-   05/03/10 - DanB - More state added to TGLStateCache
-   15/03/08 - DaStr - Bugfixed TGLAbsoluteHUDText.DoRender()
-  (thanks Nicoara Adrian) (BugtrackerID = 1914823)
-   18/09/07 - DaStr - Added TGLResolutionIndependantHUDText and
-  TGLAbsoluteHUDText to the list of registered classes
-  Cleaned up "uses" section
-   07/09/07 - DaStr - AlphaChannel is now applied to ActualPrimaryMaterial
-  Added TGLResolutionIndependantHUDText,
-  TGLAbsoluteHUDText
-   06/06/07 - DaStr - Added GLColor to uses (BugtrackerID = 1732211)
-   30/03/07 - DaStr - Added $I GLScene.inc
-   23/02/07 - DaStr - Added default values to TGLHUDSprite.Width & Height
-   15/02/07 - DaStr - Added default values to TGLHUDText.Alignment & Layout
-   28/06/04 - LR - Change TTextLayout to TGLTextLayout for Linux
-   27/11/02 - EG - HUDSprite and HUDText now honour renderDPI
-   23/11/02 - EG - Added X/YTiles to HUDSprite
-   12/05/02 - EG - ModulateColor for HUDText (Nelson Chu)
-   20/12/01 - EG - PolygonMode properly adjusted for HUDText
-   18/07/01 - EG - VisibilityCulling compatibility changes
-   20/06/01 - EG - Default hud sprite size is now 16x16
-   21/02/01 - EG - Now XOpenGL based (multitexture)
-   15/01/01 - EG - Creation
-   
 }
 unit GLHUDObjects;
 
@@ -51,9 +21,6 @@ uses
   GLRenderContextInfo;
 
 type
-
-  // TGLHUDSprite
-  //
   { : A rectangular area, NOT perspective projected.
     (x, y) coordinates map directly to the viewport (in pixels) and refer
     the center of the area. 
@@ -98,8 +65,6 @@ type
     property Height stored StoreHeight;
   end;
 
-  // TGLHUDText
-  //
   { : A 2D text displayed and positionned in 2D coordinates.
     The HUDText uses a character font defined and stored by a TGLBitmapFont
     component. The text can be scaled and rotated (2D), the layout and
