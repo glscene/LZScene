@@ -8,7 +8,7 @@ unit FGUISkinEditor;
 
 interface
 
-{$I ../GLScene.inc}
+{$I GLScene.inc}
 
 uses
   lresources, 
