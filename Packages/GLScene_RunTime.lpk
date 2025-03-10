@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="4">
+  <Package Version="5">
     <Name Value="GLScene_RunTime"/>
     <AddToProjectUsesSection Value="True"/>
     <CompilerOptions>
@@ -33,7 +33,7 @@
     <Description Value="GLScene OpenGL 3D library
 "/>
     <Version Major="1"/>
-    <Files Count="238">
+    <Files Count="239">
       <Item1>
         <Filename Value="../Source/GLApplicationFileIO.pas"/>
         <UnitName Value="GLApplicationFileIO"/>
@@ -313,7 +313,7 @@
       <Item70>
         <Filename Value="../Source/GLFileTIN.pas"/>
         <UnitName Value="GLFileTIN"/>
-7      </Item70>
+      </Item70>
       <Item71>
         <Filename Value="../Source/GLFileVRML.pas"/>
         <UnitName Value="GLFileVRML"/>
@@ -983,7 +983,12 @@
         <AddToUsesPkgSection Value="False"/>
         <UnitName Value="GLFileX"/>
       </Item238>
+      <Item239>
+        <Filename Value="../Source/GLRandomGenerator.pas"/>
+        <UnitName Value="GLRandomGenerator"/>
+      </Item239>
     </Files>
+    <CompatibilityMode Value="True"/>
     <RequiredPkgs Count="3">
       <Item1>
         <PackageName Value="ImagesForLazarus"/>
@@ -1003,7 +1008,6 @@
     </UsageOptions>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
     </PublishOptions>
   </Package>
 </CONFIG>

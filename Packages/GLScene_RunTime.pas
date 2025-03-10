@@ -54,7 +54,7 @@ uses
   GLSLGoochShader, GLSLIvoryShader, GLSLSemShader, GLSLToonShader, 
   GLSLVertexDisplacementShader, GLTriangulation, GLMeshLines, 
   GLSLLatticeShader, GLFileQ3BSP, GLFileOCT, GLFileDXF, GLFileGRD, 
-  GLCustomShader, GLScriptBase;
+  GLCustomShader, GLScriptBase, GLRandomGenerator;
 
 implementation
 
