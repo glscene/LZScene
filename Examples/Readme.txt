@@ -1,6 +1,6 @@
 The example demos  for using LZXEngine with Lazarus
 
-For all this ../Examples/Demoz and AdvDenoz it supposed that  
+For all this ../Examples/Demos and AdvDenos it supposed that  
 - demos projects are in ..\Examples directory;
 - assets in ..\Assets directory;
 - media files are in ..\Examples\media folder; 
