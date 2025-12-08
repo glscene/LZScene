@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.0.0\bin\x86_64-win64\fpc.exe" Date="1231861895"/>
+  <Params Value=" -Mdelphi -Scghi -O1 -g -gl -WG -l -vewnhibq -FiC:\codetyphon\typhon\components\pl_GLScene\source -FuC:\lazarus\components\glscene\Packages\lib\x86_64-win64 -FuC:\lazarus\components\images\lib\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\lazarus\components\glscene\examples\Collisions\Raycast\SphereSweep\ -dUseCThreads -dLCL -dLCLwin32 -dBorland -dVer150 -dDelphi7 -dCompiler6_Up -dPUREPASCAL SphereSweep.lpr"/>
+</CONFIG>

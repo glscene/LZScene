@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="16">
+      <Unit0>
+        <Filename Value="MeshTest.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="44" Y="20"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="135"/>
+        <CursorPos X="50" Y="157"/>
+        <FoldState Value=" T3jA03528r"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GLRevolutionMeshObject"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="893"/>
+        <CursorPos X="41" Y="915"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uVector2D.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="154"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Basis\GLVectorFileObjects.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="186"/>
+        <CursorPos X="33" Y="204"/>
+        <UsageCount Value="56"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="208"/>
+        <CursorPos X="58" Y="56"/>
+        <UsageCount Value="90"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Basis\GLVectorLists.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="52" Y="211"/>
+        <UsageCount Value="14"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\glmeshobjecthelper.pas"/>
+        <UnitName Value="GLMeshObjectHelper"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="23"/>
+        <CursorPos Y="125"/>
+        <UsageCount Value="100"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\GLScene.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2078"/>
+        <CursorPos X="14" Y="2096"/>
+        <UsageCount Value="15"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\2DGeo\uVector2D.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="8" Y="448"/>
+        <UsageCount Value="103"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="glhiddenlineshader.pas"/>
+        <UnitName Value="GLHiddenLineShader"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="33"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Shaders\GLSLShader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="334"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Shaders\GLHiddenLineShader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="21" Y="85"/>
+        <UsageCount Value="16"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\GLColor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1028"/>
+        <CursorPos X="4" Y="552"/>
+        <UsageCount Value="15"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Basis\OpenGLAdapter.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="501"/>
+        <CursorPos X="24" Y="521"/>
+        <UsageCount Value="14"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus64\components\glscene-code-7054-branches-GLSceneLCL\Source\Basis\OpenGLTokens.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1981"/>
+        <CursorPos X="3" Y="1988"/>
+        <UsageCount Value="13"/>
+      </Unit15>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="114" Column="41" TopLine="111"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="405" Column="78" TopLine="374"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="412" Column="78" TopLine="381"/>
+      </Position3>
+      <Position4>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="166" Column="13" TopLine="139"/>
+      </Position4>
+      <Position5>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="917" Column="60" TopLine="896"/>
+      </Position5>
+      <Position6>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="903" Column="4" TopLine="896"/>
+      </Position6>
+      <Position7>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="918" Column="8" TopLine="896"/>
+      </Position7>
+      <Position8>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="931" TopLine="896"/>
+      </Position8>
+      <Position9>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="918" TopLine="893"/>
+      </Position9>
+      <Position10>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="920" TopLine="893"/>
+      </Position10>
+      <Position11>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="918" TopLine="893"/>
+      </Position11>
+      <Position12>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="920" TopLine="893"/>
+      </Position12>
+      <Position13>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="921" TopLine="893"/>
+      </Position13>
+      <Position14>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="923" TopLine="893"/>
+      </Position14>
+      <Position15>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="924" TopLine="893"/>
+      </Position15>
+      <Position16>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="921" TopLine="893"/>
+      </Position16>
+      <Position17>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="923" TopLine="893"/>
+      </Position17>
+      <Position18>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="924" TopLine="893"/>
+      </Position18>
+      <Position19>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="921" TopLine="893"/>
+      </Position19>
+      <Position20>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="923" TopLine="893"/>
+      </Position20>
+      <Position21>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="928" Column="57" TopLine="896"/>
+      </Position21>
+      <Position22>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="929" Column="71" TopLine="896"/>
+      </Position22>
+      <Position23>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="878" Column="28" TopLine="869"/>
+      </Position23>
+      <Position24>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="361" TopLine="322"/>
+      </Position24>
+      <Position25>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="319" TopLine="300"/>
+      </Position25>
+      <Position26>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="429" TopLine="411"/>
+      </Position26>
+      <Position27>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="914" Column="65" TopLine="896"/>
+      </Position27>
+      <Position28>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="319" TopLine="300"/>
+      </Position28>
+      <Position29>
+        <Filename Value="glrevolutionmeshobject.pas"/>
+        <Caret Line="918" Column="34" TopLine="893"/>
+      </Position29>
+      <Position30>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="147" Column="93" TopLine="111"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="QuadSinArray"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

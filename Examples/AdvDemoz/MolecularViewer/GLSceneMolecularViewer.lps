@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="37">
+      <Unit0>
+        <Filename Value="GLSceneMolecularViewer.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos Y="23"/>
+        <UsageCount Value="73"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uMainForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="55" Y="13"/>
+        <UsageCount Value="73"/>
+        <Bookmarks Count="1">
+          <Item0 X="22" Y="1434" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="libs\GLZArrayClasses.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="299"/>
+        <CursorPos X="5" Y="286"/>
+        <UsageCount Value="71"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="libs\uNavCube.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="61"/>
+        <CursorPos X="14"/>
+        <UsageCount Value="66"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="periodictable.dat"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="87"/>
+        <CursorPos X="35" Y="100"/>
+        <UsageCount Value="61"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="libs\GLZStringUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="734"/>
+        <CursorPos X="7" Y="741"/>
+        <UsageCount Value="57"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uHelpCommandsForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HelpCommandsForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="9" Y="35"/>
+        <UsageCount Value="50"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="uCPKForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CPKForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="41"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="uAtomInfosForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AtomInfosForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="11"/>
+        <CursorPos X="26" Y="53"/>
+        <UsageCount Value="39"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8510"/>
+        <CursorPos X="4" Y="8520"/>
+        <UsageCount Value="33"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="140"/>
+        <CursorPos Y="165"/>
+        <UsageCount Value="11"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2205"/>
+        <CursorPos Y="2230"/>
+        <UsageCount Value="11"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7367"/>
+        <CursorPos Y="7383"/>
+        <UsageCount Value="12"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\..\Source\GLScene.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="484"/>
+        <CursorPos X="3" Y="505"/>
+        <UsageCount Value="32"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\..\..\Source\GLColor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="351"/>
+        <CursorPos X="4" Y="374"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\..\Source\Basis\GLVectorTypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="150"/>
+        <CursorPos X="3" Y="166"/>
+        <UsageCount Value="27"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1859"/>
+        <CursorPos X="14" Y="1873"/>
+        <UsageCount Value="13"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\stringl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="414"/>
+        <CursorPos X="3" Y="416"/>
+        <UsageCount Value="8"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="98"/>
+        <CursorPos X="21" Y="118"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\..\Source\Basis\GLCoordinates.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="327"/>
+        <CursorPos X="3" Y="333"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\sysutils\intfh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="10" Y="29"/>
+        <UsageCount Value="22"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\..\Source\Basis\GLBaseClasses.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="15" Y="61"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\lcl\include\radiogroup.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="422"/>
+        <CursorPos Y="438"/>
+        <UsageCount Value="9"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\..\Source\GLPersistentClasses.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1109"/>
+        <CursorPos Y="1125"/>
+        <UsageCount Value="21"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\..\Samples\Lazarus\interface\pick\Unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos X="5" Y="38"/>
+        <UsageCount Value="9"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\..\Samples\Lazarus\interface\bmpfont\Unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="63"/>
+        <UsageCount Value="9"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\components\lazutils\lazfileutils.pas"/>
+        <UnitName Value="LazFileUtils"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\components\lazutils\fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="125"/>
+        <UsageCount Value="11"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\..\..\Samples\Lazarus\interface\ArcBall\uMainForm.pas"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="441"/>
+        <CursorPos X="31" Y="281"/>
+        <FoldState Value=" T3oJ0@021;"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\..\Source\GLScene.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="2" Y="56"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\..\..\Source\DesignTime\GLSceneRegister.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="187"/>
+        <CursorPos X="21" Y="166"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\..\..\Source\FileFormats\GLFileMP3.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="91"/>
+        <CursorPos X="6" Y="12"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\..\editors\SceneMaster\umainform.pas"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMainform"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="551"/>
+        <CursorPos X="14" Y="11"/>
+        <FoldState Value=" T3qf0431411R"/>
+        <UsageCount Value="11"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="211"/>
+        <CursorPos X="9" Y="224"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\MathApps\Plot3D\Main.pas"/>
+        <ComponentName Value="ViewForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="121"/>
+        <CursorPos X="45" Y="17"/>
+        <UsageCount Value="10"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\..\Source\GLWindowsFont.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="64"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\..\..\Source\Plateform\GLWidgetContext.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="50"/>
+        <CursorPos Y="64"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1223" Column="14" TopLine="1200"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1236" Column="9" TopLine="1224"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1178" Column="32" TopLine="1171"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1228" Column="39" TopLine="1203"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1230" Column="39" TopLine="1205"/>
+      </Position5>
+      <Position6>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1229" Column="39" TopLine="1204"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1230" Column="39" TopLine="1205"/>
+      </Position7>
+      <Position8>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1231" Column="39" TopLine="1206"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1230" Column="39" TopLine="1205"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1344" Column="17" TopLine="1333"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1348" Column="15" TopLine="1311"/>
+      </Position11>
+      <Position12>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1312" Column="5" TopLine="1288"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1313" Column="5" TopLine="1289"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1314" Column="5" TopLine="1290"/>
+      </Position14>
+      <Position15>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1315" Column="5" TopLine="1291"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="12" Column="34"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1120" Column="47" TopLine="1109"/>
+      </Position17>
+      <Position18>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1121" Column="47" TopLine="1110"/>
+      </Position18>
+      <Position19>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1122" Column="47" TopLine="1111"/>
+      </Position19>
+      <Position20>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1123" Column="47" TopLine="1112"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1124" Column="47" TopLine="1113"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1125" Column="47" TopLine="1114"/>
+      </Position22>
+      <Position23>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1126" Column="47" TopLine="1115"/>
+      </Position23>
+      <Position24>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="1127" Column="47"/>
+      </Position24>
+      <Position25>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="222" Column="17" TopLine="199"/>
+      </Position25>
+      <Position26>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="285" Column="16" TopLine="264"/>
+      </Position26>
+      <Position27>
+        <Filename Value="..\..\..\Source\Plateform\GLWidgetContext.pas"/>
+        <Caret Line="64" TopLine="48"/>
+      </Position27>
+      <Position28>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="285" Column="16" TopLine="264"/>
+      </Position28>
+      <Position29>
+        <Filename Value="..\..\..\Source\Plateform\GLWidgetContext.pas"/>
+        <Caret Line="64" TopLine="50"/>
+      </Position29>
+      <Position30>
+        <Filename Value="uMainForm.pas"/>
+        <Caret Line="13" Column="63"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

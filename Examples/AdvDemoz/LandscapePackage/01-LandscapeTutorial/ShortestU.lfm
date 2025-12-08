@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 299
+  Height = 445
+  Top = 262
+  Width = 564
+  ClientHeight = 445
+  ClientWidth = 564
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 445
+    Top = 0
+    Width = 564
+    Camera = GLCamera1
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.Lighting = False
+    FieldOfView = 154.669860839844
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    OnMouseWheel = FormMouseWheel
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 56
+    top = 8
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 1000
+        FocalLength = 50
+        TargetObject = GLDummyCube1
+      end
+      object GLTerrainRenderer1: TGLTerrainRenderer
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        Direction.Coordinates = {
+          00000000000080BF0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        TilesPerTexture = 1
+        MaterialLibrary = GLMaterialLibrary1
+        QualityDistance = 0
+      end
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 224
+    top = 8
+  end
+end

@@ -1,0 +1,734 @@
+object Form1: TForm1
+  Left = 545
+  Height = 659
+  Top = 82
+  Width = 752
+  Caption = 'Fountain Demo'
+  ClientHeight = 639
+  ClientWidth = 752
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  WindowState = wsMaximized
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 616
+    Top = 0
+    Width = 544
+    Camera = Cam
+    VSync = vsmSync
+    Buffer.FogEnvironment.FogColor.Red = 0
+    Buffer.FogEnvironment.FogColor.Green = 0
+    Buffer.FogEnvironment.FogColor.Blue = 0
+    Buffer.FogEnvironment.FogColor.Alpha = 1
+    Buffer.FogEnvironment.FogStart = 25
+    Buffer.FogEnvironment.FogEnd = 25
+    Buffer.BackgroundColor = clBlack
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    FieldOfView = 143.383056640625
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    OnMouseWheel = FormMouseWheel
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 544
+    Height = 616
+    Top = 0
+    Width = 208
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 616
+    ClientWidth = 208
+    TabOrder = 1
+    object Panel2: TPanel
+      Left = 0
+      Height = 117
+      Top = 499
+      Width = 208
+      Align = alBottom
+      ClientHeight = 117
+      ClientWidth = 208
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 8
+        Height = 13
+        Top = 10
+        Width = 61
+        Caption = 'Color Start'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 8
+        Height = 13
+        Top = 42
+        Width = 56
+        Caption = 'Color End'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 8
+        Height = 13
+        Top = 74
+        Width = 71
+        Caption = 'BackGround'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object PStartColor: TPanel
+        Left = 8
+        Height = 17
+        Top = 24
+        Width = 129
+        Color = clRed
+        ParentColor = False
+        TabOrder = 0
+        OnClick = PStartColorClick
+      end
+      object PEndColor: TPanel
+        Left = 8
+        Height = 17
+        Top = 56
+        Width = 129
+        Color = clYellow
+        ParentColor = False
+        TabOrder = 1
+        OnClick = PEndColorClick
+      end
+      object PBackColor: TPanel
+        Left = 8
+        Height = 17
+        Top = 88
+        Width = 129
+        Color = clBlack
+        ParentColor = False
+        TabOrder = 2
+        OnClick = PBackColorClick
+      end
+    end
+    object PageControl1: TPageControl
+      Left = 0
+      Height = 499
+      Top = 0
+      Width = 208
+      ActivePage = TabSheet1
+      Align = alClient
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabIndex = 0
+      TabOrder = 1
+      object TabSheet1: TTabSheet
+        Caption = 'Fontaine Setting'
+        ClientHeight = 473
+        ClientWidth = 200
+        object Label14: TLabel
+          Left = 8
+          Height = 13
+          Top = 472
+          Width = 105
+          Caption = 'Particles Size Max'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label13: TLabel
+          Left = 8
+          Height = 13
+          Top = 432
+          Width = 102
+          Caption = 'Particles Size Min'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label12: TLabel
+          Left = 8
+          Height = 13
+          Top = 392
+          Width = 74
+          Caption = 'Times Factor'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label11: TLabel
+          Left = 8
+          Height = 13
+          Top = 352
+          Width = 62
+          Caption = 'Life Factor'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label10: TLabel
+          Left = 8
+          Height = 13
+          Top = 312
+          Width = 64
+          Caption = 'Angle Start'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label9: TLabel
+          Left = 8
+          Height = 13
+          Top = 272
+          Width = 73
+          Caption = 'Velocity Max'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label8: TLabel
+          Left = 8
+          Height = 13
+          Top = 232
+          Width = 70
+          Caption = 'Velocity Min'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label7: TLabel
+          Left = 8
+          Height = 13
+          Top = 192
+          Width = 77
+          Caption = 'Max Particles'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 8
+          Height = 13
+          Top = 152
+          Width = 29
+          Caption = 'Floor'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 8
+          Height = 13
+          Top = 112
+          Width = 94
+          Caption = 'Bounding Factor'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label4: TLabel
+          Left = 8
+          Height = 13
+          Top = 72
+          Width = 77
+          Caption = 'Particle Mass'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label15: TLabel
+          Left = 8
+          Height = 13
+          Top = 32
+          Width = 33
+          Caption = 'Scale'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object EdPSizeMax: TEdit
+          Left = 8
+          Height = 21
+          Top = 488
+          Width = 129
+          OnChange = EdPSizeMaxChange
+          TabOrder = 0
+          Text = '130'
+        end
+        object EdPSizeMin: TEdit
+          Left = 8
+          Height = 21
+          Top = 448
+          Width = 129
+          OnChange = EdPSizeMinChange
+          TabOrder = 1
+          Text = '110'
+        end
+        object EdTimesFact: TEdit
+          Left = 8
+          Height = 21
+          Top = 408
+          Width = 129
+          OnChange = EdTimesFactChange
+          TabOrder = 2
+          Text = '0.00005'
+        end
+        object EdLifeFact: TEdit
+          Left = 8
+          Height = 21
+          Top = 368
+          Width = 129
+          OnChange = EdLifeFactChange
+          TabOrder = 3
+          Text = '0.025'
+        end
+        object EdAngleStart: TEdit
+          Left = 8
+          Height = 21
+          Top = 328
+          Width = 129
+          OnChange = EdAngleStartChange
+          TabOrder = 4
+          Text = '360'
+        end
+        object EdVelMax: TEdit
+          Left = 8
+          Height = 21
+          Top = 288
+          Width = 129
+          OnChange = EdVelMaxChange
+          TabOrder = 5
+          Text = '15'
+        end
+        object EdVelMin: TEdit
+          Left = 8
+          Height = 21
+          Top = 248
+          Width = 129
+          OnChange = EdVelMinChange
+          TabOrder = 6
+          Text = '5'
+        end
+        object EdMaxP: TEdit
+          Left = 8
+          Height = 21
+          Top = 208
+          Width = 129
+          OnChange = EdMaxPChange
+          TabOrder = 7
+          Text = '60'
+        end
+        object EdFloor: TEdit
+          Left = 8
+          Height = 21
+          Top = 168
+          Width = 129
+          OnChange = EdFloorChange
+          TabOrder = 8
+          Text = '0.0'
+        end
+        object EdBound: TEdit
+          Left = 8
+          Height = 21
+          Top = 128
+          Width = 129
+          OnChange = EdBoundChange
+          TabOrder = 9
+          Text = '100.0'
+        end
+        object EdMass: TEdit
+          Left = 8
+          Height = 21
+          Top = 88
+          Width = 129
+          OnChange = EdMassChange
+          TabOrder = 10
+          Text = '5.0'
+        end
+        object CheckActived: TCheckBox
+          Left = 0
+          Height = 19
+          Top = 8
+          Width = 63
+          Caption = 'Actived'
+          Checked = True
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          OnClick = CheckActivedClick
+          ParentFont = False
+          State = cbChecked
+          TabOrder = 11
+        end
+        object CheckBound: TCheckBox
+          Left = 72
+          Height = 19
+          Top = 8
+          Width = 73
+          Caption = 'Bounding'
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          OnClick = CheckBoundClick
+          ParentFont = False
+          TabOrder = 12
+        end
+        object TrackBar1: TTrackBar
+          Left = 0
+          Height = 15
+          Top = 48
+          Width = 150
+          Min = 1
+          OnChange = TrackBar1Change
+          PageSize = 1
+          Position = 2
+          TabOrder = 13
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Fontaine Style'
+        ClientHeight = 0
+        ClientWidth = 0
+        ImageIndex = 1
+        object Panel3: TPanel
+          Left = 0
+          Height = 495
+          Top = 0
+          Width = 200
+          Align = alClient
+          ClientHeight = 495
+          ClientWidth = 200
+          TabOrder = 0
+          object RadioButton1: TRadioButton
+            Left = 8
+            Height = 17
+            Top = 16
+            Width = 73
+            Caption = 'Style Fire'
+            Checked = True
+            OnClick = RadioButtonClick
+            TabOrder = 0
+            TabStop = True
+          end
+          object RadioButton2: TRadioButton
+            Left = 8
+            Height = 17
+            Top = 40
+            Width = 81
+            Caption = 'Style Water'
+            OnClick = RadioButtonClick
+            TabOrder = 1
+          end
+          object RadioButton3: TRadioButton
+            Left = 8
+            Height = 17
+            Top = 64
+            Width = 73
+            Caption = 'Style Ball'
+            OnClick = RadioButtonClick
+            TabOrder = 2
+          end
+        end
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 616
+    Width = 752
+    Panels = <>
+  end
+  object GLScene1: TGLScene
+    top = 112
+    object Scene: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLTorus1: TGLTorus
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0
+        Material.FrontProperties.Diffuse.Green = 0
+        Material.FrontProperties.Diffuse.Blue = 0.333333343267441
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Diffuse.Color = {
+          0000000000000000ABAAAA3E0000803F
+        }
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        MajorRadius = 1.5
+        MinorRadius = 0.25
+        StartAngle = 0
+        StopAngle = 360
+        Parts = [toSides, toStartDisk, toStopDisk]
+      end
+      object GLPlane1: TGLPlane
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0
+        Material.FrontProperties.Diffuse.Green = 0
+        Material.FrontProperties.Diffuse.Blue = 0.235294118523598
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Diffuse.Color = {
+          0000000000000000F1F0703E0000803F
+        }
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        PitchAngle = 0
+        Position.Coordinates = {
+          0000000000000000000080C00000803F
+        }
+        RollAngle = 0
+        TurnAngle = 0
+        Height = 20
+        Width = 20
+        XOffset = 0
+        YOffset = 0
+      end
+    end
+    object Light: TGLLightSource
+      TagFloat = 0
+      Ambient.Red = 0.752941012382507
+      Ambient.Green = 0.752941012382507
+      Ambient.Blue = 0.752941012382507
+      Ambient.Alpha = 1
+      Ambient.Color = {
+        BEC0403FBEC0403FBEC0403F0000803F
+      }
+      ConstAttenuation = 1
+      Diffuse.Red = 1
+      Diffuse.Green = 1
+      Diffuse.Blue = 1
+      Diffuse.Alpha = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        0000000000000000000020410000803F
+      }
+      LightStyle = lsOmni
+      Specular.Red = 0.752941012382507
+      Specular.Green = 0.752941012382507
+      Specular.Blue = 0.752941012382507
+      Specular.Alpha = 1
+      Specular.Color = {
+        BEC0403FBEC0403FBEC0403F0000803F
+      }
+      SpotCutOff = 180
+      SpotDirection.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      SpotExponent = 0
+    end
+    object Cam: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000
+      FocalLength = 90
+      TargetObject = Scene
+      Position.Coordinates = {
+        0000000000007041000040400000803F
+      }
+      Direction.Coordinates = {
+        000000000000803F0000000000000000
+      }
+      Up.Coordinates = {
+        00000000000000000000803F00000000
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0.02
+    MinDeltaTime = 0
+    FixedDeltaTime = 0.0165
+    SleepLength = 0
+    OnProgress = GLCadencer1Progress
+    top = 144
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    top = 176
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 504
+    top = 416
+  end
+  object MainMenu1: TMainMenu
+    left = 40
+    top = 112
+    object File1: TMenuItem
+      Caption = 'File'
+      object Texture1: TMenuItem
+        Caption = 'Texture...'
+        OnClick = Texture1Click
+      end
+      object Close1: TMenuItem
+        Caption = 'Close'
+        OnClick = Close1Click
+      end
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Filter = 'Bitmaps (*.bmp)|*.bmp'
+    left = 40
+    top = 144
+  end
+end

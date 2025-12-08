@@ -1,0 +1,96 @@
+object Form1: TForm1
+  Left = 189
+  Height = 659
+  Top = 161
+  Width = 868
+  Caption = 'Form1'
+  ClientHeight = 659
+  ClientWidth = 868
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '1.6.4.0'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 659
+    Top = 0
+    Width = 868
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.DepthTest = False
+    FieldOfView = 162.742950439453
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    OnMouseWheel = FormMouseWheel
+    TabOrder = 0
+  end
+  object GLScene1: TGLScene
+    left = 8
+    top = 8
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 20
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      VisibleAtRunTime = True
+      object GLParticles1: TGLParticles
+        TagFloat = 0
+        ObjectsSorting = osNone
+        PitchAngle = 0
+        RollAngle = 0
+        Scale.Coordinates = {
+          00000040000000400000004000000000
+        }
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        OnActivateParticle = GLParticles1ActivateParticle
+      end
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = GLParticles1
+      Position.Coordinates = {
+        0000704100000000000000000000803F
+      }
+    end
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    SleepLength = 1
+    left = 8
+    top = 48
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 48
+    top = 8
+  end
+  object Timer2: TTimer
+    OnTimer = Timer2Timer
+    left = 48
+    top = 48
+  end
+end

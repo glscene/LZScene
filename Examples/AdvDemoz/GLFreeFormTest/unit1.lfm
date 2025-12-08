@@ -1,0 +1,282 @@
+object Form1: TForm1
+  Left = 370
+  Height = 507
+  Top = 237
+  Width = 748
+  Caption = 'GLScene Test'
+  ClientHeight = 507
+  ClientWidth = 748
+  OnShow = FormShow
+  LCLVersion = '1.6.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 507
+    Top = 0
+    Width = 200
+    Align = alLeft
+    ClientHeight = 507
+    ClientWidth = 200
+    TabOrder = 0
+    object Button1: TButton
+      Left = 24
+      Height = 33
+      Top = 40
+      Width = 147
+      Caption = 'Create Cube'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 24
+      Height = 33
+      Top = 80
+      Width = 147
+      Caption = 'Create Sphere'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+    object Button3: TButton
+      Left = 24
+      Height = 33
+      Top = 120
+      Width = 147
+      Caption = 'Create Cylinder'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+    object Button4: TButton
+      Left = 24
+      Height = 33
+      Top = 160
+      Width = 147
+      Caption = 'Create Grid'
+      OnClick = Button4Click
+      TabOrder = 3
+    end
+    object ComboBox1: TComboBox
+      Left = 25
+      Height = 23
+      Top = 8
+      Width = 146
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        'WireFrame'
+        'Point'
+        'Solid'
+      )
+      OnChange = ComboBox1Change
+      Style = csDropDownList
+      TabOrder = 4
+      Text = 'Solid'
+    end
+    object Button5: TButton
+      Left = 25
+      Height = 33
+      Top = 200
+      Width = 147
+      Caption = 'Create Torus'
+      OnClick = BuildTorus
+      TabOrder = 5
+    end
+    object Button6: TButton
+      Left = 25
+      Height = 33
+      Top = 240
+      Width = 147
+      Caption = 'Optimize'
+      OnClick = Button6Click
+      TabOrder = 6
+    end
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 200
+    Height = 507
+    Top = 0
+    Width = 548
+    Camera = GLCamera1
+    Buffer.BackgroundColor = clBlack
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
+    Buffer.FaceCulling = False
+    Buffer.ShadeModel = smFlat
+    FieldOfView = 157.684555053711
+    Align = alClient
+    Enabled = False
+    TabOrder = 1
+  end
+  object GLScene1: TGLScene
+    left = 32
+    top = 424
+    object DCHelpers: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 100
+        FocalLength = 50
+        TargetObject = DCCameraTarget
+        Position.Coordinates = {
+          000000000000A0400000A0C00000803F
+        }
+        object GLLightSource1: TGLLightSource
+          TagFloat = 0
+          Ambient.Red = 0.150000005960464
+          Ambient.Green = 0.150000005960464
+          Ambient.Blue = 0.150000005960464
+          Ambient.Alpha = 1
+          Ambient.Color = {
+            9A99193E9A99193E9A99193E0000803F
+          }
+          ConstAttenuation = 1
+          Diffuse.Red = 0.996078431606293
+          Diffuse.Green = 0.968627452850342
+          Diffuse.Blue = 0.796078443527222
+          Diffuse.Alpha = 1
+          Diffuse.Color = {
+            FFFE7E3FF8F7773FCCCB4B3F0000803F
+          }
+          LinearAttenuation = 0
+          QuadraticAttenuation = 0
+          Position.Coordinates = {
+            0000404000004040000080BF0000803F
+          }
+          LightStyle = lsOmni
+          Specular.Red = 0.850000023841858
+          Specular.Green = 0.850000023841858
+          Specular.Blue = 0.850000023841858
+          Specular.Alpha = 1
+          Specular.Color = {
+            9A99593F9A99593F9A99593F0000803F
+          }
+          SpotCutOff = 180
+          SpotExponent = 0
+        end
+      end
+    end
+    object DCWorld: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+    object DCCameraTarget: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    Materials = <    
+      item
+        Name = 'LibMaterial'
+        Tag = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.MaterialOptions = [moNoLighting]
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        Shader = GLHiddenLineShader1
+      end>
+    OnTextureNeeded = GLMaterialLibrary1TextureNeeded
+    left = 62
+    top = 360
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    Enabled = False
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    left = 62
+    top = 303
+  end
+  object GLHiddenLineShader1: TGLHiddenLineShader
+    FrontLine.Width = 1
+    FrontLine.Color.Red = 0
+    FrontLine.Color.Green = 0
+    FrontLine.Color.Blue = 1
+    FrontLine.Color.Alpha = 1
+    FrontLine.Color.Color = {
+      00000000000000000000803F0000803F
+    }
+    BackLine.Width = 1
+    BackLine.Color.Red = 0.349999994039536
+    BackLine.Color.Green = 0.159999996423721
+    BackLine.Color.Blue = 0.140000000596046
+    BackLine.Color.Alpha = 1
+    BackLine.Color.Color = {
+      3333B33E0AD7233E295C0F3E0000803F
+    }
+    LineSmooth = True
+    Solid = True
+    BackgroundColor.Red = 0
+    BackgroundColor.Green = 0
+    BackgroundColor.Blue = 0
+    BackgroundColor.Alpha = 1
+    BackgroundColor.Color = {
+      0000000000000000000000000000803F
+    }
+    ShadeModel = smFlat
+    left = 107
+    top = 412
+  end
+end

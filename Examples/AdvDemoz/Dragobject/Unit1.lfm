@@ -1,0 +1,279 @@
+object Form1: TForm1
+  Left = 425
+  Height = 465
+  Top = 249
+  Width = 633
+  ChildSizing.LeftRightSpacing = 4
+  ChildSizing.TopBottomSpacing = 4
+  ClientHeight = 465
+  ClientWidth = 633
+  LCLVersion = '1.8.0.1'
+  object Scn: TGLSceneViewer
+    Left = 4
+    Height = 457
+    Top = 4
+    Width = 625
+    Camera = cam
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 155.314346313477
+    Align = alClient
+    OnMouseDown = ScnMouseDown
+    OnMouseMove = ScnMouseMove
+    TabOrder = 0
+  end
+  object TrackBar1: TTrackBar
+    Left = 8
+    Height = 35
+    Top = 462
+    Width = 150
+    Frequency = 45
+    Max = 360
+    OnChange = TrackBar1Change
+    Position = 180
+    TabOrder = 1
+  end
+  object TrackBar2: TTrackBar
+    Left = 630
+    Height = 150
+    Top = 2
+    Width = 35
+    Frequency = 20
+    Max = 75
+    OnChange = TrackBar2Change
+    Orientation = trVertical
+    Position = 45
+    TabOrder = 2
+  end
+  object GLScene1: TGLScene
+    left = 575
+    top = 15
+    object dc1: TGLDummyCube
+      TagFloat = 0
+      Direction.Coordinates = {
+        00000000FFFFFFBED7B35D3F00000000
+      }
+      PitchAngle = -30
+      RollAngle = 0
+      TurnAngle = 0
+      Up.Coordinates = {
+        00000000D7B35D3FFFFFFF3E00000000
+      }
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object dc2: TGLDummyCube
+        TagFloat = 0
+        Direction.Coordinates = {
+          F20435BF00000000F30435BF00000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = -135
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object GLCube1: TGLCube
+          TagFloat = 0
+          Material.BackProperties.Ambient.Red = 0.200000002980232
+          Material.BackProperties.Ambient.Green = 0.200000002980232
+          Material.BackProperties.Ambient.Blue = 0.200000002980232
+          Material.BackProperties.Ambient.Alpha = 1
+          Material.BackProperties.Diffuse.Red = 0.800000011920929
+          Material.BackProperties.Diffuse.Green = 0.800000011920929
+          Material.BackProperties.Diffuse.Blue = 0.800000011920929
+          Material.BackProperties.Diffuse.Alpha = 1
+          Material.BackProperties.Emission.Red = 0
+          Material.BackProperties.Emission.Green = 0
+          Material.BackProperties.Emission.Blue = 0
+          Material.BackProperties.Emission.Alpha = 1
+          Material.BackProperties.Specular.Red = 0
+          Material.BackProperties.Specular.Green = 0
+          Material.BackProperties.Specular.Blue = 0
+          Material.BackProperties.Specular.Alpha = 1
+          Material.FrontProperties.Ambient.Red = 0.200000002980232
+          Material.FrontProperties.Ambient.Green = 0.200000002980232
+          Material.FrontProperties.Ambient.Blue = 0.200000002980232
+          Material.FrontProperties.Ambient.Alpha = 1
+          Material.FrontProperties.Diffuse.Red = 0.800000011920929
+          Material.FrontProperties.Diffuse.Green = 0.800000011920929
+          Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+          Material.FrontProperties.Diffuse.Alpha = 1
+          Material.FrontProperties.Emission.Red = 0
+          Material.FrontProperties.Emission.Green = 0
+          Material.FrontProperties.Emission.Blue = 0
+          Material.FrontProperties.Emission.Alpha = 1
+          Material.FrontProperties.Specular.Red = 0
+          Material.FrontProperties.Specular.Green = 0
+          Material.FrontProperties.Specular.Blue = 0
+          Material.FrontProperties.Specular.Alpha = 1
+          Material.Texture.EnvColor.Red = 0
+          Material.Texture.EnvColor.Green = 0
+          Material.Texture.EnvColor.Blue = 0
+          Material.Texture.EnvColor.Alpha = 0
+          Material.Texture.BorderColor.Red = 0
+          Material.Texture.BorderColor.Green = 0
+          Material.Texture.BorderColor.Blue = 0
+          Material.Texture.BorderColor.Alpha = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+        end
+        object GLPlane1: TGLPlane
+          TagFloat = 0
+          Material.BackProperties.Ambient.Red = 0.200000002980232
+          Material.BackProperties.Ambient.Green = 0.200000002980232
+          Material.BackProperties.Ambient.Blue = 0.200000002980232
+          Material.BackProperties.Ambient.Alpha = 1
+          Material.BackProperties.Diffuse.Red = 0.800000011920929
+          Material.BackProperties.Diffuse.Green = 0.800000011920929
+          Material.BackProperties.Diffuse.Blue = 0.800000011920929
+          Material.BackProperties.Diffuse.Alpha = 1
+          Material.BackProperties.Emission.Red = 0
+          Material.BackProperties.Emission.Green = 0
+          Material.BackProperties.Emission.Blue = 0
+          Material.BackProperties.Emission.Alpha = 1
+          Material.BackProperties.Specular.Red = 0
+          Material.BackProperties.Specular.Green = 0
+          Material.BackProperties.Specular.Blue = 0
+          Material.BackProperties.Specular.Alpha = 1
+          Material.FrontProperties.Ambient.Red = 0.200000002980232
+          Material.FrontProperties.Ambient.Green = 0.200000002980232
+          Material.FrontProperties.Ambient.Blue = 0.200000002980232
+          Material.FrontProperties.Ambient.Alpha = 1
+          Material.FrontProperties.Diffuse.Red = 0.800000011920929
+          Material.FrontProperties.Diffuse.Green = 0.800000011920929
+          Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+          Material.FrontProperties.Diffuse.Alpha = 1
+          Material.FrontProperties.Emission.Red = 0
+          Material.FrontProperties.Emission.Green = 0
+          Material.FrontProperties.Emission.Blue = 0
+          Material.FrontProperties.Emission.Alpha = 1
+          Material.FrontProperties.Specular.Red = 0
+          Material.FrontProperties.Specular.Green = 0
+          Material.FrontProperties.Specular.Blue = 0
+          Material.FrontProperties.Specular.Alpha = 1
+          Material.BlendingMode = bmTransparency
+          Material.Texture.EnvColor.Red = 0
+          Material.Texture.EnvColor.Green = 0
+          Material.Texture.EnvColor.Blue = 0
+          Material.Texture.EnvColor.Alpha = 0
+          Material.Texture.BorderColor.Red = 0
+          Material.Texture.BorderColor.Green = 0
+          Material.Texture.BorderColor.Blue = 0
+          Material.Texture.BorderColor.Alpha = 0
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          Height = 30
+          Width = 30
+          XOffset = 0
+          YOffset = 0
+        end
+        object shad: TGLPlane
+          TagFloat = 0
+          Material.BackProperties.Ambient.Red = 0.200000002980232
+          Material.BackProperties.Ambient.Green = 0.200000002980232
+          Material.BackProperties.Ambient.Blue = 0.200000002980232
+          Material.BackProperties.Ambient.Alpha = 1
+          Material.BackProperties.Diffuse.Red = 0.800000011920929
+          Material.BackProperties.Diffuse.Green = 0.800000011920929
+          Material.BackProperties.Diffuse.Blue = 0.800000011920929
+          Material.BackProperties.Diffuse.Alpha = 1
+          Material.BackProperties.Emission.Red = 0
+          Material.BackProperties.Emission.Green = 0
+          Material.BackProperties.Emission.Blue = 0
+          Material.BackProperties.Emission.Alpha = 1
+          Material.BackProperties.Specular.Red = 0
+          Material.BackProperties.Specular.Green = 0
+          Material.BackProperties.Specular.Blue = 0
+          Material.BackProperties.Specular.Alpha = 1
+          Material.FrontProperties.Ambient.Red = 0.200000002980232
+          Material.FrontProperties.Ambient.Green = 0.200000002980232
+          Material.FrontProperties.Ambient.Blue = 0.200000002980232
+          Material.FrontProperties.Ambient.Alpha = 1
+          Material.FrontProperties.Diffuse.Red = 0.800000011920929
+          Material.FrontProperties.Diffuse.Green = 0.800000011920929
+          Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+          Material.FrontProperties.Diffuse.Alpha = 1
+          Material.FrontProperties.Emission.Red = 0
+          Material.FrontProperties.Emission.Green = 0
+          Material.FrontProperties.Emission.Blue = 0
+          Material.FrontProperties.Emission.Alpha = 1
+          Material.FrontProperties.Specular.Red = 0
+          Material.FrontProperties.Specular.Green = 0
+          Material.FrontProperties.Specular.Blue = 0
+          Material.FrontProperties.Specular.Alpha = 1
+          Material.Texture.EnvColor.Red = 0
+          Material.Texture.EnvColor.Green = 0
+          Material.Texture.EnvColor.Blue = 0
+          Material.Texture.EnvColor.Alpha = 0
+          Material.Texture.BorderColor.Red = 0
+          Material.Texture.BorderColor.Green = 0
+          Material.Texture.BorderColor.Blue = 0
+          Material.Texture.BorderColor.Alpha = 0
+          Direction.Coordinates = {
+            000000000000803F0000000000000000
+          }
+          PitchAngle = 0
+          Position.Coordinates = {
+            00000000CDCCCC3D000000000000803F
+          }
+          RollAngle = 0
+          TurnAngle = 0
+          Up.Coordinates = {
+            0000000000000000000080BF00000000
+          }
+          Height = 1
+          Width = 1
+          XOffset = 0
+          YOffset = 0
+        end
+      end
+    end
+    object cam: TGLCamera
+      TagFloat = 0
+      DepthOfView = 100
+      FocalLength = 50
+      TargetObject = dc2
+      Position.Coordinates = {
+        00000000000000000000F0410000803F
+      }
+      object light: TGLLightSource
+        TagFloat = 0
+        Ambient.Red = 0
+        Ambient.Green = 0
+        Ambient.Blue = 0
+        Ambient.Alpha = 1
+        ConstAttenuation = 1
+        Diffuse.Red = 1
+        Diffuse.Green = 1
+        Diffuse.Blue = 1
+        Diffuse.Alpha = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Position.Coordinates = {
+          0000484200004842000048420000803F
+        }
+        Specular.Red = 0
+        Specular.Green = 0
+        Specular.Blue = 0
+        Specular.Alpha = 1
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+end

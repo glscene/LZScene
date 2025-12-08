@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="Atomics.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="16"/>
+        <CursorPos X="20" Y="31"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="AtomsFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AAtomForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="755"/>
+        <CursorPos X="34" Y="762"/>
+        <FoldState Value=" T3z70T013."/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="AboutFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutBox"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="41"/>
+        <CursorPos X="20" Y="3"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="AtomicRotationFrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AtomicRotationForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="58"/>
+        <CursorPos X="20" Y="3"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLXCollection.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="677"/>
+        <CursorPos Y="692"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\..\Source\Basis\GLXCollection.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="169"/>
+        <CursorPos X="5" Y="125"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="178"/>
+        <CursorPos X="23" Y="194"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\Source\Basis\GLObjects.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="520"/>
+        <CursorPos X="3" Y="536"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\..\..\Source\GLColor.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="15"/>
+        <CursorPos X="3" Y="31"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\Source\GLNodes.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="137"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="AboutFrm.pas"/>
+        <Caret Line="49" Column="4" TopLine="34"/>
+      </Position1>
+      <Position2>
+        <Filename Value="AboutFrm.pas"/>
+        <Caret Line="48" Column="4" TopLine="33"/>
+      </Position2>
+      <Position3>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="288" Column="3" TopLine="288"/>
+      </Position3>
+      <Position4>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="436" Column="80" TopLine="183"/>
+      </Position4>
+      <Position5>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="443" Column="18" TopLine="423"/>
+      </Position5>
+      <Position6>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="486" TopLine="486"/>
+      </Position6>
+      <Position7>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="1199" Column="24" TopLine="1196"/>
+      </Position7>
+      <Position8>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="291" Column="8" TopLine="209"/>
+      </Position8>
+      <Position9>
+        <Filename Value="..\..\..\Source\Basis\GLXCollection.pas"/>
+        <Caret Line="490" TopLine="462"/>
+      </Position9>
+      <Position10>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="291" Column="8" TopLine="209"/>
+      </Position10>
+      <Position11>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="387" Column="17" TopLine="362"/>
+      </Position11>
+      <Position12>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="774" Column="46" TopLine="758"/>
+      </Position12>
+      <Position13>
+        <Filename Value="..\..\..\Source\Basis\GLObjects.pas"/>
+        <Caret Line="529" Column="14" TopLine="514"/>
+      </Position13>
+      <Position14>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="13" Column="50"/>
+      </Position14>
+      <Position15>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="774" Column="55" TopLine="758"/>
+      </Position15>
+      <Position16>
+        <Filename Value="..\..\..\Source\GLColor.pas"/>
+        <Caret Line="372" Column="4" TopLine="356"/>
+      </Position16>
+      <Position17>
+        <Filename Value="..\..\..\Source\GLColor.pas"/>
+        <Caret Line="31" Column="3" TopLine="15"/>
+      </Position17>
+      <Position18>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="775" Column="7" TopLine="759"/>
+      </Position18>
+      <Position19>
+        <Filename Value="..\..\..\Source\Basis\GLObjects.pas"/>
+        <Caret Line="640" Column="14" TopLine="625"/>
+      </Position19>
+      <Position20>
+        <Filename Value="..\..\..\Source\Basis\GLObjects.pas"/>
+        <Caret Line="536" Column="3" TopLine="520"/>
+      </Position20>
+      <Position21>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="205" Column="21" TopLine="190"/>
+      </Position21>
+      <Position22>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="263" Column="43" TopLine="237"/>
+      </Position22>
+      <Position23>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="371" Column="61" TopLine="346"/>
+      </Position23>
+      <Position24>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="387" Column="8" TopLine="362"/>
+      </Position24>
+      <Position25>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="379" Column="45" TopLine="363"/>
+      </Position25>
+      <Position26>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="387" Column="8" TopLine="363"/>
+      </Position26>
+      <Position27>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="388" Column="32" TopLine="363"/>
+      </Position27>
+      <Position28>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="429" Column="16" TopLine="409"/>
+      </Position28>
+      <Position29>
+        <Filename Value="AtomsFrm.pas"/>
+        <Caret Line="601" Column="13" TopLine="591"/>
+      </Position29>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

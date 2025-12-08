@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="76">
+      <Unit0>
+        <Filename Value="MultiFreeForm.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="20" Y="3"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="3" Y="72"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLApplicationFileIO.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="21"/>
+        <CursorPos X="27" Y="36"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLCadencer.pas"/>
+        <EditorIndex Value="46"/>
+        <TopLine Value="862"/>
+        <CursorPos Y="882"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLContext.pas"/>
+        <EditorIndex Value="47"/>
+        <TopLine Value="4753"/>
+        <CursorPos X="41" Y="4764"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLCrossPlatform.pas"/>
+        <EditorIndex Value="48"/>
+        <TopLine Value="85"/>
+        <CursorPos Y="100"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLGraphics.pas"/>
+        <EditorIndex Value="52"/>
+        <TopLine Value="3272"/>
+        <CursorPos X="7" Y="3287"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLHeightData.pas"/>
+        <EditorIndex Value="53"/>
+        <TopLine Value="1959"/>
+        <CursorPos Y="1976"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLScene.inc"/>
+        <EditorIndex Value="59"/>
+        <TopLine Value="97"/>
+        <CursorPos Y="112"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSceneForm.pas"/>
+        <EditorIndex Value="61"/>
+        <TopLine Value="781"/>
+        <CursorPos Y="810"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLScreen.pas"/>
+        <EditorIndex Value="62"/>
+        <TopLine Value="109"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSGenerics.pas"/>
+        <EditorIndex Value="68"/>
+        <TopLine Value="5"/>
+        <CursorPos X="5" Y="19"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSLanguage.pas"/>
+        <EditorIndex Value="70"/>
+        <TopLine Value="22"/>
+        <CursorPos X="83" Y="33"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSRedBlackTree.pas"/>
+        <EditorIndex Value="72"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="48"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLWin32Context.pas"/>
+        <EditorIndex Value="63"/>
+        <TopLine Value="861"/>
+        <CursorPos Y="875"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PictureRegisteredFormats.pas"/>
+        <EditorIndex Value="64"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="109"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLObjectManager.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="471"/>
+        <CursorPos Y="498"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus32\components\glscene\Source\DesignTime\GLSceneForm.pas"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="769"/>
+        <CursorPos X="5" Y="795"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus32\components\glscene\Source\DesignTime\GLSceneRegister.pas"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="683"/>
+        <CursorPos X="41" Y="697"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\DDSImage.pas"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="58"/>
+        <CursorPos X="19" Y="72"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLFileJPEG.pas"/>
+        <EditorIndex Value="19"/>
+        <CursorPos Y="474"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\GLScreenSaver.pas"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="283"/>
+        <CursorPos X="49" Y="297"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmoddyn.pas"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="26"/>
+        <CursorPos X="9" Y="40"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmod.pas"/>
+        <EditorIndex Value="25"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="41"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\delphiode.inc"/>
+        <EditorIndex Value="26"/>
+        <TopLine Value="130"/>
+        <CursorPos X="10" Y="88"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\delphinewton.inc"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="157"/>
+        <CursorPos Y="172"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GameAPIs\sdl2.inc"/>
+        <EditorIndex Value="33"/>
+        <TopLine Value="381"/>
+        <CursorPos Y="396"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\ZLibEx.inc"/>
+        <EditorIndex Value="36"/>
+        <TopLine Value="56"/>
+        <CursorPos Y="80"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\O3TCImage.pas"/>
+        <EditorIndex Value="41"/>
+        <TopLine Value="31"/>
+        <CursorPos X="13" Y="46"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\LIBPNG.pas"/>
+        <EditorIndex Value="43"/>
+        <TopLine Value="1252"/>
+        <CursorPos Y="1266"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\HDRImage.pas"/>
+        <EditorIndex Value="44"/>
+        <TopLine Value="29"/>
+        <CursorPos X="11" Y="44"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLSZLibExApi.pas"/>
+        <EditorIndex Value="45"/>
+        <TopLine Value="328"/>
+        <CursorPos X="5" Y="342"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLBitmapFont.pas"/>
+        <EditorIndex Value="40"/>
+        <TopLine Value="42"/>
+        <CursorPos Y="57"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLEParticleMasksManager.pas"/>
+        <EditorIndex Value="49"/>
+        <TopLine Value="766"/>
+        <CursorPos X="9" Y="706"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLFullScreenViewer.pas"/>
+        <EditorIndex Value="50"/>
+        <TopLine Value="589"/>
+        <CursorPos X="5" Y="600"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLGnuGettext.pas"/>
+        <EditorIndex Value="51"/>
+        <TopLine Value="3502"/>
+        <CursorPos X="3" Y="3517"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLLensFlare.pas"/>
+        <EditorIndex Value="54"/>
+        <TopLine Value="549"/>
+        <CursorPos X="20" Y="564"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLMaterial.pas"/>
+        <EditorIndex Value="55"/>
+        <TopLine Value="241"/>
+        <CursorPos X="14" Y="255"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLPerlinNoise3D.pas"/>
+        <EditorIndex Value="57"/>
+        <TopLine Value="69"/>
+        <CursorPos X="17" Y="84"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLPersistentClasses.pas"/>
+        <EditorIndex Value="58"/>
+        <TopLine Value="2360"/>
+        <CursorPos Y="2374"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLScene.pas"/>
+        <EditorIndex Value="60"/>
+        <TopLine Value="342"/>
+        <CursorPos X="11" Y="353"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSimpleNavigation.pas"/>
+        <EditorIndex Value="69"/>
+        <TopLine Value="407"/>
+        <CursorPos Y="428"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSLog.pas"/>
+        <EditorIndex Value="71"/>
+        <TopLine Value="593"/>
+        <CursorPos X="60" Y="599"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSvdPAUAPI.pas"/>
+        <EditorIndex Value="73"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="42"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLTexture.pas"/>
+        <EditorIndex Value="74"/>
+        <TopLine Value="3758"/>
+        <CursorPos Y="3757"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLViewer.pas"/>
+        <EditorIndex Value="75"/>
+        <TopLine Value="21"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="C:\lazarus32\components\glscene\Source\RegisterXCollection.pas"/>
+        <EditorIndex Value="65"/>
+        <TopLine Value="53"/>
+        <CursorPos X="35" Y="66"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLGnuGettext.pas"/>
+        <EditorIndex Value="66"/>
+        <TopLine Value="97"/>
+        <CursorPos X="20" Y="112"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLKeyboard.pas"/>
+        <EditorIndex Value="67"/>
+        <TopLine Value="307"/>
+        <CursorPos X="8" Y="323"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLTypes.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="78"/>
+        <CursorPos X="60" Y="102"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLVectorGeometry.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="8446"/>
+        <CursorPos X="4" Y="8461"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLVectorLists.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="4241"/>
+        <CursorPos X="8" Y="4231"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\GLXCollection.pas"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="604"/>
+        <CursorPos Y="618"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\OpenGL1x.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="4998"/>
+        <CursorPos X="5" Y="5102"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\OpenGLAdapter.pas"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="7165"/>
+        <CursorPos Y="7188"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Basis\OpenGLTokens.pas"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="169"/>
+        <CursorPos Y="184"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="C:\lazarus32\components\glscene\Source\DesignTime\FGUILayoutEditor.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="321"/>
+        <CursorPos Y="334"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="C:\lazarus32\components\glscene\Source\DesignTime\GLSceneFormDesign.pas"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="1119"/>
+        <CursorPos Y="1145"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLFileOCT.pas"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="106"/>
+        <CursorPos X="22" Y="123"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLFilePNG.pas"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="137"/>
+        <CursorPos X="65" Y="150"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLFileQ3BSP.pas"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="162"/>
+        <CursorPos Y="180"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\TGA.pas"/>
+        <EditorIndex Value="42"/>
+        <TopLine Value="175"/>
+        <CursorPos X="6" Y="199"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GameAPIs\GLSDLContext.pas"/>
+        <EditorIndex Value="37"/>
+        <TopLine Value="4"/>
+        <CursorPos X="11" Y="28"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GameAPIs\GLSDLWindow.pas"/>
+        <EditorIndex Value="38"/>
+        <TopLine Value="432"/>
+        <CursorPos X="4" Y="452"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GameAPIs\SDL.pas"/>
+        <EditorIndex Value="39"/>
+        <TopLine Value="170"/>
+        <CursorPos Y="157"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GameAPIs\SDL2.pas"/>
+        <EditorIndex Value="34"/>
+        <TopLine Value="6112"/>
+        <CursorPos X="3" Y="6124"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="C:\lazarus32\components\glscene\Source\ParallelAPIs\GLSCLPlatform.pas"/>
+        <EditorIndex Value="35"/>
+        <TopLine Value="42"/>
+        <CursorPos Y="46"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="2691"/>
+        <CursorPos X="10" Y="2706"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\NewtonImport.pas"/>
+        <EditorIndex Value="29"/>
+        <TopLine Value="105"/>
+        <CursorPos X="5" Y="92"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\NewtonImport_JointLibrary.pas"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="64"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\ODEImport.pas"/>
+        <EditorIndex Value="31"/>
+        <TopLine Value="137"/>
+        <CursorPos Y="161"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Shaders\GLCgRegister.pas"/>
+        <EditorIndex Value="32"/>
+        <CursorPos X="3" Y="24"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmodtypes.pas"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="27"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\GLSMBASS.pas"/>
+        <EditorIndex Value="23"/>
+        <TopLine Value="130"/>
+        <CursorPos Y="147"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\openal.pas"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="1996"/>
+        <CursorPos X="5" Y="1965"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLColor.pas"/>
+        <EditorIndex Value="56"/>
+        <TopLine Value="148"/>
+        <CursorPos X="18" Y="24"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit75>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="71" Column="17" TopLine="57"/>
+      </Position1>
+      <Position2>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="1883" TopLine="1869"/>
+      </Position2>
+      <Position3>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="1879" Column="42" TopLine="1869"/>
+      </Position3>
+      <Position4>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="1885" Column="48" TopLine="1869"/>
+      </Position4>
+      <Position5>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="2554" Column="78" TopLine="2525"/>
+      </Position5>
+      <Position6>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="1885" Column="48" TopLine="1870"/>
+      </Position6>
+      <Position7>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="1879" Column="42" TopLine="1870"/>
+      </Position7>
+      <Position8>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="2558" TopLine="2543"/>
+      </Position8>
+      <Position9>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\GLNGDManager.pas"/>
+        <Caret Line="2566" TopLine="2543"/>
+      </Position9>
+      <Position10>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\NewtonImport.pas"/>
+      </Position10>
+      <Position11>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\NewtonImport_JointLibrary.pas"/>
+      </Position11>
+      <Position12>
+        <Filename Value="C:\lazarus32\components\glscene\Source\PhysicsAPIs\ODEImport.pas"/>
+      </Position12>
+      <Position13>
+        <Filename Value="C:\lazarus32\components\glscene\Source\Shaders\GLCgRegister.pas"/>
+      </Position13>
+      <Position14>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmod.pas"/>
+        <Caret Line="780" TopLine="759"/>
+      </Position14>
+      <Position15>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmoddyn.pas"/>
+        <Caret Line="1539" TopLine="1518"/>
+      </Position15>
+      <Position16>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\fmodtypes.pas"/>
+      </Position16>
+      <Position17>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\GLSMBASS.pas"/>
+      </Position17>
+      <Position18>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\openal.pas"/>
+      </Position18>
+      <Position19>
+        <Filename Value="C:\lazarus32\components\glscene\Source\SoundVideoAPIs\openal.pas"/>
+        <Caret Line="52" TopLine="28"/>
+      </Position19>
+      <Position20>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\DDSImage.pas"/>
+        <Caret Line="72" Column="19" TopLine="58"/>
+      </Position20>
+      <Position21>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\GLSZLibExApi.pas"/>
+        <Caret Line="342" Column="5" TopLine="328"/>
+      </Position21>
+      <Position22>
+        <Filename Value="C:\lazarus32\components\glscene\Source\FileFormats\LIBPNG.pas"/>
+        <Caret Line="1266" TopLine="1252"/>
+      </Position22>
+      <Position23>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLCadencer.pas"/>
+        <Caret Line="882" TopLine="862"/>
+      </Position23>
+      <Position24>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSLanguage.pas"/>
+        <Caret Line="33" Column="69" TopLine="20"/>
+      </Position24>
+      <Position25>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLSLanguage.pas"/>
+        <Caret Line="114" Column="15" TopLine="99"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="72" Column="37" TopLine="63"/>
+      </Position26>
+      <Position27>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLMaterial.pas"/>
+        <Caret Line="255" Column="14" TopLine="241"/>
+      </Position27>
+      <Position28>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLColor.pas"/>
+        <Caret Line="73" Column="16" TopLine="25"/>
+      </Position28>
+      <Position29>
+        <Filename Value="C:\lazarus32\components\glscene\Source\GLCrossPlatform.pas"/>
+        <Caret Line="100" TopLine="85"/>
+      </Position29>
+      <Position30>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="72" Column="37" TopLine="57"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

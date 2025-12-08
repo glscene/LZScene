@@ -1,0 +1,678 @@
+object MainForm: TMainForm
+  Left = 0
+  Height = 581
+  Top = 0
+  Width = 909
+  ActiveControl = GLViewer
+  Caption = 'GLScene Molecular Viewer'
+  ClientHeight = 581
+  ClientWidth = 909
+  KeyPreview = True
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnKeyUp = FormKeyUp
+  OnMouseWheel = FormMouseWheel
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object Panel1: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 909
+    Align = alTop
+    ClientHeight = 56
+    ClientWidth = 909
+    TabOrder = 0
+    object RadioGroup1: TRadioGroup
+      Left = 5
+      Height = 46
+      Top = 5
+      Width = 315
+      Align = alLeft
+      AutoFill = True
+      BorderSpacing.Around = 4
+      Caption = 'Visualize'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 3
+      ClientHeight = 26
+      ClientWidth = 313
+      Columns = 3
+      ItemIndex = 0
+      Items.Strings = (
+        'Atom + Bonds'
+        'Only Atoms'
+        'Only Bonds'
+      )
+      OnClick = RadioGroup1Click
+      TabOrder = 0
+    end
+    object CheckBox2: TCheckBox
+      Left = 712
+      Height = 21
+      Top = 24
+      Width = 123
+      Caption = 'Show World Axis'
+      Checked = True
+      OnChange = CheckBox2Change
+      State = cbChecked
+      TabOrder = 1
+    end
+    object CheckBox3: TCheckBox
+      Left = 712
+      Height = 21
+      Top = 6
+      Width = 124
+      Caption = 'Show World Grid'
+      Checked = True
+      OnChange = CheckBox3Change
+      State = cbChecked
+      TabOrder = 2
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 475
+    Top = 56
+    Width = 592
+    Align = alClient
+    ClientHeight = 475
+    ClientWidth = 592
+    TabOrder = 1
+    object GLViewer: TGLSceneViewer
+      Left = 1
+      Height = 473
+      Top = 1
+      Width = 590
+      Camera = GLCamera
+      Buffer.BackgroundColor = 8026746
+      Buffer.AmbientColor.Red = 0.200000002980232
+      Buffer.AmbientColor.Green = 0.200000002980232
+      Buffer.AmbientColor.Blue = 0.200000002980232
+      Buffer.AmbientColor.Alpha = 1
+      Buffer.ShadeModel = smSmooth
+      FieldOfView = 99.5598678588867
+      Align = alClient
+      OnMouseDown = GLViewerMouseDown
+      OnMouseMove = GLViewerMouseMove
+      OnMouseUp = GLViewerMouseUp
+      TabOrder = 0
+    end
+  end
+  object Panel3: TPanel
+    Left = 592
+    Height = 475
+    Top = 56
+    Width = 317
+    Align = alRight
+    ClientHeight = 475
+    ClientWidth = 317
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 5
+      Height = 15
+      Top = 5
+      Width = 307
+      Align = alTop
+      AutoSize = False
+      BorderSpacing.Around = 4
+      Caption = 'Molecule :'
+      Font.Height = 16
+      Font.Style = [fsBold, fsUnderline]
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowAccelChar = False
+      OptimalFill = True
+    end
+    object lblMolName: TLabel
+      Left = 5
+      Height = 23
+      Top = 24
+      Width = 307
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      BorderSpacing.Around = 4
+      Caption = 'No Name'
+      Font.Height = 18
+      Layout = tlCenter
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowAccelChar = False
+    end
+    object GroupBox1: TGroupBox
+      Left = 1
+      Height = 197
+      Top = 51
+      Width = 315
+      Align = alTop
+      Caption = 'Atoms '
+      ClientHeight = 177
+      ClientWidth = 313
+      TabOrder = 0
+      object mmoMolAtoms: TMemo
+        Left = 0
+        Height = 177
+        Top = 0
+        Width = 313
+        Align = alClient
+        Font.Height = -9
+        Font.Name = 'Arial'
+        Font.Quality = fqCleartype
+        Lines.Strings = (
+          'mmoMolAtoms'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 1
+      Height = 197
+      Top = 248
+      Width = 315
+      Align = alTop
+      Caption = 'Bonds'
+      ClientHeight = 177
+      ClientWidth = 313
+      TabOrder = 1
+      object mmoMolBonds: TMemo
+        Left = 0
+        Height = 177
+        Top = 0
+        Width = 313
+        Align = alClient
+        Font.Height = -9
+        Font.Name = 'Arial'
+        Font.Quality = fqCleartype
+        Lines.Strings = (
+          'mmoMolBonds'
+        )
+        ParentFont = False
+        ReadOnly = True
+        ScrollBars = ssBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Height = 29
+      Top = 445
+      Width = 315
+      Align = alClient
+      ClientHeight = 29
+      ClientWidth = 315
+      TabOrder = 2
+      object CheckBox1: TCheckBox
+        Left = 5
+        Height = 21
+        Top = -5
+        Width = 305
+        Align = alBottom
+        BorderSpacing.Bottom = 8
+        BorderSpacing.Around = 4
+        Caption = 'Show Molecule Axis'
+        OnChange = CheckBox1Change
+        TabOrder = 0
+      end
+    end
+  end
+  object MainStatusBar: TStatusBar
+    Left = 0
+    Height = 21
+    Top = 531
+    Width = 909
+    Panels = <    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 170
+      end    
+      item
+        Alignment = taCenter
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object GLScene: TGLScene
+    left = 296
+    object DCWorld: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      ShowAxes = True
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object DCWorldGrid: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object WorldGrid: TGLXYZGrid
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          Pickable = False
+          LineColor.Red = 0.658824026584625
+          LineColor.Green = 0.658824026584625
+          LineColor.Blue = 0.658824026584625
+          LineColor.Alpha = 1
+          LineColor.Color = {
+            B1A8283FB1A8283FB1A8283F0000803F
+          }
+          XSamplingScale.Min = -50
+          XSamplingScale.Max = 50
+          XSamplingScale.Origin = 0
+          XSamplingScale.Step = 0.100000001490116
+          YSamplingScale.Min = 0
+          YSamplingScale.Max = 0
+          YSamplingScale.Origin = 0
+          YSamplingScale.Step = 0.100000001490116
+          ZSamplingScale.Min = -50
+          ZSamplingScale.Max = 50
+          ZSamplingScale.Origin = 0
+          ZSamplingScale.Step = 0.100000001490116
+          Parts = [gpX, gpZ]
+        end
+      end
+      object DCGrids: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object DCGridXY: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object GridXY: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            LineColor.Red = 1
+            LineColor.Green = 1
+            LineColor.Blue = 1
+            LineColor.Alpha = 1
+            XSamplingScale.Min = 0
+            XSamplingScale.Max = 0
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 0.100000001490116
+            YSamplingScale.Min = 0
+            YSamplingScale.Max = 0
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 0.100000001490116
+            ZSamplingScale.Min = 0
+            ZSamplingScale.Max = 0
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 0.100000001490116
+          end
+        end
+        object DCGridXZ: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object GridXZ: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            LineColor.Red = 1
+            LineColor.Green = 1
+            LineColor.Blue = 1
+            LineColor.Alpha = 1
+            XSamplingScale.Min = 0
+            XSamplingScale.Max = 0
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 0.100000001490116
+            YSamplingScale.Min = 0
+            YSamplingScale.Max = 0
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 0.100000001490116
+            ZSamplingScale.Min = 0
+            ZSamplingScale.Max = 0
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 0.100000001490116
+          end
+        end
+        object DCGridYZ: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object GridYZ: TGLXYZGrid
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            TurnAngle = 0
+            LineColor.Red = 1
+            LineColor.Green = 1
+            LineColor.Blue = 1
+            LineColor.Alpha = 1
+            XSamplingScale.Min = 0
+            XSamplingScale.Max = 0
+            XSamplingScale.Origin = 0
+            XSamplingScale.Step = 0.100000001490116
+            YSamplingScale.Min = 0
+            YSamplingScale.Max = 0
+            YSamplingScale.Origin = 0
+            YSamplingScale.Step = 0.100000001490116
+            ZSamplingScale.Min = 0
+            ZSamplingScale.Max = 0
+            ZSamplingScale.Origin = 0
+            ZSamplingScale.Step = 0.100000001490116
+          end
+        end
+      end
+      object DCTarget: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object GLPoints1: TGLPoints
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          NoZWrite = True
+          Static = False
+          Size = 8
+          Style = psRound
+          PointParameters.DistanceAttenuation.Coordinates = {
+            CDCC4C3FCDCC4C3FCDCC4C3F00000000
+          }
+          PointParameters.PointParams = {
+            0000404000002041CDCC4C3E
+          }
+        end
+      end
+      object DCMoleculeWorld: TGLDummyCube
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        CubeSize = 1
+        EdgeColor.Red = 1
+        EdgeColor.Green = 1
+        EdgeColor.Blue = 1
+        EdgeColor.Alpha = 1
+        object MoleculeAxis: TGLCube
+          TagFloat = 0
+          Material.BackProperties.Ambient.Red = 0.200000002980232
+          Material.BackProperties.Ambient.Green = 0.200000002980232
+          Material.BackProperties.Ambient.Blue = 0.200000002980232
+          Material.BackProperties.Ambient.Alpha = 1
+          Material.BackProperties.Diffuse.Red = 0.800000011920929
+          Material.BackProperties.Diffuse.Green = 0.800000011920929
+          Material.BackProperties.Diffuse.Blue = 0.800000011920929
+          Material.BackProperties.Diffuse.Alpha = 1
+          Material.BackProperties.Emission.Red = 0
+          Material.BackProperties.Emission.Green = 0
+          Material.BackProperties.Emission.Blue = 0
+          Material.BackProperties.Emission.Alpha = 1
+          Material.BackProperties.Specular.Red = 0
+          Material.BackProperties.Specular.Green = 0
+          Material.BackProperties.Specular.Blue = 0
+          Material.BackProperties.Specular.Alpha = 1
+          Material.FrontProperties.Ambient.Red = 0.200000002980232
+          Material.FrontProperties.Ambient.Green = 0.200000002980232
+          Material.FrontProperties.Ambient.Blue = 0.200000002980232
+          Material.FrontProperties.Ambient.Alpha = 1
+          Material.FrontProperties.Diffuse.Red = 0.800000011920929
+          Material.FrontProperties.Diffuse.Green = 0.800000011920929
+          Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+          Material.FrontProperties.Diffuse.Alpha = 1
+          Material.FrontProperties.Emission.Red = 0
+          Material.FrontProperties.Emission.Green = 0
+          Material.FrontProperties.Emission.Blue = 0
+          Material.FrontProperties.Emission.Alpha = 1
+          Material.FrontProperties.Specular.Red = 0
+          Material.FrontProperties.Specular.Green = 0
+          Material.FrontProperties.Specular.Blue = 0
+          Material.FrontProperties.Specular.Alpha = 1
+          Material.Texture.EnvColor.Red = 0
+          Material.Texture.EnvColor.Green = 0
+          Material.Texture.EnvColor.Blue = 0
+          Material.Texture.EnvColor.Alpha = 0
+          Material.Texture.BorderColor.Red = 0
+          Material.Texture.BorderColor.Green = 0
+          Material.Texture.BorderColor.Blue = 0
+          Material.Texture.BorderColor.Alpha = 0
+          PitchAngle = 0
+          RollAngle = 0
+          Scale.Coordinates = {
+            CDCCCC3DCDCCCC3DCDCCCC3D00000000
+          }
+          ShowAxes = True
+          TurnAngle = 0
+          Visible = False
+        end
+        object DCMolecule: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+        end
+        object DCMolInfos: TGLDummyCube
+          TagFloat = 0
+          PitchAngle = 0
+          RollAngle = 0
+          TurnAngle = 0
+          CubeSize = 1
+          EdgeColor.Red = 1
+          EdgeColor.Green = 1
+          EdgeColor.Blue = 1
+          EdgeColor.Alpha = 1
+          object LblMolInfo: TGLFlatText
+            TagFloat = 0
+            PitchAngle = 0
+            RollAngle = 0
+            Scale.Coordinates = {
+              0AD7233C0AD7233C0AD7233C00000000
+            }
+            TurnAngle = 0
+            Visible = False
+            BitmapFont = GLWindowsBitmapFont1
+            Alignment = taCenter
+            Layout = tlCenter
+            ModulateColor.Red = 0.560783982276917
+            ModulateColor.Green = 0.560783982276917
+            ModulateColor.Blue = 0.737254977226257
+            ModulateColor.Alpha = 1
+            ModulateColor.Color = {
+              8A8F0F3F8A8F0F3FBEBC3C3F0000803F
+            }
+            Options = [ftoTwoSided]
+          end
+          object lblMolInfo2: TGLHUDText
+            TagFloat = 0
+            PitchAngle = 0
+            Position.Coordinates = {
+              0000A0410000A041000000000000803F
+            }
+            RollAngle = 0
+            TurnAngle = 0
+            Visible = False
+            BitmapFont = GLWindowsBitmapFont1
+            Rotation = 0
+            Layout = tlCenter
+            ModulateColor.Red = 1
+            ModulateColor.Green = 1
+            ModulateColor.Blue = 1
+            ModulateColor.Alpha = 1
+          end
+        end
+      end
+    end
+    object GLCamera: TGLCamera
+      TagFloat = 0
+      DepthOfView = 1000
+      FocalLength = 200
+      NearPlaneBias = 0.00100000004749745
+      TargetObject = DCTarget
+      CameraStyle = csInfinitePerspective
+      Position.Coordinates = {
+        0000A04000002041000020410000803F
+      }
+      object MainLightSource1: TGLLightSource
+        TagFloat = 0
+        Ambient.Red = 0.25
+        Ambient.Green = 0.25
+        Ambient.Blue = 0.25
+        Ambient.Alpha = 1
+        Ambient.Color = {
+          0000803E0000803E0000803E0000803F
+        }
+        ConstAttenuation = 1
+        Diffuse.Red = 1
+        Diffuse.Green = 1
+        Diffuse.Blue = 1
+        Diffuse.Alpha = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Position.Coordinates = {
+          000000C00000A0400000A0C00000803F
+        }
+        LightStyle = lsOmni
+        Specular.Red = 0
+        Specular.Green = 0
+        Specular.Blue = 0
+        Specular.Alpha = 1
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+    end
+  end
+  object GLMatLib: TGLMaterialLibrary
+    left = 224
+  end
+  object GLCadencer: TGLCadencer
+    Scene = GLScene
+    Enabled = False
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    OnProgress = GLCadencerProgress
+    left = 64
+    top = 8
+  end
+  object MainMenu1: TMainMenu
+    left = 144
+    object MenuItem1: TMenuItem
+      Caption = '&File'
+      object MenuItem2: TMenuItem
+        Caption = '&Open'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem4: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuItem4Click
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = '&View'
+      object MenuItem9: TMenuItem
+        Caption = 'Color Periodic Table Ref'
+        OnClick = MenuItem9Click
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Help'
+      object MenuItem6: TMenuItem
+        Caption = 'Commands'
+        OnClick = MenuItem6Click
+      end
+    end
+  end
+  object GLWindowsBitmapFont1: TGLWindowsBitmapFont
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Quality = fqCleartype
+    left = 456
+    top = 8
+  end
+  object OpenDlg: TOpenDialog
+    DefaultExt = '.mol'
+    Filter = 'MOL File|*.mol'
+    InitialDir = '\datafiles'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 368
+    top = 4
+  end
+  object MainTimer: TTimer
+    OnTimer = MainTimerTimer
+    left = 166
+    top = 194
+  end
+end

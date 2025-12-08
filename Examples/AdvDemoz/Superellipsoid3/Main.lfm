@@ -1,0 +1,105 @@
+object Form1: TForm1
+  Left = 419
+  Height = 700
+  Top = 118
+  Width = 865
+  Caption = '  SuperGems'
+  ClientHeight = 700
+  ClientWidth = 865
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.1'
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 700
+    Top = 0
+    Width = 865
+    Camera = GLCamera1
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 120.510231018066
+    Align = alClient
+    TabOrder = 0
+  end
+  object GLSimpleNavigation1: TGLSimpleNavigation
+    Form = Owner
+    GLSceneViewer = GLSceneViewer1
+    ZoomSpeed = 1.00999999046326
+    FormCaption = 'Superellipsoids Demo - %FPS'
+    KeyCombinations = <    
+      item
+        ShiftState = [ssLeft, ssRight]
+        Action = snaZoom
+      end    
+      item
+        ShiftState = [ssLeft]
+        Action = snaMoveAroundTarget
+      end    
+      item
+        ShiftState = [ssRight]
+        Action = snaMoveAroundTarget
+      end>
+    left = 16
+    top = 16
+  end
+  object GLCadencer1: TGLCadencer
+    Scene = GLScene1
+    MaxDeltaTime = 0
+    MinDeltaTime = 0
+    FixedDeltaTime = 0
+    left = 48
+    top = 16
+  end
+  object GLScene1: TGLScene
+    left = 80
+    top = 16
+    object GLLightSource1: TGLLightSource
+      TagFloat = 0
+      Ambient.Red = 0
+      Ambient.Green = 0
+      Ambient.Blue = 0
+      Ambient.Alpha = 1
+      ConstAttenuation = 1
+      Diffuse.Red = 1
+      Diffuse.Green = 1
+      Diffuse.Blue = 1
+      Diffuse.Alpha = 1
+      LinearAttenuation = 0
+      QuadraticAttenuation = 0
+      Position.Coordinates = {
+        000020410000A0410000C8420000803F
+      }
+      Specular.Red = 0
+      Specular.Green = 0
+      Specular.Blue = 0
+      Specular.Alpha = 1
+      SpotCutOff = 180
+      SpotExponent = 0
+    end
+    object GLCamera1: TGLCamera
+      TagFloat = 0
+      DepthOfView = 500
+      FocalLength = 200
+      TargetObject = GLDummyCube1
+      Position.Coordinates = {
+        0000204200004842000070420000803F
+      }
+    end
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+    end
+  end
+end

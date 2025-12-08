@@ -1,0 +1,53 @@
+Atoms are based on 7 levels containing 2,8,18,32,32,32,32 max electrons.  
+Stereo mode is done by having Red and Blue electron-spheres.
+
+The objects used are
+1 Camera
+1 Light
+1 Mesh to hold the exploding central atom.
+1 Lines object to draw lines between atoms per level.
+1 Large Red Central Sphere
+1 Large Blue Central Sphere
+1 Small Red Sphere used as a template to create each levels electrons.
+1 Small Blue Sphere used as a template to create each levels electrons.
+14 Dummycubes: 7 each for red and blue levels. Used to rotate the levels in individual X,Y,Z rotations.
+
+(A Cadencer and Timer, the GlScene and Viewer components)
+
+The Mesh loads a sphere.3ds file to explode later...
+Each Dummycube has (2 to 32) spheres dynamically created as children to be that levels electrons. 
+They use 1 sphere as a template (Red or Blue).
+There is a form to alter the selected Levels Color, X,Y,Z rotation and Toggle the display of a line connecting 
+the selected levels electron spheres. 
+The line gets the always changing Absolute Coordinates of the Dummycube children-spheres. 
+The rotation is controlled by the Cadencers Delta time, a Speed variable, (and an absolute speed variable) , 
+while the lines display maintains its own speed (less often than the rotations).
+
+The About form contains a memo with Help hints about the Keyboard key actions. 
+There is capability to alter the speed of rotation +- , Cpu use, Camera Zoom properties (Focal length and Depth of field), 
+Camera look angle, Reset the speed to default, and enable the explosion of the central sphere.
+
+Changing to 2D and back to 3D will reset rotations if they get buggered... usefull if Stereo mode is desired. 
+The odds are Stereo mode is not done correctly, might require 2 or 3 Cameras and lights: 1 each for Red and Blue and 1 
+for normal mode. Might be best done in direct mode as doing two views from 2 cameras at the same time seems weird. 
+The original c code is enclosed in the zip file. Maybe alternating display of the Red/Blue atoms is the way to do it... 
+This is for Red/Blue glasses... not those on/off lcd goggles.
+
+THINGS to DO:
+
+Experiment by changing the hierarchy of the Dummycubes to view the rotation affects.  
+Realize the rotations of each level are dependent on the other part of the X,Y,Z rotation parameters.
+
+Create your own .3ds object to explode. (The object X,Y,Z center, scale, Material properties, ... could be improved 
+from my quick one).
+
+Create all the atoms from meshes so they all can explode.
+
+Create a database linked to the Atom tag to display Atomic facts and fiction in a new form.
+
+Change the thing into Atom classes so they can be combined into molecules... 
+Each Atom would have 7 Level classes. 
+Each Level Class would have a Color parameter and a Line Object in addition to the Element structure. 
+An atom would have to contain the capability to LINK atom structures to each other... 
+depending on REAL capabilities of outer levels allowing links to other atoms if missing an electron(s).
+

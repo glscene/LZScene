@@ -1,0 +1,41 @@
+object dlgProgress: TdlgProgress
+  Left = 698
+  Height = 63
+  Top = 678
+  Width = 318
+  BorderStyle = bsDialog
+  Caption = 'Progress'
+  ClientHeight = 63
+  ClientWidth = 318
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnHide = FormHide
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object lblTask: TLabel
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 318
+    Align = alTop
+    Alignment = taCenter
+    AutoSize = False
+    ParentColor = False
+  end
+  object ggTaskProgress: TProgressBar
+    Left = 8
+    Height = 23
+    Top = 32
+    Width = 302
+    Align = alClient
+    BorderSpacing.Around = 8
+    TabOrder = 0
+  end
+  object timTask: TTimer
+    Enabled = False
+    OnTimer = timTaskTimer
+    left = 8
+  end
+end

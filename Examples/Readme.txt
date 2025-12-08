@@ -1,12 +1,13 @@
-The example demos  for using LZScene of GLXEngine with Lazarus
+The example demos  for using LZXEngine with Lazarus
 
-For all this ../Examples/Demoz  it supposed that  
-- demos projects are in ..\Examples\Demoz directory;
-- media files are in ..\Examples\media,
-and they need to move in Assets further; 
+For all this ../Examples/Demoz and AdvDenoz it supposed that  
+- demos projects are in ..\Examples directory;
+- assets in ..\Assets directory;
+- media files are in ..\Examples\media folder; 
 
-Additional Dynamic libraries, common DLLs are in ..\external directory, 
-that should be renamed to Externals as in GLXEngine;
+Additional Dynamic libraries, common DLLs are in ..\external directory
+
+LZXE Team
 
 
 

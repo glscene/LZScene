@@ -1,0 +1,179 @@
+object dlgFracArchip: TdlgFracArchip
+  Left = 578
+  Height = 501
+  Top = 153
+  Width = 618
+  Caption = 'Fractal Archipelago'
+  ClientHeight = 501
+  ClientWidth = 618
+  Color = clWhite
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 0
+    Height = 20
+    Top = 184
+    Width = 625
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Caption = 'Landscape initialisation in progress. Please wait...'
+    Color = clBlack
+    Font.Color = clLime
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object GLSceneViewer1: TGLSceneViewer
+    Left = 0
+    Height = 476
+    Top = 0
+    Width = 618
+    Camera = GLCamera1
+    Buffer.FogEnvironment.FogColor.Red = 0
+    Buffer.FogEnvironment.FogColor.Green = 0
+    Buffer.FogEnvironment.FogColor.Blue = 0
+    Buffer.FogEnvironment.FogColor.Alpha = 1
+    Buffer.FogEnvironment.FogStart = 700
+    Buffer.FogEnvironment.FogEnd = 1200
+    Buffer.FogEnvironment.FogDistance = fdEyeRadial
+    Buffer.BackgroundColor = clSkyBlue
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    Buffer.FogEnable = True
+    Buffer.Lighting = False
+    FieldOfView = 156.271224975586
+    Align = alClient
+    OnMouseDown = GLSceneViewer1MouseDown
+    OnMouseMove = GLSceneViewer1MouseMove
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 25
+    Top = 476
+    Width = 618
+    Align = alBottom
+    ClientHeight = 25
+    ClientWidth = 618
+    TabOrder = 0
+    object lblDebug: TLabel
+      Left = 8
+      Height = 1
+      Top = 4
+      Width = 1
+      ParentColor = False
+    end
+  end
+  object GLScene1: TGLScene
+    ObjectsSorting = osNone
+    left = 160
+    top = 24
+    object GLDummyCube1: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      Scale.Coordinates = {
+        0000E0400000E0400000E04000000000
+      }
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLCamera1: TGLCamera
+        TagFloat = 0
+        DepthOfView = 800
+        FocalLength = 50
+        Direction.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        left = 264
+        top = 160
+      end
+      object TerrainRenderer1: TGLTerrainRenderer
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        Direction.Coordinates = {
+          000000000000803F0000000000000000
+        }
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Up.Coordinates = {
+          00000000000000000000803F00000000
+        }
+        TileSize = 32
+        TilesPerTexture = 1
+        MaterialLibrary = GLMaterialLibrary1
+        QualityDistance = 20
+        CLODPrecision = 20
+      end
+    end
+  end
+  object GLMaterialLibrary1: TGLMaterialLibrary
+    left = 48
+    top = 24
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 48
+    top = 88
+  end
+  object GLAsyncTimer1: TGLAsyncTimer
+    OnTimer = GLAsyncTimer1Timer
+    left = 160
+    top = 88
+  end
+end

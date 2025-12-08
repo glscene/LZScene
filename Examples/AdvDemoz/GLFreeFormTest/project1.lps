@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="32">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="6" Y="14"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="97"/>
+        <CursorPos Y="118"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="glfreeformex.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GLfreeFormEx"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="28"/>
+        <CursorPos Y="35"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="glmeshobjecthelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GLMeshObjectHelper"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="41" Y="30"/>
+        <FoldState Value=" T3mM0N2 piZjL0{d032 T0qS6M021/"/>
+        <UsageCount Value="48"/>
+        <Bookmarks Count="1">
+          <Item0 X="107" Y="263" ID="1"/>
+        </Bookmarks>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uncube.pas"/>
+        <UnitName Value="uNCube"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="184"/>
+        <CursorPos X="42" Y="368"/>
+        <UsageCount Value="32"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLVectorFileObjects.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1599"/>
+        <CursorPos X="36" Y="1599"/>
+        <UsageCount Value="30"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\GLSEditor\umainform.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="444"/>
+        <CursorPos X="34" Y="445"/>
+        <UsageCount Value="11"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLObjects.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="139"/>
+        <CursorPos X="3" Y="173"/>
+        <UsageCount Value="23"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLGeomObjects.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2361"/>
+        <CursorPos X="3" Y="2361"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLSilhouette.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="159"/>
+        <CursorPos Y="160"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\demos\User_Demos_1.3_src\USER_DEMOS_1.3\UvMapping\UvMapping\Unit1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="62"/>
+        <UsageCount Value="8"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLCoordinates.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="26" Y="35"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\OpenGLTokens.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="116"/>
+        <CursorPos X="3" Y="133"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLVectorGeometry.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1770"/>
+        <CursorPos X="7" Y="1786"/>
+        <UsageCount Value="24"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLVectorTypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="35"/>
+        <UsageCount Value="24"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\FileOCT.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="69"/>
+        <CursorPos X="20" Y="74"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLVectorLists.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="221"/>
+        <CursorPos X="15" Y="236"/>
+        <UsageCount Value="22"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLImposter.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos X="20" Y="136"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLPersistentClasses.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="187"/>
+        <CursorPos X="3" Y="204"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLFileVRML.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="352"/>
+        <CursorPos X="22" Y="358"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLMeshUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="10" Y="70"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1794"/>
+        <CursorPos X="17" Y="1810"/>
+        <UsageCount Value="8"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLScene.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5846"/>
+        <CursorPos Y="5863"/>
+        <UsageCount Value="13"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\codetyphon\typhon\components\pl_GLScene\source\GLMeshOptimizer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="51"/>
+        <CursorPos X="49" Y="85"/>
+        <UsageCount Value="25"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\codetyphon\CodeOcean\GLScene\samples\rendering\lining\liningmw.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos Y="31"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="612"/>
+        <CursorPos Y="636"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="941"/>
+        <CursorPos Y="959"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8273"/>
+        <CursorPos Y="8291"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1366"/>
+        <CursorPos Y="1383"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="D:\Delphi\Opengl\GLScene\GLAsm\GLAsm\navicube\uNCube.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="39"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus\components\glscene\Source\GLScene.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="5528"/>
+        <CursorPos Y="5546"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="uNavCube.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="36" Y="10"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit31>
+    </Units>
+    <JumpHistory Count="9" HistoryIndex="8">
+      <Position1>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="122" TopLine="100"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="123" TopLine="100"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="124" TopLine="100"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="128" TopLine="100"/>
+      </Position4>
+      <Position5>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="10" Column="27"/>
+      </Position5>
+      <Position6>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="20"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="15" Column="63"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="123" Column="28" TopLine="91"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uNavCube.pas"/>
+        <Caret Line="10" Column="36"/>
+      </Position9>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
