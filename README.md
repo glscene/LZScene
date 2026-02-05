@@ -1,4 +1,4 @@
-# LZXEngine
+# LZScene
 The graphics engine of 3D scenes with LCL component packages for Lazarus and Free Pascal.
 Class libraries with rendering and animations of spatial objects 
 include managers for supporting physics, sounds, terrains with materials and shaders. 
